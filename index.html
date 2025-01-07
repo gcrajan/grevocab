@@ -12,22 +12,26 @@
         padding: 20px;
         position: relative;
       }
+
       h1 {
         text-align: center;
         color: #333;
       }
+
       .title-bottom {
         display: flex;
         align-items: center;
         gap: 1rem;
         flex-wrap: wrap;
       }
+
       .groups-container {
         display: flex;
         gap: 20px;
         margin: 20px 0px;
         flex-wrap: wrap;
       }
+
       .group {
         border: 2px solid #ccc;
         border-radius: 8px;
@@ -35,11 +39,13 @@
         min-width: 240px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
+
       @media only screen and (max-width: 600px) {
         .group {
           width: 90vw;
         }
       }
+
       .grouphead {
         display: flex;
         justify-content: center;
@@ -47,11 +53,13 @@
         border-bottom: 2px solid #c1b8b8;
         gap: 5px;
       }
+
       .group h2 {
         font-size: 18px;
         margin-right: 5px;
         color: #555;
       }
+
       ul {
         list-style: none;
         padding: 5px 15px;
@@ -60,15 +68,18 @@
         overflow: auto;
         text-overflow: ellipsis;
       }
+
       li {
         cursor: pointer;
         margin-bottom: 5px;
         padding: 5px;
         border-radius: 4px;
       }
+
       li:hover {
         background-color: #f0f0f0;
       }
+
       .word-red {
         color: red;
       }
@@ -104,21 +115,25 @@
         overflow-y: auto;
         max-height: 90%;
       }
+
       .form-container {
         display: none;
         flex-direction: column;
         gap: 10px;
         margin-top: 10px;
       }
+
       .form-container input {
         padding: 5px;
         border: 1px solid #ccc;
         border-radius: 4px;
       }
+
       .title {
         font-size: 2rem;
         color: #544545;
       }
+
       select {
         padding: 5px;
       }
@@ -131,9 +146,11 @@
         cursor: pointer;
         background-color: #28a745;
       }
+
       .greenbtn:hover {
         background-color: #218838;
       }
+
       .redbtn {
         padding: 5px 10px;
         color: white;
@@ -142,15 +159,23 @@
         cursor: pointer;
         background-color: #ff0000;
       }
+
       .redbtn:hover {
         background-color: #e93a3a;
       }
+
       .right {
         right: 2rem;
         position: fixed;
       }
+      footer{
+        text-align:center;
+        padding:5px;
+        border-top: 1px solid #544545;
+      }
     </style>
   </head>
+
   <body>
     <div class="overlay" id="overlay"></div>
     <h1>GRE Vocabulary List</h1>
@@ -199,10 +224,10 @@
       <!-- Random and Reset buttons for all groups -->
       <div>
         <button id="random-btn" class="greenbtn" onclick="randomizeAllGroups()">
-          Randomize Selected
+          Randomize All
         </button>
         <button id="reset-btn" class="redbtn" onclick="resetAllGroups()">
-          Reset Selected
+          Reset All Selected
         </button>
       </div>
     </div>
@@ -212,9 +237,9 @@
     <div class="word-details" id="word-details">
       <div class="word-details-info">
         <div>
-          <!-- <button id="mark-button" onclick="toggleMarkWord()" class="greenbtn">
+          <button id="mark-button" onclick="toggleMarkWord()" class="greenbtn">
             Mark
-          </button> -->
+          </button>
           <button onclick="closeDetails()" class="redbtn right">Close</button>
         </div>
         <h3 id="details-word" class="title"></h3>
@@ -224,6 +249,9 @@
       </div>
     </div>
 
+    <footer>
+      Copyright, Rajan Gc - Manjul Sharma @2025
+    </footer>
     <script>
       let vocabulary = [];
 
@@ -248,17 +276,17 @@
         const groupsContainer = document.getElementById("groups-container");
         groupsContainer.innerHTML = "";
 
-        const wordChunks = chunkVocabulary(vocabulary, 30);
-        wordChunks.forEach((chunk, index) => {
+        const chunks = chunkVocabulary(vocabulary, 30);
+        chunks.forEach((chunk, index) => {
           const group = document.createElement("div");
           group.classList.add("group");
           group.id = `Group ${index + 1}`;
-          group.originalWords = chunk.map((word) => ({ ...word })); // Store a copy of the original word list
-          group.currentWords = [...group.originalWords]; // Copy of current words for randomization
+          group.originalWords = chunk.map((word) => ({ ...word }));
+          group.currentWords = [...group.originalWords];
+          group.selected = new Set();
 
           const groupHead = document.createElement("div");
           groupHead.classList.add("grouphead");
-          group.appendChild(groupHead);
 
           const h2 = document.createElement("h2");
           h2.textContent = `Group ${index + 1}`;
@@ -267,14 +295,16 @@
           const randomButton = document.createElement("button");
           randomButton.textContent = "Random";
           randomButton.classList.add("greenbtn");
-          randomButton.onclick = () => randomizeGroup(group);
+          randomButton.addEventListener("click", () => randomizeGroup(group));
           groupHead.appendChild(randomButton);
 
           const resetButton = document.createElement("button");
           resetButton.textContent = "Reset";
           resetButton.classList.add("redbtn");
-          resetButton.onclick = () => resetGroup(group);
+          resetButton.addEventListener("click", () => resetGroup(group));
           groupHead.appendChild(resetButton);
+
+          group.appendChild(groupHead);
 
           const wordListContainer = document.createElement("ul");
           wordListContainer.id = `word-list-${index + 1}`;
@@ -282,7 +312,9 @@
           chunk.forEach((wordObj) => {
             const li = document.createElement("li");
             li.textContent = wordObj.word;
-            li.onclick = () => openWordDetails(wordObj);
+            li.addEventListener("click", () =>
+              openWordDetails(group, wordObj, li)
+            );
             wordListContainer.appendChild(li);
           });
 
@@ -330,8 +362,9 @@
           for (let i = 0; i < groupSize; i++) {
             const wordObj = allWords[wordIndex++];
             const li = document.createElement("li");
+            if (group.selected.has(wordObj.word)) li.classList.add("word-red");
             li.textContent = wordObj.word;
-            li.onclick = () => openWordDetails(wordObj);
+            li.onclick = () => openWordDetails(group, wordObj, li);
             wordListContainer.appendChild(li);
           }
 
@@ -355,29 +388,37 @@
 
         group.currentWords.forEach((wordObj) => {
           const li = document.createElement("li");
+          if (group.selected.has(wordObj.word)) li.classList.add("word-red");
           li.textContent = wordObj.word;
-          li.onclick = () => openWordDetails(wordObj, li); // Pass both the word object and its list item
+          li.onclick = () => openWordDetails(group, wordObj, li); // Pass both the word object and its list item
           wordListContainer.appendChild(li);
         });
       }
 
       function resetGroup(group) {
         const wordList = group.querySelector("ul");
+        group.selected.clear();
         wordList.innerHTML = "";
         group.originalWords.forEach((wordObj) => {
           const li = document.createElement("li");
           li.textContent = wordObj.word;
-          li.onclick = () => openWordDetails(wordObj);
+          li.onclick = () => openWordDetails(group, wordObj, li);
           wordList.appendChild(li);
         });
         group.currentWords = [...group.originalWords]; // Reset currentWords back to original
       }
 
-      function openWordDetails(wordObj, listItem) {
+      function openWordDetails(group, wordObj, listItem) {
+        const markButton = document.getElementById("mark-button");
         const overlay = document.getElementById("overlay");
         const wordDetails = document.getElementById("word-details");
 
         // Display the word details in the modal
+        markButton.onclick = () => toggleMarkWord(group, wordObj);
+        markButton.textContent = group.selected.has(wordObj.word)
+          ? "Unmark"
+          : "Mark";
+
         document.getElementById("details-word").textContent = wordObj.word;
         document.getElementById("details-meaning").textContent =
           wordObj.meaning;
@@ -386,14 +427,8 @@
         document.getElementById("details-antonyms").textContent =
           wordObj.antonyms;
 
-        // Save reference to the selected list item for toggling mark/unmark
-        console.log(listItem);
-        console.log(wordDetails.currentListItem);
-        console.log("------");
-
         wordDetails.currentListItem = listItem;
 
-        // Show modal and overlay
         overlay.style.display = "block";
         wordDetails.style.display = "block";
       }
@@ -406,29 +441,27 @@
         wordDetails.style.display = "none";
       }
 
-      let markedWordElement = null; // Keep track of the currently marked word
+      let markedWordElement = null;
 
-      function toggleMarkWord() {
+      function toggleMarkWord(group, wordObj) {
         const markButton = document.getElementById("mark-button");
         const detailsWord = document.getElementById("details-word");
 
-        if (markedWordElement) {
+        if (group.selected.has(wordObj.word)) {
           // If there is a marked word, unmark it
-          markedWordElement.classList.remove("word-red");
-          markedWordElement = null;
+          document.querySelectorAll("li").forEach((li) => {
+            if (li.textContent === wordObj.word)
+              li.classList.remove("word-red");
+          });
+          group.selected.delete(wordObj.word);
           markButton.textContent = "Mark";
         } else {
           // Find the word in the vocabulary list and mark it
-          const wordToMark = detailsWord.textContent;
-          const wordElement = Array.from(document.querySelectorAll("li")).find(
-            (li) => li.textContent === wordToMark
-          );
-
-          if (wordElement) {
-            wordElement.classList.add("word-red");
-            markedWordElement = wordElement;
-            markButton.textContent = "Unmark";
-          }
+          group.selected.add(wordObj.word);
+          document.querySelectorAll("li").forEach((li) => {
+            if (li.textContent === wordObj.word) li.classList.add("word-red");
+          });
+          markButton.textContent = "Umark";
         }
       }
     </script>
