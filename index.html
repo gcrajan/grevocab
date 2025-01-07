@@ -378,8 +378,9 @@
 
         detailsWord.textContent = wordObj.word;
         detailsMeaning.textContent = wordObj.meaning;
-        detailsSynonyms.textContent = wordObj.synonyms.join(", ");
-        detailsAntonyms.textContent = wordObj.antonyms.join(", ");
+
+        detailsSynonyms.textContent = wordObj.synonyms;
+        detailsAntonyms.textContent = wordObj.antonyms;
 
         overlay.style.display = "block";
         wordDetails.style.display = "block";
