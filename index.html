@@ -16,6 +16,12 @@
         text-align: center;
         color: #333;
       }
+      .title-bottom {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
       .groups-container {
         display: flex;
         gap: 20px;
@@ -115,7 +121,6 @@
       }
       select {
         padding: 5px;
-        margin-top: 20px;
       }
 
       .greenbtn {
@@ -151,42 +156,56 @@
     <h1>GRE Vocabulary List</h1>
 
     <!-- Group Selector -->
-    <label for="group-selector">Select number of groups to show: </label>
-    <select id="group-selector" onchange="updateVisibleGroups()">
-      <option value="all">All</option>
-      <option value="1">1</option>
-      <option value="2">2</option>
-      <option value="3">3</option>
-      <option value="4">4</option>
-      <option value="5">5</option>
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-      <option value="11">11</option>
-      <option value="12">12</option>
-      <option value="13">13</option>
-      <option value="14">14</option>
-      <option value="15">15</option>
-      <option value="16">16</option>
-      <option value="17">17</option>
-      <option value="18">18</option>
-      <option value="19">19</option>
-      <option value="20">20</option>
-      <option value="21">21</option>
-      <option value="22">22</option>
-      <option value="23">23</option>
-      <option value="24">24</option>
-      <option value="25">25</option>
-      <option value="26">26</option>
-      <option value="27">27</option>
-      <option value="28">28</option>
-      <option value="29">29</option>
-      <option value="30">30</option>
-      <option value="31">31</option>
-      <option value="32">32</option>
-    </select>
+    <div class="title-bottom">
+      <div>
+        <label for="group-selector">Select number of groups to show: </label>
+        <select id="group-selector" onchange="updateVisibleGroups()">
+          <option value="all">All</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+          <option value="32">32</option>
+        </select>
+      </div>
+
+      <!-- Random and Reset buttons for all groups -->
+      <div>
+        <button id="random-btn" class="greenbtn" onclick="randomizeAllGroups()">
+          Randomize Selected
+        </button>
+        <button id="reset-btn" class="redbtn" onclick="resetAllGroups()">
+          Reset Selected
+        </button>
+      </div>
+    </div>
 
     <div class="groups-container" id="groups-container"></div>
 
@@ -217,7 +236,6 @@
         })
         .catch((error) => console.error("Error loading vocabulary:", error));
 
-      // Function to split vocabulary into chunks of 30 words
       function chunkVocabulary(vocabulary, chunkSize) {
         const chunks = [];
         for (let i = 0; i < vocabulary.length; i += chunkSize) {
@@ -226,69 +244,17 @@
         return chunks;
       }
 
-      // Function to update the vocabulary list and create groups
-      // function updateVocabularyList() {
-      //   const groupsContainer = document.getElementById("groups-container");
-      //   groupsContainer.innerHTML = "";
-
-      //   const wordChunks = chunkVocabulary(vocabulary, 30);
-
-      //   wordChunks.forEach((chunk, index) => {
-      //     const group = document.createElement("div");
-      //     group.classList.add("group");
-      //     group.id = `Group ${index + 1}`;
-
-      //     const groupHead = document.createElement("div");
-      //     groupHead.classList.add("grouphead");
-      //     group.appendChild(groupHead);
-
-      //     const h2 = document.createElement("h2");
-      //     h2.textContent = `Group ${index + 1}`;
-      //     groupHead.appendChild(h2);
-
-      //     const randomButton = document.createElement("button");
-      //     randomButton.textContent = "Random";
-      //     randomButton.classList.add("greenbtn");
-      //     randomButton.onclick = () => randomizeGroup(group.id);
-      //     groupHead.appendChild(randomButton);
-
-      //     const resetButton = document.createElement("button");
-      //     resetButton.textContent = "Reset";
-      //     resetButton.classList.add("redbtn");
-      //     resetButton.onclick = () => resetGroup(group.id);
-      //     groupHead.appendChild(resetButton);
-
-      //     const wordListContainer = document.createElement("ul");
-      //     wordListContainer.id = `word-list-${index + 1}`;
-
-      //     chunk.forEach((wordObj) => {
-      //       const li = document.createElement("li");
-      //       li.textContent = wordObj.word;
-      //       li.onclick = () => showDetails(wordObj);
-      //       wordListContainer.appendChild(li);
-      //     });
-
-      //     group.appendChild(wordListContainer);
-      //     groupsContainer.appendChild(group);
-      //   });
-
-      //   // Update visible groups after they are created
-      //   updateVisibleGroups();
-      // }
-
       function updateVocabularyList() {
         const groupsContainer = document.getElementById("groups-container");
         groupsContainer.innerHTML = "";
 
         const wordChunks = chunkVocabulary(vocabulary, 30);
-
         wordChunks.forEach((chunk, index) => {
           const group = document.createElement("div");
           group.classList.add("group");
           group.id = `Group ${index + 1}`;
-
-          // Store original words for reset
-          group.originalWords = chunk;
+          group.originalWords = chunk.map((word) => ({ ...word })); // Store a copy of the original word list
+          group.currentWords = [...group.originalWords]; // Copy of current words for randomization
 
           const groupHead = document.createElement("div");
           groupHead.classList.add("grouphead");
@@ -301,13 +267,13 @@
           const randomButton = document.createElement("button");
           randomButton.textContent = "Random";
           randomButton.classList.add("greenbtn");
-          randomButton.onclick = () => randomizeGroup(group.id);
+          randomButton.onclick = () => randomizeGroup(group);
           groupHead.appendChild(randomButton);
 
           const resetButton = document.createElement("button");
           resetButton.textContent = "Reset";
           resetButton.classList.add("redbtn");
-          resetButton.onclick = () => resetGroup(group.id);
+          resetButton.onclick = () => resetGroup(group);
           groupHead.appendChild(resetButton);
 
           const wordListContainer = document.createElement("ul");
@@ -316,109 +282,89 @@
           chunk.forEach((wordObj) => {
             const li = document.createElement("li");
             li.textContent = wordObj.word;
-            li.onclick = () => showDetails(wordObj);
+            li.onclick = () => openWordDetails(wordObj);
             wordListContainer.appendChild(li);
           });
 
           group.appendChild(wordListContainer);
           groupsContainer.appendChild(group);
         });
-
-        // Update visible groups after they are created
-        updateVisibleGroups();
       }
 
-      let currentWordObj = null;
-      let isMarked = false;
-
-      function showDetails(wordObj) {
-        currentWordObj = wordObj;
-        isMarked = false;
-        const liElement = Array.from(document.querySelectorAll("li")).find(
-          (li) => li.textContent === wordObj.word
-        );
-        if (liElement && liElement.classList.contains("word-red")) {
-          isMarked = true;
-          document.getElementById("mark-button").textContent = "Unmark";
-        } else {
-          document.getElementById("mark-button").textContent = "Mark";
-        }
-        document.getElementById("details-word").textContent = wordObj.word;
-        document.getElementById("details-meaning").textContent =
-          wordObj.meaning;
-        document.getElementById("details-synonyms").textContent =
-          wordObj.synonyms;
-        document.getElementById("details-antonyms").textContent =
-          wordObj.antonyms;
-        document.getElementById("word-details").style.display = "block";
-        document.getElementById("overlay").style.display = "block";
-      }
-
-      function closeDetails() {
-        document.getElementById("word-details").style.display = "none";
-        document.getElementById("overlay").style.display = "none";
-      }
-
-      function toggleMarkWord() {
-        const liElement = Array.from(document.querySelectorAll("li")).find(
-          (li) => li.textContent === currentWordObj.word
-        );
-        if (liElement) {
-          if (isMarked) {
-            liElement.classList.remove("word-red");
-            document.getElementById("mark-button").textContent = "Mark";
-            isMarked = false;
-          } else {
-            liElement.classList.add("word-red");
-            document.getElementById("mark-button").textContent = "Unmark";
-            isMarked = true;
-          }
-        }
-      }
-
-      function randomizeGroup(groupId) {
-        const wordListContainer = document
-          .getElementById(groupId)
-          .querySelector("ul");
-        const words = Array.from(wordListContainer.children);
-        for (let i = words.length - 1; i > 0; i--) {
-          const j = Math.floor(Math.random() * (i + 1));
-          wordListContainer.appendChild(words[j]);
-        }
-      }
-
-      function resetGroup(groupId) {
-        const group = document.getElementById(groupId);
-        const wordListContainer = group.querySelector("ul");
-
-        // Get the original order of words stored in the group
-        const originalWords = group.originalWords;
-
-        // Clear the current list
-        wordListContainer.innerHTML = "";
-
-        // Append the words back in the original order
-        originalWords.forEach((wordObj) => {
-          const li = document.createElement("li");
-          li.textContent = wordObj.word;
-          li.onclick = () => showDetails(wordObj);
-          wordListContainer.appendChild(li);
-        });
-      }
-
-      // Function to update the visible groups based on user selection
       function updateVisibleGroups() {
         const selectedValue = document.getElementById("group-selector").value;
-        const groupsContainer = document.getElementById("groups-container");
-        const groups = groupsContainer.querySelectorAll(".group");
-
-        groups.forEach((group, index) => {
-          if (selectedValue === "all" || index < parseInt(selectedValue)) {
+        const allGroups = document.querySelectorAll(".group");
+        allGroups.forEach((group, index) => {
+          if (selectedValue === "all" || index < selectedValue) {
             group.style.display = "block";
           } else {
             group.style.display = "none";
           }
         });
+      }
+
+      function randomizeAllGroups() {
+        const allGroups = document.querySelectorAll(".group");
+        allGroups.forEach(randomizeGroup);
+      }
+
+      function resetAllGroups() {
+        const allGroups = document.querySelectorAll(".group");
+        allGroups.forEach((group) => resetGroup(group));
+      }
+
+      function randomizeGroup(group) {
+        const listItems = group.querySelectorAll("li");
+        const words = group.currentWords; // Use currentWords for randomization
+
+        // Shuffle words
+        words.sort(() => Math.random() - 0.5);
+        listItems.forEach((li, index) => {
+          li.textContent = words[index].word;
+        });
+      }
+
+      function resetGroup(group) {
+        const wordList = group.querySelector("ul");
+        wordList.innerHTML = "";
+        group.originalWords.forEach((wordObj) => {
+          const li = document.createElement("li");
+          li.textContent = wordObj.word;
+          li.onclick = () => openWordDetails(wordObj);
+          wordList.appendChild(li);
+        });
+        group.currentWords = [...group.originalWords]; // Reset currentWords back to original
+      }
+
+      function openWordDetails(wordObj) {
+        const overlay = document.getElementById("overlay");
+        const wordDetails = document.getElementById("word-details");
+        const detailsWord = document.getElementById("details-word");
+        const detailsMeaning = document.getElementById("details-meaning");
+        const detailsSynonyms = document.getElementById("details-synonyms");
+        const detailsAntonyms = document.getElementById("details-antonyms");
+
+        detailsWord.textContent = wordObj.word;
+        detailsMeaning.textContent = wordObj.meaning;
+        detailsSynonyms.textContent = wordObj.synonyms.join(", ");
+        detailsAntonyms.textContent = wordObj.antonyms.join(", ");
+
+        overlay.style.display = "block";
+        wordDetails.style.display = "block";
+      }
+
+      function closeDetails() {
+        const overlay = document.getElementById("overlay");
+        const wordDetails = document.getElementById("word-details");
+
+        overlay.style.display = "none";
+        wordDetails.style.display = "none";
+      }
+
+      function toggleMarkWord() {
+        const markButton = document.getElementById("mark-button");
+        markButton.textContent =
+          markButton.textContent === "Mark" ? "Unmark" : "Mark";
       }
     </script>
   </body>
