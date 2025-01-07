@@ -1,0 +1,778 @@
+{
+  "vocabulary": [
+    {
+      "word": "abound",
+      "meaning": "be present in large quantities",
+      "synonyms": "flourish, teem, swarm, proliferate",
+      "antonyms": "lack, scarce"
+    },
+    {
+      "word": "amorphous",
+      "meaning": "lacking structure; unclear",
+      "synonyms": "shapeless, formless, unstructured",
+      "antonyms": "structured, defined, shaped"
+    },
+    {
+      "word": "austere",
+      "meaning": "(of a person) strict and stern in character; (of living conditions) lacking luxury; extremely harsh",
+      "synonyms": "severe, stern, harsh, strict",
+      "antonyms": "luxurious, lenient, gentle"
+    },
+    {
+      "word": "belie",
+      "meaning": "give a false impression",
+      "synonyms": "mislead, contradict",
+      "antonyms": "reveal, reflect"
+    },
+    {
+      "word": "capricious",
+      "meaning": "having varying moods; fickle",
+      "synonyms": "whimsical, erratic, unpredictable",
+      "antonyms": "consistent, stable"
+    },
+    {
+      "word": "cerebral",
+      "meaning": "1. related to the brain; 2. intellectual; focused on learning rather than emotion",
+      "synonyms": "",
+      "antonyms": ""
+    },
+    {
+      "word": "congenial",
+      "meaning": "1. (of a person) likable and friendly, often due to shared interests; 2. (of a thing) enjoyable because it aligns with one's tendencies",
+      "synonyms": "friendly, pleasant, agreeable",
+      "antonyms": "unpleasant, disagreeable"
+    },
+    {
+      "word": "conspicuous",
+      "meaning": "easily noticed; obvious",
+      "synonyms": "obvious, noticeable, evident",
+      "antonyms": "hidden, inconspicuous"
+    },
+    {
+      "word": "cursory",
+      "meaning": "lacking effort; without care",
+      "synonyms": "superficial, hasty, brief",
+      "antonyms": "thorough, detailed, meticulous"
+    },
+    {
+      "word": "daunting",
+      "meaning": "scary or frightening; (of a task) seeming impossible",
+      "synonyms": "intimidating, overwhelming, discouraging",
+      "antonyms": "encouraging, manageable"
+    },
+    {
+      "word": "deify",
+      "meaning": "look up to someone or something as a god",
+      "synonyms": "idolize, worship, revere",
+      "antonyms": "criticize, despise"
+    },
+    {
+      "word": "didactic",
+      "meaning": "meant for teaching; educational, sometimes in a condescending manner",
+      "synonyms": "instructive, educational, pedagogical",
+      "antonyms": ""
+    },
+    {
+      "word": "disseminate",
+      "meaning": "distribute or circulate broadly",
+      "synonyms": "spread, propagate, diffuse",
+      "antonyms": "contain, withhold"
+    },
+    {
+      "word": "feasible",
+      "meaning": "likely to be achieved; practical",
+      "synonyms": "possible, achievable, workable",
+      "antonyms": "impractical, impossible"
+    },
+    {
+      "word": "flout",
+      "meaning": "break a rule without guilt",
+      "synonyms": "defy, disobey, violate",
+      "antonyms": "observe, comply"
+    },
+    {
+      "word": "homogeneous",
+      "meaning": "composed of similar parts; alike",
+      "synonyms": "uniform, consistent, similar",
+      "antonyms": "heterogeneous, diverse"
+    },
+    {
+      "word": "humdrum",
+      "meaning": "boring; unlikely to excite",
+      "synonyms": "dull, monotonous, mundane",
+      "antonyms": "exciting, dynamic"
+    },
+    {
+      "word": "insipid",
+      "meaning": "without flavor; lacking energy",
+      "synonyms": "bland, tasteless, uninspired",
+      "antonyms": "flavorful, interesting"
+    },
+    {
+      "word": "loquacious",
+      "meaning": "likely to talk a lot; wordy",
+      "synonyms": "talkative, chatty, verbose",
+      "antonyms": "taciturn, reticent"
+    },
+    {
+      "word": "misanthropic",
+      "meaning": "having a distaste for humans and society",
+      "synonyms": "antisocial, cynical",
+      "antonyms": "sociable, philanthropic"
+    },
+    {
+      "word": "misnomer",
+      "meaning": "a misleading or inaccurate name",
+      "synonyms": "mislabel, misnaming",
+      "antonyms": ""
+    },
+    {
+      "word": "negligent",
+      "meaning": "lacking care or attention",
+      "synonyms": "careless, inattentive, neglectful",
+      "antonyms": "careful, attentive"
+    },
+    {
+      "word": "obsequious",
+      "meaning": "excessively submissive to authority",
+      "synonyms": "servile, sycophantic, fawning",
+      "antonyms": "assertive, defiant"
+    },
+    {
+      "word": "placate",
+      "meaning": "decrease someone's anger or other negative emotion",
+      "synonyms": "pacify, appease, soothe",
+      "antonyms": "provoke, irritate"
+    },
+    {
+      "word": "proclivity",
+      "meaning": "a fondness or liking for something",
+      "synonyms": "inclination, tendency, propensity",
+      "antonyms": ""
+    },
+    {
+      "word": "puerile",
+      "meaning": "immature and childish",
+      "synonyms": "juvenile, infantile, naive",
+      "antonyms": "mature, adult"
+    },
+    {
+      "word": "quixotic",
+      "meaning": "excessively visionary; unfeasible",
+      "synonyms": "idealistic, impractical, romantic",
+      "antonyms": "realistic, practical"
+    },
+    {
+      "word": "spendthrift",
+      "meaning": "someone who spends money recklessly",
+      "synonyms": "prodigal, squanderer, waster",
+      "antonyms": "frugal, saver"
+    },
+    {
+      "word": "taciturn",
+      "meaning": "of few words; speaking little",
+      "synonyms": "reserved, silent, reticent",
+      "antonyms": "talkative, loquacious"
+    },
+    {
+      "word": "wary",
+      "meaning": "exercising caution; careful",
+      "synonyms": "cautious, alert, vigilant",
+      "antonyms": "careless, reckless"
+    },
+    {
+      "word": "adulterate",
+      "meaning": "damage the quality of; corrupt",
+      "synonyms": "contaminate, dilute, degrade",
+      "antonyms": "purify, refine"
+    },
+    {
+      "word": "advocate",
+      "meaning": "support; be in favor of",
+      "synonyms": "supporter, proponent, champion",
+      "antonyms": "opponent, critic"
+    },
+    {
+      "word": "aggrandize",
+      "meaning": "enhance one's power or standing",
+      "synonyms": "magnify, glorify, elevate",
+      "antonyms": "demean, belittle"
+    },
+    {
+      "word": "alacrity",
+      "meaning": "eagerness to do something",
+      "synonyms": "readiness, enthusiasm, willingness",
+      "antonyms": "reluctance, hesitation"
+    },
+    {
+      "word": "ambivalent",
+      "meaning": "having conflicting emotions; unsure",
+      "synonyms": "uncertain, hesitant, conflicted",
+      "antonyms": "decisive, resolved"
+    },
+    {
+      "word": "ameliorate",
+      "meaning": "improve a bad feeling or bad situation",
+      "synonyms": "improve, enhance, mitigate",
+      "antonyms": "worsen, exacerbate"
+    },
+    {
+      "word": "amenable",
+      "meaning": "(of a person) receptive to change; open; (of a thing) responsive to",
+      "synonyms": "compliant, agreeable, responsive",
+      "antonyms": "uncooperative, resistant"
+    },
+    {
+      "word": "anachronistic",
+      "meaning": "of the wrong time or era",
+      "synonyms": "outdated, antiquated, misplaced",
+      "antonyms": "timely, contemporary"
+    },
+    {
+      "word": "audacious",
+      "meaning": "1. bold; unafraid of risks; 2. rude; exhibiting disrespect",
+      "synonyms": "daring, brazen, fearless",
+      "antonyms": "timid, cautious"
+    },
+    {
+      "word": "avaricious",
+      "meaning": "greedy; always wanting more",
+      "synonyms": "covetous, materialistic, grasping",
+      "antonyms": "generous, selfless"
+    },
+    {
+      "word": "banal",
+      "meaning": "unoriginal and dull; lacking creativity",
+      "synonyms": "trite, clichéd, ordinary",
+      "antonyms": "innovative, fresh"
+    },
+    {
+      "word": "benign",
+      "meaning": "1. harmless; having little effect; 2. (of a person's character) kind-hearted; nice",
+      "synonyms": "kind, gentle, benevolent",
+      "antonyms": "harmful, malevolent"
+    },
+    {
+      "word": "brazen",
+      "meaning": "shameless and excessively forward",
+      "synonyms": "bold, audacious, impudent",
+      "antonyms": "modest, timid"
+    },
+    {
+      "word": "calumny",
+      "meaning": "slander and defamation",
+      "synonyms": "libel, falsehood, slur",
+      "antonyms": "praise, compliment"
+    },
+    {
+      "word": "candid",
+      "meaning": "honest; without deception",
+      "synonyms": "frank, sincere, truthful",
+      "antonyms": "dishonest, deceitful"
+    },
+    {
+      "word": "castigate",
+      "meaning": "scold someone harshly",
+      "synonyms": "reprimand, chastise, berate",
+      "antonyms": "praise, commend"
+    },
+    {
+      "word": "caustic",
+      "meaning": "1. (of speech) hostile and bitter; 2. (of a chemical) corrosive; acidic",
+      "synonyms": "sarcastic, scathing, abrasive",
+      "antonyms": "mild, gentle"
+    },
+    {
+      "word": "construe",
+      "meaning": "understand something subjectively",
+      "synonyms": "interpret, explain, deduce",
+      "antonyms": "misinterpret, misunderstand"
+    },
+    {
+      "word": "contrite",
+      "meaning": "feeling regretful or guilty",
+      "synonyms": "remorseful, penitent, repentant",
+      "antonyms": "unrepentant, indifferent"
+    },
+    {
+      "word": "convoluted",
+      "meaning": "difficult to understand or follow",
+      "synonyms": "complex, intricate, complicated",
+      "antonyms": "simple, straightforward"
+    },
+    {
+      "word": "covet",
+      "meaning": "strongly desire; yearn for",
+      "synonyms": "crave, envy, desire",
+      "antonyms": "reject, spurn"
+    },
+    {
+      "word": "craven",
+      "meaning": "lacking bravery; weak-kneed",
+      "synonyms": "cowardly, timid, spineless",
+      "antonyms": "brave, courageous"
+    },
+    {
+      "word": "decorum",
+      "meaning": "politeness and proper behavior",
+      "synonyms": "propriety, etiquette, civility",
+      "antonyms": "rudeness, impropriety"
+    },
+    {
+      "word": "deft",
+      "meaning": "highly proficient; skilled",
+      "synonyms": "adept, nimble, dexterous",
+      "antonyms": "clumsy, inept"
+    },
+    {
+      "word": "demur",
+      "meaning": "1. hesitate or object; express doubt; 2. hesitation",
+      "synonyms": "object, protest, balk",
+      "antonyms": "agree, accept"
+    },
+    {
+      "word": "derivative",
+      "meaning": "based on someone else's work (often used in a negative sense)",
+      "synonyms": "copied, unoriginal, imitative",
+      "antonyms": "original, unique"
+    },
+    {
+      "word": "desiccate",
+      "meaning": "dry out; remove all moisture",
+      "synonyms": "dehydrate, parch, wither",
+      "antonyms": "moisten, hydrate"
+    },
+    {
+      "word": "diatribe",
+      "meaning": "an angry rant; verbal abuse",
+      "synonyms": "tirade, harangue, invective",
+      "antonyms": "praise, compliment"
+    },
+    {
+      "word": "incredulous",
+      "meaning": "doubtful and disbelieving",
+      "synonyms": "skeptical, dubious, suspicious",
+      "antonyms": "credulous, trusting"
+    },
+    {
+      "word": "ingenuous",
+      "meaning": "naive and lacking experience",
+      "synonyms": "innocent, guileless, sincere",
+      "antonyms": "cunning, sophisticated"
+    },
+    {
+      "word": "abate",
+      "meaning": "decrease in intensity; lessen",
+      "synonyms": "diminish, subside, reduce",
+      "antonyms": "increase, intensify"
+    },
+    {
+      "word": "abjure",
+      "meaning": "strongly reject (an idea); forgo",
+      "synonyms": "renounce, repudiate, disavow",
+      "antonyms": "embrace, accept"
+    },
+    {
+      "word": "anomalous",
+      "meaning": "differing from what is normal; atypical",
+      "synonyms": "abnormal, irregular, unusual",
+      "antonyms": "normal, standard"
+    },
+    {
+      "word": "antipathy",
+      "meaning": "profound hostility or hatred",
+      "synonyms": "aversion, animosity, enmity",
+      "antonyms": "affection, friendliness"
+    },
+    {
+      "word": "arcane",
+      "meaning": "comprehended by very few people; secret",
+      "synonyms": "mysterious, esoteric, obscure",
+      "antonyms": "clear, accessible"
+    },
+    {
+      "word": "arduous",
+      "meaning": "very challenging; needing great effort",
+      "synonyms": "strenuous, difficult, demanding",
+      "antonyms": "easy, effortless"
+    },
+    {
+      "word": "artless",
+      "meaning": "1. naive; inexperienced; 2. plain and simple; 3. lacking skill",
+      "synonyms": "guileless, unsophisticated, unrefined",
+      "antonyms": "sophisticated, refined"
+    },
+    {
+      "word": "ascetic",
+      "meaning": "1. (of a lifestyle) very strict and lacking luxury; 2. someone who adopts an ascetic lifestyle",
+      "synonyms": "austere, disciplined, abstinent",
+      "antonyms": "hedonistic, indulgent"
+    },
+    {
+      "word": "assuage",
+      "meaning": "1. decrease a negative feeling; 2. fulfill a certain desire",
+      "synonyms": "alleviate, soothe, mitigate",
+      "antonyms": "aggravate, intensify"
+    },
+    {
+      "word": "betray",
+      "meaning": "unknowingly disclose or reveal",
+      "synonyms": "expose, reveal, divulge",
+      "antonyms": "conceal, protect"
+    },
+    {
+      "word": "bucolic",
+      "meaning": "associated with tranquil rural life",
+      "synonyms": "rustic, pastoral, countryside",
+      "antonyms": "urban, metropolitan"
+    },
+    {
+      "word": "burgeon",
+      "meaning": "quickly increase or grow; skyrocket",
+      "synonyms": "flourish, thrive, expand",
+      "antonyms": "decline, wither"
+    },
+    {
+      "word": "cacophonous",
+      "meaning": "extremely noisy; grating",
+      "synonyms": "discordant, jarring, dissonant",
+      "antonyms": "harmonious, melodious"
+    },
+    {
+      "word": "canonize",
+      "meaning": "treat like a god; deeply venerate",
+      "synonyms": "glorify, exalt, sanctify",
+      "antonyms": "denounce, condemn"
+    },
+    {
+      "word": "censure",
+      "meaning": "strongly criticize or disapprove",
+      "synonyms": "reprimand, rebuke, reproach",
+      "antonyms": "praise, commend"
+    },
+    {
+      "word": "chicanery",
+      "meaning": "using deception to attain a certain goal",
+      "synonyms": "trickery, deceit, fraud",
+      "antonyms": "honesty, integrity"
+    },
+    {
+      "word": "coalesce",
+      "meaning": "bring elements together; unite",
+      "synonyms": "merge, combine, fuse",
+      "antonyms": "separate, divide"
+    },
+    {
+      "word": "cogent",
+      "meaning": "persuasive and clear; compelling",
+      "synonyms": "convincing, logical, forceful",
+      "antonyms": "unconvincing, weak"
+    },
+    {
+      "word": "compelling",
+      "meaning": "1. persuasive and clear; 2. attracting interest; fascinating",
+      "synonyms": "captivating, enthralling, riveting",
+      "antonyms": "boring, uninteresting"
+    },
+    {
+      "word": "contend",
+      "meaning": "1. argue a certain point of view; assert; 2. compete; 3. struggle or attempt to overcome something",
+      "synonyms": "assert, compete, vie",
+      "antonyms": "yield, concede"
+    },
+    {
+      "word": "copious",
+      "meaning": "existing in great supply; abundant",
+      "synonyms": "plentiful, ample, profuse",
+      "antonyms": "scarce, sparse"
+    },
+    {
+      "word": "cosmopolitan",
+      "meaning": "1. (of a city) highly diverse; 2. (of a person) sophisticated and urbane",
+      "synonyms": "worldly, cultured, refined",
+      "antonyms": "provincial, parochial"
+    },
+    {
+      "word": "deference",
+      "meaning": "high regard and respect; esteem",
+      "synonyms": "respect, reverence, submission",
+      "antonyms": "disrespect, defiance"
+    },
+    {
+      "word": "desultory",
+      "meaning": "unplanned; without enthusiasm",
+      "synonyms": "aimless, haphazard, random",
+      "antonyms": "methodical, purposeful"
+    },
+    {
+      "word": "diffident",
+      "meaning": "reserved or shy; without confidence",
+      "synonyms": "timid, self-conscious, bashful",
+      "antonyms": "confident, assertive"
+    },
+    {
+      "word": "dilatory",
+      "meaning": "slow and unhurried; meant to stall",
+      "synonyms": "tardy, procrastinating, delaying",
+      "antonyms": "prompt, expedient"
+    },
+    {
+      "word": "equivocate",
+      "meaning": "speak evasively; avoid taking a stance",
+      "synonyms": "hedge, prevaricate, dodge",
+      "antonyms": "be direct, clarify"
+    },
+    {
+      "word": "polarize",
+      "meaning": "separate into two opposing groups",
+      "synonyms": "divide, split, alienate",
+      "antonyms": "unite, harmonize"
+    },
+    {
+      "word": "prodigal",
+      "meaning": "1. carelessly wasteful; extravagant; 2. a person who is excessively wasteful",
+      "synonyms": "lavish, spendthrift, wasteful",
+      "antonyms": "frugal, economical"
+    },
+    {
+      "word": "verbose",
+      "meaning": "excessively talkative; wordy",
+      "synonyms": "long-winded, loquacious, garrulous",
+      "antonyms": "concise, succinct"
+    },
+    {
+      "word": "abstain",
+      "meaning": "avoid taking part in something",
+      "synonyms": "refrain, withhold, avoid",
+      "antonyms": "indulge, participate"
+    },
+    {
+      "word": "approbation",
+      "meaning": "appreciation toward someone",
+      "synonyms": "approval, praise, commendation",
+      "antonyms": "criticism, disapproval"
+    },
+    {
+      "word": "cherish",
+      "meaning": "greatly love or protect something",
+      "synonyms": "treasure, adore, appreciate",
+      "antonyms": "neglect, despise"
+    },
+    {
+      "word": "corroborate",
+      "meaning": "lend support to; bolster",
+      "synonyms": "confirm, validate, verify",
+      "antonyms": "disprove, refute"
+    },
+    {
+      "word": "disparate",
+      "meaning": "different or contrasting",
+      "synonyms": "divergent, dissimilar, distinct",
+      "antonyms": "similar, uniform"
+    },
+    {
+      "word": "emulate",
+      "meaning": "imitate someone or something",
+      "synonyms": "copy, mimic, follow",
+      "antonyms": ""
+    },
+    {
+      "word": "enervate",
+      "meaning": "sap the energy out of someone; fatigue",
+      "synonyms": "weaken, exhaust, debilitate",
+      "antonyms": "energize, invigorate"
+    },
+    {
+      "word": "ephemeral",
+      "meaning": "extremely short-lasting",
+      "synonyms": "transient, fleeting, momentary",
+      "antonyms": "permanent, enduring"
+    },
+    {
+      "word": "fervid",
+      "meaning": "excessively energetic or eager",
+      "synonyms": "passionate, fervent, zealous",
+      "antonyms": "apathetic, indifferent"
+    },
+    {
+      "word": "garrulous",
+      "meaning": "tending to talk too much; wordy",
+      "synonyms": "talkative, loquacious, verbose",
+      "antonyms": "taciturn, reticent"
+    },
+    {
+      "word": "incendiary",
+      "meaning": "provocative; causing conflict",
+      "synonyms": "inflammatory, provocative, contentious",
+      "antonyms": "calming, soothing"
+    },
+    {
+      "word": "inimical",
+      "meaning": "damaging; hostile in manner or tone",
+      "synonyms": "harmful, antagonistic, adverse",
+      "antonyms": "friendly, beneficial"
+    },
+    {
+      "word": "intimate",
+      "meaning": "subtly suggest or imply",
+      "synonyms": "hint, suggest, imply",
+      "antonyms": "state explicitly, declare"
+    },
+    {
+      "word": "invigorate",
+      "meaning": "provide energy or vitality to",
+      "synonyms": "energize, rejuvenate, refresh",
+      "antonyms": "weaken, exhaust"
+    },
+    {
+      "word": "mitigate",
+      "meaning": "diminish negative feelings or situation",
+      "synonyms": "alleviate, lessen, reduce",
+      "antonyms": "aggravate, worsen"
+    },
+    {
+      "word": "obsolete",
+      "meaning": "no longer useful; outmoded",
+      "synonyms": "outdated, antiquated, archaic",
+      "antonyms": "modern, current"
+    },
+    {
+      "word": "opaque",
+      "meaning": "1. unclear; hard to comprehend; 2. not able to be seen through",
+      "synonyms": "obscure, dense, impenetrable",
+      "antonyms": "transparent, clear"
+    },
+    {
+      "word": "paradigmatic",
+      "meaning": "representing the standard example",
+      "synonyms": "typical, exemplary, standard",
+      "antonyms": "atypical, unconventional"
+    },
+    {
+      "word": "pedantic",
+      "meaning": "overly concerned with (minor) details",
+      "synonyms": "precise, meticulous, academic",
+      "antonyms": "informal, careless"
+    },
+    {
+      "word": "placid",
+      "meaning": "calm; free from activity or irritation",
+      "synonyms": "serene, tranquil, peaceful",
+      "antonyms": "agitated, turbulent"
+    },
+    {
+      "word": "polemical",
+      "meaning": "giving a strong, controversial opinion",
+      "synonyms": "argumentative, contentious, combative",
+      "antonyms": "conciliatory, agreeable"
+    },
+    {
+      "word": "precipitate",
+      "meaning": "1. cause to happen; 2. done quickly or suddenly",
+      "synonyms": "trigger, hasten, impulsive",
+      "antonyms": "deliberate, gradual"
+    },
+    {
+      "word": "profundity",
+      "meaning": "great wisdom or intelligence",
+      "synonyms": "depth, insight, understanding",
+      "antonyms": "shallowness, ignorance"
+    },
+    {
+      "word": "prophetic",
+      "meaning": "able to correctly predict the future",
+      "synonyms": "predictive, prescient, visionary",
+      "antonyms": "unforeseeing"
+    },
+    {
+      "word": "prudent",
+      "meaning": "wise in decision-making",
+      "synonyms": "sensible, judicious, cautious",
+      "antonyms": "reckless, imprudent"
+    },
+    {
+      "word": "punctilious",
+      "meaning": "highly concerned with details or manners",
+      "synonyms": "meticulous, scrupulous, conscientious",
+      "antonyms": "careless, casual"
+    },
+    {
+      "word": "recondite",
+      "meaning": "obscure and difficult to understand",
+      "synonyms": "esoteric, abstruse, arcane",
+      "antonyms": "simple, obvious"
+    },
+    {
+      "word": "scrupulous",
+      "meaning": "1. careful with details; 2. possessing moral integrity",
+      "synonyms": "thorough, ethical, meticulous",
+      "antonyms": "careless, unscrupulous"
+    },
+    {
+      "word": "tranquil",
+      "meaning": "peaceful; free from activity",
+      "synonyms": "calm, serene, placid",
+      "antonyms": "chaotic, agitated"
+    },
+    {
+      "word": "vacillate",
+      "meaning": "go back and forth with one's view",
+      "synonyms": "waver, oscillate, fluctuate",
+      "antonyms": "decide, resolve"
+    },
+    {
+      "word": "aloof",
+      "meaning": "not warm or friendly; impersonal",
+      "synonyms": "distant, detached, reserved",
+      "antonyms": "friendly, approachable"
+    },
+    {
+      "word": "clangor",
+      "meaning": "a disturbingly loud noise",
+      "synonyms": "din, clatter, racket",
+      "antonyms": "silence, hush"
+    },
+    {
+      "word": "conventional",
+      "meaning": "adhering to established practices or accepted standards",
+      "synonyms": "traditional, customary, orthodox",
+      "antonyms": "unconventional, avant-garde"
+    },
+    {
+      "word": "debunk",
+      "meaning": "prove a belief or idea false",
+      "synonyms": "disprove, refute, invalidate",
+      "antonyms": "validate, confirm"
+    },
+    {
+      "word": "diminutive",
+      "meaning": "exceptionally small in size or stature",
+      "synonyms": "tiny, miniature, petite",
+      "antonyms": "large, immense"
+    },
+    {
+      "word": "discernible",
+      "meaning": "able to be recognized or understood",
+      "synonyms": "perceptible, noticeable, detectable",
+      "antonyms": "indistinct, imperceptible"
+    },
+    {
+      "word": "enigmatic",
+      "meaning": "hard to understand; mysterious",
+      "synonyms": "puzzling, cryptic, ambiguous",
+      "antonyms": "clear, straightforward"
+    },
+    {
+      "word": "estranged",
+      "meaning": "emotionally distanced from someone",
+      "synonyms": "alienated, separated, detached",
+      "antonyms": "reconciled, connected"
+    },
+    {
+      "word": "extravagant",
+      "meaning": "excessive, especially in terms of cost",
+      "synonyms": "lavish, exorbitant, luxurious",
+      "antonyms": "frugal, economical"
+    }
+  ]
+}
