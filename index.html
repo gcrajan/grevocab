@@ -212,9 +212,9 @@
     <div class="word-details" id="word-details">
       <div class="word-details-info">
         <div>
-          <button id="mark-button" onclick="toggleMarkWord()" class="greenbtn">
+          <!-- <button id="mark-button" onclick="toggleMarkWord()" class="greenbtn">
             Mark
-          </button>
+          </button> -->
           <button onclick="closeDetails()" class="redbtn right">Close</button>
         </div>
         <h3 id="details-word" class="title"></h3>
@@ -346,13 +346,18 @@
       }
 
       function randomizeGroup(group) {
-        const listItems = group.querySelectorAll("li");
-        const words = group.currentWords; // Use currentWords for randomization
+        // Shuffle the currentWords array
+        group.currentWords.sort(() => Math.random() - 0.5);
 
-        // Shuffle words
-        words.sort(() => Math.random() - 0.5);
-        listItems.forEach((li, index) => {
-          li.textContent = words[index].word;
+        // Update the group's word list UI
+        const wordListContainer = group.querySelector("ul");
+        wordListContainer.innerHTML = ""; // Clear the current list
+
+        group.currentWords.forEach((wordObj) => {
+          const li = document.createElement("li");
+          li.textContent = wordObj.word;
+          li.onclick = () => openWordDetails(wordObj, li); // Pass both the word object and its list item
+          wordListContainer.appendChild(li);
         });
       }
 
@@ -368,20 +373,27 @@
         group.currentWords = [...group.originalWords]; // Reset currentWords back to original
       }
 
-      function openWordDetails(wordObj) {
+      function openWordDetails(wordObj, listItem) {
         const overlay = document.getElementById("overlay");
         const wordDetails = document.getElementById("word-details");
-        const detailsWord = document.getElementById("details-word");
-        const detailsMeaning = document.getElementById("details-meaning");
-        const detailsSynonyms = document.getElementById("details-synonyms");
-        const detailsAntonyms = document.getElementById("details-antonyms");
 
-        detailsWord.textContent = wordObj.word;
-        detailsMeaning.textContent = wordObj.meaning;
+        // Display the word details in the modal
+        document.getElementById("details-word").textContent = wordObj.word;
+        document.getElementById("details-meaning").textContent =
+          wordObj.meaning;
+        document.getElementById("details-synonyms").textContent =
+          wordObj.synonyms;
+        document.getElementById("details-antonyms").textContent =
+          wordObj.antonyms;
 
-        detailsSynonyms.textContent = wordObj.synonyms;
-        detailsAntonyms.textContent = wordObj.antonyms;
+        // Save reference to the selected list item for toggling mark/unmark
+        console.log(listItem);
+        console.log(wordDetails.currentListItem);
+        console.log("------");
 
+        wordDetails.currentListItem = listItem;
+
+        // Show modal and overlay
         overlay.style.display = "block";
         wordDetails.style.display = "block";
       }
@@ -394,10 +406,30 @@
         wordDetails.style.display = "none";
       }
 
+      let markedWordElement = null; // Keep track of the currently marked word
+
       function toggleMarkWord() {
         const markButton = document.getElementById("mark-button");
-        markButton.textContent =
-          markButton.textContent === "Mark" ? "Unmark" : "Mark";
+        const detailsWord = document.getElementById("details-word");
+
+        if (markedWordElement) {
+          // If there is a marked word, unmark it
+          markedWordElement.classList.remove("word-red");
+          markedWordElement = null;
+          markButton.textContent = "Mark";
+        } else {
+          // Find the word in the vocabulary list and mark it
+          const wordToMark = detailsWord.textContent;
+          const wordElement = Array.from(document.querySelectorAll("li")).find(
+            (li) => li.textContent === wordToMark
+          );
+
+          if (wordElement) {
+            wordElement.classList.add("word-red");
+            markedWordElement = wordElement;
+            markButton.textContent = "Unmark";
+          }
+        }
       }
     </script>
   </body>
