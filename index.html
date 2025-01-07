@@ -304,8 +304,40 @@
       }
 
       function randomizeAllGroups() {
-        const allGroups = document.querySelectorAll(".group");
-        allGroups.forEach(randomizeGroup);
+        const selectedGroups = Array.from(
+          document.querySelectorAll(".group")
+        ).filter((group) => group.style.display !== "none");
+
+        // Step 1: Gather words from all selected groups
+        const allWords = [];
+        selectedGroups.forEach((group) => {
+          group.currentWords.forEach((word) => {
+            allWords.push(word); // Collect words from each group
+          });
+        });
+
+        // Step 2: Shuffle the words
+        allWords.sort(() => Math.random() - 0.5);
+
+        // Step 3: Distribute shuffled words back into selected groups
+        let wordIndex = 0;
+        selectedGroups.forEach((group) => {
+          const wordListContainer = group.querySelector("ul");
+          wordListContainer.innerHTML = ""; // Clear current list
+          const groupSize = group.currentWords.length;
+
+          // Assign shuffled words to the group
+          for (let i = 0; i < groupSize; i++) {
+            const wordObj = allWords[wordIndex++];
+            const li = document.createElement("li");
+            li.textContent = wordObj.word;
+            li.onclick = () => openWordDetails(wordObj);
+            wordListContainer.appendChild(li);
+          }
+
+          // Update the current words of the group
+          group.currentWords = group.originalWords.slice(0, groupSize); // Reset to original state if needed
+        });
       }
 
       function resetAllGroups() {
