@@ -10,6 +10,7 @@
         background-color: #f9f9f9;
         margin: 0;
         padding: 20px;
+        position: relative;
       }
       h1 {
         text-align: center;
@@ -18,7 +19,7 @@
       .groups-container {
         display: flex;
         gap: 20px;
-        margin-top: 20px;
+        margin: 20px 0px;
         flex-wrap: wrap;
       }
       .group {
@@ -27,6 +28,11 @@
         background-color: #fff;
         min-width: 220px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      @media only screen and (max-width: 600px) {
+        .group {
+          width: 90vw;
+        }
       }
       .grouphead {
         display: flex;
@@ -60,34 +66,37 @@
       .word-red {
         color: red;
       }
-      .word-details {
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        width: 100vw;
-        height: 100vh;
-        background-color: #202414a1;
+
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(73, 72, 72, 0.747);
+        z-index: 999;
         display: none;
       }
-      .word-details-info {
-        position: absolute;
+
+      .word-details {
+        position: fixed;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 600px;
         background-color: #fff;
-        border: 2px solid #ccc;
-        z-index: 10;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        min-width: 50%;
-        overflow-y: auto;
-        max-height: 80%;
+        display: none;
+        z-index: 1000;
       }
-      @media only screen and (max-width: 600px) {
-        .word-details-info {
-          min-width: 80%;
-        }
+
+      .word-details-info {
+        position: relative;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        overflow-y: auto;
+        max-height: 90%;
       }
       .form-container {
         display: none;
@@ -104,12 +113,17 @@
         font-size: 2rem;
         color: #544545;
       }
-      .greenbtn {        
+      select {
+        padding: 5px;
+        margin-top: 20px;
+      }
+
+      .greenbtn {
         padding: 5px 10px;
         color: white;
         border: none;
         border-radius: 4px;
-        cursor: pointer;  
+        cursor: pointer;
         background-color: #28a745;
       }
       .greenbtn:hover {
@@ -133,23 +147,55 @@
     </style>
   </head>
   <body>
+    <div class="overlay" id="overlay"></div>
     <h1>GRE Vocabulary List</h1>
 
-    <div class="groups-container" id="groups-container">
-      <div class="group" id="Group 1">
-        <div class="grouphead">
-          <h2>Group 1</h2>
-          <button onclick="randomizeGroup('Group 1')">Random</button>
-          <button onclick="resetGroup('Group 1')">Reset</button>
-        </div>
-        <ul id="word-list"></ul>
-      </div>
-    </div>
+    <!-- Group Selector -->
+    <label for="group-selector">Select number of groups to show: </label>
+    <select id="group-selector" onchange="updateVisibleGroups()">
+      <option value="all">All</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+      <option value="16">16</option>
+      <option value="17">17</option>
+      <option value="18">18</option>
+      <option value="19">19</option>
+      <option value="20">20</option>
+      <option value="21">21</option>
+      <option value="22">22</option>
+      <option value="23">23</option>
+      <option value="24">24</option>
+      <option value="25">25</option>
+      <option value="26">26</option>
+      <option value="27">27</option>
+      <option value="28">28</option>
+      <option value="29">29</option>
+      <option value="30">30</option>
+      <option value="31">31</option>
+      <option value="32">32</option>
+    </select>
+
+    <div class="groups-container" id="groups-container"></div>
 
     <div class="word-details" id="word-details">
       <div class="word-details-info">
         <div>
-          <button id="mark-button" onclick="toggleMarkWord()" class="greenbtn">Mark</button>
+          <button id="mark-button" onclick="toggleMarkWord()" class="greenbtn">
+            Mark
+          </button>
           <button onclick="closeDetails()" class="redbtn right">Close</button>
         </div>
         <h3 id="details-word" class="title"></h3>
@@ -181,6 +227,55 @@
       }
 
       // Function to update the vocabulary list and create groups
+      // function updateVocabularyList() {
+      //   const groupsContainer = document.getElementById("groups-container");
+      //   groupsContainer.innerHTML = "";
+
+      //   const wordChunks = chunkVocabulary(vocabulary, 30);
+
+      //   wordChunks.forEach((chunk, index) => {
+      //     const group = document.createElement("div");
+      //     group.classList.add("group");
+      //     group.id = `Group ${index + 1}`;
+
+      //     const groupHead = document.createElement("div");
+      //     groupHead.classList.add("grouphead");
+      //     group.appendChild(groupHead);
+
+      //     const h2 = document.createElement("h2");
+      //     h2.textContent = `Group ${index + 1}`;
+      //     groupHead.appendChild(h2);
+
+      //     const randomButton = document.createElement("button");
+      //     randomButton.textContent = "Random";
+      //     randomButton.classList.add("greenbtn");
+      //     randomButton.onclick = () => randomizeGroup(group.id);
+      //     groupHead.appendChild(randomButton);
+
+      //     const resetButton = document.createElement("button");
+      //     resetButton.textContent = "Reset";
+      //     resetButton.classList.add("redbtn");
+      //     resetButton.onclick = () => resetGroup(group.id);
+      //     groupHead.appendChild(resetButton);
+
+      //     const wordListContainer = document.createElement("ul");
+      //     wordListContainer.id = `word-list-${index + 1}`;
+
+      //     chunk.forEach((wordObj) => {
+      //       const li = document.createElement("li");
+      //       li.textContent = wordObj.word;
+      //       li.onclick = () => showDetails(wordObj);
+      //       wordListContainer.appendChild(li);
+      //     });
+
+      //     group.appendChild(wordListContainer);
+      //     groupsContainer.appendChild(group);
+      //   });
+
+      //   // Update visible groups after they are created
+      //   updateVisibleGroups();
+      // }
+
       function updateVocabularyList() {
         const groupsContainer = document.getElementById("groups-container");
         groupsContainer.innerHTML = "";
@@ -191,6 +286,9 @@
           const group = document.createElement("div");
           group.classList.add("group");
           group.id = `Group ${index + 1}`;
+
+          // Store original words for reset
+          group.originalWords = chunk;
 
           const groupHead = document.createElement("div");
           groupHead.classList.add("grouphead");
@@ -225,6 +323,9 @@
           group.appendChild(wordListContainer);
           groupsContainer.appendChild(group);
         });
+
+        // Update visible groups after they are created
+        updateVisibleGroups();
       }
 
       let currentWordObj = null;
@@ -250,10 +351,12 @@
         document.getElementById("details-antonyms").textContent =
           wordObj.antonyms;
         document.getElementById("word-details").style.display = "block";
+        document.getElementById("overlay").style.display = "block";
       }
 
       function closeDetails() {
         document.getElementById("word-details").style.display = "none";
+        document.getElementById("overlay").style.display = "none";
       }
 
       function toggleMarkWord() {
@@ -280,15 +383,42 @@
         const words = Array.from(wordListContainer.children);
         for (let i = words.length - 1; i > 0; i--) {
           const j = Math.floor(Math.random() * (i + 1));
-          [words[i].textContent, words[j].textContent] = [
-            words[j].textContent,
-            words[i].textContent,
-          ];
+          wordListContainer.appendChild(words[j]);
         }
       }
 
       function resetGroup(groupId) {
-        updateVocabularyList();
+        const group = document.getElementById(groupId);
+        const wordListContainer = group.querySelector("ul");
+
+        // Get the original order of words stored in the group
+        const originalWords = group.originalWords;
+
+        // Clear the current list
+        wordListContainer.innerHTML = "";
+
+        // Append the words back in the original order
+        originalWords.forEach((wordObj) => {
+          const li = document.createElement("li");
+          li.textContent = wordObj.word;
+          li.onclick = () => showDetails(wordObj);
+          wordListContainer.appendChild(li);
+        });
+      }
+
+      // Function to update the visible groups based on user selection
+      function updateVisibleGroups() {
+        const selectedValue = document.getElementById("group-selector").value;
+        const groupsContainer = document.getElementById("groups-container");
+        const groups = groupsContainer.querySelectorAll(".group");
+
+        groups.forEach((group, index) => {
+          if (selectedValue === "all" || index < parseInt(selectedValue)) {
+            group.style.display = "block";
+          } else {
+            group.style.display = "none";
+          }
+        });
       }
     </script>
   </body>
