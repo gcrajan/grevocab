@@ -6209,6 +6209,96 @@
       "meaning": "deserving praise and commendation",
       "synonyms": "praiseworthy, admirable, commendable",
       "antonyms": "disgraceful, blameworthy"
+    },
+    {
+      "word": "levity",
+      "meaning": "humor or frivolity, especially in serious situations",
+      "synonyms": "lightheartedness, flippancy, humor",
+      "antonyms": "seriousness, gravity"
+    },
+    {
+      "word": "lucid",
+      "meaning": "expressed clearly; easy to understand",
+      "synonyms": "clear, comprehensible, articulate",
+      "antonyms": "confusing, unclear"
+    },
+    {
+      "word": "lugubrious",
+      "meaning": "looking or sounding sad and dismal",
+      "synonyms": "mournful, gloomy, somber",
+      "antonyms": "cheerful, joyful"
+    },
+    {
+      "word": "magnanimous",
+      "meaning": "very generous or forgiving, especially toward a rival or someone less powerful",
+      "synonyms": "generous, noble, benevolent",
+      "antonyms": "selfish, petty"
+    },
+    {
+      "word": "malaise",
+      "meaning": "a general feeling of discomfort, illness, or unease",
+      "synonyms": "unease, discomfort, melancholy",
+      "antonyms": "comfort, well-being"
+    },
+    {
+      "word": "maverick",
+      "meaning": "an independent-minded person",
+      "synonyms": "nonconformist, rebel, individualist",
+      "antonyms": "conformist, follower"
+    },
+    {
+      "word": "mawkish",
+      "meaning": "sentimental in a sickly or overly sweet way",
+      "synonyms": "overemotional, cloying, sappy",
+      "antonyms": "unsentimental, stoic"
+    },
+    {
+      "word": "mitigate",
+      "meaning": "make less severe, serious, or painful",
+      "synonyms": "alleviate, reduce, lessen",
+      "antonyms": "aggravate, intensify"
+    },
+    {
+      "word": "modicum",
+      "meaning": "a small quantity of a particular thing",
+      "synonyms": "smidgen, bit, trace",
+      "antonyms": "abundance, plenty"
+    },
+    {
+      "word": "moribund",
+      "meaning": "at the point of death or in terminal decline",
+      "synonyms": "dying, declining, waning",
+      "antonyms": "thriving, flourishing"
+    },
+    {
+      "word": "munificent",
+      "meaning": "larger or more generous than is usual or necessary",
+      "synonyms": "generous, lavish, bountiful",
+      "antonyms": "stingy, parsimonious"
+    },
+    {
+      "word": "myopic",
+      "meaning": "lacking foresight or intellectual insight",
+      "synonyms": "shortsighted, narrow-minded, unimaginative",
+      "antonyms": "far-sighted, perceptive"
+    },
+    {
+      "word": "nebulous",
+      "meaning": "in the form of a cloud or haze; unclear or vague",
+      "synonyms": "hazy, ambiguous, indistinct",
+      "antonyms": "clear, definite"
+    },
+    {
+      "word": "nonchalant",
+      "meaning": "feeling or appearing casually calm and relaxed",
+      "synonyms": "unconcerned, composed, indifferent",
+      "antonyms": "anxious, agitated"
+    },
+    {
+      "word": "obdurate",
+      "meaning": "stubbornly refusing to change one's opinion or course of action",
+      "synonyms": "stubborn, unyielding, inflexible",
+      "antonyms": "compliant, yielding"
     }
   ]
 }
