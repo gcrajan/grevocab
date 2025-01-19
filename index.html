@@ -1,51 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
-    <title>Gre Prep</title>
-    <style>
-      body {
-        box-sizing: border-box;
-        padding: 0rem;
-        margin: 0rem;
-      }
-      .header {
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        gap: 1rem;
-        background: #7e97f7;
-        padding: 0.5rem 1rem;
-      }
-      .header > a {
-        color: #ffffff;
-        text-decoration: none;
-        font-size: 1.3rem;
-        padding: 0.1rem 0.3rem;
-      }
-      .header > a:hover {
-        color: #5778fd;
-      }
-      footer {
-        display: flex;
-        justify-content: center;
-        padding-top: 1rem;
-      }
-    </style>
-  </head>
-  <body>
-    <header class="header">
-      <a href="writing//awawriting.html">Writing</a>
-      <a href="vocabulary/vocabulary.html">Vocab</a>
-      <a href="quant/quant.html">Quant</a>
-    </header>
-    <section>
-      <div>
-        <h1>Welcome to GRE perparation.</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+  <title>Gre Prep</title>
+  <style>
+    body {
+      box-sizing: border-box;
+      padding: 0rem;
+      margin: 0rem;
+    }
+    body>section{
+      padding: 20px;
+      min-height: 80vh;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 1rem;
+      background: #7e97f7;
+      padding: 0.5rem 1rem;
+    }
+
+    .header>a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.3rem;
+      padding: 0.1rem 0.3rem;
+    }
+
+    .header>a:hover {
+      color: #5778fd;
+    }
+
+    .card-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .card {
+      width: 30%;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card>a{
+      text-decoration: none;
+    }
+
+    .card-image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      font-size: 1.2rem;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    footer {
+      display: flex;
+      justify-content: center;
+      padding-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <header class="header">
+    <a href="writing//awawriting.html">Writing</a>
+    <a href="vocabulary/vocabulary.html">Vocab</a>
+    <a href="quant/quant.html">Quant</a>
+  </header> -->
+  <section>
+    <div>
+      <h1>Welcome to GRE perparation.</h1>
+    </div>
+    <div class="card-container">
+      <div class="card">
+        <a href="writing//awawriting.html">
+        <img src="writing.jpg" alt="Writing" class="card-image" />
+        <p class="card-title">Writing</p>
+      </a>
       </div>
-    </section>
-    <footer>Copyright @ 2025, Jhamghat</footer>
-  </body>
+      <div class="card">
+        <a href="vocabulary/vocabulary.html">
+        <img src="vocab.jpg" alt="Verbal" class="card-image" />
+        <p class="card-title">Verbal</p>
+        </a>
+      </div>
+      <div class="card">
+        <a href="quant/quant.html">
+        <img src="quant.jpg" alt="Quant" class="card-image" />
+        <p class="card-title">Quant</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="quizes"></div>
+
+  </section>
+  <footer>Copyright @ 2025, Jhamghat</footer>
+</body>
+
 </html>
