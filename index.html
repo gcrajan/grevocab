@@ -3,467 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GRE Vocabulary List</title>
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <title>Gre Prep</title>
     <style>
       body {
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
-        margin: 0;
-        padding: 20px;
-        position: relative;
+        box-sizing: border-box;
+        padding: 0rem;
+        margin: 0rem;
       }
-
-      h1 {
-        text-align: center;
-        color: #333;
-      }
-
-      .title-bottom {
+      .header {
         display: flex;
         align-items: center;
+        justify-content: end;
         gap: 1rem;
-        flex-wrap: wrap;
+        background: #7e97f7;
+        padding: 0.5rem 1rem;
       }
-
-      .groups-container {
-        display: flex;
-        gap: 20px;
-        margin: 20px 0px;
-        flex-wrap: wrap;
+      .header > a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.3rem;
+        padding: 0.1rem 0.3rem;
       }
-
-      .group {
-        border: 2px solid #ccc;
-        border-radius: 8px;
-        background-color: #fff;
-        min-width: 240px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      .header > a:hover {
+        color: #5778fd;
       }
-
-      @media only screen and (max-width: 600px) {
-        .group {
-          width: 90vw;
-        }
-      }
-
-      .grouphead {
+      footer {
         display: flex;
         justify-content: center;
-        align-items: center;
-        border-bottom: 2px solid #c1b8b8;
-        gap: 5px;
-      }
-
-      .group h2 {
-        font-size: 18px;
-        margin-right: 5px;
-        color: #555;
-      }
-
-      ul {
-        list-style: none;
-        padding: 5px 15px;
-        margin: 0;
-        white-space: nowrap;
-        overflow: auto;
-        text-overflow: ellipsis;
-      }
-
-      li {
-        cursor: pointer;
-        margin-bottom: 5px;
-        padding: 5px;
-        border-radius: 4px;
-      }
-
-      li:hover {
-        background-color: #f0f0f0;
-      }
-
-      .word-red {
-        color: red;
-      }
-
-      .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(73, 72, 72, 0.747);
-        z-index: 999;
-        display: none;
-      }
-
-      .word-details {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        max-width: 600px;
-        background-color: #fff;
-        display: none;
-        z-index: 1000;
-      }
-
-      .word-details-info {
-        position: relative;
-        background-color: #fff;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-        overflow-y: auto;
-        max-height: 90%;
-      }
-
-      .form-container {
-        display: none;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 10px;
-      }
-
-      .form-container input {
-        padding: 5px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-      }
-
-      .title {
-        font-size: 2rem;
-        color: #544545;
-      }
-
-      select {
-        padding: 5px;
-      }
-
-      .greenbtn {
-        padding: 5px 10px;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        background-color: #28a745;
-      }
-
-      .greenbtn:hover {
-        background-color: #218838;
-      }
-
-      .redbtn {
-        padding: 5px 10px;
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        background-color: #ff0000;
-      }
-
-      .redbtn:hover {
-        background-color: #e93a3a;
-      }
-
-      .right {
-        right: 2rem;
-        position: fixed;
-      }
-      footer{
-        text-align:center;
-        padding:5px;
-        border-top: 1px solid #544545;
+        padding-top: 1rem;
       }
     </style>
   </head>
-
   <body>
-    <div class="overlay" id="overlay"></div>
-    <h1>GRE Vocabulary List</h1>
-
-    <!-- Group Selector -->
-    <div class="title-bottom">
+    <header class="header">
+      <a href="writing//awawriting.html">Writing</a>
+      <a href="vocabulary/vocabulary.html">Vocab</a>
+      <a href="quant/quant.html">Quant</a>
+    </header>
+    <section>
       <div>
-        <label for="group-selector">Select number of groups to show: </label>
-        <select id="group-selector" onchange="updateVisibleGroups()">
-          <option value="all">All</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-          <option value="13">13</option>
-          <option value="14">14</option>
-          <option value="15">15</option>
-          <option value="16">16</option>
-          <option value="17">17</option>
-          <option value="18">18</option>
-          <option value="19">19</option>
-          <option value="20">20</option>
-          <option value="21">21</option>
-          <option value="22">22</option>
-          <option value="23">23</option>
-          <option value="24">24</option>
-          <option value="25">25</option>
-          <option value="26">26</option>
-          <option value="27">27</option>
-          <option value="28">28</option>
-          <option value="29">29</option>
-          <option value="30">30</option>
-          <option value="31">31</option>
-          <option value="32">32</option>
-        </select>
+        <h1>Welcome to GRE perparation.</h1>
       </div>
-
-      <!-- Random and Reset buttons for all groups -->
-      <div>
-        <button id="random-btn" class="greenbtn" onclick="randomizeAllGroups()">
-          Randomize All
-        </button>
-        <button id="reset-btn" class="redbtn" onclick="resetAllGroups()">
-          Reset All Selected
-        </button>
-      </div>
-    </div>
-
-    <div class="groups-container" id="groups-container"></div>
-
-    <div class="word-details" id="word-details">
-      <div class="word-details-info">
-        <div>
-          <button id="mark-button" onclick="toggleMarkWord()" class="greenbtn">
-            Mark
-          </button>
-          <button onclick="closeDetails()" class="redbtn right">Close</button>
-        </div>
-        <h3 id="details-word" class="title"></h3>
-        <p><strong>Meaning:</strong> <span id="details-meaning"></span></p>
-        <p><strong>Synonyms:</strong> <span id="details-synonyms"></span></p>
-        <p><strong>Antonyms:</strong> <span id="details-antonyms"></span></p>
-      </div>
-    </div>
-
-    <footer>
-      Copyright, Rajan Gc - Manjul Sharma @2025
-    </footer>
-    <script>
-      let vocabulary = [];
-
-      // Fetch the vocabulary.json file and load the words
-      fetch("vocabulary.json")
-        .then((response) => response.json())
-        .then((data) => {
-          vocabulary = data.vocabulary;
-          updateVocabularyList();
-        })
-        .catch((error) => console.error("Error loading vocabulary:", error));
-
-      function chunkVocabulary(vocabulary, chunkSize) {
-        const chunks = [];
-        for (let i = 0; i < vocabulary.length; i += chunkSize) {
-          chunks.push(vocabulary.slice(i, i + chunkSize));
-        }
-        return chunks;
-      }
-
-      function updateVocabularyList() {
-        const groupsContainer = document.getElementById("groups-container");
-        groupsContainer.innerHTML = "";
-
-        const chunks = chunkVocabulary(vocabulary, 30);
-        chunks.forEach((chunk, index) => {
-          const group = document.createElement("div");
-          group.classList.add("group");
-          group.id = `Group ${index + 1}`;
-          group.originalWords = chunk.map((word) => ({ ...word }));
-          group.currentWords = [...group.originalWords];
-          group.selected = new Set();
-
-          const groupHead = document.createElement("div");
-          groupHead.classList.add("grouphead");
-
-          const h2 = document.createElement("h2");
-          h2.textContent = `Group ${index + 1}`;
-          groupHead.appendChild(h2);
-
-          const randomButton = document.createElement("button");
-          randomButton.textContent = "Random";
-          randomButton.classList.add("greenbtn");
-          randomButton.addEventListener("click", () => randomizeGroup(group));
-          groupHead.appendChild(randomButton);
-
-          const resetButton = document.createElement("button");
-          resetButton.textContent = "Reset";
-          resetButton.classList.add("redbtn");
-          resetButton.addEventListener("click", () => resetGroup(group));
-          groupHead.appendChild(resetButton);
-
-          group.appendChild(groupHead);
-
-          const wordListContainer = document.createElement("ul");
-          wordListContainer.id = `word-list-${index + 1}`;
-
-          chunk.forEach((wordObj) => {
-            const li = document.createElement("li");
-            li.textContent = wordObj.word;
-            li.addEventListener("click", () =>
-              openWordDetails(group, wordObj, li)
-            );
-            wordListContainer.appendChild(li);
-          });
-
-          group.appendChild(wordListContainer);
-          groupsContainer.appendChild(group);
-        });
-      }
-
-      function updateVisibleGroups() {
-        const selectedValue = document.getElementById("group-selector").value;
-        const allGroups = document.querySelectorAll(".group");
-        allGroups.forEach((group, index) => {
-          if (selectedValue === "all" || index < selectedValue) {
-            group.style.display = "block";
-          } else {
-            group.style.display = "none";
-          }
-        });
-      }
-
-      function randomizeAllGroups() {
-        const selectedGroups = Array.from(
-          document.querySelectorAll(".group")
-        ).filter((group) => group.style.display !== "none");
-
-        // Step 1: Gather words from all selected groups
-        const allWords = [];
-        selectedGroups.forEach((group) => {
-          group.currentWords.forEach((word) => {
-            allWords.push(word); // Collect words from each group
-          });
-        });
-
-        // Step 2: Shuffle the words
-        allWords.sort(() => Math.random() - 0.5);
-
-        // Step 3: Distribute shuffled words back into selected groups
-        let wordIndex = 0;
-        selectedGroups.forEach((group) => {
-          const wordListContainer = group.querySelector("ul");
-          wordListContainer.innerHTML = ""; // Clear current list
-          const groupSize = group.currentWords.length;
-
-          // Assign shuffled words to the group
-          for (let i = 0; i < groupSize; i++) {
-            const wordObj = allWords[wordIndex++];
-            const li = document.createElement("li");
-            if (group.selected.has(wordObj.word)) li.classList.add("word-red");
-            li.textContent = wordObj.word;
-            li.onclick = () => openWordDetails(group, wordObj, li);
-            wordListContainer.appendChild(li);
-          }
-
-          // Update the current words of the group
-          group.currentWords = group.originalWords.slice(0, groupSize); // Reset to original state if needed
-        });
-      }
-
-      function resetAllGroups() {
-        const allGroups = document.querySelectorAll(".group");
-        allGroups.forEach((group) => resetGroup(group));
-      }
-
-      function randomizeGroup(group) {
-        // Shuffle the currentWords array
-        group.currentWords.sort(() => Math.random() - 0.5);
-
-        // Update the group's word list UI
-        const wordListContainer = group.querySelector("ul");
-        wordListContainer.innerHTML = ""; // Clear the current list
-
-        group.currentWords.forEach((wordObj) => {
-          const li = document.createElement("li");
-          if (group.selected.has(wordObj.word)) li.classList.add("word-red");
-          li.textContent = wordObj.word;
-          li.onclick = () => openWordDetails(group, wordObj, li); // Pass both the word object and its list item
-          wordListContainer.appendChild(li);
-        });
-      }
-
-      function resetGroup(group) {
-        const wordList = group.querySelector("ul");
-        group.selected.clear();
-        wordList.innerHTML = "";
-        group.originalWords.forEach((wordObj) => {
-          const li = document.createElement("li");
-          li.textContent = wordObj.word;
-          li.onclick = () => openWordDetails(group, wordObj, li);
-          wordList.appendChild(li);
-        });
-        group.currentWords = [...group.originalWords]; // Reset currentWords back to original
-      }
-
-      function openWordDetails(group, wordObj, listItem) {
-        const markButton = document.getElementById("mark-button");
-        const overlay = document.getElementById("overlay");
-        const wordDetails = document.getElementById("word-details");
-
-        // Display the word details in the modal
-        markButton.onclick = () => toggleMarkWord(group, wordObj);
-        markButton.textContent = group.selected.has(wordObj.word)
-          ? "Unmark"
-          : "Mark";
-
-        document.getElementById("details-word").textContent = wordObj.word;
-        document.getElementById("details-meaning").textContent =
-          wordObj.meaning;
-        document.getElementById("details-synonyms").textContent =
-          wordObj.synonyms;
-        document.getElementById("details-antonyms").textContent =
-          wordObj.antonyms;
-
-        wordDetails.currentListItem = listItem;
-
-        overlay.style.display = "block";
-        wordDetails.style.display = "block";
-      }
-
-      function closeDetails() {
-        const overlay = document.getElementById("overlay");
-        const wordDetails = document.getElementById("word-details");
-
-        overlay.style.display = "none";
-        wordDetails.style.display = "none";
-      }
-
-      let markedWordElement = null;
-
-      function toggleMarkWord(group, wordObj) {
-        const markButton = document.getElementById("mark-button");
-        const detailsWord = document.getElementById("details-word");
-
-        if (group.selected.has(wordObj.word)) {
-          // If there is a marked word, unmark it
-          document.querySelectorAll("li").forEach((li) => {
-            if (li.textContent === wordObj.word)
-              li.classList.remove("word-red");
-          });
-          group.selected.delete(wordObj.word);
-          markButton.textContent = "Mark";
-        } else {
-          // Find the word in the vocabulary list and mark it
-          group.selected.add(wordObj.word);
-          document.querySelectorAll("li").forEach((li) => {
-            if (li.textContent === wordObj.word) li.classList.add("word-red");
-          });
-          markButton.textContent = "Umark";
-        }
-      }
-    </script>
+    </section>
+    <footer>Copyright @ 2025, Jhamghat</footer>
   </body>
 </html>

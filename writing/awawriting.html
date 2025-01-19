@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <title>Gre Prep- Writing</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 0rem;
+        font-family: Arial, sans-serif;
+        text-align: center;
+      }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 1rem;
+      }
+      .header > a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.15rem;
+        background-color: #28a745;
+        border: 1px solid #28a745;
+        border-radius: 0.2rem;
+        padding: 0.1rem 0.3rem;
+      }
+      .header > a:hover {
+        color: #28a745;
+        background-color: #ffffff;
+      }
+      .container {
+        max-width: 65vw;
+        margin: auto;
+        min-height: 80vh;
+      }
+      .hidden {
+        display: none;
+      }
+      textarea {
+        width: 100%;
+        height: 200px;
+        font-size: 1rem;
+        padding: 2rem 0.5rem 0.5rem 0.5rem;
+      }
+      button {
+        padding: 5px 10px;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #28a745;
+        font-size: 1rem;
+      }
+      button:hover {
+        background-color: #218838;
+      }
+      .copydiv {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        text-align: left;
+      }
+      .copydiv button {
+        background-color: #007bff;
+      }
+      .copydiv button:hover {
+        background-color: #0056b3;
+      }
+      .inputvalues {
+        white-space: pre-wrap;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+      #questionContainer,
+      #question{
+        text-align: initial;
+        position: relative;
+      }
+      #question{
+        font-weight: 600;
+      }
+      #timer {
+        position: absolute;
+        right: 0.1rem;
+        background-color: #fff;
+      }
+      footer {
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/writing/writinglist.html">Writing List</a>
+      <a href="/index.html">Home</a>
+      <a href="/vocabulary/vocabulary.html">Vocab</a>
+      <a href="/quant/quant.html">Quant</a>
+    </header>
+
+    <div class="container">
+      <h1>GRE Analytical Writing Practice</h1>
+      <button id="randomGenerate">Random Generate</button>
+
+      <div id="questionContainer" class="hidden">
+        <p>
+          <strong>Topic:</strong> <br />
+          Present your perspective on the issue below, using relevant reasons
+          and/or examples to support your views.
+        </p>
+        <p id="question"></p>
+        <p id="timer"></p>
+        <textarea
+          id="answerTextarea"
+          rows="10"
+          placeholder="Write your answer here..."
+        ></textarea>
+        <button id="submitAnswer">Submit</button>
+      </div>
+
+      <div id="copyDiv" class="copydiv hidden">
+        <button id="copyButton">Copy</button>
+        <p><strong>Paste this in ChatGPT:</strong></p>
+        <p class="inputvalues">
+          <strong>
+          <span id="questionText"></span>
+          </strong>
+          <!-- <br /> -->
+          <span id="userAnswerText"></span>
+        </p>
+      </div>
+    </div>
+    <footer>Copyright @ 2025, Jhamghat</footer>
+
+    <script>
+      let questions = [];
+
+      async function fetchQuestions() {
+        const response = await fetch("awawriting.json");
+        questions = await response.json();
+      }
+
+      let timer;
+      const randomGenerate = document.getElementById("randomGenerate");
+      const questionContainer = document.getElementById("questionContainer");
+      const questionText = document.getElementById("question");
+      const answerTextarea = document.getElementById("answerTextarea");
+      const submitAnswer = document.getElementById("submitAnswer");
+      const timerDisplay = document.getElementById("timer");
+      const copyDiv = document.getElementById("copyDiv");
+      const copyButton = document.getElementById("copyButton");
+      const userAnswerText = document.getElementById("userAnswerText");
+      const questionTextCopy = document.getElementById("questionText");
+
+      randomGenerate.addEventListener("click", async () => {
+        await fetchQuestions();
+        let randomIndex = Math.floor(Math.random() * questions.length);
+        let selectedQuestion = questions[randomIndex].question;
+        questionText.textContent = selectedQuestion;
+        questionTextCopy.textContent = selectedQuestion; // Save for copy
+        answerTextarea.value = "";
+        questionContainer.classList.remove("hidden");
+        randomGenerate.classList.add("hidden");
+        copyDiv.classList.add("hidden");
+        startTimer(30 * 60);
+      });
+
+      function startTimer(duration) {
+        let timeLeft = duration;
+        timer = setInterval(() => {
+          let minutes = Math.floor(timeLeft / 60);
+          let seconds = timeLeft % 60;
+          timerDisplay.textContent = `${minutes}:${
+            seconds < 10 ? "0" : ""
+          }${seconds}`;
+          if (timeLeft <= 0) {
+            clearInterval(timer);
+            submitAnswer.click();
+          }
+          timeLeft--;
+        }, 1000);
+      }
+
+      submitAnswer.addEventListener("click", () => {
+        clearInterval(timer);
+        let userAnswer = answerTextarea.value;
+        userAnswerText.textContent = userAnswer;
+        copyDiv.classList.remove("hidden");
+        randomGenerate.classList.remove("hidden");
+        questionContainer.classList.add("hidden");
+      });
+
+      copyButton.addEventListener("click", () => {
+        let textToCopy = document.querySelector(".inputvalues").textContent;
+        navigator.clipboard
+          .writeText(textToCopy)
+          .then(() => {
+            alert("Copied to clipboard!");
+          })
+          .catch((err) => {
+            console.error("Failed to copy:", err);
+          });
+      });
+    </script>
+  </body>
+</html>
