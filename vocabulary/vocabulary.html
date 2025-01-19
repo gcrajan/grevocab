@@ -3,8 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Boost your GRE preparation with expert practice in Analytical Writing, Quant, and Verbal. Get the best GRE prep resources, vocab practice, and quant problem-solving techniques."
+    />
+    <meta
+      name="keywords"
+      content="GRE prep, GRE practice, gre vocab, gre vocabulary, GRE vocab practice, vocab, vocab practice, GRE preparation, GRE verbal, GRE study tips"
+    />
+    <meta name="jhamghat" content="Jhamghat" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Best GRE Preparation - Writing, Quant & Verbal Practice"
+    />
+    <meta
+      property="og:description"
+      content="Ace your GRE with top-notch preparation strategies, analytical writing exercises, quant problem-solving, and vocab practice."
+    />
+    <meta property="og:image" content="https://greprep.netlify.app/logo.png" />
+    <meta property="og:url" content="https://greprep.netlify.app/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="GRE Prep - Writing, Quant & Vocab Practice"
+    />
+    <meta
+      name="twitter:description"
+      content="Excel in your GRE with effective study techniques and practice questions in writing, quant, and vocab."
+    />
+    <meta
+      name="twitter:image"
+      content="https://pbs.twimg.com/profile_images/1441442129629249537/tapqgD9Z_400x400.jpg"
+    />
     <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
-    <title>Gre Prep- Vocab</title>
+    <title>Gre Prep: Vocabulary</title>
     <style>
       body {
         font-family: Arial, sans-serif;
@@ -16,21 +49,37 @@
       .header {
         display: flex;
         align-items: center;
-        justify-content: end;
-        gap: 1rem;
+        justify-content: space-between;
+        margin-bottom: 20px;
       }
-      .header > a {
+      .header > a,
+      .header > div > a {
         color: #ffffff;
         text-decoration: none;
         font-size: 1.15rem;
         background-color: #28a745;
         border: 1px solid #28a745;
         border-radius: 0.2rem;
-        padding: 0.1rem 0.3rem;
+        padding: 0.3rem 0.5rem;
       }
-      .header > a:hover {
+      .header > a:hover,
+      .header > div > a:hover {
         color: #28a745;
         background-color: #ffffff;
+      }
+      .header > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 2rem;
+      }
+
+      .red {
+        background-color: rgb(255, 43, 43) !important;
+        border: 1px solid rgb(255, 43, 43) !important;
+      }
+      .red:hover {
+        color: rgb(255, 159, 159) !important;
       }
 
       h1 {
@@ -199,9 +248,12 @@
   <body>
     <div class="overlay" id="overlay"></div>
     <header class="header">
-      <a href="/index.html">Home</a>
-      <a href="/writing/awawriting.html">Writing</a>
-      <a href="/quant/quant.html">Quant</a>
+      <a href="/vocabulary/vocabquiz.html" class="red">Practice</a>
+      <div>
+        <a href="/index.html">Home</a>
+        <a href="/writing/writing.html">Writing</a>
+        <a href="/quant/quant.html">Quant</a>
+      </div>
     </header>
     <h1>GRE Vocabulary List</h1>
 

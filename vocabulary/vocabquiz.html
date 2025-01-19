@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Boost your GRE preparation with expert practice in Analytical Writing, Quant, and Verbal. Get the best GRE prep resources, vocab practice, and quant problem-solving techniques."
+    />
+    <meta
+      name="keywords"
+      content="GRE prep, GRE practice, gre vocab, gre vocabulary, GRE vocab practice, vocab, vocab practice, GRE preparation, GRE verbal, GRE study tips"
+    />
+    <meta name="jhamghat" content="Jhamghat" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Best GRE Preparation - Writing, Quant & Verbal Practice"
+    />
+    <meta
+      property="og:description"
+      content="Ace your GRE with top-notch preparation strategies, analytical writing exercises, quant problem-solving, and vocab practice."
+    />
+    <meta property="og:image" content="https://greprep.netlify.app/logo.png" />
+    <meta property="og:url" content="https://greprep.netlify.app/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="GRE Prep - Writing, Quant & Vocab Practice"
+    />
+    <meta
+      name="twitter:description"
+      content="Excel in your GRE with effective study techniques and practice questions in writing, quant, and vocab."
+    />
+    <meta
+      name="twitter:image"
+      content="https://pbs.twimg.com/profile_images/1441442129629249537/tapqgD9Z_400x400.jpg"
+    />
+    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <title>Gre Prep: Vocabulary</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 0rem;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f9f9f9;
+      }
+      .header {
+        display: flex;
+      }
+      .header > a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 1.15rem;
+        background-color: #28a745;
+        border: 1px solid #28a745;
+        border-radius: 0.2rem;
+        padding: 0.1rem 0.3rem;
+      }
+      .header > a:hover {
+        color: #28a745;
+        background-color: #ffffff;
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+      }
+
+      .word-container {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+      }
+
+      .word-box h2 {
+        font-size: 24px;
+        color: #333;
+      }
+
+      .game-container {
+        background: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin: auto;
+        text-align: left;
+      }
+      .options {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .option {
+        font-size: 18px;
+        color: #333;
+        margin: 5px 0;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+      }
+      .option input {
+        margin-right: 10px;
+      }
+      .correct {
+        color: green;
+        font-weight: bold;
+      }
+      .incorrect {
+        color: red;
+        font-weight: bold;
+      }
+      #resultMessage2 {
+        margin-top: 10px;
+        font-size: 18px;
+      }
+      .hidden {
+        display: none;
+      }
+
+      button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: #218838;
+      }
+
+      #meaning,
+      #synonyms,
+      #antonyms {
+        font-size: 18px;
+        color: #555;
+        margin-top: 10px;
+      }
+
+      #nextWord {
+        margin-top: 20px;
+        background-color: #007bff;
+      }
+      footer {
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a href="/writing/writing.html">< Back to Vocab lists</a>
+    </header>
+
+    <h1>GRE Vocab Practice</h1>
+    <div class="container">
+      <h2>#Game1, Random Words</h2>
+      <div class="word-container"></div>
+      <button id="nextWord">Next Word</button>
+    </div>
+    <h2>#Game2, Select Correct Word</h2>
+    <div class="game-container">
+      <h2 id="wordDisplay2"></h2>
+      <div id="optionsContainer" class="options"></div>
+      <p id="resultMessage2" class="hidden"></p>
+      <p id="wordMeaning" class="hidden"></p>
+      <button id="nextWordGame2">Next</button>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", async () => {
+        let words = [];
+        let usedWords = new Set();
+        let currentWordIndex = null;
+
+        // Fetch vocabulary.json file
+        async function fetchWords() {
+          try {
+            const response = await fetch("vocabulary.json");
+            const data = await response.json();
+            words = data.vocabulary; // Extract the vocabulary array
+            getNextWord();
+          } catch (error) {
+            console.error("Error loading vocabulary:", error);
+          }
+        }
+
+        function getNextWord() {
+          if (usedWords.size === words.length) {
+            usedWords.clear(); // Reset when all words are used
+          }
+
+          do {
+            currentWordIndex = Math.floor(Math.random() * words.length);
+          } while (usedWords.has(currentWordIndex));
+
+          usedWords.add(currentWordIndex);
+          displayWord(words[currentWordIndex]);
+        }
+
+        function displayWord(wordObj) {
+          const wordContainer = document.querySelector(".word-container");
+          wordContainer.innerHTML = `
+      <div class="word-box">
+        <h2 id="word">${wordObj.word}</h2>
+        <p id="meaning" class="hidden"><strong>"${wordObj.meaning}"</p></strong>
+        <p id="synonyms" class="hidden"><strong>Synonyms:</strong> ${wordObj.synonyms}</p>
+        <p id="antonyms" class="hidden"><strong>Antonyms:</strong> ${wordObj.antonyms}</p>
+        <button id="toggleMeaning">Show Meaning</button>
+      </div>
+    `;
+          document
+            .getElementById("toggleMeaning")
+            .addEventListener("click", toggleMeaning);
+        }
+
+        function toggleMeaning() {
+          const meaning = document.getElementById("meaning");
+          const synonyms = document.getElementById("synonyms");
+          const antonyms = document.getElementById("antonyms");
+          const toggleButton = document.getElementById("toggleMeaning");
+
+          if (meaning.classList.contains("hidden")) {
+            meaning.classList.remove("hidden");
+            synonyms.classList.remove("hidden");
+            antonyms.classList.remove("hidden");
+            toggleButton.textContent = "OK";
+          } else {
+            meaning.classList.add("hidden");
+            synonyms.classList.add("hidden");
+            antonyms.classList.add("hidden");
+            toggleButton.textContent = "Show Meaning";
+          }
+        }
+
+        document
+          .getElementById("nextWord")
+          .addEventListener("click", getNextWord);
+
+        fetchWords();
+      });
+
+      document.addEventListener("DOMContentLoaded", async () => {
+        let vocabulary = [];
+
+        async function fetchVocabulary() {
+          try {
+            const response = await fetch("vocabulary.json");
+            const data = await response.json();
+            vocabulary = data.vocabulary;
+            startGame2();
+          } catch (error) {
+            console.error("Error fetching vocabulary:", error);
+          }
+        }
+
+        function startGame2() {
+          if (vocabulary.length === 0) return;
+
+          const currentWordIndex = Math.floor(
+            Math.random() * vocabulary.length
+          );
+          const correctWord = vocabulary[currentWordIndex];
+
+          document.getElementById("wordDisplay2").textContent =
+            correctWord.word;
+
+          // Extract one synonym from the correct word
+          const correctSynonym =
+            correctWord.synonyms.split(", ")[0] || "Unknown";
+          const synonym = String(correctWord.synonyms);
+
+          // Get five random incorrect options from other words
+          let incorrectOptions = vocabulary
+            .filter((_, index) => index !== currentWordIndex) // Exclude correct word
+            .map((word) => word.word)
+            .sort(() => 0.5 - Math.random()) // Shuffle
+            .slice(0, 5); // Pick five
+
+          // Shuffle options and include the correct one
+          const options = [...incorrectOptions, correctSynonym].sort(
+            () => Math.random() - 0.5
+          );
+
+          // Display options in a radio button list
+          const optionsContainer = document.getElementById("optionsContainer");
+          optionsContainer.innerHTML = "";
+          options.forEach((option, index) => {
+            const optionElement = document.createElement("label");
+            optionElement.classList.add("option");
+            optionElement.innerHTML = `
+              <input type="radio" name="option" value="${option}" /> ${option}
+            `;
+            optionElement.addEventListener("click", () =>
+              checkAnswer(option, correctSynonym, correctWord.meaning, synonym)
+            );
+            optionsContainer.appendChild(optionElement);
+          });
+
+          // Hide result message & meaning initially
+          document.getElementById("resultMessage2").classList.add("hidden");
+          document.getElementById("wordMeaning").classList.add("hidden");
+        }
+        function checkAnswer(selectedOption, correctSynonym, meaning, synonym) {
+          const resultMessage = document.getElementById("resultMessage2");
+          const wordMeaning = document.getElementById("wordMeaning");
+
+          if (selectedOption === correctSynonym) {
+            resultMessage.textContent = "Correct!";
+            resultMessage.classList.remove("incorrect");
+            resultMessage.classList.add("correct");
+          } else {
+            resultMessage.textContent = "Incorrect, try again.";
+            resultMessage.classList.remove("correct");
+            resultMessage.classList.add("incorrect");
+          }
+
+          wordMeaning.innerHTML = `<div><p>"<strong> ${meaning}</strong>"</p><p><strong>Synonyms</strong>: ${synonym}</p></div>`;
+          resultMessage.classList.remove("hidden");
+          wordMeaning.classList.remove("hidden");
+        }
+
+        document
+          .getElementById("nextWordGame2")
+          .addEventListener("click", startGame2);
+
+        fetchVocabulary();
+      });
+    </script>
+  </body>
+</html>

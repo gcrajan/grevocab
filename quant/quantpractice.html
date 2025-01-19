@@ -43,45 +43,31 @@
         box-sizing: border-box;
         padding: 20px;
         margin: 0rem;
+        font-family: Arial, sans-serif;
+        text-align: center;
         background-color: #f9f9f9;
       }
       .header {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 20px;
       }
-      .header > a,
-      .header > div > a {
+      .header > a {
         color: #ffffff;
         text-decoration: none;
         font-size: 1.15rem;
         background-color: #28a745;
         border: 1px solid #28a745;
         border-radius: 0.2rem;
-        padding: 0.3rem 0.5rem;
+        padding: 0.1rem 0.3rem;
       }
-      .header > a:hover,
-      .header > div > a:hover {
+      .header > a:hover {
         color: #28a745;
         background-color: #ffffff;
       }
-      .header > div {
+      .container {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-around;
-        gap: 2rem;
-      }
-      h1 {
-        text-align: center;
-      }
-
-      .red {
-        background-color: rgb(255, 43, 43) !important;
-        border: 1px solid rgb(255, 43, 43) !important;
-      }
-      .red:hover {
-        color: rgb(255, 159, 159) !important;
+        margin-top: 20px;
       }
       footer {
         display: flex;
@@ -92,19 +78,12 @@
   </head>
   <body>
     <header class="header">
-      <a href="/quant/quantpractice.html" class="red">Practice</a>
-      <div>
-        <a href="/index.html">Home</a>
-        <a href="/writing/writing.html">Writing</a>
-        <a href="/vocabulary/vocabulary.html">Quant</a>
-      </div>
+      <a href="/quant/quant.html">< Back to Quant cheatsheet</a>
     </header>
-    <h1>GRE Quant cheatsheet.</h1>
-    <section>
-      <div>
-        <p>Week 1</p>
-      </div>
-    </section>
-    <footer>Copyright @ 2025, Jhamghat</footer>
+
+    <h1>GRE Quant Practice</h1>
+    <div class="container">
+      <div class="quant-container"></div>
+    </div>
   </body>
 </html>
