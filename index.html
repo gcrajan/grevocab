@@ -88,7 +88,7 @@
       }
 
       .card {
-        width: 30%;
+        width: 100%;
         border: 1px solid #ccc;
         border-radius: 8px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -106,7 +106,7 @@
 
       .card-image {
         width: 100%;
-        height: 200px;
+        height: 300px;
         object-fit: cover;
       }
 
@@ -123,6 +123,18 @@
         display: flex;
         justify-content: center;
         padding-top: 1rem;
+      }
+
+      @media only screen and (min-width: 600px) and (max-width: 900px) {
+        .card {
+          width: 47% !important;
+        }
+      }
+
+      @media only screen and (min-width: 900px) {
+        .card {
+          width: 30% !important;
+        }
       }
     </style>
   </head>
@@ -142,22 +154,29 @@
       <div class="card-container">
         <div class="card">
           <a href="writing/writing.html">
-            <img src="writing.jpg" alt="Writing" class="card-image" />
+            <img src="writing.png" alt="Writing" class="card-image" />
             <p class="card-title">Writing</p>
           </a>
         </div>
         <div class="card">
           <a href="vocabulary/vocabulary.html">
-            <img src="vocab.jpg" alt="Verbal" class="card-image" />
+            <img src="vocab.png" alt="Verbal" class="card-image" />
             <p class="card-title">Verbal</p>
           </a>
         </div>
         <div class="card">
           <a href="quant/quant.html">
-            <img src="quant.jpg" alt="Quant" class="card-image" />
+            <img src="quant.png" alt="Quant" class="card-image" />
             <p class="card-title">Quant</p>
           </a>
+        </div>        
+        <div class="card">
+          <a href="book/book.html">
+            <img src="book.jpg" alt="Book" class="card-image" />
+            <p class="card-title">Book</p>
+          </a>
         </div>
+      </div>
       </div>
 
       <div class="quizes"></div>

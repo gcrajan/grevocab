@@ -50,6 +50,8 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 20px;
+        flex-wrap: wrap;
+        gap: 2rem;
       }
       .header > a,
       .header > div > a {
@@ -74,6 +76,7 @@
       }
       h1 {
         text-align: center;
+        color: #333;
       }
 
       .red {
@@ -83,10 +86,110 @@
       .red:hover {
         color: rgb(255, 159, 159) !important;
       }
+      .card-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
+
+      .card-heading {
+        font-style: italic;
+        font-weight: 900;
+        font-size: 1.5rem;
+        margin-top: 5rem;
+      }
+
+      .card {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .card:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .card > a {
+        text-decoration: none;
+      }
+
+      .card-image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+      }
+
+      .card-title {
+        font-size: 1.2rem;
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        margin: 0;
+        font-weight: bold;
+      }
+
       footer {
         display: flex;
         justify-content: center;
         padding-top: 1rem;
+      }
+
+      @media only screen and (min-width: 650px) and (max-width: 735px) {
+        .card {
+          width: 290px !important;
+        }
+        .card > iframe {
+          width: 290px !important ;
+          height: 200px !important;
+        }
+      }
+      @media only screen and (min-width: 735px) and (max-width: 780px) {
+        .card {
+          width: 334px !important;
+        }
+        .card > iframe {
+          width: 334px !important ;
+          height: 205px !important;
+        }
+      }
+      @media only screen and (min-width: 780px) and (max-width: 865px) {
+        .card {
+          width: 350px !important;
+        }
+        .card > iframe {
+          width: 350px !important ;
+          height: 205px !important;
+        }
+      }
+      @media only screen and (min-width: 865px) and (max-width: 956px) {
+        .card {
+          width: 400px !important;
+        }
+        .card > iframe {
+          width: 400px !important ;
+          height: 205px !important;
+        }
+      }
+      @media only screen and (min-width: 956px) and (max-width: 1120px) {
+        .card {
+          width: 450px !important;
+        }
+        .card > iframe {
+          width: 450px !important ;
+          height: 250px !important;
+        }
+      }
+
+      @media only screen and (min-width: 1120px) {
+        .card {
+          width: 610px !important;
+        }
       }
     </style>
   </head>
@@ -96,15 +199,183 @@
       <div>
         <a href="/index.html">Home</a>
         <a href="/writing/writing.html">Writing</a>
-        <a href="/vocabulary/vocabulary.html">Quant</a>
+        <a href="/vocabulary/vocabulary.html">Vocab</a>
       </div>
     </header>
     <h1>GRE Quant cheatsheet.</h1>
     <section>
-      <div>
-        <p>Week 1</p>
+      <p class="card-heading">Week 1</p>
+      <div class="card-container">
+        <div class="card">
+          <iframe
+            width="610"
+            height="315"
+            src="https://www.youtube.com/embed/bJ-l9WCTfJM?list=PL4eZtbx_qaM-k3FtIBjybFsUXnCcZUYap&autoplay=0"
+            title="11 Tricky Quant Phrases to Watch Out For! GRE / GMAT"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          >
+          </iframe>
+
+          <p class="card-title">11 Tricky Quant Phrases</p>
+        </div>
+
+        <div class="card">
+          <iframe
+            width="610"
+            height="315"
+            src="https://www.youtube.com/embed/MNRyRGlVI3w?list=PL4eZtbx_qaM-k3FtIBjybFsUXnCcZUYap"
+            title="Prime Numbers 101 - Great for GRE, GMAT students"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p class="card-title">Prime Numbers 101</p>
+        </div>
       </div>
     </section>
+
+    <section>
+      <p class="card-heading">Week 2</p>
+      <div class="card-container">
+        <div class="card">
+          <iframe
+            width="610"
+            height="315"
+            src="https://www.youtube.com/embed/MuGMKG2BrPY?list=PL4eZtbx_qaM-5a4EoNOpOYji3O_4R0Fb5"
+            title="Everything You Need to Know About Exponents (18 new tricks!)"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <p class="card-title">Everything You Need to Know About Exponents</p>
+        </div>
+
+        <div class="card">
+          <iframe
+            width="610"
+            height="315"
+            src="https://www.youtube.com/embed/lKrEtfGjUss?list=PL4eZtbx_qaM-5a4EoNOpOYji3O_4R0Fb5"
+            title="Everything You Need to Know About Roots - GRE / GMAT"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p class="card-title">Everything You Need to Know About Roots</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="card-heading">Week 3</p>
+      <div class="card-container">
+        <div class="card">
+          <iframe
+            width="610"
+            height="315"
+            src="https://www.youtube.com/embed/DncDTnQdxes?list=PL4eZtbx_qaM9dHV3kf3qAaw4BbxcnG7NS"
+            title="Everything You Need to Know About Speed, Distance, Time (12 New Tricks!)"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <p class="card-title">
+            Everything You Need to Know About Speed, Distance, Time
+          </p>
+        </div>
+
+        <div class="card">
+          <iframe
+            width="610"
+            height="315"
+            src="https://www.youtube.com/embed/OWvXeWJ07BY?list=PL4eZtbx_qaM9dHV3kf3qAaw4BbxcnG7NS"
+            title="The Truth About Work Rates: GRE / GMAT (with official example!)"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p class="card-title">The Truth About Work Rates</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="card-heading">Week 4</p>
+      <div class="card-container">
+        <div class="card">
+          <iframe
+            width="610"
+            height="315"
+            src="https://www.youtube.com/embed/StUaVYInd9M?list=PL4eZtbx_qaM8v2OXSlRm7ZbJbiT1kW-a_"
+            title="Coordinate Geometry: YOU Must Know These Essentials – GRE / GMAT Quant with Official Guide Questions"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <p class="card-title">Coordinate Geometry</p>
+        </div>
+
+        <div class="card">
+          <iframe
+            width="610"
+            height="315"
+            src="https://www.youtube.com/embed/e603ltL-A8s?list=PL4eZtbx_qaM8v2OXSlRm7ZbJbiT1kW-a_"
+            title="Most Students Can’t Do This: Distance Between Two Points ¦ GRE / GMAT Math"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p class="card-title">Distance Between Two Points</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <p class="card-heading">Week 5</p>
+      <div class="card-container">
+        <div class="card">
+          <iframe
+            width="610"
+            height="315"
+            src="https://www.youtube.com/embed/qLkNdsQlEhU?list=PL4eZtbx_qaM9SPSEcSESrL6T4l-dYNPmt"
+            title="Probability - Everything You Need to Know. 11 New Tricks and Shortcuts, GRE, GMAT and more"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+
+          <p class="card-title">Probability</p>
+        </div>
+
+        <div class="card">
+          <iframe
+            width="610"
+            height="315"
+            src="https://www.youtube.com/embed/2W0UPWupcss?list=PL4eZtbx_qaM9SPSEcSESrL6T4l-dYNPmt"
+            title="An Introduction to Venn Diagrams: GRE / GMAT Quant"
+            frameborder="0"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <p class="card-title">An Introduction to Venn Diagrams</p>
+        </div>
+      </div>
+    </section>
+
     <footer>Copyright @ 2025, Jhamghat</footer>
   </body>
 </html>
