@@ -69,37 +69,13 @@
         }
 
         .books {
+            text-align: center;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             gap: 20px;
             margin-top: 20px;
             flex-wrap: wrap;
         }
-
-        /* .book {
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .book:hover {
-            transform: scale(1.05);
-            cursor: pointer;
-        }
-
-        .book>a {
-            text-decoration: none;
-        } */
-
-        /* .book-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-        } */
 
         .book-title {
             font-size: 1.2rem;
@@ -127,13 +103,17 @@
             .book>iframe {
                 width: 47% !important;
             }
-        }
-
-        @media only screen and (max-width: 900px) {
-            .book>iframe {
-                width: 100% !important;
-            }
         } */
+
+        @media only screen and (min-width: 1300px) {
+            .books {
+                display: flex;
+                justify-content: space-between !important;
+                gap: 20px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+            }
+        }
 
         .close-btn {
             background-color: rgb(255, 43, 43);
