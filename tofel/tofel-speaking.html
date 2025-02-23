@@ -66,39 +66,16 @@
         h1 {
             text-align: center;
             color: #333;
+            margin-bottom: 2.5rem;
         }
 
         .books {
+            text-align: center;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             gap: 20px;
             margin-top: 20px;
             flex-wrap: wrap;
-        }
-
-        .book {
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            text-align: center;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .book:hover {
-            transform: scale(1.05);
-            cursor: pointer;
-        }
-
-        .book>a {
-            text-decoration: none;
-        }
-
-        .book-image {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
         }
 
         .book-title {
@@ -110,42 +87,33 @@
             font-weight: bold;
         }
 
+        /* .book-heading {
+            font-style: italic;
+            font-weight: 900;
+            font-size: 1.5rem;
+            margin-top: 5rem;
+        } */
+
         footer {
             display: flex;
             justify-content: center;
             padding-top: 1rem;
         }
 
-        @media only screen and (min-width: 600px) and (max-width: 900px) {
-            .book {
+        /* @media only screen and (min-width: 900px) and (max-width: 1300px) {
+            .book>iframe {
                 width: 47% !important;
             }
-        }
+        } */
 
-        @media only screen and (min-width: 900px) {
-            .book {
-                width: 30% !important;
+        @media only screen and (min-width: 1300px) {
+            .books {
+                display: flex;
+                justify-content: space-between !important;
+                gap: 20px;
+                margin-top: 20px;
+                flex-wrap: wrap;
             }
-        }
-
-        .pdf-viewer {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            z-index: 1000;
-        }
-
-        .pdf-viewer embed {
-            width: 90%;
-            height: 80%;
-            border: none;
         }
 
         .close-btn {
@@ -180,42 +148,31 @@
     <header class="header">
         <a href="/index.html" class="red">Home</a>
         <div>
-            <a href="/writing/writing.html">Writing</a>
-            <a href="/vocabulary/vocabulary.html">Vocab</a>
-            <a href="/quant/quant.html">Quant</a>
+            <a href="./tofel-listening.html">Listening</a>
+            <a href="./tofel-writing.html">Writing</a>
+            <a href="./tofel-reading.html">Reading</a>
         </div>
     </header>
-    <h1>Tofel Books.</h1>
+    <h1>Tofel Writing.</h1>
     <section class="books">
         <div class="book">
-            <a href="./tofel-reading.html">
-            <img src="https://desktime.com/blog/wp-content/uploads/2015/09/reading.png" alt="Reading"
-                class="book-image" />
-            <p class="book-title">Reading</p>
-        </a>
+            <p class="book-title">Task 1</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/TnPrCQs-NLo"
+                title="TOEFL Integrated Writing PRACTICE: Question 1" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
         </div>
         <div class="book">
-            <a href="./tofel-writing.html">
-            <img src="https://www.pobble.com/hs-fs/hubfs/motivated-writer-no-bg-1-2.png?width=1200&name=motivated-writer-no-bg-1-2.png"
-                alt="writing" class="book-image" />
-            <p class="book-title">Writing</p>
-            </a>
-        </div>
-        <div class="book">
-            <a href="./tofel-listening.html">
-            <img src="https://content.twinkl.co.uk/website/uploaded/listening-blog-1-1646221074.jpg" alt="Listening"
-                class="book-image" />
-            <p class="book-title">Listening</p>
-            </a>
-        </div>
-        <div class="book">
-            <a href="./tofel-speaking.html">
-            <img src="https://cdn.pixabay.com/photo/2023/06/28/08/13/public-speaking-8093767_640.png" alt="Speaking"
-                class="book-image" />
-            <p class="book-title">Speaking</p>
-            </a>
+            <p class="book-title">Task 2</p>
+            <iframe width="620" height="375" src="https://www.youtube.com/embed/QL4r78VQq1M"
+                title="New TOEFL Writing Question: Guide to Academic Discussion Questions" frameborder="0"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+            </iframe>
         </div>
     </section>
+
 </body>
 
 </html>
