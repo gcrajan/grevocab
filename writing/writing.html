@@ -81,10 +81,6 @@
       border-radius: 5px;
     }
 
-    .question {
-      font-weight: bold;
-    }
-
     .answer {
       display: none;
       margin-top: 10px;
@@ -119,7 +115,7 @@
 
     .highlighted-question {
       font-weight: bold;
-      color: #2c3e50;
+      color: #f72222;
       font-size: 1.1rem;
     }
 
@@ -166,10 +162,38 @@
         const qaDiv = document.createElement("div");
         qaDiv.classList.add("qaDiv");
 
+        const [firstLine, ...restLines] = item.question.split("\n");
+
+        const questionContainer = document.createElement("div");
+        questionContainer.style.position = "relative";
+
+        const copyBtn = document.createElement("button");
+        copyBtn.textContent = "Copy";
+        copyBtn.style.position = "absolute";
+        copyBtn.style.top = "0";
+        copyBtn.style.right = "0";
+        copyBtn.style.fontSize = "0.8rem";
+        copyBtn.style.padding = "4px 8px";
+        copyBtn.style.backgroundColor = "#6c757d";
+        copyBtn.style.color = "#fff";
+        copyBtn.style.border = "none";
+        copyBtn.style.borderRadius = "3px";
+        copyBtn.style.cursor = "pointer";
+
+        copyBtn.onclick = () => {
+          navigator.clipboard.writeText(item.question).then(() => {
+            copyBtn.textContent = "Copied!";
+            setTimeout(() => (copyBtn.textContent = "Copy"), 1500);
+          });
+        };
+
         const questionEl = document.createElement("p");
         questionEl.classList.add("question");
-        const [firstLine, ...restLines] = item.question.split("\n");
-        questionEl.innerHTML = `Q${index + 1}: <span class="highlighted-question">${firstLine}</span><br>${restLines.join("<br>")}`;
+        questionEl.innerHTML = `Q${index + 1}: <span style="font-weight:bold; color:#2c3e50; font-size:1.1rem;">${firstLine}</span><br>${restLines.join("<br>")}`;
+
+        questionContainer.appendChild(copyBtn);
+        questionContainer.appendChild(questionEl);
+
 
         const answerEl = document.createElement("p");
         answerEl.classList.add("answer");
@@ -190,7 +214,7 @@
 
         answerEl.style.display = "none"; // Hide answers initially
 
-        qaDiv.appendChild(questionEl);
+        qaDiv.appendChild(questionContainer);
         qaDiv.appendChild(toggleBtn);
         qaDiv.appendChild(answerEl);
 
