@@ -36,7 +36,7 @@
       name="twitter:image"
       content="https://pbs.twimg.com/profile_images/1441442129629249537/tapqgD9Z_400x400.jpg"
     />
-    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/fav-icon.png" type="image/x-icon" />
     <title>Gre Prep: Vocabulary</title>
     <style>
       body {
@@ -49,19 +49,61 @@
       }
       .header {
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-bottom: 20px;
       }
-      .header > a {
+
+      .header-a {
         color: #ffffff;
         text-decoration: none;
-        font-size: 1.15rem;
+        /* font-size: 1.15rem; */
         background-color: #28a745;
         border: 1px solid #28a745;
         border-radius: 0.2rem;
-        padding: 0.1rem 0.3rem;
+        padding: 0.3rem 0.5rem;
       }
-      .header > a:hover {
+
+      .header-a:hover {
+        color: #54d171;
+      }
+
+      .breadcrumb {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+        padding: 10px 15px;
+        /* background-color: #ffffff; */
+        border-radius: 8px;
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); */
+        color: #333;
+      }
+
+      .breadcrumb a {
         color: #28a745;
-        background-color: #ffffff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease;
+        font-size: 1.2rem;
+      }
+
+      .breadcrumb a:hover {
+        /* text-decoration: underline; */
+        color: #1c7c36;
+      }
+
+      .breadcrumb span.separator {
+        color: #aaa;
+        user-select: none;
+      }
+
+      .breadcrumb span:last-child {
+        font-size: 1.2rem;
+        color: #555;
       }
       .container {
         display: flex;
@@ -162,7 +204,16 @@
   </head>
   <body>
     <header class="header">
-      <a href="/vocabulary/vocabulary.html">< Back to Vocab lists</a>
+      <nav class="breadcrumb">
+        <a href="/index.html">Home</a>
+        <span class="separator">›</span>
+        <a href="/vocabulary/vocabulary.html">Vocabulary</a>
+        <span class="separator">›</span>
+        <span>Practice</span>
+      </nav>
+      <div>
+        <a href="/vocabulary/material.html" class="header-a">Materials</a>
+      </div>
     </header>
 
     <h1>GRE Vocab Practice</h1>

@@ -36,7 +36,7 @@
       name="twitter:image"
       content="https://pbs.twimg.com/profile_images/1441442129629249537/tapqgD9Z_400x400.jpg"
     />
-    <link rel="shortcut icon" href="/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/fav-icon.png" type="image/x-icon" />
     <title>Gre Prep: Quant</title>
     <style>
       body {
@@ -49,30 +49,60 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        margin-bottom: 20px;
         flex-wrap: wrap;
         gap: 2rem;
+        margin-bottom: 20px;
       }
-      .header > a,
-      .header > div > a {
+
+      .header-a {
         color: #ffffff;
         text-decoration: none;
-        font-size: 1.15rem;
+        /* font-size: 1.15rem; */
         background-color: #28a745;
         border: 1px solid #28a745;
         border-radius: 0.2rem;
         padding: 0.3rem 0.5rem;
       }
-      .header > a:hover,
-      .header > div > a:hover {
-        color: #28a745;
-        background-color: #ffffff;
+
+      .header-a:hover {
+        color: #54d171;
       }
-      .header > div {
+
+      .breadcrumb {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
-        justify-content: space-around;
-        gap: 2rem;
+        gap: 0.5rem;
+        font-size: 1rem;
+        margin: 20px 0;
+        padding: 10px 15px;
+        /* background-color: #ffffff; */
+        border-radius: 8px;
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); */
+        color: #333;
+      }
+
+      .breadcrumb a {
+        color: #28a745;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.2s ease;
+        font-size: 1.2rem;
+      }
+
+      .breadcrumb a:hover {
+        /* text-decoration: underline; */
+        color: #1c7c36;
+      }
+
+      .breadcrumb span.separator {
+        color: #aaa;
+        user-select: none;
+      }
+
+      .breadcrumb span:last-child {
+        font-size: 1.2rem;
+        color: #555;
       }
       h1 {
         text-align: center;
@@ -195,13 +225,18 @@
   </head>
   <body>
     <header class="header">
-      <a href="/quant/quantpractice.html" class="red">Practice</a>
-      <div>
+      <nav class="breadcrumb">
         <a href="/index.html">Home</a>
-        <a href="/writing/writing.html">Writing</a>
-        <a href="/vocabulary/vocabulary.html">Vocab</a>
+        <span class="separator">›</span>
+        <span></span>
+        <span>Quant</span>
+      </nav>
+      <div>
+        <a href="/vocabulary/material.html" class="header-a">Materials</a>
+        <a href="/quant/quantpractice.html" class="red header-a">Practice</a>
       </div>
     </header>
+
     <h1>GRE Quant cheatsheet.</h1>
     <section>
       <p class="card-heading">Week 1</p>
