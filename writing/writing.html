@@ -39,147 +39,186 @@
     <link rel="shortcut icon" href="/fav-icon.png" type="image/x-icon" />
     <title>Epreptest: Writing</title>
     <style>
-      body {
+      * {
         box-sizing: border-box;
-        padding: 20px;
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f9f9f9;
       }
-
+    
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f7fa;
+        color: #333;
+      }
+    
+      .container {
+        /* max-width: 900px; */
+        margin: auto;
+      }
+    
+      h1 {
+        text-align: center;
+        color: #2b2b2b;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+      }
+    
       .header {
         display: flex;
         align-items: center;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 2rem;
-        margin-bottom: 20px;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
       }
-
+    
       .header-a {
-        color: #ffffff;
+        color: #fff;
         text-decoration: none;
-        /* font-size: 1.15rem; */
         background-color: #28a745;
-        border: 1px solid #28a745;
-        border-radius: 0.2rem;
-        padding: 0.3rem 0.5rem;
+        border-radius: 5px;
+        padding: 8px 14px;
+        font-weight: 500;
+        transition: background-color 0.2s;
       }
-
+    
       .header-a:hover {
-        color: #54d171;
+        background-color: #218838;
       }
-
+    
+      .red {
+        background-color: #dc3545 !important;
+      }
+    
+      .red:hover {
+        background-color: #c82333 !important;
+      }
+    
       .breadcrumb {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         gap: 0.5rem;
-        font-size: 1rem;
-        margin: 20px 0;
-        padding: 10px 15px;
-        /* background-color: #ffffff; */
-        border-radius: 8px;
-        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); */
-        color: #333;
+        font-size: 1.1rem;
+        flex-wrap: wrap;
       }
-
+    
       .breadcrumb a {
         color: #28a745;
         text-decoration: none;
-        font-weight: 500;
-        transition: color 0.2s ease;
-        font-size: 1.2rem;
+        font-weight: 600;
       }
-
+    
       .breadcrumb a:hover {
-        /* text-decoration: underline; */
         color: #1c7c36;
       }
-
+    
       .breadcrumb span.separator {
         color: #aaa;
-        user-select: none;
       }
-
+    
       .breadcrumb span:last-child {
-        font-size: 1.2rem;
         color: #555;
       }
-
-      h1 {
-        text-align: center;
-        color: #333;
-      }
-
+    
       .note {
-        color: #333;
-        font-size: smaller;
-        margin-top: 1rem;
-        font-style: italic;
-      }
-
-      .note > span {
-        color: #3d08ff;
-        font-style: normal !important;
-      }
-
-      .container {
-        margin: auto;
-      }
-
-      .qaDiv {
-        margin-bottom: 15px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        background-color: #ffffff;
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+        background: #e9f7ef;
+        padding: 12px 18px;
+        border-left: 5px solid #28a745;
         border-radius: 5px;
       }
-
+    
+      .note span {
+        font-weight: bold;
+        color: #0c63e4;
+      }
+    
+      .qaDiv {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.2s ease-in-out;
+      }
+    
+      .qaDiv:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+    
+      .highlighted-question {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #dc3545;
+      }
+    
       .answer {
         display: none;
-        margin-top: 10px;
-        background: #fffdfd;
-        padding: 10px;
-        border-radius: 4px;
-        border: 1px solid #ddd;
+        margin-top: 12px;
+        background-color: #f8f9fa;
+        border-left: 4px solid #007bff;
+        padding: 12px;
+        border-radius: 6px;
+        white-space: pre-wrap;
       }
-
+    
       .toggle-btn {
-        padding: 5px 10px;
-        color: white;
+        margin-top: 10px;
+        padding: 8px 16px;
+        font-size: 1rem;
         border: none;
         border-radius: 4px;
-        cursor: pointer;
         background-color: #007bff;
-        font-size: 1rem;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
       }
-
+    
       .toggle-btn:hover {
         background-color: #0056b3;
       }
-
-      .red {
-        background-color: rgb(255, 43, 43) !important;
-        border: 1px solid rgb(255, 43, 43) !important;
+    
+      button[style*="position: absolute"] {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        background-color: #6c757d;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
       }
-
-      .red:hover {
-        color: rgb(255, 159, 159) !important;
+    
+      button[style*="position: absolute"]:hover {
+        background-color: #5a6268;
       }
-
-      .highlighted-question {
-        font-weight: bold;
-        color: #f72222;
-        font-size: 1.1rem;
-      }
-
+    
       footer {
-        display: flex;
-        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #888;
+        margin-top: 2rem;
         padding-top: 1rem;
       }
+    
+      @media (max-width: 600px) {
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+    
+        .breadcrumb {
+          font-size: 1rem;
+        }
+    
+        .header-a {
+          width: 100%;
+          text-align: center;
+        }
+      }
     </style>
+    
   </head>
 
   <body>
