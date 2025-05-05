@@ -5,187 +5,159 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Boost your GRE preparation with expert practice in Analytical Writing, Quant, and Verbal. Get the best GRE prep resources, vocab practice, and quant problem-solving techniques." />
+    content="Boost your GRE preparation with expert practice in Analytical Writing, Quant, and Verbal." />
   <meta name="keywords"
-    content="GRE prep, GRE practice, GRE writing, analytical writing, GRE quant practice, vocab, vocab practice, GRE preparation, GRE verbal, GRE study tips" />
-  <meta name="jhamghat" content="Jhamghat" />
-  <meta name="robots" content="index, follow" />
+    content="GRE prep, GRE practice, GRE writing, analytical writing, GRE quant practice, vocab, vocab practice, GRE verbal" />
   <meta property="og:title" content="Best GRE Preparation - Writing, Quant & Verbal Practice" />
   <meta property="og:description"
-    content="Ace your GRE with top-notch preparation strategies, analytical writing exercises, quant problem-solving, and vocab practice." />
+    content="Ace your GRE with writing exercises, quant problem-solving, and vocab practice." />
   <meta property="og:image" content="https://greprep.netlify.app/logo.png" />
   <meta property="og:url" content="https://greprep.netlify.app/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="GRE Prep - Writing, Quant & Vocab Practice" />
   <meta name="twitter:description"
-    content="Excel in your GRE with effective study techniques and practice questions in writing, quant, and vocab." />
+    content="Excel in your GRE with effective strategies and practice questions." />
   <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1441442129629249537/tapqgD9Z_400x400.jpg" />
   <link rel="shortcut icon" href="/fav-icon.png" type="image/x-icon" />
   <title>Epreptest</title>
+
   <style>
-    body {
+    * {
       box-sizing: border-box;
-      padding: 0rem;
-      margin: 0rem;
-      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
     }
 
-    body>section {
-      padding: 20px;
-      min-height: 80vh;
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
     }
 
-    .header {
+    header {
       display: flex;
       align-items: center;
-      margin: 20px 0px 0px 20px;
-      gap: 1rem;
+      padding: 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
     }
 
-    .header>img {
-      height: 5rem;
+    header img {
+      height: 60px;
       width: auto;
-      /* border-radius: 50%; */
     }
 
-    .header>div {
-      display: flex;
-      flex-direction: column;
-      gap: 0.25rem;
+    section {
+      padding: 2rem 1rem;
+      max-width: 1200px;
+      margin: auto;
     }
-
-    /* .mainP {
-      font-size: 1.3rem;
-      font-weight: 600;
-      font-family: monospace;
-      margin: 0px;
-    }
-
-    .secondP {
-      font-family: cursive;
-      margin: 0px;
-    } */
 
     h1 {
+      font-size: 1.8rem;
       text-align: center;
+      margin-bottom: 1rem;
+      color: #2c3e50;
     }
 
     .card-container {
       display: flex;
-      justify-content: space-between;
-      gap: 20px;
-      margin-top: 20px;
       flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
 
     .card {
-      width: 100%;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
       overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      max-width: 320px;
       text-align: center;
-      transition: transform 0.3s ease-in-out;
     }
 
     .card:hover {
-      transform: scale(1.05);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .card>a {
-      text-decoration: none;
-    }
-
-    .card-image {
+    .card img {
       width: 100%;
-      height: 300px;
+      height: 220px;
       object-fit: cover;
+      display: block;
+      transition: filter 0.3s ease;
     }
 
     .card-title {
-      font-size: 1.2rem;
-      padding: 10px;
       background-color: #28a745;
       color: white;
-      margin: 0;
-      font-weight: bold;
+      padding: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
     }
 
     footer {
-      display: flex;
-      justify-content: center;
-      padding-top: 1rem;
+      text-align: center;
+      padding: 1.5rem 0;
+      background-color: #eee;
+      margin-top: 2rem;
+      font-size: 0.9rem;
     }
 
-    @media only screen and (min-width: 600px) and (max-width: 900px) {
+    @media screen and (min-width: 600px) {
       .card {
-        width: 47% !important;
+        width: calc(50% - 20px);
       }
     }
 
-    @media only screen and (min-width: 900px) {
+    @media screen and (min-width: 900px) {
       .card {
-        width: 30% !important;
+        width: calc(33.33% - 20px);
       }
     }
   </style>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "EducationalOrganization",
-      "name": "EPreptest",
-      "url": "https://epreptest.netlify.app",
-      "sameAs": [],
-      "logo": "https://epreptest.netlify.app/logo.png",
-      "description": "Online GRE, TOFEL, IELTS and SAT preparation including practice for Quant, Verbal, and Analytical Writing."
-    }
-    </script>
-    
 </head>
 
 <body>
-  <header class="header">
-    <img src="/logo.png" alt="logo" />
-    <!-- <div>
-      <p class="mainP">GREPrep by Jhamghat</p>
-      <p class="secondP">Your one step 🐾...🐾🐾🐾</p>
-    </div> -->
+  <header>
+    <img src="/logo.png" alt="GRE Prep Logo" loading="lazy" />
   </header>
+
   <section>
-    <div>
-      <h1>Welcome to GRE perparation.</h1>
-    </div>
+    <h1>Welcome to GRE Preparation</h1>
+
     <div class="card-container">
       <div class="card">
         <a href="writing/writing.html">
           <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*tC_17YEiu4jLs-qp" alt="Writing"
-            class="card-image" />
+            loading="lazy" />
           <p class="card-title">Writing</p>
         </a>
       </div>
       <div class="card">
         <a href="vocabulary/vocabulary.html">
-          <img src="https://www.maize.io/wp-content/uploads/2024/01/Vale-cover-1-jpg.webp" alt="Verbal"
-            class="card-image" />
+          <img src="https://www.maize.io/wp-content/uploads/2024/01/Vale-cover-1-jpg.webp" alt="Verbal" loading="lazy" />
           <p class="card-title">Verbal</p>
         </a>
       </div>
       <div class="card">
         <a href="quant/quant.html">
-          <img src="https://qph.cf2.quoracdn.net/main-qimg-531b05e795441a0bd4a378eb30dcd09e" alt="Quant"
-            class="card-image" />
+          <img src="https://qph.cf2.quoracdn.net/main-qimg-531b05e795441a0bd4a378eb30dcd09e" alt="Quant" loading="lazy" />
           <p class="card-title">Quant</p>
         </a>
       </div>
     </div>
-    <div>
-      <h1>Extra Materials.</h1>
-    </div>
+
+    <h1>Extra Materials</h1>
+
     <div class="card-container">
       <div class="card">
         <a href="book/book.html">
           <img src="https://img.freepik.com/free-photo/open-book-blue-background-isolated-closeup_169016-25939.jpg"
-            alt="Book" class="card-image" />
+            alt="Book" loading="lazy" />
           <p class="card-title">Book</p>
         </a>
       </div>
@@ -193,24 +165,21 @@
         <a href="tofel/tofel.html">
           <img
             src="https://jointvision.edu.np/wp-content/uploads/2023/05/JOE_6091_TOEFL_Thumbnail_Article_Banner_01_2f21e91dbb-1536x1025.jpg"
-            alt="Tofel" class="card-image" />
+            alt="Tofel" loading="lazy" />
           <p class="card-title">Tofel</p>
         </a>
       </div>
       <div class="card">
         <a href="video/video.html">
-          <img
-            src="https://www.virtualne.sk/Data/2720/UserFiles/blog-2021/ako-na-video%20(1).webp"
-            alt="Video" class="card-image" />
+          <img src="https://www.virtualne.sk/Data/2720/UserFiles/blog-2021/ako-na-video%20(1).webp" alt="Video"
+            loading="lazy" />
           <p class="card-title">Video</p>
         </a>
       </div>
     </div>
-    </div>
-
-    <div class="quizes"></div>
   </section>
-  <footer>Copyright @ 2025, Jhamghat</footer>
+
+  <footer>© 2025, Jhamghat. All rights reserved.</footer>
 </body>
 
 </html>
