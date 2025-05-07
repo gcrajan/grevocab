@@ -1,123 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Boost your GRE preparation with expert practice in Analytical Writing, Quant, and Verbal. Get the best GRE prep resources, vocab practice, and quant problem-solving techniques." />
-  <meta name="keywords"
-    content="GRE prep, GRE practice, GRE writing, analytical writing, gre writing practice, GRE preparation, GRE verbal, GRE study tips" />
-  <meta name="jhamghat" content="Jhamghat" />
+  <meta name="description" content="Boost your GRE preparation with expert practice in Analytical Writing, Quant, and Verbal." />
+  <meta name="keywords" content="GRE prep, GRE writing, analytical writing, GRE practice, GRE study tips" />
   <meta name="robots" content="index, follow" />
   <meta property="og:title" content="Best GRE Preparation - Writing, Quant & Verbal Practice" />
-  <meta property="og:description"
-    content="Ace your GRE with top-notch preparation strategies, analytical writing exercises, quant problem-solving, and vocab practice." />
   <meta property="og:image" content="https://greprep.netlify.app/logo.png" />
   <meta property="og:url" content="https://greprep.netlify.app/" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="GRE Prep - Writing, Quant & Vocab Practice" />
-  <meta name="twitter:description"
-    content="Excel in your GRE with effective study techniques and practice questions in writing, quant, and vocab." />
   <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1441442129629249537/tapqgD9Z_400x400.jpg" />
   <link rel="shortcut icon" href="/fav-icon.png" type="image/x-icon" />
-  <title>Epreptest: Gre Writing Practice</title>
+  <title>Epreptest: GRE Writing Practice</title>
   <style>
-    body {
+    *, *::before, *::after {
       box-sizing: border-box;
-      padding: 20px;
-      margin: 0rem;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f9f9f9;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
     }
 
     .header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
       flex-wrap: wrap;
-      gap: 2rem;
-      margin-bottom: 20px;
-    }
-
-    .header-a {
-      color: #ffffff;
-      text-decoration: none;
-      /* font-size: 1.15rem; */
-      background-color: #28a745;
-      border: 1px solid #28a745;
-      border-radius: 0.2rem;
-      padding: 0.3rem 0.5rem;
-    }
-
-    .header-a:hover {
-      color: #54d171;
     }
 
     .breadcrumb {
       display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1.1rem;
       flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 1rem;
     }
 
     .breadcrumb a {
-      color: #28a745;
+      color: #007b5e;
       text-decoration: none;
       font-weight: 600;
     }
 
     .breadcrumb a:hover {
-      color: #1c7c36;
+      text-decoration: underline;
     }
 
     .breadcrumb span.separator {
-      color: #aaa;
+      color: #999;
     }
 
-    .breadcrumb span:last-child {
-      color: #555;
+    .header-a {
+      background-color: #28a745;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .header-a:hover {
+      background-color: #218838;
     }
 
     .container {
-      max-width: 65vw;
-      margin: auto;
-      min-height: 80vh;
+      max-width: 768px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
     }
 
-    .hidden {
-      display: none;
-    }
-
-    textarea {
-      width: 100%;
-      height: 200px;
-      font-size: 1rem;
-      padding: 2rem 0.5rem 0.5rem 0.5rem;
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
     }
 
     button {
-      padding: 5px 10px;
-      color: white;
+      padding: 0.6rem 1.2rem;
       border: none;
-      border-radius: 4px;
-      cursor: pointer;
       background-color: #28a745;
+      color: white;
       font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
     }
 
     button:hover {
       background-color: #218838;
     }
 
-    .copydiv {
-      margin-top: 20px;
-      padding: 10px;
+    textarea {
+      width: 100%;
+      height: 200px;
+      padding: 1rem;
+      margin-top: 1rem;
       border: 1px solid #ccc;
-      background-color: #f9f9f9;
-      text-align: left;
+      border-radius: 6px;
+      font-size: 1rem;
+      resize: vertical;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    #questionContainer {
+      margin-top: 2rem;
+    }
+
+    #question {
+      font-weight: 600;
+      margin: 1rem 0;
+    }
+
+    #timer {
+      position: absolute;
+      right: 1rem;
+      top: 1rem;
+      font-weight: bold;
+      color: #666;
+    }
+
+    .copydiv {
+      margin-top: 2rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+      border-radius: 8px;
     }
 
     .copydiv button {
@@ -129,51 +150,48 @@
     }
 
     .inputvalues {
-      white-space: pre-wrap;
-      font-family: Arial, sans-serif;
       background-color: #fff;
-      padding: 10px;
-      border-radius: 5px;
+      padding: 1rem;
+      border-radius: 6px;
       border: 1px solid #ccc;
-    }
-
-    #questionContainer,
-    #question {
-      text-align: initial;
-      position: relative;
-    }
-
-    #question {
-      font-weight: 600;
-    }
-
-    #timer {
-      position: absolute;
-      right: 0.1rem;
-      background-color: #fff;
+      white-space: pre-wrap;
     }
 
     footer {
-      display: flex;
-      justify-content: center;
-      padding-top: 1rem;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #888;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .breadcrumb {
+        font-size: 0.9rem;
+      }
+
+      button {
+        width: 100%;
+      }
     }
   </style>
 </head>
-
 <body>
   <header class="header">
     <nav class="breadcrumb">
       <a href="/index.html">Home</a>
       <span class="separator">›</span>
-      <span></span>
       <a href="/writing/writing.html">Writing</a>
       <span class="separator">›</span>
       <span>Practice</span>
     </nav>
-    <div>
-      <a href="/writing/template.html" class="red header-a">Template</a>
-    </div>
+    <a href="/writing/template.html" class="header-a">Template</a>
   </header>
 
   <div class="container">
@@ -181,14 +199,10 @@
     <button id="randomGenerate">Generate Random Topic</button>
 
     <div id="questionContainer" class="hidden">
-      <p>
-        <strong>Topic:</strong> <br />
-        Present your perspective on the issue below, using relevant reasons
-        and/or examples to support your views.
-      </p>
+      <p><strong>Topic:</strong><br> Present your perspective on the issue below, using relevant reasons and/or examples to support your views.</p>
       <p id="question"></p>
       <p id="timer"></p>
-      <textarea id="answerTextarea" rows="10" placeholder="Write your answer here..."></textarea>
+      <textarea id="answerTextarea" placeholder="Write your answer here..."></textarea>
       <button id="submitAnswer">Submit</button>
     </div>
 
@@ -196,15 +210,13 @@
       <button id="copyButton">Copy</button>
       <p><strong>Paste this in ChatGPT:</strong></p>
       <p class="inputvalues">
-        <strong>
-          <span id="questionText"></span>
-        </strong>
-        <!-- <br /> -->
+        <strong><span id="questionText"></span></strong><br />
         <span id="userAnswerText"></span>
       </p>
     </div>
   </div>
-  <footer>Copyright @ 2025, Jhamghat</footer>
+
+  <footer>© 2025 Jhamghat</footer>
 
   <script>
     let questions = [];
@@ -214,7 +226,6 @@
       questions = await response.json();
     }
 
-    let timer;
     const randomGenerate = document.getElementById("randomGenerate");
     const questionContainer = document.getElementById("questionContainer");
     const questionText = document.getElementById("question");
@@ -226,12 +237,14 @@
     const userAnswerText = document.getElementById("userAnswerText");
     const questionTextCopy = document.getElementById("questionText");
 
+    let timer;
+
     randomGenerate.addEventListener("click", async () => {
       await fetchQuestions();
-      let randomIndex = Math.floor(Math.random() * questions.length);
-      let selectedQuestion = questions[randomIndex].question;
+      const randomIndex = Math.floor(Math.random() * questions.length);
+      const selectedQuestion = questions[randomIndex].question;
       questionText.textContent = selectedQuestion;
-      questionTextCopy.textContent = selectedQuestion; // Save for copy
+      questionTextCopy.textContent = selectedQuestion;
       answerTextarea.value = "";
       questionContainer.classList.remove("hidden");
       randomGenerate.classList.add("hidden");
@@ -242,10 +255,9 @@
     function startTimer(duration) {
       let timeLeft = duration;
       timer = setInterval(() => {
-        let minutes = Math.floor(timeLeft / 60);
-        let seconds = timeLeft % 60;
-        timerDisplay.textContent = `${minutes}:${seconds < 10 ? "0" : ""
-          }${seconds}`;
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timerDisplay.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
         if (timeLeft <= 0) {
           clearInterval(timer);
           submitAnswer.click();
@@ -256,25 +268,18 @@
 
     submitAnswer.addEventListener("click", () => {
       clearInterval(timer);
-      let userAnswer = answerTextarea.value;
-      userAnswerText.textContent = userAnswer;
+      userAnswerText.textContent = answerTextarea.value;
       copyDiv.classList.remove("hidden");
       randomGenerate.classList.remove("hidden");
       questionContainer.classList.add("hidden");
     });
 
     copyButton.addEventListener("click", () => {
-      let textToCopy = document.querySelector(".inputvalues").textContent;
-      navigator.clipboard
-        .writeText(textToCopy)
-        .then(() => {
-          alert("Copied to clipboard!");
-        })
-        .catch((err) => {
-          console.error("Failed to copy:", err);
-        });
+      const textToCopy = document.querySelector(".inputvalues").textContent;
+      navigator.clipboard.writeText(textToCopy)
+        .then(() => alert("Copied to clipboard!"))
+        .catch(err => console.error("Failed to copy:", err));
     });
   </script>
 </body>
-
 </html>
