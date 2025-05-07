@@ -113,7 +113,7 @@
         display: none;
       }
 
-      textarea {
+      /* textarea {
         width: 100%;
         height: 200px;
         font-size: 1rem;
@@ -123,6 +123,19 @@
         font-size: 1rem;
         resize: vertical;
         font-family: sans-serif;
+      } */
+      textarea {
+        width: 100%;
+        height: 200px;
+        font-size: 1rem;
+        padding: 2rem 0.5rem 0.5rem 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-family: sans-serif;
+        white-space: pre-wrap; /* Ensure wrapping */
+        word-wrap: break-word; /* Ensures that long words are broken properly */
+        resize: vertical;
+        line-height: 1.5; /* Add line-height for better text separation */
       }
 
       button {
@@ -157,7 +170,6 @@
       }
 
       .inputvalues {
-        white-space: pre-wrap;
         font-family: Arial, sans-serif;
         background-color: #fff;
         padding: 10px;
@@ -241,11 +253,30 @@
         <button id="copyButton">Copy</button>
         <p><strong>Paste this in AI models (ChatGPT, Deepseek):</strong></p>
         <p class="inputvalues">
-          <strong>
-            <span id="questionText"></span>
-          </strong>
-          <!-- <br /> -->
-          <span id="userAnswerText"></span>
+          <strong>📝 Topic:<br /></strong> <span id="questionText"></span
+          ><br /><br />
+          <strong>✅ Answer:<br /></strong> <span id="userAnswerText"></span
+          ><br /><br />
+          <strong>➡️ Full Prompt:</strong><br />
+          I am preparing for the GRE Analytical Writing section. Please evaluate
+          my response below based on the official ETS GRE scoring rubric (0–6)
+          and provide feedback in the following format:<br />
+          ✅ Score: Provide a score between 0–6 based on the official GRE
+          rubric. If the essay is off-topic or not aligned with the prompt, give
+          a score of 0 and explain why.<br />
+          🔍 Strengths: Highlight what I did well in terms of reasoning,
+          structure, examples, vocabulary, tone, and adherence to the prompt.<br />
+          ⚠️ Errors: Identify any issues in grammar, clarity, structure, logical
+          flow, or content. If the response is off-topic, mention that here.<br />
+          ✨ Suggestions for Improvement: Provide suggestions on how I can
+          address the errors and improve my essay's overall quality.<br />
+          ✍️ Perfect Score (6) Essay: Rewrite my essay into a refined version
+          that would receive a perfect score of 6. Keep all my original ideas
+          and structure, but improve fluency, coherence, grammar, and style.<br />
+          ⚠️ Note: If my answer is off-topic or does not address the prompt,
+          please indicate that and provide reasoning. If it’s relevant but needs
+          significant improvement, give detailed feedback on how I can stay on
+          topic and make my argument stronger.
         </p>
       </div>
     </div>
@@ -303,7 +334,8 @@
       submitAnswer.addEventListener("click", () => {
         clearInterval(timer);
         let userAnswer = answerTextarea.value;
-        userAnswerText.textContent = userAnswer;
+        // Replace newlines with <br> to preserve paragraph breaks
+        userAnswerText.innerHTML = userAnswer.replace(/\n/g, "<br>");
         copyDiv.classList.remove("hidden");
         randomGenerate.classList.remove("hidden");
         questionContainer.classList.add("hidden");
@@ -311,8 +343,10 @@
 
       copyButton.addEventListener("click", () => {
         let textToCopy = document.querySelector(".inputvalues").textContent;
+        // Replace <br> tags with \n for copying the correct text with newlines
+        let textWithLineBreaks = textToCopy.replace(/<br>/g, "\n");
         navigator.clipboard
-          .writeText(textToCopy)
+          .writeText(textWithLineBreaks)
           .then(() => {
             alert("Copied to clipboard!");
           })
