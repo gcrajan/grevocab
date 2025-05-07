@@ -1,280 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Boost your GRE preparation with expert practice in Analytical Writing, Quant, and Verbal. Get the best GRE prep resources, vocab practice, and quant problem-solving techniques."
+    />
+    <meta
+      name="keywords"
+      content="GRE prep, GRE practice, GRE writing, analytical writing, gre writing practice, GRE preparation, GRE verbal, GRE study tips"
+    />
+    <meta name="jhamghat" content="Jhamghat" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Best GRE Preparation - Writing, Quant & Verbal Practice"
+    />
+    <meta
+      property="og:description"
+      content="Ace your GRE with top-notch preparation strategies, analytical writing exercises, quant problem-solving, and vocab practice."
+    />
+    <meta property="og:image" content="https://greprep.netlify.app/logo.png" />
+    <meta property="og:url" content="https://greprep.netlify.app/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="GRE Prep - Writing, Quant & Vocab Practice"
+    />
+    <meta
+      name="twitter:description"
+      content="Excel in your GRE with effective study techniques and practice questions in writing, quant, and vocab."
+    />
+    <meta
+      name="twitter:image"
+      content="https://pbs.twimg.com/profile_images/1441442129629249537/tapqgD9Z_400x400.jpg"
+    />
+    <link rel="shortcut icon" href="/fav-icon.png" type="image/x-icon" />
+    <title>Epreptest: Gre Writing Practice</title>
+    <style>
+      body {
+        box-sizing: border-box;
+        padding: 20px;
+        margin: 0rem;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f9f9f9;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Boost your GRE preparation with expert practice in Analytical Writing, Quant, and Verbal. Get the best GRE prep resources, vocab practice, and quant problem-solving techniques." />
-  <meta name="keywords"
-    content="GRE prep, GRE practice, GRE writing, analytical writing, gre writing practice, GRE preparation, GRE verbal, GRE study tips" />
-  <meta name="jhamghat" content="Jhamghat" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Best GRE Preparation - Writing, Quant & Verbal Practice" />
-  <meta property="og:description"
-    content="Ace your GRE with top-notch preparation strategies, analytical writing exercises, quant problem-solving, and vocab practice." />
-  <meta property="og:image" content="https://greprep.netlify.app/logo.png" />
-  <meta property="og:url" content="https://greprep.netlify.app/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="GRE Prep - Writing, Quant & Vocab Practice" />
-  <meta name="twitter:description"
-    content="Excel in your GRE with effective study techniques and practice questions in writing, quant, and vocab." />
-  <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1441442129629249537/tapqgD9Z_400x400.jpg" />
-  <link rel="shortcut icon" href="/fav-icon.png" type="image/x-icon" />
-  <title>Epreptest: Gre Writing Practice</title>
-  <style>
-    body {
-      box-sizing: border-box;
-      padding: 20px;
-      margin: 0rem;
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f9f9f9;
-    }
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-bottom: 20px;
+      }
 
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 2rem;
-      margin-bottom: 20px;
-    }
+      .header-a {
+        color: #ffffff;
+        text-decoration: none;
+        /* font-size: 1.15rem; */
+        background-color: #28a745;
+        border: 1px solid #28a745;
+        border-radius: 0.2rem;
+        padding: 0.3rem 0.5rem;
+      }
 
-    .header-a {
-      color: #ffffff;
-      text-decoration: none;
-      /* font-size: 1.15rem; */
-      background-color: #28a745;
-      border: 1px solid #28a745;
-      border-radius: 0.2rem;
-      padding: 0.3rem 0.5rem;
-    }
+      .header-a:hover {
+        color: #54d171;
+      }
 
-    .header-a:hover {
-      color: #54d171;
-    }
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.1rem;
+        flex-wrap: wrap;
+      }
 
-    .breadcrumb {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1.1rem;
-      flex-wrap: wrap;
-    }
+      .breadcrumb a {
+        color: #28a745;
+        text-decoration: none;
+        font-weight: 600;
+      }
 
-    .breadcrumb a {
-      color: #28a745;
-      text-decoration: none;
-      font-weight: 600;
-    }
+      .breadcrumb a:hover {
+        color: #1c7c36;
+      }
 
-    .breadcrumb a:hover {
-      color: #1c7c36;
-    }
+      .breadcrumb span.separator {
+        color: #aaa;
+      }
 
-    .breadcrumb span.separator {
-      color: #aaa;
-    }
+      .breadcrumb span:last-child {
+        color: #555;
+      }
 
-    .breadcrumb span:last-child {
-      color: #555;
-    }
+      .container {
+        max-width: 65vw;
+        margin: auto;
+        min-height: 80vh;
+      }
 
-    .container {
-      max-width: 65vw;
-      margin: auto;
-      min-height: 80vh;
-    }
+      .container > h1 {
+        font-size: 24px;
+        color: #2c3e50;
+        margin-bottom: 20px;
+      }
 
-    .hidden {
-      display: none;
-    }
+      .hidden {
+        display: none;
+      }
 
-    textarea {
-      width: 100%;
-      height: 200px;
-      font-size: 1rem;
-      padding: 2rem 0.5rem 0.5rem 0.5rem;
-    }
+      textarea {
+        width: 100%;
+        height: 200px;
+        font-size: 1rem;
+        padding: 2rem 0.5rem 0.5rem 0.5rem;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        font-size: 1rem;
+        resize: vertical;
+        font-family: sans-serif;
+      }
 
-    button {
-      padding: 5px 10px;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      background-color: #28a745;
-      font-size: 1rem;
-    }
+      button {
+        padding: 8px 10px;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #2980b9;
+        font-size: 1rem;
+      }
 
-    button:hover {
-      background-color: #218838;
-    }
+      button:hover {
+        background-color: #339de4;
+        color: #c7cdd1;
+      }
 
-    .copydiv {
-      margin-top: 20px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      background-color: #f9f9f9;
-      text-align: left;
-    }
+      .copydiv {
+        margin-top: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #f9f9f9;
+        text-align: left;
+      }
 
-    .copydiv button {
-      background-color: #007bff;
-    }
+      .copydiv button {
+        background-color: #007bff;
+      }
 
-    .copydiv button:hover {
-      background-color: #0056b3;
-    }
+      .copydiv button:hover {
+        background-color: #0056b3;
+      }
 
-    .inputvalues {
-      white-space: pre-wrap;
-      font-family: Arial, sans-serif;
-      background-color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
+      .inputvalues {
+        white-space: pre-wrap;
+        font-family: Arial, sans-serif;
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+      }
 
-    #questionContainer,
-    #question {
-      text-align: initial;
-      position: relative;
-    }
+      #questionContainer,
+      #question {
+        text-align: initial;
+        position: relative;
+      }
 
-    #question {
-      font-weight: 600;
-    }
+      #question,
+      #questionText {
+        font-weight: bold;
+        color: #413e3e;
+        margin: 10px 0;
+        line-height: 1.6;
+      }
 
-    #timer {
-      position: absolute;
-      right: 0.1rem;
-      background-color: #fff;
-    }
+      .question-title {
+        font-weight: bold;
+        color: #8e44ad;
+        margin-top: 10px;
+        margin-bottom: 5px;
+      }
 
-    footer {
-      display: flex;
-      justify-content: center;
-      padding-top: 1rem;
-    }
-  </style>
-</head>
+      #timer {
+        position: absolute;
+        right: 0.1rem;
+        background-color: #fff;
+      }
 
-<body>
-  <header class="header">
-    <nav class="breadcrumb">
-      <a href="/index.html">Home</a>
-      <span class="separator">›</span>
-      <span></span>
-      <a href="/writing/writing.html">Writing</a>
-      <span class="separator">›</span>
-      <span>Practice</span>
-    </nav>
-    <div>
-      <a href="/writing/template.html" class="red header-a">Template</a>
+      footer {
+        display: flex;
+        justify-content: center;
+        padding-top: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header class="header">
+      <nav class="breadcrumb">
+        <a href="/index.html">Home</a>
+        <span class="separator">›</span>
+        <span></span>
+        <a href="/writing/writing.html">Writing</a>
+        <span class="separator">›</span>
+        <span>Practice</span>
+      </nav>
+      <div>
+        <a href="/writing/template.html" class="red header-a">Template</a>
+      </div>
+    </header>
+
+    <div class="container">
+      <h1>🎯 GRE Analytical Writing Practice</h1>
+      <button id="randomGenerate">Generate Random Topic</button>
+
+      <div id="questionContainer" class="hidden">
+        <div>
+          <div class="question-title">📝 Topic:</div>
+          <p>
+            Present your perspective on the issue below, using relevant reasons
+            and/or examples to support your views.
+          </p>
+        </div>
+        <p id="question"></p>
+        <p id="timer"></p>
+        <textarea
+          id="answerTextarea"
+          rows="10"
+          placeholder="Write your answer here..."
+        ></textarea>
+        <button id="submitAnswer">Submit</button>
+      </div>
+
+      <div id="copyDiv" class="copydiv hidden">
+        <button id="copyButton">Copy</button>
+        <p><strong>Paste this in AI models (ChatGPT, Deepseek):</strong></p>
+        <p class="inputvalues">
+          <strong>
+            <span id="questionText"></span>
+          </strong>
+          <!-- <br /> -->
+          <span id="userAnswerText"></span>
+        </p>
+      </div>
     </div>
-  </header>
+    <footer>Copyright @ 2025, Jhamghat</footer>
 
-  <div class="container">
-    <h1>GRE Analytical Writing Practice</h1>
-    <button id="randomGenerate">Generate Random Topic</button>
+    <script>
+      let questions = [];
 
-    <div id="questionContainer" class="hidden">
-      <p>
-        <strong>Topic:</strong> <br />
-        Present your perspective on the issue below, using relevant reasons
-        and/or examples to support your views.
-      </p>
-      <p id="question"></p>
-      <p id="timer"></p>
-      <textarea id="answerTextarea" rows="10" placeholder="Write your answer here..."></textarea>
-      <button id="submitAnswer">Submit</button>
-    </div>
+      async function fetchQuestions() {
+        const response = await fetch("awawriting.json");
+        questions = await response.json();
+      }
 
-    <div id="copyDiv" class="copydiv hidden">
-      <button id="copyButton">Copy</button>
-      <p><strong>Paste this in ChatGPT:</strong></p>
-      <p class="inputvalues">
-        <strong>
-          <span id="questionText"></span>
-        </strong>
-        <!-- <br /> -->
-        <span id="userAnswerText"></span>
-      </p>
-    </div>
-  </div>
-  <footer>Copyright @ 2025, Jhamghat</footer>
+      let timer;
+      const randomGenerate = document.getElementById("randomGenerate");
+      const questionContainer = document.getElementById("questionContainer");
+      const questionText = document.getElementById("question");
+      const answerTextarea = document.getElementById("answerTextarea");
+      const submitAnswer = document.getElementById("submitAnswer");
+      const timerDisplay = document.getElementById("timer");
+      const copyDiv = document.getElementById("copyDiv");
+      const copyButton = document.getElementById("copyButton");
+      const userAnswerText = document.getElementById("userAnswerText");
+      const questionTextCopy = document.getElementById("questionText");
 
-  <script>
-    let questions = [];
+      randomGenerate.addEventListener("click", async () => {
+        await fetchQuestions();
+        let randomIndex = Math.floor(Math.random() * questions.length);
+        let selectedQuestion = questions[randomIndex].question;
+        questionText.textContent = selectedQuestion;
+        questionTextCopy.textContent = selectedQuestion; // Save for copy
+        answerTextarea.value = "";
+        questionContainer.classList.remove("hidden");
+        randomGenerate.classList.add("hidden");
+        copyDiv.classList.add("hidden");
+        startTimer(30 * 60);
+      });
 
-    async function fetchQuestions() {
-      const response = await fetch("awawriting.json");
-      questions = await response.json();
-    }
-
-    let timer;
-    const randomGenerate = document.getElementById("randomGenerate");
-    const questionContainer = document.getElementById("questionContainer");
-    const questionText = document.getElementById("question");
-    const answerTextarea = document.getElementById("answerTextarea");
-    const submitAnswer = document.getElementById("submitAnswer");
-    const timerDisplay = document.getElementById("timer");
-    const copyDiv = document.getElementById("copyDiv");
-    const copyButton = document.getElementById("copyButton");
-    const userAnswerText = document.getElementById("userAnswerText");
-    const questionTextCopy = document.getElementById("questionText");
-
-    randomGenerate.addEventListener("click", async () => {
-      await fetchQuestions();
-      let randomIndex = Math.floor(Math.random() * questions.length);
-      let selectedQuestion = questions[randomIndex].question;
-      questionText.textContent = selectedQuestion;
-      questionTextCopy.textContent = selectedQuestion; // Save for copy
-      answerTextarea.value = "";
-      questionContainer.classList.remove("hidden");
-      randomGenerate.classList.add("hidden");
-      copyDiv.classList.add("hidden");
-      startTimer(30 * 60);
-    });
-
-    function startTimer(duration) {
-      let timeLeft = duration;
-      timer = setInterval(() => {
-        let minutes = Math.floor(timeLeft / 60);
-        let seconds = timeLeft % 60;
-        timerDisplay.textContent = `${minutes}:${seconds < 10 ? "0" : ""
+      function startTimer(duration) {
+        let timeLeft = duration;
+        timer = setInterval(() => {
+          let minutes = Math.floor(timeLeft / 60);
+          let seconds = timeLeft % 60;
+          timerDisplay.textContent = `${minutes}:${
+            seconds < 10 ? "0" : ""
           }${seconds}`;
-        if (timeLeft <= 0) {
-          clearInterval(timer);
-          submitAnswer.click();
-        }
-        timeLeft--;
-      }, 1000);
-    }
+          if (timeLeft <= 0) {
+            clearInterval(timer);
+            submitAnswer.click();
+          }
+          timeLeft--;
+        }, 1000);
+      }
 
-    submitAnswer.addEventListener("click", () => {
-      clearInterval(timer);
-      let userAnswer = answerTextarea.value;
-      userAnswerText.textContent = userAnswer;
-      copyDiv.classList.remove("hidden");
-      randomGenerate.classList.remove("hidden");
-      questionContainer.classList.add("hidden");
-    });
+      submitAnswer.addEventListener("click", () => {
+        clearInterval(timer);
+        let userAnswer = answerTextarea.value;
+        userAnswerText.textContent = userAnswer;
+        copyDiv.classList.remove("hidden");
+        randomGenerate.classList.remove("hidden");
+        questionContainer.classList.add("hidden");
+      });
 
-    copyButton.addEventListener("click", () => {
-      let textToCopy = document.querySelector(".inputvalues").textContent;
-      navigator.clipboard
-        .writeText(textToCopy)
-        .then(() => {
-          alert("Copied to clipboard!");
-        })
-        .catch((err) => {
-          console.error("Failed to copy:", err);
-        });
-    });
-  </script>
-</body>
-
+      copyButton.addEventListener("click", () => {
+        let textToCopy = document.querySelector(".inputvalues").textContent;
+        navigator.clipboard
+          .writeText(textToCopy)
+          .then(() => {
+            alert("Copied to clipboard!");
+          })
+          .catch((err) => {
+            console.error("Failed to copy:", err);
+          });
+      });
+    </script>
+  </body>
 </html>
