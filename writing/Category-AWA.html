@@ -135,8 +135,14 @@
       }
       .category-list-ul {
         display: flex;
+        flex-direction: column;
         justify-content: space-around;
       }
+      @media (min-width: 850px) {
+      .category-list-ul {
+        flex-direction: row;
+      }
+    }
       li {
         margin-bottom: 10px;
       }
