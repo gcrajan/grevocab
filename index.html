@@ -1,185 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Boost your GRE preparation with expert practice in Analytical Writing, Quant, and Verbal."
+    />
+    <meta
+      name="keywords"
+      content="GRE prep, GRE practice, GRE writing, analytical writing, GRE quant practice, vocab, vocab practice, GRE verbal"
+    />
+    <meta
+      property="og:title"
+      content="Best GRE Preparation - Writing, Quant & Verbal Practice"
+    />
+    <meta
+      property="og:description"
+      content="Ace your GRE with writing exercises, quant problem-solving, and vocab practice."
+    />
+    <meta property="og:image" content="https://greprep.netlify.app/logo.png" />
+    <meta property="og:url" content="https://greprep.netlify.app/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="GRE Prep - Writing, Quant & Vocab Practice"
+    />
+    <meta
+      name="twitter:description"
+      content="Excel in your GRE with effective strategies and practice questions."
+    />
+    <meta
+      name="twitter:image"
+      content="https://pbs.twimg.com/profile_images/1441442129629249537/tapqgD9Z_400x400.jpg"
+    />
+    <link rel="shortcut icon" href="/fav-icon.png" type="image/x-icon" />
+    <title>Epreptest</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Boost your GRE preparation with expert practice in Analytical Writing, Quant, and Verbal." />
-  <meta name="keywords"
-    content="GRE prep, GRE practice, GRE writing, analytical writing, GRE quant practice, vocab, vocab practice, GRE verbal" />
-  <meta property="og:title" content="Best GRE Preparation - Writing, Quant & Verbal Practice" />
-  <meta property="og:description"
-    content="Ace your GRE with writing exercises, quant problem-solving, and vocab practice." />
-  <meta property="og:image" content="https://greprep.netlify.app/logo.png" />
-  <meta property="og:url" content="https://greprep.netlify.app/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="GRE Prep - Writing, Quant & Vocab Practice" />
-  <meta name="twitter:description"
-    content="Excel in your GRE with effective strategies and practice questions." />
-  <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1441442129629249537/tapqgD9Z_400x400.jpg" />
-  <link rel="shortcut icon" href="/fav-icon.png" type="image/x-icon" />
-  <title>Epreptest</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f8f9fa;
-      color: #333;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      background-color: #f8f9fa;
-      border-bottom: 1px solid #ddd;
-    }
-
-    header img {
-      height: 60px;
-      width: auto;
-    }
-
-    section {
-      padding: 2rem 1rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      text-align: center;
-      margin-bottom: 1rem;
-      color: #2c3e50;
-    }
-
-    .card-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-
-    .card {
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      width: 100%;
-      max-width: 320px;
-      text-align: center;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
-    }
-
-    .card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      display: block;
-      transition: filter 0.3s ease;
-    }
-
-    .card-title {
-      background-color: #28a745;
-      color: white;
-      padding: 12px;
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-
-    footer {
-      text-align: center;
-      padding: 1.5rem 0;
-      background-color: #eee;
-      margin-top: 2rem;
-      font-size: 0.9rem;
-    }
-
-    @media screen and (min-width: 600px) {
-      .card {
-        width: calc(50% - 20px);
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
       }
-    }
 
-    @media screen and (min-width: 900px) {
-      .card {
-        width: calc(33.33% - 20px);
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f9fa;
+        color: #333;
       }
-    }
-  </style>
-</head>
 
-<body>
-  <header>
-    <img src="/logo.png" alt="GRE Prep Logo" loading="lazy" />
-  </header>
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0rem 5rem;
+        flex-wrap: wrap;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-bottom: 1px solid #ddd;
+      }
 
-  <section>
-    <h1>Welcome to GRE Preparation</h1>
+      header > a {
+        text-decoration: none;
+        font-size: x-large;
+        color: #2c3e50;
+        cursor: pointer;
+        font-weight: bold;
+      }
 
-    <div class="card-container">
-      <div class="card">
-        <a href="writing/writing.html">
-          <img src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*tC_17YEiu4jLs-qp" alt="Writing"
-            loading="lazy" />
-          <p class="card-title">Writing</p>
-        </a>
+      header > a:hover {
+        color: #6e9cca;
+      }
+
+      header img {
+        height: 60px;
+        width: auto;
+      }
+
+      section {
+        padding: 2rem 1rem;
+        margin: 0rem 5rem;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: #2c3e50;
+      }
+
+      .card-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 100%;
+        max-width: 320px;
+        text-align: center;
+      }
+
+      .card > a {
+        text-decoration: none;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        display: block;
+        transition: filter 0.3s ease;
+      }
+
+      .card-title {
+        background-color: #28a745;
+        color: white;
+        padding: 12px;
+        font-size: 1.1rem;
+        font-weight: 600;
+      }
+
+      footer {
+        text-align: center;
+        padding: 1.5rem 0;
+        background-color: #eee;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+      }
+
+      @media screen and (min-width: 600px) {
+        .card {
+          width: calc(50% - 20px);
+        }
+      }
+
+      @media screen and (min-width: 900px) {
+        .card {
+          width: calc(33.33% - 20px);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <img src="/logo.png" alt="GRE Prep Logo" loading="lazy" />
+      <a href="./mock-test/testIndex.html">Mock Test</a>
+    </header>
+
+    <section>
+      <h1>Welcome to GRE Preparation</h1>
+
+      <div class="card-container">
+        <div class="card">
+          <a href="writing/writing.html">
+            <img
+              src="https://miro.medium.com/v2/resize:fit:720/format:webp/0*tC_17YEiu4jLs-qp"
+              alt="Writing"
+              loading="lazy"
+            />
+            <p class="card-title">Writing</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="vocabulary/vocabulary.html">
+            <img
+              src="https://www.maize.io/wp-content/uploads/2024/01/Vale-cover-1-jpg.webp"
+              alt="Verbal"
+              loading="lazy"
+            />
+            <p class="card-title">Verbal</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="quant/quant.html">
+            <img
+              src="https://qph.cf2.quoracdn.net/main-qimg-531b05e795441a0bd4a378eb30dcd09e"
+              alt="Quant"
+              loading="lazy"
+            />
+            <p class="card-title">Quant</p>
+          </a>
+        </div>
       </div>
-      <div class="card">
-        <a href="vocabulary/vocabulary.html">
-          <img src="https://www.maize.io/wp-content/uploads/2024/01/Vale-cover-1-jpg.webp" alt="Verbal" loading="lazy" />
-          <p class="card-title">Verbal</p>
-        </a>
-      </div>
-      <div class="card">
-        <a href="quant/quant.html">
-          <img src="https://qph.cf2.quoracdn.net/main-qimg-531b05e795441a0bd4a378eb30dcd09e" alt="Quant" loading="lazy" />
-          <p class="card-title">Quant</p>
-        </a>
-      </div>
-    </div>
 
-    <h1>Extra Materials</h1>
+      <h1>Extra Materials</h1>
 
-    <div class="card-container">
-      <div class="card">
-        <a href="book/book.html">
-          <img src="https://img.freepik.com/free-photo/open-book-blue-background-isolated-closeup_169016-25939.jpg"
-            alt="Book" loading="lazy" />
-          <p class="card-title">Book</p>
-        </a>
+      <div class="card-container">
+        <div class="card">
+          <a href="book/book.html">
+            <img
+              src="https://img.freepik.com/free-photo/open-book-blue-background-isolated-closeup_169016-25939.jpg"
+              alt="Book"
+              loading="lazy"
+            />
+            <p class="card-title">Book</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="tofel/tofel.html">
+            <img
+              src="https://jointvision.edu.np/wp-content/uploads/2023/05/JOE_6091_TOEFL_Thumbnail_Article_Banner_01_2f21e91dbb-1536x1025.jpg"
+              alt="Tofel"
+              loading="lazy"
+            />
+            <p class="card-title">Tofel</p>
+          </a>
+        </div>
+        <div class="card">
+          <a href="video/video.html">
+            <img
+              src="https://www.virtualne.sk/Data/2720/UserFiles/blog-2021/ako-na-video%20(1).webp"
+              alt="Video"
+              loading="lazy"
+            />
+            <p class="card-title">Video</p>
+          </a>
+        </div>
       </div>
-      <div class="card">
-        <a href="tofel/tofel.html">
-          <img
-            src="https://jointvision.edu.np/wp-content/uploads/2023/05/JOE_6091_TOEFL_Thumbnail_Article_Banner_01_2f21e91dbb-1536x1025.jpg"
-            alt="Tofel" loading="lazy" />
-          <p class="card-title">Tofel</p>
-        </a>
-      </div>
-      <div class="card">
-        <a href="video/video.html">
-          <img src="https://www.virtualne.sk/Data/2720/UserFiles/blog-2021/ako-na-video%20(1).webp" alt="Video"
-            loading="lazy" />
-          <p class="card-title">Video</p>
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>© 2025, Jhamghat. All rights reserved.</footer>
-</body>
-
+    <footer>© 2025, Jhamghat. All rights reserved.</footer>
+  </body>
 </html>
