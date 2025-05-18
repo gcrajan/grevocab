@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../fav-icon.png" type="image/x-icon" />
+    <title>GRE Test Results</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+        background-color: #f9f9f9;
+      }
+      header {
+        background-color: #f8f9fa;
+        padding: 15px 0;
+      }
+      header > a > img {
+        height: 56px;
+        width: auto;
+        padding-top: 6px;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        color: #2a3f54;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+      }
+      .score-summary {
+        background-color: #f4f8ff;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+      .score-box {
+        text-align: center;
+        padding: 15px;
+        min-width: 150px;
+      }
+      .score-box h3 {
+        margin: 0 0 10px 0;
+        color: #2a3f54;
+      }
+      .score-value {
+        font-size: 24px;
+        font-weight: bold;
+        color: #3498db;
+      }
+      .section-title {
+        background-color: #2a3f54;
+        color: white;
+        padding: 10px 15px;
+        margin: 30px 0 15px 0;
+        border-radius: 5px;
+      }
+      .question-card {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        overflow: hidden;
+      }
+      .question-header {
+        background-color: #f4f8ff;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid #ddd;
+      }
+      .question-number {
+        font-weight: bold;
+        font-size: 1.1em;
+      }
+      .question-result {
+        padding: 5px 10px;
+        border-radius: 15px;
+        font-weight: bold;
+      }
+      .correct {
+        background-color: #d4edda;
+        color: #155724;
+      }
+      .incorrect {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+      .question-content {
+        padding: 15px;
+      }
+      .passage {
+        background-color: #f9f9f9;
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        font-style: italic;
+      }
+      .question-text {
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      .answer-section {
+        margin-top: 15px;
+        padding-top: 15px;
+        border-top: 1px dashed #ddd;
+      }
+      .user-answer,
+      .correct-answer {
+        margin-bottom: 10px;
+      }
+      .user-answer span,
+      .correct-answer span {
+        font-weight: bold;
+      }
+      .user-answer .incorrect {
+        color: #dc3545;
+        background-color: transparent;
+        text-decoration: line-through;
+      }
+      .correct-answer .correct {
+        color: #28a745;
+        background-color: transparent;
+      }
+      .options {
+        margin-top: 10px;
+      }
+      .option {
+        padding: 8px 12px;
+        margin: 5px 0;
+        border-radius: 4px;
+        background-color: #f8f9fa;
+      }
+      .option.selected {
+        background-color: #cce5ff;
+      }
+      .option.correct {
+        background-color: #d4edda;
+      }
+      .option.incorrect {
+        background-color: #f8d7da;
+      }
+      .explanation {
+        margin-top: 15px;
+        padding: 15px;
+        background-color: #f0f9ff;
+        border-radius: 4px;
+        border-left: 4px solid #3498db;
+      }
+      .explanation h4 {
+        margin-top: 0;
+        color: #2a3f54;
+      }
+      .actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 30px;
+        padding-top: 20px;
+        border-top: 1px solid #ddd;
+      }
+      .actions button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      #retryTest {
+        background-color: #3498db;
+        color: white;
+      }
+      #exportResults {
+        background-color: #28a745;
+        color: white;
+      }
+      .error {
+        background-color: #f8d7da;
+        color: #721c24;
+        padding: 15px;
+        margin: 20px 0;
+        border-radius: 4px;
+        border: 1px solid #f5c6cb;
+      }
+      @media print {
+        body {
+          background-color: white;
+          color: black;
+        }
+        .container {
+          box-shadow: none;
+          max-width: 100%;
+        }
+        .question-card {
+          break-inside: avoid;
+        }
+        .actions {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="../index.html"
+        ><img src="../logo.png" alt="GRE Prep Logo" loading="lazy"
+      /></a>
+    </header>
+    <div class="container">
+      <h1>GRE Test Results</h1>
+
+      <div class="score-summary">
+        <div class="score-box">
+          <h3>Total Score</h3>
+          <div class="score-value" id="totalscore"></div>
+        </div>
+        <div class="score-box">
+          <h3>Verbal Section 1</h3>
+          <div class="score-value" id="section1"></div>
+        </div>
+        <div class="score-box">
+          <h3>Verbal Section 2</h3>
+          <div class="score-value" id="section2"></div>
+        </div>
+        <div class="score-box">
+          <h3>Accuracy</h3>
+          <div class="score-value"></div>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="retryTest">Try Another Test</button>
+        <button id="exportResults">Export Results</button>
+      </div>
+      <section class="sectionOne"></section>
+
+      <section class="sectionTwo"></section>
+    </div>
+
+    <script src="resultScript.js"></script>
+  </body>
+</html>

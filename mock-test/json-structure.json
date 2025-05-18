@@ -1,0 +1,577 @@
+{
+  "tests": [
+    {
+      "id": "test1",
+      "title": "Mock GRE Test 1",
+      "sections": [
+        {
+          "id": "verbal1",
+          "title": "Verbal Reasoning - Section 1",
+          "timeLimit": 1080,
+          "parts": [
+            {
+              "id": "text-completion-1",
+              "type": "text-completion",
+              "questions": [
+                {
+                  "id": "q1",
+                  "question": "Scientists could not build on each other's work if they could not trust the published work of other scientists; thus progress in science depends on the _____ of practicing scientists.",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "",
+                      "options": [
+                        "consciences",
+                        "intuitions",
+                        "ambitions",
+                        "experiences",
+                        "optimism"
+                      ],
+                      "answer": ["consciences"]
+                    }
+                  ]
+                },
+                {
+                  "id": "q2",
+                  "type": "text-completion",
+                  "question": "The (i) _____ that one occasionally finds in the columnist's articles are so memorable that many people think of her as being far more (ii) _____ than she in fact is.",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "i",
+                      "options": ["banalities", "denunciations", "accolades"],
+                      "answer": ["denunciations"]
+                    },
+                    {
+                      "id": "blank2",
+                      "label": "ii",
+                      "options": ["censorious", "praiseworthy", "irresolute"],
+                      "answer": ["censorious"]
+                    }
+                  ]
+                },
+                {
+                  "id": "q3",
+                  "type": "text-completion",
+                  "question": "Divided into separate essays on different aspects of Jacques-Louis David's late career, Bordes' catalog (i)_____ a great deal of knowledge, never providing a full introduction to the painter's life or to the period in which he lived. Yet while the book may (ii) _____ the casual reader, cognoscenti will delight in the wonderfully complete detail on each picture, not to mention the caustic little jabs at colleagues that Bordes occasionally delivers. The world of David scholarship, as befits its subject, is not a (iii) _____ place.",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "i",
+                      "options": ["contains", "assumes", "disputes"],
+                      "answer": ["assumes"]
+                    },
+                    {
+                      "id": "blank2",
+                      "label": "ii",
+                      "options": ["satisfy", "frustrate", "address"],
+                      "answer": ["frustrate"]
+                    },
+                    {
+                      "id": "blank3",
+                      "label": "iii",
+                      "options": ["gentle", "competitive", "sophisticated"],
+                      "answer": ["gentle"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "reading-1",
+              "type": "reading-comprehension",
+              "passage": "African American musicians in the 1950s faced a dilemma regarding classical music. A cosmopolitan display of knowledge about modern classical music enabled artists such as Duke Ellington to counter misconceptions that jazz musicians were untutored. Yet jazz musicians' interest in classical music was often taken as an admission that jazz innovations were derived from European sources. After Charlie Parker expressed admiration for Bartók, an interviewer asked if Parker's musical innovations were adaptations of classical predecessors' ideas. Often, comparisons with modern European composers connected jazz to the presumed superior standards of classical music without recognizing that jazz articulated its own musical vision—by developing expressive and improvisational principles rooted in a wide variety of African American musics—that challenged the hegemony of European standards in American music.",
+              "questions": [
+                {
+                  "id": "q4",
+                  "type": "multiple-choice",
+                  "question": "Which of the following best characterizes the author's main point about the 'comparisons'?",
+                  "options": [
+                    "They were adduced to help challenge a view that jazz musicians were untutored in musical traditions other than jazz.",
+                    "They sometimes overlooked the sophistication of African American musical traditions as reflected in the work of jazz innovators.",
+                    "They were more illuminating when applied to the music of Duke Ellington than when applied to that of Charlie Parker.",
+                    "They often served to clarify a hierarchy among musical traditions that had previously been neglected.",
+                    "They helped bring to light the historical richness of a musical tradition that had previously been undervalued."
+                  ],
+                  "answer": [
+                    "They sometimes overlooked the sophistication of African American musical traditions as reflected in the work of jazz innovators."
+                  ]
+                },
+                {
+                  "id": "q5",
+                  "type": "multiple-choice",
+                  "question": "The author implies that the 'musical vision':",
+                  "options": [
+                    "gave rise to a certain dilemma faced by musicians outside the European tradition.",
+                    "could not have emerged without a confluence of traditions.",
+                    "was evident in the admiration of Charlie Parker for Bartók.",
+                    "exerted influence on musicians with classical roots were primarily classical.",
+                    "constitutes a rebuttal to assumptions about musical excellence in music."
+                  ],
+                  "answer": [
+                    "constitutes a rebuttal to assumptions about musical excellence in music."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "sentence-equivalence-1",
+              "type": "sentence-equivalence",
+              "questions": [
+                {
+                  "id": "q6",
+                  "question": "The society of the ancient Moche of northern Peru was _____ one: it was ruled by local lords who were overseen by an elite composed of administrative and religious authorities.",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "",
+                      "options": [
+                        "an enduring",
+                        "an inflexible",
+                        "an abiding",
+                        "a stratified",
+                        "a cohesive",
+                        "a hierarchical"
+                      ],
+                      "answer": ["a stratified", "a hierarchical"]
+                    }
+                  ]
+                },
+                {
+                  "id": "q7",
+                  "question": "Automated text-matching and plagiarism-detection services must be _____ human expertise: machines alone cannot detect plagiarism of ideas.",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "",
+                      "options": [
+                        "developed by",
+                        "supplemented with",
+                        "resistant to",
+                        "augmented by",
+                        "impenetrable to",
+                        "compatible with"
+                      ],
+                      "answer": ["supplemented with", "augmented by"]
+                    }
+                  ]
+                },
+                {
+                  "id": "q8",
+                  "question": "Viruses are generally regarded as being on the far side of the demarcation between living and nonliving things, yet newly discovered giant viruses have longer genomes than some bacteria, whose status as living entities is _____.",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "",
+                      "options": [
+                        "elusive",
+                        "incontrovertible",
+                        "questionable",
+                        "underestimated",
+                        "indisputable",
+                        "debatable"
+                      ],
+                      "answer": ["questionable", "debatable"]
+                    }
+                  ]
+                },
+                {
+                  "id": "q9",
+                  "question": "The artist reworked certain of his etchings to make the scenes more logical, yet the pictorial space seems to become more _____ the more realistically it is defined.",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "",
+                      "options": [
+                        "austere",
+                        "cogent",
+                        "lucid",
+                        "fanciful",
+                        "ominous",
+                        "chimerical"
+                      ],
+                      "answer": ["fanciful", "chimerical"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "reading-2",
+              "type": "reading-comprehension",
+              "passage": "One possible explanation for the increased percentage of red maple trees in mixed forests of the eastern United States in the twentieth century is the dramatic increase in atmospheric carbon dioxide during this period. However, although red maples' photosynthetic performance and biomass production have increased in response to elevated levels of atmospheric carbon dioxide, these increases are not necessarily greater than those of co-occurring tree species, such as oak. Other possible explanations include the deliberate suppression of fire during the twentieth century (red maples are more sensitive to fire than are many other trees), red maples' ability to thrive in a wide variety of soil conditions, and their unique ability to thrive in both young and mature forests. Increased deer browsing of oak foliage and seeds (acorns), owing to larger deer populations, may be yet another cause. Deer do browse heavily during winter on red maple twigs (red maple foliage, on the other hand, may contain deer-deterring alkaloids), and a high percentage of red maple seeds are consumed by various animals. However, deer browse on oak primarily during summer when the impact of browsing on tree growth and survival is greatest, and oaks release seeds less frequently than do red maples.",
+              "questions": [
+                {
+                  "id": "q10",
+                  "type": "multiple-choice",
+                  "question": "The passage implies each of the following about red maples in mixed forests of the eastern United States <span class=\"italic\"EXCEPT</span>:",
+                  "options": [
+                    "The photosynthetic performance of red maples has increased less than has that of co-occurring oaks.",
+                    "Deer are less likely to eat the foliage of red maples than to eat the foliage of co-occurring oaks.",
+                    "Red maples release seeds more often than do co-occurring oaks.",
+                    "Deer feed more heavily on red maples during the winter than during the summer.",
+                    "Red maples have benefited more from fire suppression than have many other tree species."
+                  ],
+                  "answer": [
+                    "The photosynthetic performance of red maples has increased less than has that of co-occurring oaks."
+                  ]
+                },
+                {
+                  "id": "q11",
+                  "type": "multiple-choice",
+                  "question": "The author compares the photosynthetic performance and biomass production of red maples to those of co-occurring tree species most probably in order to",
+                  "options": [
+                    "suggest why scientists were led to study the effects of increased atmospheric carbon dioxide in mixed forests of the eastern United States",
+                    "suggest that the proportion of red maples has increased primarily at the expense of tree species other than oaks",
+                    "downplay the extent to which elevated levels of atmospheric carbon dioxide can help explain the increased percentage of red maples",
+                    "demonstrate that no single explanation can account for the increased percentage of red maples",
+                    "indicate why most scientists consider elevated levels of atmospheric carbon dioxide a viable explanation for the increased percentage of red maples"
+                  ],
+                  "answer": [
+                    "C: downplay the extent to which elevated levels of atmospheric carbon dioxide can help explain the increased percentage of red maples"
+                  ]
+                },
+                {
+                  "id": "q12",
+                  "type": "multiple-choice",
+                  "question": "Which of the following can be inferred from the passage about tree species that co-occur with red maples in mixed forests of the eastern United States?",
+                  "options": [
+                    "These species ordinarily release seeds only once a year.",
+                    "These species do not thrive in both young and mature forests.",
+                    "These species are more responsive to atmospheric carbon dioxide than are red maples.",
+                    "These species are unable to establish themselves in areas that have recently been disturbed by fire.",
+                    "These species no longer predominate in mixed forests of the eastern United States that contain red maples."
+                  ],
+                  "answer": [
+                    "B: These species do not thrive in both young and mature forests."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "verbal2",
+          "title": "Verbal Reasoning - Section 2",
+          "timeLimit": 1260,
+          "parts": [
+            {
+              "id": "text-completion-2",
+              "type": "text-completion",
+              "questions": [
+                {
+                  "id": "q13",
+                  "question": "Sea turtles ______ sponges on Caribbean reefs; however, the percentage of sponge reef cover is climbing due to human predation of turtles.",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "",
+                      "options": [
+                        "destroy the habitat of",
+                        "impede the growth of",
+                        "assist colonization by",
+                        "divert attention from",
+                        "consume the waste of"
+                      ],
+                      "answer": ["impede the growth of"]
+                    }
+                  ]
+                },
+                {
+                  "id": "q14",
+                  "question": "Because the critic thought that the mark of great literature was a grandiosity not to be found in common speech, writers seeking his approbation ______ the vernacular.",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "",
+                      "options": [
+                        "exploited",
+                        "embraced",
+                        "misapplied",
+                        "considered",
+                        "eschewed"
+                      ],
+                      "answer": ["eschewed"]
+                    }
+                  ]
+                },
+                {
+                  "id": "q15",
+                  "type": "text-completion",
+                  "question": "Britain's deteriorating economy after 1945 was (i) _____ by politicians who favored the manufacturing sector over the service sector: rather than attempting to (ii) ______ the decline of manufacturing, they should have promoted service industries.",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "i",
+                      "options": ["mishandled", "bolstered", "forestalled"],
+                      "answer": ["mishandled"]
+                    },
+                    {
+                      "id": "blank2",
+                      "label": "ii",
+                      "options": ["augment", "arrest", "escalated"],
+                      "answer": ["arrest"]
+                    }
+                  ]
+                },
+                {
+                  "id": "q16",
+                  "type": "text-completion",
+                  "question": "A comparison of satellite data from 1970 to 1996 found a steady decline in the amount of energy escaping Earth into space at the wavelengths that greenhouse gases in Earth's atmosphere absorb. (i) ______ indications of (ii) ______ incoming solar energy, these findings (iii) _______ direct experimental evidence for a significant increase in Earth's greenhouse effect, that is, the planet's retention of heat as a result of greenhouse gases.",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "i",
+                      "options": [
+                        "given the compelling",
+                        "based on",
+                        "in the absence of"
+                      ],
+                      "answer": ["based on"]
+                    },
+                    {
+                      "id": "blank2",
+                      "label": "ii",
+                      "options": [
+                        "innovative users for",
+                        "a reduction in",
+                        "a dependence on"
+                      ],
+                      "answer": ["a reduction in"]
+                    },
+                    {
+                      "id": "blank3",
+                      "label": "iii",
+                      "options": ["constitute", "contravene", "complicate"],
+                      "answer": ["constitute"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "reading-3",
+              "type": "reading-comprehension",
+              "passage": "The American social activist and intellectual Jane Addams (1860-1935) is experiencing a scholarly revival. Despite her towering reputation in her own day, Addams had been neglected by academic historians-too much a crossover act for women's history, too much an activist for intellectual history, largely ignored by political history. Her concern for the poor registered as genuine but ineffectual. Against the turn-of-the-century backdrop of massive strikes and class hatred, Addams' commitment to mediation, conciliation, and cooperation looked ill equipped for the bitter politics of the day. In the 1990s, however, historians grew more curious about Addams' Progressive-movement politics. At one time judged conservative, even reactionary, the Progressives and their considerable accomplishments- the fruits of steady, incremental reform–began to look appealing.",
+              "questions": [
+                {
+                  "id": "q17",
+                  "type": "multiple-choice",
+                  "question": "According to the passage, a criticism of Addams has been that she",
+                  "options": [
+                    "was not fully committed to Progressive causes",
+                    "was unable to formulate an effective response to poverty",
+                    "did not truly understand the nature of Progressive politics",
+                    "tended to be more concerned with intellectual matters than with social problems",
+                    "tended to overshadow other Progressive reformers"
+                  ],
+                  "answer": [
+                    "B: was unable to formulate an effective response to poverty"
+                  ]
+                },
+                {
+                  "id": "q18",
+                  "type": "multiple-choice",
+                  "question": "The author suggests that one reason for Addams' neglect by academic historians is that",
+                  "options": [
+                    "she was associated with a political movement whose program seemed inadequate",
+                    "she was generally considered ineffectual by her contemporaries",
+                    "historians have found her political loyalties difficult to pin down",
+                    "historians have found her interests too limited to be academically interesting",
+                    "historians have considered her views to be merely a by-product of the bitter politics of her day"
+                  ],
+                  "answer": [
+                    "C: historians have found her political loyalties difficult to pin down"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "reading-4",
+              "type": "reading-comprehension",
+              "passage": "The revival of mural painting that has occurred in San Francisco since the 1970s, especially among the Mexican American population of the city's Mission District, has marked differences from its social realist forerunner in Mexico and the United States some 40 years earlier. Rather than being government sponsored and limited to murals on government buildings, the contemporary mural movement sprang from the people themselves, with murals appearing on community buildings and throughout college campuses. Perhaps the biggest difference, however, is the process. In early twentieth- century Mexico, murals resulted from the vision of individual artists. But today's murals are characteristically the products of artists working with local residents on design and creation. <br/> Such community engagement is characteristic of the Chicano (Mexican American) art movement as a whole, which evolved from the same foundations as the Chicano civil rights movement of the mid-1960s. Both were a direct response to the needs of Mexican Americans in the UnitedStates, who were fighting for the right to adequate education, political empowerment, and decent working conditions. Artists joined other cultural workers in making political statements and played a keyrole in taking these statements to the public. They developed collectives and established cultural centers that functioned as the public- relations arm of the Chicano sociopolitical movement.",
+              "questions": [
+                {
+                  "id": "q19",
+                  "type": "multiple-choice",
+                  "question": "The primary purpose of the passage is to",
+                  "options": [
+                    "argue for the superiority of a style of art",
+                    "consider the impact of an art movement ",
+                    "describe the political content of certain works of art",
+                    "detail the characteristic style of an art movement",
+                    "place an art movement in its historical context"
+                  ],
+                  "answer": [
+                    "E: place an art movement in its historical context"
+                  ]
+                },
+                {
+                  "id": "q20",
+                  "type": "multiple-choice",
+                  "question": "According to the passage, which of the following statements about the \"cultural centers\" is true? ",
+                  "options": [
+                    "They were the venue where many later leaders of the Chicano civil rights movement first became politically active. ",
+                    "Though later widespread, they originated in the San Francisco area.",
+                    "Springing up in a number of communities, they initially had largely apolitical goals centered on art instruction.",
+                    "They constituted the nucleus from which the Chicane civil rights movement originated.",
+                    "Founded by artists, they provided support for the Chicano civil rights movement."
+                  ],
+                  "answer": [
+                    "E: Founded by artists, they provided support for the Chicano civil rights movement."
+                  ]
+                },
+                {
+                  "id": "q21",
+                  "type": "multiple-choice",
+                  "question": "Which of the following best describes the relationship between the first paragraph and the second paragraph of the second paragraph of the passage?",
+                  "options": [
+                    "The first focuses on the mural artists as individuals; the second, on their actions as a group. ",
+                    "The first compares the mural revival with an earlier artistic movement; the second describes the contemporary to the revival. ",
+                    "The first defines the revival by distinguishing it from an earlier artistic movement; the second addresses the political goals of both the revival and its forerunner. ",
+                    "The first presents an apparently plausible account of the relationship between the revival and its forerunner; the second calls that account into calls that account into question. ",
+                    "The first is concerned with the artistic aims and ambitions behind the San Francisco murals; the second considers their political significance. "
+                  ],
+                  "answer": [
+                    "B: The first compares the mural revival with an earlier artistic movement; the second describes the contemporary to the revival."
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "sentence-equivalence-2",
+              "type": "sentence-equivalence",
+              "questions": [
+                {
+                  "id": "q22",
+                  "question": "Simultaneously revered and reviled, the wolf embodies society's _____ relationship with nature.",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "",
+                      "options": [
+                        "conflicted",
+                        "romanticized",
+                        "complex",
+                        "idealized",
+                        "changing",
+                        "hypocritical"
+                      ],
+                      "answer": ["conflicted", "complex"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "sentence-equivalence-3",
+              "type": "sentence-equivalence",
+              "questions": [
+                {
+                  "id": "q23",
+                  "question": "Established scientists recognize that peer review of manuscripts submitted to scientific journals is critical to science, but this recognition _____ a certain ambivalence in them, since reviewing takes time away from their research. ",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "",
+                      "options": [
+                        "obviates",
+                        "mitigates",
+                        "engenders",
+                        "tempers",
+                        "induces",
+                        "exacerbates"
+                      ],
+                      "answer": ["engenders", "induces"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "sentence-equivalence-4",
+              "type": "sentence-equivalence",
+              "questions": [
+                {
+                  "id": "q24",
+                  "question": "Pop Music continually recycles itself, building new hits around familiar themes, and successful new acts often do not even bother to disguise their_____ .",
+                  "blanks": [
+                    {
+                      "id": "blank1",
+                      "label": "",
+                      "options": [
+                        "appropriations",
+                        "innovations",
+                        "influences",
+                        "pilferage",
+                        "originality",
+                        "complicity"
+                      ],
+                      "answer": ["appropriations", "pilferage"]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "reading-5",
+              "type": "reading-comprehension",
+              "passage": "A study of cardiovascular health involving a large, randomly selected group of adults found that members of the group who reported having taken aspirin regularly for the past five to ten years were significantly less likely to have developed heart disease than were members of the group who reported they had not taken aspirin regularly. Although suggestive, these results should not be interpreted as proof that taking aspirin regularly significantly reduces the likelihood of developing heart disease, since _______ .",
+              "questions": [
+                {
+                  "id": "q25",
+                  "type": "multiple-choice",
+                  "question": "Which of the following most logically completes the argument?",
+                  "options": [
+                    "among those who did not take aspirin regularly, those who have healthful habits were less likely to have developed heart disease than were those who had unhealthful habits ",
+                    "among those who took aspirin regularly, those who followed healthful diets were less likely to have developed heart disease than were those whose diets were unhealthful ",
+                    "the study made no distinction between those who had  taken aspirin regularly for far longer periods ",
+                    "those who took aspirin regularly were more likely than those who did not to have followed a healthy diet during the previous ten years",
+                    "those who had not taken aspirin regularly were more likely than those who had taken it regularly to have experienced difficulties with their circulatory systems during the preceding five years "
+                  ],
+                  "answer": [
+                    "D: those who took aspirin regularly were more likely than those who did not to have followed a healthy diet during the previous ten years"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "reading-6",
+              "type": "reading-comprehension",
+              "passage": "The discovery of subsurface life on Earth, surviving independently from surface life, refuted the belief that biological processes require not only liquid water but sunlight as well, thus greatly enhancing the possibility of life beyond Earth.<span class=\"highlight\">Take Jupiter's moon Europa</span>. Space probes show a body covered with a thick layer of ice. As Europa orbits its planet, however, it flexes due to the gravitational tug-of-war between it, its sister moons, and Jupiter. Through friction, this flexing produces heat in the moon's interior capable of melting ice. Indeed, observations suggest liquid water exists beneath Europa's icy crust. Photosynthetic life is impossible there because sunlight is completely absent, but life such as the microbes that flourish deep within Earth may still be possible.",
+              "questions": [
+                {
+                  "id": "q26",
+                  "type": "multiple-choice",
+                  "question": "Regarding life beyond Earth, the author of the passage implies that",
+                  "options": [
+                    "life could be dependent on a source of than light from the nearest star ",
+                    "life might exist in an environment that did not provide everything that is needed for life on Earth to exist ",
+                    "life might take a form radically different from that of any life that is found on Earth "
+                  ],
+                  "answer": [
+                    "A: life could be dependent on a source of than light from the nearest star",
+                    ""
+                  ]
+                },
+                {
+                  "id": "q27",
+                  "type": "multiple-choice",
+                  "question": "The highlighted sentence serves to introduce",
+                  "options": [
+                    "an instance that allows a hypothesis to be tested ",
+                    "speculation grounded in empirical discovery",
+                    "a deduction from a newly advanced hypothesis",
+                    "a large-scale effect of an apparently insignificant contingency ",
+                    "the derivation of a contradiction to refute a claim"
+                  ],
+                  "answer": ["B: speculation grounded in empirical discovery"]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
