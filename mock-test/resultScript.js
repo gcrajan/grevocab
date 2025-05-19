@@ -56,62 +56,72 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function processResults(results, testData) {
-    // Calculate overall statistics
-    const totalQuestions = results.length;
-    const correctAnswers = results.filter((r) => r.isCorrect).length;
-    const accuracyPercentage = Math.round(
-      (correctAnswers / totalQuestions) * 100
-    );
+function processResults(results, testData) {
+  // Ensure we have valid results data
+  if (!Array.isArray(results) || results.length === 0) {
+    showError("Invalid results data. Please try taking the test again.");
+    return;
+  }
 
-    // Format time taken
-    let formattedTime = "";
-    if (timeTaken > 0) {
-      const minutes = Math.floor(timeTaken / 60);
-      const seconds = timeTaken % 60;
-      formattedTime = `${minutes}m ${seconds}s`;
-    } else {
-      formattedTime = "N/A";
+  // Calculate overall statistics
+  const totalQuestions = results.length;
+  const correctAnswers = results.filter((r) => r.isCorrect).length;
+  const accuracyPercentage = Math.round(
+    (correctAnswers / totalQuestions) * 100
+  );
+
+  // Format time taken
+  let formattedTime = "";
+  if (timeTaken > 0) {
+    const minutes = Math.floor(timeTaken / 60);
+    const seconds = timeTaken % 60;
+    formattedTime = `${minutes}m ${seconds}s`;
+  } else {
+    formattedTime = "N/A";
+  }
+
+  // Calculate section statistics
+  const sectionResults = {};
+  results.forEach((result) => {
+    // Convert section to string to ensure consistent comparison
+    const sectionKey = String(result.section);
+    if (!sectionResults[sectionKey]) {
+      sectionResults[sectionKey] = {
+        total: 0,
+        correct: 0,
+      };
     }
 
-    // Calculate section statistics
-    const sectionResults = {};
-    results.forEach((result) => {
-      // Convert section to string to ensure consistent comparison
-      const sectionKey = String(result.section);
-      if (!sectionResults[sectionKey]) {
-        sectionResults[sectionKey] = {
-          total: 0,
-          correct: 0,
-        };
-      }
+    sectionResults[sectionKey].total++;
+    if (result.isCorrect) {
+      sectionResults[sectionKey].correct++;
+    }
+  });
 
-      sectionResults[sectionKey].total++;
-      if (result.isCorrect) {
-        sectionResults[sectionKey].correct++;
-      }
-    });
+  // Log for debugging
+  console.log("Total Questions:", totalQuestions);
+  console.log("Correct Answers:", correctAnswers);
+  console.log("Section results:", sectionResults);
 
-    // Debug the section results
-    console.log("Section results:", sectionResults);
+  // Update score summary
+  updateScoreSummary(
+    totalQuestions,
+    correctAnswers,
+    sectionResults,
+    accuracyPercentage,
+    formattedTime
+  );
 
-    // Update score summary
-    updateScoreSummary(
-      totalQuestions,
-      correctAnswers,
-      sectionResults,
-      accuracyPercentage
-    );
-
-    // Generate question cards for both sections
-    generateQuestionCards(results, testData);
-  }
+  // Generate question cards for all sections
+  generateQuestionCards(results, testData);
+}
 
   function updateScoreSummary(
     totalQuestions,
     correctAnswers,
     sectionResults,
-    accuracyPercentage
+    accuracyPercentage,
+    formattedTime
   ) {
     // Update total score
     document.querySelector(
@@ -206,119 +216,108 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function createQuestionCard(result, testData) {
-    const card = document.createElement("div");
-    card.className = "question-card";
+function createQuestionCard(result, testData) {
+  const card = document.createElement("div");
+  card.className = "question-card";
 
-    // Create header
-    const header = document.createElement("div");
-    header.className = "question-header";
+  // Create header
+  const header = document.createElement("div");
+  header.className = "question-header";
 
-    const questionNumber = document.createElement("div");
-    questionNumber.className = "question-number";
-    questionNumber.textContent = `Question ${result.questionIndex}`;
+  const questionNumber = document.createElement("div");
+  questionNumber.className = "question-number";
+  questionNumber.textContent = `Question ${result.questionIndex}`;
 
-    const questionResult = document.createElement("div");
-    questionResult.className = `question-result ${
-      result.isCorrect ? "correct" : "incorrect"
-    }`;
-    questionResult.textContent = result.isCorrect ? "Correct" : "Incorrect";
+  const questionResult = document.createElement("div");
+  questionResult.className = `question-result ${
+    result.isCorrect ? "correct" : "incorrect"
+  }`;
+  questionResult.textContent = result.isCorrect ? "Correct" : "Incorrect";
 
-    header.appendChild(questionNumber);
-    header.appendChild(questionResult);
-    card.appendChild(header);
+  header.appendChild(questionNumber);
+  header.appendChild(questionResult);
+  card.appendChild(header);
 
-    // Create content
-    const content = document.createElement("div");
-    content.className = "question-content";
+  // Create content
+  const content = document.createElement("div");
+  content.className = "question-content";
 
-    // Add passage if it exists
-    if (result.passage) {
-      const passage = document.createElement("div");
-      passage.className = "passage";
-      passage.textContent = result.passage;
-      content.appendChild(passage);
-    }
+  // Add passage if it exists
+  if (result.passage) {
+    const passage = document.createElement("div");
+    passage.className = "passage";
+    passage.textContent = result.passage;
+    content.appendChild(passage);
+  }
 
-    // Add question text
-    const questionText = document.createElement("div");
-    questionText.className = "question-text";
-    questionText.textContent = result.question;
-    content.appendChild(questionText);
+  // Add question text
+  const questionText = document.createElement("div");
+  questionText.className = "question-text";
+  questionText.textContent = result.question;
+  content.appendChild(questionText);
 
-    // Add options
-    const options = document.createElement("div");
-    options.className = "options";
+  // Add options
+  const options = document.createElement("div");
+  options.className = "options";
 
-    // Find complete question data from test data
-    let questionData = null;
-    if (testData && testData.tests && testData.tests[0]) {
-      const sections = testData.tests[0].sections;
-      // Adjust for 0-based vs 1-based indexing
-      const sectionIndex = parseInt(result.section) - 1;
+  // Find complete question data from test data
+  let questionData = null;
+  if (testData && testData.tests && testData.tests[0]) {
+    const sections = testData.tests[0].sections;
+    // Adjust for 0-based vs 1-based indexing
+    const sectionIndex = parseInt(result.section) - 1;
 
-      if (sectionIndex >= 0 && sectionIndex < sections.length) {
-        const section = sections[sectionIndex];
+    if (sectionIndex >= 0 && sectionIndex < sections.length) {
+      const section = sections[sectionIndex];
 
-        if (section && section.parts) {
-          for (const part of section.parts) {
-            if (part.questions) {
-              const foundQuestion = part.questions.find(
-                (q) => q.id === result.questionId
-              );
-              if (foundQuestion) {
-                questionData = foundQuestion;
-                break;
-              }
+      if (section && section.parts) {
+        for (const part of section.parts) {
+          if (part.questions) {
+            const foundQuestion = part.questions.find(
+              (q) => q.id === result.questionId
+            );
+            if (foundQuestion) {
+              questionData = foundQuestion;
+              break;
             }
           }
         }
       }
     }
+  }
 
-    // Render options based on question type
-    if (questionData) {
-      if (questionData.blanks) {
-        // Text completion or sentence equivalence
-        questionData.blanks.forEach((blank, index) => {
-          const blankLabel = blank.label ? `(${blank.label}) ` : "";
+  // Render options based on question type
+  if (questionData) {
+    if (questionData.blanks) {
+      // Text completion or sentence equivalence
+      questionData.blanks.forEach((blank, index) => {
+        const blankLabel = blank.label ? `(${blank.label}) ` : "";
 
-          blank.options.forEach((option) => {
-            const optionEl = document.createElement("div");
-            optionEl.className = "option";
-
-            // Add appropriate classes based on user's answer and correct answer
-            const userSelectedThisOption =
-              result.userAnswer && result.userAnswer[index] === option;
-            const isCorrectOption =
-              result.correctAnswer && result.correctAnswer[index] === option;
-
-            if (userSelectedThisOption) {
-              optionEl.classList.add("selected");
-              if (isCorrectOption) {
-                optionEl.classList.add("correct");
-              } else {
-                optionEl.classList.add("incorrect");
-              }
-            } else if (isCorrectOption) {
-              optionEl.classList.add("correct");
-            }
-
-            optionEl.textContent = `${blankLabel}${option}`;
-            options.appendChild(optionEl);
-          });
-        });
-      } else if (questionData.options) {
-        // Multiple choice
-        questionData.options.forEach((option) => {
+        blank.options.forEach((option) => {
           const optionEl = document.createElement("div");
           optionEl.className = "option";
 
-          // Add appropriate classes based on user's answer and correct answer
-          const userSelectedThisOption =
-            result.userAnswer && result.userAnswer.includes(option);
-          const isCorrectOption =
-            result.correctAnswer && result.correctAnswer.includes(option);
+          // For sentence equivalence, userAnswer is an array of arrays
+          let userSelectedThisOption = false;
+          let isCorrectOption = false;
+
+          if (questionData.type === "sentence-equivalence") {
+            // Handle sentence equivalence (array of arrays)
+            const userAnswerForBlank = result.userAnswer && result.userAnswer[index] 
+              ? result.userAnswer[index] 
+              : [];
+            
+            userSelectedThisOption = userAnswerForBlank.includes(option);
+            isCorrectOption = result.correctAnswer && 
+              result.correctAnswer[index] && 
+              result.correctAnswer[index].includes(option);
+          } else {
+            // Handle text completion (simple array)
+            userSelectedThisOption = 
+              result.userAnswer && result.userAnswer[index] === option;
+            isCorrectOption = 
+              result.correctAnswer && result.correctAnswer[index] === option;
+          }
 
           if (userSelectedThisOption) {
             optionEl.classList.add("selected");
@@ -331,28 +330,79 @@ document.addEventListener("DOMContentLoaded", function () {
             optionEl.classList.add("correct");
           }
 
-          optionEl.textContent = option;
+          optionEl.textContent = `${blankLabel}${option}`;
           options.appendChild(optionEl);
         });
-      }
+      });
+    } else if (questionData.options) {
+      // Multiple choice
+      questionData.options.forEach((option) => {
+        const optionEl = document.createElement("div");
+        optionEl.className = "option";
+
+        // Add appropriate classes based on user's answer and correct answer
+        const userSelectedThisOption =
+          result.userAnswer && result.userAnswer.includes(option);
+        const isCorrectOption =
+          result.correctAnswer && result.correctAnswer.includes(option);
+
+        if (userSelectedThisOption) {
+          optionEl.classList.add("selected");
+          if (isCorrectOption) {
+            optionEl.classList.add("correct");
+          } else {
+            optionEl.classList.add("incorrect");
+          }
+        } else if (isCorrectOption) {
+          optionEl.classList.add("correct");
+        }
+
+        optionEl.textContent = option;
+        options.appendChild(optionEl);
+      });
     }
+  }
 
-    content.appendChild(options);
+  content.appendChild(options);
 
-    // Add answer section
-    const answerSection = document.createElement("div");
-    answerSection.className = "answer-section";
+  // Add answer section
+  const answerSection = document.createElement("div");
+  answerSection.className = "answer-section";
 
-    // User answer
-    const userAnswerDiv = document.createElement("div");
-    userAnswerDiv.className = "user-answer";
+  // User answer
+  const userAnswerDiv = document.createElement("div");
+  userAnswerDiv.className = "user-answer";
 
-    let userAnswerText;
-    if (!result.userAnswer || result.userAnswer.length === 0) {
-      userAnswerText = '<span class="no-answer">No answer provided</span>';
-    } else {
-      // Format based on question type
-      if (questionData && questionData.blanks) {
+  let userAnswerText;
+  if (!result.userAnswer || result.userAnswer.length === 0) {
+    userAnswerText = '<span class="no-answer">No answer provided</span>';
+  } else {
+    // Format based on question type
+    if (questionData && questionData.blanks) {
+      if (questionData.type === "sentence-equivalence") {
+        // For sentence equivalence - show selected words for each blank
+        const formattedAnswers = [];
+        questionData.blanks.forEach((blank, index) => {
+          const blankLabel = blank.label ? `(${blank.label}) ` : "";
+          const userAnsArray = result.userAnswer[index] || [];
+          
+          const selectedWords = userAnsArray.length > 0 
+            ? userAnsArray.join(", ") 
+            : "No answer";
+          
+          const isCorrect = arraysEqual(
+            userAnsArray.sort(), 
+            (result.correctAnswer[index] || []).sort()
+          );
+          
+          formattedAnswers.push(
+            `${blankLabel}<span class="${
+              isCorrect ? "correct" : "incorrect"
+            }">${selectedWords}</span>`
+          );
+        });
+        userAnswerText = formattedAnswers.join(", ");
+      } else {
         // For text completion - show each blank answer
         const formattedAnswers = [];
         questionData.blanks.forEach((blank, index) => {
@@ -366,23 +416,36 @@ document.addEventListener("DOMContentLoaded", function () {
           );
         });
         userAnswerText = formattedAnswers.join(", ");
-      } else {
-        // For multiple choice
-        userAnswerText = `<span class="${
-          result.isCorrect ? "correct" : "incorrect"
-        }">${result.userAnswer.join(", ")}</span>`;
       }
+    } else {
+      // For multiple choice
+      userAnswerText = `<span class="${
+        result.isCorrect ? "correct" : "incorrect"
+      }">${result.userAnswer.join(", ")}</span>`;
     }
+  }
 
-    userAnswerDiv.innerHTML = `Your answer: ${userAnswerText}`;
-    answerSection.appendChild(userAnswerDiv);
+  userAnswerDiv.innerHTML = `Your answer: ${userAnswerText}`;
+  answerSection.appendChild(userAnswerDiv);
 
-    // Correct answer
-    const correctAnswerDiv = document.createElement("div");
-    correctAnswerDiv.className = "correct-answer";
+  // Correct answer
+  const correctAnswerDiv = document.createElement("div");
+  correctAnswerDiv.className = "correct-answer";
 
-    let correctAnswerText;
-    if (questionData && questionData.blanks) {
+  let correctAnswerText;
+  if (questionData && questionData.blanks) {
+    if (questionData.type === "sentence-equivalence") {
+      // For sentence equivalence - show the correct answers for each blank
+      const formattedAnswers = [];
+      questionData.blanks.forEach((blank, index) => {
+        const blankLabel = blank.label ? `(${blank.label}) ` : "";
+        const correctAns = result.correctAnswer[index] || [];
+        formattedAnswers.push(
+          `${blankLabel}<span class="correct">${correctAns.join(", ")}</span>`
+        );
+      });
+      correctAnswerText = formattedAnswers.join(", ");
+    } else {
       // For text completion - show each blank answer
       const formattedAnswers = [];
       questionData.blanks.forEach((blank, index) => {
@@ -392,54 +455,67 @@ document.addEventListener("DOMContentLoaded", function () {
         );
       });
       correctAnswerText = formattedAnswers.join(", ");
-    } else {
-      // For multiple choice
-      correctAnswerText = `<span class="correct">${result.correctAnswer.join(
-        ", "
-      )}</span>`;
     }
-
-    correctAnswerDiv.innerHTML = `Correct answer: ${correctAnswerText}`;
-    answerSection.appendChild(correctAnswerDiv);
-
-    // Add explanation if available
-    if (questionData && questionData.explanation) {
-      const explanationDiv = document.createElement("div");
-      explanationDiv.className = "explanation";
-      explanationDiv.innerHTML = `<h4>Explanation:</h4><p>${questionData.explanation}</p>`;
-      content.appendChild(explanationDiv);
-    } else {
-      // Generate a simple explanation
-      const explanationDiv = document.createElement("div");
-      explanationDiv.className = "explanation";
-
-      let explanationText = "";
-      if (result.isCorrect) {
-        explanationText = "Correct! You selected the right answer.";
-      } else if (!result.userAnswer || result.userAnswer.length === 0) {
-        explanationText = "You did not provide an answer to this question.";
-      } else {
-        if (questionData && questionData.blanks) {
-          explanationText =
-            "The selected answer does not correctly complete the sentence in context.";
-        } else {
-          explanationText =
-            "The selected answer is not the best choice based on the given information.";
-        }
-      }
-
-      explanationDiv.innerHTML = `<h4>Explanation:</h4><p>${explanationText}</p>`;
-      content.appendChild(explanationDiv);
-    }
-
-    // Finally add the content to the card
-    card.appendChild(content);
-
-    // Add answer section to content
-    content.appendChild(answerSection);
-
-    return card;
+  } else {
+    // For multiple choice
+    correctAnswerText = `<span class="correct">${result.correctAnswer.join(
+      ", "
+    )}</span>`;
   }
+
+  correctAnswerDiv.innerHTML = `Correct answer: ${correctAnswerText}`;
+  answerSection.appendChild(correctAnswerDiv);
+
+  // Add explanation if available
+  if (questionData && questionData.explanation) {
+    const explanationDiv = document.createElement("div");
+    explanationDiv.className = "explanation";
+    explanationDiv.innerHTML = `<h4>Explanation:</h4><p>${questionData.explanation}</p>`;
+    content.appendChild(explanationDiv);
+  } else {
+    // Generate a simple explanation
+    const explanationDiv = document.createElement("div");
+    explanationDiv.className = "explanation";
+
+    let explanationText = "";
+    if (result.isCorrect) {
+      explanationText = "Correct! You selected the right answer.";
+    } else if (!result.userAnswer || result.userAnswer.length === 0) {
+      explanationText = "You did not provide an answer to this question.";
+    } else {
+      if (questionData && questionData.blanks) {
+        if (questionData.type === "sentence-equivalence") {
+          explanationText = "The selected words do not create sentences with equivalent meanings when used in the blank.";
+        } else {
+          explanationText = "The selected answer does not correctly complete the sentence in context.";
+        }
+      } else {
+        explanationText = "The selected answer is not the best choice based on the given information.";
+      }
+    }
+
+    explanationDiv.innerHTML = `<h4>Explanation:</h4><p>${explanationText}</p>`;
+    content.appendChild(explanationDiv);
+  }
+
+  // Add answer section to content
+  content.appendChild(answerSection);
+  card.appendChild(content);
+
+  return card;
+}
+
+// Helper function to check if arrays have the same elements
+function arraysEqual(a, b) {
+  if (!Array.isArray(a) || !Array.isArray(b)) return false;
+  if (a.length !== b.length) return false;
+  
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] !== b[i]) return false;
+  }
+  
+  return true;
+}
 
   function showError(message) {
     const container = document.querySelector(".container");

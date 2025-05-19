@@ -7,6 +7,7 @@ let userAnswers = {}; // key: testIndex_sectionIndex_questionIndex
 let sectionTimers = [];
 let timerInterval;
 let timeSpent = 0; // Track time spent on the test
+let sectionQuestions = {}; // Track questions by section
 
 // Load the test data from the JSON file
 document.addEventListener('DOMContentLoaded', function() {
@@ -47,6 +48,10 @@ function initializeTest(data) {
   // Reset time spent
   timeSpent = 0;
   localStorage.removeItem("testTimeTaken");
+  localStorage.removeItem("greResult"); // Clear any previous results
+  
+  // Initialize sectionQuestions object
+  sectionQuestions = {};
   
   // Load the first section
   loadSection(0);
@@ -56,7 +61,13 @@ function loadSection(sectionIdx) {
   clearInterval(timerInterval);
   currentSectionIndex = sectionIdx;
   const section = allSections[sectionIdx];
-  allQuestions = [];
+  
+  // Initialize this section's question array if not already exists
+  if (!sectionQuestions[sectionIdx]) {
+    sectionQuestions[sectionIdx] = [];
+  }
+  
+  allQuestions = []; // Reset questions for this section
   
   // Get section title
   const sectionTitle = section.title || `Section ${sectionIdx + 1}`;
@@ -75,6 +86,7 @@ function loadSection(sectionIdx) {
           sectionIndex: sectionIdx // Store the section index with the question
         };
         allQuestions.push(questionCopy);
+        sectionQuestions[sectionIdx].push(questionCopy); // Store in the section-specific array as well
       });
     }
   });
@@ -166,6 +178,7 @@ function renderQuestion(index) {
   // Get saved answer if it exists
   const key = `${currentTestIndex}_${currentSectionIndex}_${index}`;
   const savedAnswers = userAnswers[key] || [];
+  
   
   // Render question based on type
   if (q.type === "text-completion") {
@@ -398,7 +411,7 @@ function saveAnswer(index) {
       }
     }
   } else if (q.type === "sentence-equivalence") {
-    // For sentence equivalence questions (CHANGED: handle checkbox values)
+    // For sentence equivalence questions (using checkboxes)
     if (q.blanks) {
       const ans = [];
       q.blanks.forEach((blank, bi) => {
@@ -406,11 +419,11 @@ function saveAnswer(index) {
           .map(input => input.value);
         
         // Store the selected values for this blank
-        ans.push(selected);
+        ans[bi] = selected; // Ensure we preserve the blank index
       });
       
-      // Only save if at least one answer is selected
-      if (ans.some(a => a.length > 0)) {
+      // Only save if at least one answer is selected in at least one blank
+      if (ans.some(a => a && a.length > 0)) {
         userAnswers[key] = ans;
       }
     }
@@ -427,6 +440,9 @@ function saveAnswer(index) {
   
   // Update the sidebar button status
   updateQuestionButtonStatus(index);
+  
+  // Print for debugging
+  console.log("Saved answer:", key, userAnswers[key]);
 }
 
 function startTimer() {
@@ -475,98 +491,94 @@ function updateTimerDisplay(timeInSeconds) {
   }
 }
 
+// Fixed finishTest function
 function finishTest() {
   clearInterval(timerInterval);
+  
+  // Save final answer for current question
+  saveAnswer(currentQuestionIndex);
   
   // Calculate results
   const allResults = [];
   
-  // Track all questions from all sections
-  const allProcessedQuestions = [];
-  
   // Process each section
-  allSections.forEach((section, sectionIdx) => {
-    // Process questions in this section
-    let questionIndexInSection = 0;
+  for (let sectionIdx = 0; sectionIdx < allSections.length; sectionIdx++) {
+    // Get all questions for this section
+    const sectionQuestionsArray = sectionQuestions[sectionIdx] || [];
     
-    section.parts.forEach((part) => {
-      if (!part.questions) return;
+    // Process each question in this section
+    sectionQuestionsArray.forEach((question, questionIndexInSection) => {
+      // Find user answer for this question
+      const questionKey = `${currentTestIndex}_${sectionIdx}_${questionIndexInSection}`;
       
-      part.questions.forEach((question) => {
-        questionIndexInSection++;
+      // Log for debugging
+      console.log(`Processing: Section ${sectionIdx+1}, Question ${questionIndexInSection+1}, Key: ${questionKey}`);
+      console.log(`User answer:`, userAnswers[questionKey]);
+      
+      // Default to empty array if no answer
+      let userAnswer = userAnswers[questionKey] || [];
+      
+      // Get correct answer based on question type
+      let correctAnswer;
+      if (question.blanks && question.type === "sentence-equivalence") {
+        // For sentence equivalence, the correct answers are arrays for each blank
+        correctAnswer = question.blanks.map(b => b.answer);
+      } else if (question.blanks) {
+        // For text completion, answers are single values for each blank
+        correctAnswer = question.blanks.map(b => b.answer[0]);
+      } else {
+        correctAnswer = question.answer || [];
+      }
+      
+      // Determine if the answer is correct
+      let isCorrect = false;
+      
+      if (userAnswer.length === 0) {
+        // No answer provided
+        isCorrect = false;
+      } else if (question.type === "sentence-equivalence") {
+        // For sentence equivalence, we need to check if the selected options match the correct answers
+        const flatUserAnswer = userAnswer.flat ? userAnswer.flat() : userAnswer;
+        const flatCorrectAnswer = correctAnswer.flat ? correctAnswer.flat() : correctAnswer;
         
-        // Find all user answers for this question
-        let userAnswer = [];
-        const questionKey = Object.keys(userAnswers).find(key => {
-          const [testIdx, secIdx, qIdx] = key.split('_').map(Number);
-          const questionInArray = allQuestions.find(q => 
-            q.id === question.id && 
-            q.sectionIndex === sectionIdx &&
-            parseInt(secIdx) === sectionIdx
-          );
-          return questionInArray !== undefined;
-        });
-        
-        if (questionKey) {
-          userAnswer = userAnswers[questionKey];
-        }
-        
-        // Get correct answer based on question type
-        let correctAnswer;
-        if (question.blanks && question.type === "sentence-equivalence") {
-          // For sentence equivalence, the correct answers are arrays for each blank
-          correctAnswer = question.blanks.map(b => b.answer);
-        } else if (question.blanks) {
-          // For text completion, answers are single values for each blank
-          correctAnswer = question.blanks.map(b => b.answer[0]);
-        } else {
-          correctAnswer = question.answer || [];
-        }
-        
-        // Determine if the answer is correct
-        let isCorrect = false;
-        if (question.type === "sentence-equivalence") {
-          // For sentence equivalence, we need to check if the selected options match the two correct answers
-          // Flatten userAnswer since it's now an array of arrays due to checkbox structure
-          const flatUserAnswer = userAnswer.flat ? userAnswer.flat() : userAnswer;
-          isCorrect = correctAnswer.flat().length === flatUserAnswer.length && 
-            correctAnswer.flat().every(ans => flatUserAnswer.includes(ans));
-        } else if (question.blanks) {
-          // For text completion, all blanks must be correct
-          isCorrect = correctAnswer.every((ans, i) => userAnswer[i] === ans);
-        } else if (correctAnswer.length > 1) {
-          // For multiple select, all options must match exactly
-          isCorrect = arraysEqual(correctAnswer.sort(), userAnswer.sort());
-        } else if (correctAnswer.length === 1) {
-          // For single select, the one option must match
-          isCorrect = userAnswer[0] === correctAnswer[0];
-        }
-        
-        // Add this question's result
-        allResults.push({
-          section: sectionIdx + 1,
-          questionIndex: questionIndexInSection,
-          questionId: question.id,
-          question: question.question,
-          passage: part.passage || "",
-          userAnswer: userAnswer,
-          correctAnswer: correctAnswer,
-          isCorrect: isCorrect
-        });
-        
-        // Add to processed questions to avoid duplicates
-        allProcessedQuestions.push(question.id);
+        isCorrect = flatUserAnswer.length === flatCorrectAnswer.length && 
+          flatCorrectAnswer.every(ans => flatUserAnswer.includes(ans));
+      } else if (question.blanks) {
+        // For text completion, all blanks must be correct
+        isCorrect = correctAnswer.every((ans, i) => userAnswer[i] === ans);
+      } else if (correctAnswer.length > 1) {
+        // For multiple select, all options must match exactly
+        isCorrect = arraysEqual(correctAnswer.sort(), userAnswer.sort());
+      } else if (correctAnswer.length === 1) {
+        // For single select, the one option must match
+        isCorrect = userAnswer.includes(correctAnswer[0]);
+      }
+      
+      // Add this question's result
+      allResults.push({
+        section: sectionIdx + 1,
+        questionIndex: questionIndexInSection + 1,
+        questionId: question.id,
+        question: question.question,
+        passage: question.passage || "",
+        userAnswer: userAnswer,
+        correctAnswer: correctAnswer,
+        isCorrect: isCorrect
       });
     });
-  });
+  }
   
-  console.log("All results:", allResults);
   
   // Save results to localStorage
   localStorage.setItem("greResult", JSON.stringify(allResults));
   
   // Redirect to results page
   window.location.href = "resultHtml.html";
+
+    // Log for debugging
+  console.log("Final results:", allResults);
+  console.log("All user answers:", userAnswers);
+  console.log("json:", greResult);
 }
 
 function arraysEqual(a, b) {
