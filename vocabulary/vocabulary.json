@@ -1199,6 +1199,2646 @@
       "example": "The zealous volunteer dedicated all her free time to the cause. <br/> His zealous pursuit of perfection alienated many of his colleagues.",
       "synonyms": "passionate, fervent, enthusiastic, ardent",
       "antonyms": "apathetic, indifferent, lukewarm, half-hearted"
+    },
+    {
+      "word": "Admonish",
+      "trait": "To scold someone seriously or give someone urgent advice.",
+      "sense": "Negative (–ve) <br/> Carries a sense of correction, warning, or reprimand.",
+      "example": "The teacher had to admonish the students for their disruptive behavior. <br/> Her mother admonished her to be more careful when crossing the street.",
+      "synonyms": "reprimand, warn, rebuke, caution, chide",
+      "antonyms": "praise, commend, compliment, encourage"
+    },
+    {
+      "word": "Aesthetic",
+      "trait": "Pertaining to beauty or the appreciation of beauty.",
+      "sense": "Positive (+ve) or Neutral (0) <br/> Generally positive when referring to beauty; neutral when used descriptively.",
+      "example": "The museum features exhibits with strong aesthetic appeal. <br/> Her aesthetic sensibilities were shaped by growing up in Paris.",
+      "synonyms": "artistic, beautiful, tasteful, decorative",
+      "antonyms": "unattractive, ugly, inartistic, plain"
+    },
+    {
+      "word": "Affectation",
+      "trait": "A pretense or show meant to impress others; behavior that is artificial and designed to attract attention.",
+      "sense": "Negative (–ve) <br/> Implies insincerity or artificiality.",
+      "example": "His British accent was clearly an affectation, as he had never lived outside of California. <br/> Her literary affectations made her writing seem pretentious.",
+      "synonyms": "pretense, pose, mannerism, artificiality",
+      "antonyms": "genuineness, sincerity, naturalness, authenticity"
+    },
+    {
+      "word": "Alleviate",
+      "trait": "To lessen the intensity or severity of something negative, such as pain or hardship.",
+      "sense": "Positive (+ve) <br/> Involves reducing suffering or difficulty.",
+      "example": "The medication helped alleviate her chronic pain. <br/> Government programs aim to alleviate poverty in rural areas.",
+      "synonyms": "ease, relieve, lessen, mitigate, reduce",
+      "antonyms": "aggravate, intensify, worsen, exacerbate"
+    },
+    {
+      "word": "Analogous",
+      "trait": "Comparable or similar to something else in certain respects.",
+      "sense": "Neutral (0) <br/> Simply describes a relationship of similarity.",
+      "example": "The function of a heart is analogous to that of a pump. <br/> The situation is analogous to what happened during the last financial crisis.",
+      "synonyms": "comparable, similar, parallel, akin, equivalent",
+      "antonyms": "dissimilar, different, unrelated, contrasting"
+    },
+    {
+      "word": "Bolster",
+      "trait": "To lend support or boost; to strengthen or reinforce.",
+      "sense": "Positive (+ve) <br/> Implies strengthening or providing support.",
+      "example": "The new evidence bolstered their case. <br/> The company hired additional staff to bolster their customer service department.",
+      "synonyms": "strengthen, reinforce, support, fortify, enhance",
+      "antonyms": "weaken, undermine, diminish, impair"
+    },
+    {
+      "word": "Chauvinistic",
+      "trait": "Excessively patriotic or biased in favor of a group or cause, especially showing an aggressive belief in the superiority of one's own group.",
+      "sense": "Negative (–ve) <br/> Implies prejudice, discrimination, or excessive bias.",
+      "example": "His chauvinistic attitudes about women's roles in the workplace were outdated. <br/> The politician's chauvinistic rhetoric alienated many voters.",
+      "synonyms": "prejudiced, biased, discriminatory, jingoistic",
+      "antonyms": "unbiased, egalitarian, open-minded, fair"
+    },
+    {
+      "word": "Connoisseur",
+      "trait": "A discerning expert in matters of taste; someone with refined taste or deep knowledge in a particular field.",
+      "sense": "Positive (+ve) <br/> Implies expertise, refinement, and appreciation.",
+      "example": "As a connoisseur of fine wines, he could identify the vintage with just a sip. <br/> She's a connoisseur of Renaissance art and frequently lectures at the museum.",
+      "synonyms": "expert, authority, aficionado, specialist",
+      "antonyms": "amateur, novice, layperson, dilettante"
+    },
+    {
+      "word": "Dissemble",
+      "trait": "To hide or misrepresent one's true feelings or beliefs; to conceal the truth.",
+      "sense": "Negative (–ve) <br/> Implies deception or dishonesty.",
+      "example": "The politician dissembled when asked about the scandal. <br/> She dissembled her disappointment with a forced smile.",
+      "synonyms": "conceal, disguise, mask, pretend, feign",
+      "antonyms": "reveal, disclose, divulge, confess"
+    },
+    {
+      "word": "Dogged",
+      "trait": "Demonstrating tenacity and an unwillingness to give up; showing determination despite difficulties.",
+      "sense": "Positive (+ve) <br/> Implies persistence and determination, generally seen as commendable traits.",
+      "example": "His dogged pursuit of justice finally paid off when the case was reopened. <br/> The researcher's dogged determination led to a breakthrough in cancer treatment.",
+      "synonyms": "persistent, tenacious, stubborn, relentless, determined",
+      "antonyms": "irresolute, yielding, wavering, inconstant"
+    },
+    {
+      "word": "Dupe",
+      "trait": "To trick or fool someone; a person who is easily deceived.",
+      "sense": "Negative (–ve) <br/> Implies deception or taking advantage of someone's gullibility.",
+      "example": "The con artist duped elderly people out of their life savings. <br/> He was a dupe in their scheme to defraud the company.",
+      "synonyms": "deceive, trick, fool, mislead, swindle",
+      "antonyms": "enlighten, inform, educate, undeceive"
+    },
+    {
+      "word": "Empirical",
+      "trait": "Based on observation or experience rather than conjecture or theory; relying on evidence that can be verified through the senses.",
+      "sense": "Neutral (0) <br/> Describes an approach to knowledge based on evidence and observation.",
+      "example": "The scientist collected empirical data through experiments. <br/> Their conclusions lack empirical support and remain theoretical.",
+      "synonyms": "observable, verifiable, experiential, evidence-based",
+      "antonyms": "theoretical, speculative, conjectural, hypothetical"
+    },
+    {
+      "word": "Engender",
+      "trait": "To produce or stimulate the development of something; to cause or give rise to.",
+      "sense": "Neutral (0) <br/> Can be positive or negative depending on what is being produced.",
+      "example": "The policy changes engendered widespread support. <br/> His hostile attitude engendered distrust among his colleagues.",
+      "synonyms": "produce, create, generate, cause, bring about",
+      "antonyms": "prevent, hinder, suppress, obstruct"
+    },
+    {
+      "word": "Entitled",
+      "trait": "Assuming oneself to be deserving of special rights or privileges; believing one has a right to something.",
+      "sense": "Negative (–ve) or Neutral (0) <br/> Negative when describing an attitude of unwarranted privilege. <br/> Neutral when referring to legitimate rights.",
+      "example": "His entitled behavior made him unpopular with coworkers. <br/> As a ticket holder, you are entitled to one free drink.",
+      "synonyms": "privileged, deserving, qualified, authorized",
+      "antonyms": "undeserving, disqualified, ineligible"
+    },
+    {
+      "word": "Pertinacious",
+      "trait": "Stubbornly holding onto a belief or course of action; refusing to give up or change one's attitude.",
+      "sense": "Neutral (0) or Negative (–ve) <br/> Can be admired for determination or criticized for inflexibility.",
+      "example": "Her pertinacious pursuit of the truth finally revealed the corruption. <br/> His pertinacious insistence on his disproven theory frustrated the scientific community.",
+      "synonyms": "stubborn, persistent, tenacious, dogged, obstinate",
+      "antonyms": "yielding, flexible, compliant, acquiescent"
+    },
+    {
+      "word": "Presumptuous",
+      "trait": "Overstepping boundaries, often in an overconfident way; taking liberties or assuming too much.",
+      "sense": "Negative (–ve) <br/> Implies inappropriate or excessive boldness.",
+      "example": "It would be presumptuous to assume you're invited to the private party. <br/> His presumptuous behavior at the meeting offended the senior executives.",
+      "synonyms": "arrogant, forward, audacious, bold, impertinent",
+      "antonyms": "modest, humble, respectful, unassuming"
+    },
+    {
+      "word": "Probity",
+      "trait": "The characteristic of having strong ethical standards; integrity and honesty.",
+      "sense": "Positive (+ve) <br/> Describes a highly valued moral quality.",
+      "example": "Her probity in financial matters made her the ideal candidate for treasurer. <br/> The judge was known for his probity and fairness in all cases.",
+      "synonyms": "integrity, honesty, uprightness, virtue, rectitude",
+      "antonyms": "dishonesty, corruption, immorality, deceit"
+    },
+    {
+      "word": "Proliferate",
+      "trait": "To rapidly increase or multiply in number; to grow or spread quickly.",
+      "sense": "Neutral (0) <br/> Can be positive or negative depending on what is proliferating.",
+      "example": "Startups proliferated in the region after the tax incentives were introduced. <br/> Concerns proliferated about the safety of the new medication.",
+      "synonyms": "multiply, increase, spread, expand, grow",
+      "antonyms": "decrease, decline, diminish, dwindle"
+    },
+    {
+      "word": "Specious",
+      "trait": "Seemingly reasonable but actually wrong or misleading; having a false appearance of truth or merit.",
+      "sense": "Negative (–ve) <br/> Implies deception or unsoundness disguised as truth.",
+      "example": "The defense lawyer presented a specious argument that initially confused the jury. <br/> Her specious reasoning led to completely incorrect conclusions.",
+      "synonyms": "misleading, deceptive, fallacious, false, spurious",
+      "antonyms": "genuine, authentic, valid, sound, legitimate"
+    },
+    {
+      "word": "Spurious",
+      "trait": "Not genuine or authentic; false or bogus.",
+      "sense": "Negative (–ve) <br/> Indicates falseness or inauthenticity.",
+      "example": "The painting was revealed to be a spurious copy of the masterpiece. <br/> The researcher identified spurious correlations in the data.",
+      "synonyms": "fake, false, counterfeit, fraudulent, sham",
+      "antonyms": "genuine, authentic, legitimate, real, true"
+    },
+    {
+      "word": "Subjective",
+      "trait": "Pertaining to personal feelings, tastes, or opinions rather than objective reality; influenced by personal bias.",
+      "sense": "Neutral (0) <br/> Neither inherently good nor bad, simply describes a perspective based on personal feeling.",
+      "example": "Art appreciation is highly subjective and varies from person to person. <br/> The reviewer's subjective opinion of the film differed from the general consensus.",
+      "synonyms": "personal, individual, biased, emotional, prejudiced",
+      "antonyms": "objective, impartial, unbiased, factual"
+    },
+    {
+      "word": "Subvert",
+      "trait": "To undermine or weaken, typically an authority, system, or institution; to overthrow or overturn.",
+      "sense": "Neutral (0) or Negative (–ve) <br/> Can be seen as negative when disrupting necessary systems or positive when challenging oppressive ones.",
+      "example": "The spy attempted to subvert the government by leaking classified information. <br/> The artist's work subverts traditional notions of beauty.",
+      "synonyms": "undermine, overthrow, overturn, destabilize, sabotage",
+      "antonyms": "support, uphold, maintain, strengthen"
+    },
+    {
+      "word": "Timorous",
+      "trait": "Displaying nervousness or fear; lacking confidence or courage.",
+      "sense": "Negative (–ve) <br/> Generally describes an undesirable trait of excessive fear.",
+      "example": "The timorous new employee was afraid to speak up during meetings. <br/> A timorous approach to investment will yield minimal returns.",
+      "synonyms": "fearful, timid, nervous, apprehensive, cowardly",
+      "antonyms": "brave, bold, courageous, confident, audacious"
+    },
+    {
+      "word": "Tortuous",
+      "trait": "Marked by numerous twists or turns; overly complicated and long.",
+      "sense": "Negative (–ve) <br/> Implies unnecessary complexity or a difficult path.",
+      "example": "The negotiations followed a tortuous path before reaching an agreement. <br/> His tortuous explanation confused rather than clarified the issue.",
+      "synonyms": "winding, twisting, convoluted, complex, circuitous",
+      "antonyms": "straight, direct, straightforward, simple, clear"
+    },
+    {
+      "word": "Tractable",
+      "trait": "Easily managed or controlled; docile; (of a situation) easy to solve or handle.",
+      "sense": "Positive (+ve) <br/> Indicates a desirable quality of being manageable.",
+      "example": "The complex problem proved surprisingly tractable once we had the right approach. <br/> The horse was tractable and easy to train.",
+      "synonyms": "manageable, controllable, compliant, docile, amenable",
+      "antonyms": "intractable, unmanageable, stubborn, difficult"
+    },
+    {
+      "word": "Transient",
+      "trait": "Not lasting, enduring, or permanent; temporary or fleeting.",
+      "sense": "Neutral (0) <br/> Simply describes a temporary state without judgment.",
+      "example": "The pain was transient and disappeared within minutes. <br/> The city has a large transient population of seasonal workers.",
+      "synonyms": "temporary, fleeting, brief, short-lived, ephemeral",
+      "antonyms": "permanent, enduring, lasting, persistent, eternal"
+    },
+    {
+      "word": "Ubiquitous",
+      "trait": "Being everywhere at once; seeming to be present everywhere; widespread.",
+      "sense": "Neutral (0) <br/> Describes widespread presence without inherent judgment.",
+      "example": "Smartphones have become ubiquitous in modern society. <br/> Coffee shops are ubiquitous in urban areas.",
+      "synonyms": "omnipresent, pervasive, universal, widespread, everywhere",
+      "antonyms": "rare, scarce, uncommon, limited, restricted"
+    },
+    {
+      "word": "Underscore",
+      "trait": "To emphasize or show the importance of something; to draw attention to.",
+      "sense": "Neutral (0) <br/> Simply describes the act of emphasizing without judgment.",
+      "example": "The President's speech underscored the importance of unity. <br/> The statistics underscore the need for immediate action on climate change.",
+      "synonyms": "emphasize, highlight, stress, accentuate, underline",
+      "antonyms": "downplay, minimize, understate, deemphasize"
+    },
+    {
+      "word": "Venal",
+      "trait": "Open to bribery or corruption; capable of being bought or influenced by money.",
+      "sense": "Negative (–ve) <br/> Describes a serious character flaw involving dishonesty.",
+      "example": "The venal official accepted bribes in exchange for government contracts. <br/> His venal nature made him susceptible to financial temptations.",
+      "synonyms": "corrupt, bribable, purchasable, mercenary, unscrupulous",
+      "antonyms": "honest, principled, incorruptible, ethical, honorable"
+    },
+    {
+      "word": "Venerate",
+      "trait": "To regard with deep respect or reverence; to honor or revere.",
+      "sense": "Positive (+ve) <br/> Involves showing respect and admiration.",
+      "example": "Many cultures venerate their ancestors through various traditions. <br/> The scientist is venerated for her groundbreaking discoveries.",
+      "synonyms": "revere, respect, honor, esteem, worship",
+      "antonyms": "disrespect, dishonor, disdain, scorn, despise"
+    },
+    {
+      "word": "Appease",
+      "trait": "1. To calm someone down 2. To satisfy a demand or desire",
+      "sense": "Negative (–ve) or Neutral (0) depending on context <br/> Negative: When it involves giving in to unreasonable demands to avoid conflict <br/> Neutral: When it involves calming someone legitimately upset",
+      "example": "The government tried to appease the protesters by promising reforms. <br/> She appeased her hunger with a quick snack.",
+      "synonyms": "pacify, placate, mollify, satisfy",
+      "antonyms": "aggravate, provoke, antagonize, resist"
+    },
+    {
+      "word": "Arbitrary",
+      "trait": "Determined by chance or personal whim, not reason or system",
+      "sense": "Negative (–ve) <br/> Generally negative as it implies lack of logic, fairness, or systematic approach",
+      "example": "The manager's arbitrary decisions confused the team. <br/> The rules seemed completely arbitrary and without purpose.",
+      "synonyms": "random, capricious, whimsical, haphazard",
+      "antonyms": "reasoned, systematic, logical, planned"
+    },
+    {
+      "word": "Archaic",
+      "trait": "Ancient or outmoded; out of date",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Neutral: When describing historical items or linguistics <br/> Negative: When implying something is outdated and should be replaced",
+      "example": "The museum contains archaic tools from early civilizations. <br/> His archaic views on gender roles are out of place in modern society.",
+      "synonyms": "antiquated, obsolete, outdated, ancient",
+      "antonyms": "modern, contemporary, current, up-to-date"
+    },
+    {
+      "word": "Clamorous",
+      "trait": "Characterized by extremely loud noise; vocally insistent",
+      "sense": "Negative (–ve) or Neutral (0) depending on context <br/> Negative: When describing disruptive or unpleasant noise <br/> Neutral: When describing passionate advocacy",
+      "example": "The clamorous crowd demanded answers from the politicians. <br/> Birds made clamorous sounds at dawn, waking everyone up.",
+      "synonyms": "noisy, vociferous, boisterous, uproarious",
+      "antonyms": "quiet, silent, peaceful, subdued"
+    },
+    {
+      "word": "Dearth",
+      "trait": "Lack or scarcity of something in a particular area",
+      "sense": "Negative (–ve) <br/> Generally negative as it implies a problematic shortage",
+      "example": "There is a dearth of affordable housing in the city center. <br/> The report noted a dearth of qualified candidates for specialized positions.",
+      "synonyms": "scarcity, shortage, lack, deficiency",
+      "antonyms": "abundance, surplus, plenty, wealth"
+    },
+    {
+      "word": "Explicable",
+      "trait": "Able to be explained or understood",
+      "sense": "Positive (+ve) or Neutral (0) <br/> Generally positive or neutral as it implies clarity and understandability",
+      "example": "The scientist's findings were perfectly explicable using current theories. <br/> Her behavior, while unusual, was explicable given the circumstances.",
+      "synonyms": "explainable, understandable, comprehensible, clear",
+      "antonyms": "inexplicable, baffling, mysterious, incomprehensible"
+    },
+    {
+      "word": "Hyperbole",
+      "trait": "Exaggeration used to make a point or be funny, not meant to be taken literally",
+      "sense": "Neutral (0) <br/> Generally neutral as it's a rhetorical device that can be used positively or negatively",
+      "example": "Saying 'I'm starving' when you're just hungry is a common hyperbole. <br/> His description of the event was full of hyperbole – it wasn't really 'the greatest moment in history.'",
+      "synonyms": "exaggeration, overstatement, embellishment, magnification",
+      "antonyms": "understatement, litotes, meiosis, accuracy"
+    },
+    {
+      "word": "Immutable",
+      "trait": "Not capable of being changed or altered",
+      "sense": "Neutral (0) <br/> Can be positive when referring to principles or negative when referring to resistance to necessary change",
+      "example": "The laws of physics are immutable. <br/> Some consider certain rights to be immutable regardless of government policy.",
+      "synonyms": "unchangeable, fixed, permanent, unalterable",
+      "antonyms": "mutable, changeable, flexible, variable"
+    },
+    {
+      "word": "Indefatigable",
+      "trait": "Highly determined; resistant to tiring out; persistent",
+      "sense": "Positive (+ve) <br/> Generally positive as it implies admirable determination and energy",
+      "example": "Despite numerous setbacks, she was indefatigable in pursuing her goals. <br/> The indefatigable researcher worked through the night to complete the experiment.",
+      "synonyms": "tireless, untiring, unflagging, persevering",
+      "antonyms": "fatigable, exhaustible, weary, tired"
+    },
+    {
+      "word": "Indolent",
+      "trait": "Habitually lazy; averse to activity or exertion",
+      "sense": "Negative (–ve) <br/> Generally negative as it implies culpable laziness or avoidance of responsibility",
+      "example": "His indolent attitude prevented him from advancing in his career. <br/> The indolent student rarely completed assignments on time.",
+      "synonyms": "lazy, idle, slothful, inactive",
+      "antonyms": "industrious, diligent, active, energetic"
+    },
+    {
+      "word": "Insular",
+      "trait": "Limited in outlook or experience; narrow; isolated",
+      "sense": "Negative (–ve) <br/> Generally negative as it implies unhealthy isolation or narrowness of perspective",
+      "example": "Living in a small community had made his viewpoints somewhat insular. <br/> The company's insular culture prevented it from adapting to market changes.",
+      "synonyms": "isolated, provincial, narrow-minded, parochial",
+      "antonyms": "cosmopolitan, broad-minded, worldly, open"
+    },
+    {
+      "word": "Intransigent",
+      "trait": "Refusing to compromise or change one's position; stubborn",
+      "sense": "Negative (–ve) <br/> Generally negative as it implies unreasonable stubbornness",
+      "example": "The intransigent politician refused to consider any alternative proposals. <br/> Negotiations failed due to intransigent attitudes on both sides.",
+      "synonyms": "uncompromising, inflexible, rigid, obstinate",
+      "antonyms": "flexible, accommodating, compromising, yielding"
+    },
+    {
+      "word": "Intrepid",
+      "trait": "Resolutely fearless; brave; adventurous",
+      "sense": "Positive (+ve) <br/> Generally positive as it implies admirable courage and determination",
+      "example": "The intrepid explorer ventured into uncharted territory. <br/> She was intrepid in facing challenges that would intimidate most people.",
+      "synonyms": "fearless, dauntless, courageous, bold",
+      "antonyms": "fearful, timid, cowardly, apprehensive"
+    },
+    {
+      "word": "Irreverent",
+      "trait": "Lacking proper respect or seriousness; disrespectful of authority",
+      "sense": "Negative (–ve) or Neutral (0) depending on context <br/> Negative: When describing improper disrespect <br/> Neutral: When describing humorous or critical commentary",
+      "example": "His irreverent jokes about sacred traditions offended many people. <br/> The comedian's irreverent style challenges social norms and makes people think.",
+      "synonyms": "disrespectful, impious, flippant, cheeky",
+      "antonyms": "reverent, respectful, deferential, pious"
+    },
+    {
+      "word": "Loathe",
+      "trait": "To dislike greatly, often with disgust or intolerance",
+      "sense": "Negative (–ve) <br/> Generally negative as it expresses strong aversion or hatred",
+      "example": "She loathes public speaking and avoids it whenever possible. <br/> Many people loathe the sound of nails on a chalkboard.",
+      "synonyms": "hate, detest, abhor, despise",
+      "antonyms": "love, adore, cherish, like"
+    },
+    {
+      "word": "Malign",
+      "trait": "1. Evil and harmful 2. Speak about someone in a bitter and critical manner",
+      "sense": "Negative (–ve) <br/> Negative in both senses - describing something harmful or speaking ill of someone",
+      "example": "The report described the malign influence of corruption on the economy. <br/> He was sued for maligning his former employer's reputation.",
+      "synonyms": "evil, harmful, defame, slander",
+      "antonyms": "benign, beneficial, praise, compliment"
+    },
+    {
+      "word": "Malleable",
+      "trait": "Changeable or flexible; capable of being influenced or shaped",
+      "sense": "Neutral (0) or Positive (+ve) depending on context <br/> Neutral: When describing basic adaptability <br/> Positive: When describing useful flexibility and adaptiveness",
+      "example": "Young minds are particularly malleable and open to new ideas. <br/> The malleable metal could be shaped into intricate designs.",
+      "synonyms": "pliable, adaptable, flexible, impressionable",
+      "antonyms": "rigid, inflexible, unchangeable, fixed"
+    },
+    {
+      "word": "Neophyte",
+      "trait": "An amateur or novice in a field; beginner",
+      "sense": "Neutral (0) <br/> Generally neutral as it simply describes inexperience without judgment",
+      "example": "As a neophyte in computer programming, she was taking introductory courses. <br/> Even experienced doctors remember their days as neophytes in medical school.",
+      "synonyms": "novice, beginner, amateur, tyro",
+      "antonyms": "expert, veteran, master, adept"
+    },
+    {
+      "word": "Plastic",
+      "trait": "1. Capable of being molded; flexible 2. Artificial; unnatural",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Neutral: When describing malleability <br/> Negative: When describing artificiality or inauthenticity",
+      "example": "Children have plastic minds that readily absorb new information. <br/> His plastic smile never reached his eyes, betraying his true feelings.",
+      "synonyms": "malleable, adaptable, artificial, synthetic",
+      "antonyms": "rigid, natural, authentic, genuine"
+    },
+    {
+      "word": "Platitude",
+      "trait": "A trite or banal remark or statement, especially one expressed as if it were significant or original",
+      "sense": "Negative (–ve) <br/> Generally negative as it implies unoriginal, empty statements",
+      "example": "The politician's speech was full of platitudes about 'working together.' <br/> Instead of offering real advice, she offered platitudes like 'time heals all wounds.'",
+      "synonyms": "cliché, truism, banality, commonplace",
+      "antonyms": "insight, profundity, originality, wisdom"
+    },
+    {
+      "word": "Prescient",
+      "trait": "Possessing foresight or knowledge of upcoming events; visionary",
+      "sense": "Positive (+ve) <br/> Generally positive as it implies valuable foresight or insight",
+      "example": "Her prescient warning about market changes saved the company millions. <br/> The author's prescient novel predicted technologies that appeared decades later.",
+      "synonyms": "foreknowing, prophetic, clairvoyant, far-sighted",
+      "antonyms": "shortsighted, myopic, oblivious, unaware"
+    },
+    {
+      "word": "Pristine",
+      "trait": "In its original, unspoiled, or perfect state; immaculately clean",
+      "sense": "Positive (+ve) <br/> Generally positive as it implies purity, cleanliness, or natural beauty",
+      "example": "The remote island featured pristine beaches untouched by tourism. <br/> She kept her apartment in pristine condition.",
+      "synonyms": "immaculate, unspoiled, pure, flawless",
+      "antonyms": "soiled, polluted, damaged, tainted"
+    },
+    {
+      "word": "Reproach",
+      "trait": "Express criticism or disappointment towards; reprimand",
+      "sense": "Negative (–ve) or Neutral (0) depending on context <br/> Negative: When criticism is harsh or unwarranted <br/> Neutral: When criticism is constructive or warranted",
+      "example": "The teacher reproached the student for not completing the assignment. <br/> Her conduct was beyond reproach, earning her universal respect.",
+      "synonyms": "rebuke, reprimand, admonish, criticize",
+      "antonyms": "praise, commend, approve, compliment"
+    },
+    {
+      "word": "Robust",
+      "trait": "1. Capable of surviving despite adverse conditions 2. Strong and powerful",
+      "sense": "Positive (+ve) <br/> Generally positive as it implies strength, durability, and resilience",
+      "example": "The company reported robust growth despite economic challenges. <br/> They designed a robust system that could withstand extreme weather.",
+      "synonyms": "strong, sturdy, vigorous, hardy",
+      "antonyms": "weak, fragile, delicate, feeble"
+    },
+    {
+      "word": "Salubrious",
+      "trait": "1. Promoting health or well-being 2. Pleasant (of a place or accommodation)",
+      "sense": "Positive (+ve) <br/> Generally positive as it implies healthfulness and pleasantness",
+      "example": "The mountain retreat offered a salubrious environment for recovery. <br/> The salubrious climate attracts many retirees to the coastal town.",
+      "synonyms": "healthy, wholesome, beneficial, pleasant",
+      "antonyms": "unhealthy, unwholesome, harmful, unpleasant"
+    },
+    {
+      "word": "Sanction",
+      "trait": "1. Authorize or permit 2. Penalize or punish",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Neutral: When authorizing or permitting <br/> Negative: When referring to penalties or restrictions",
+      "example": "The board sanctioned the new development project. <br/> The country faced economic sanctions for violating international agreements.",
+      "synonyms": "approve, authorize, penalize, restrict",
+      "antonyms": "prohibit, forbid, remove penalties, pardon"
+    },
+    {
+      "word": "Sedulous",
+      "trait": "Paying attention to details; diligent and persistent",
+      "sense": "Positive (+ve) <br/> Generally positive as it implies admirable diligence and attention",
+      "example": "The sedulous researcher checked every detail multiple times. <br/> Her sedulous efforts to improve education were widely recognized.",
+      "synonyms": "diligent, assiduous, meticulous, industrious",
+      "antonyms": "lazy, careless, negligent, indolent"
+    },
+    {
+      "word": "Soporific",
+      "trait": "Causing sleep or lethargy; inducing drowsiness",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Neutral: When describing medication or intentional sleep aids <br/> Negative: When describing something boring or dull",
+      "example": "The medication had a soporific effect, helping him fall asleep. <br/> The professor's soporific lecture put half the class to sleep.",
+      "synonyms": "sleep-inducing, sedative, drowsy, narcotic",
+      "antonyms": "stimulating, invigorating, awakening, energizing"
+    },
+    {
+      "word": "Stern",
+      "trait": "Hard, harsh, or severe in manner; strict and demanding",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Neutral: When appropriate firmness is needed <br/> Negative: When indicating excessive harshness",
+      "example": "The judge gave the defendant a stern warning about future behavior. <br/> His stern expression intimidated the new employees.",
+      "synonyms": "severe, strict, harsh, rigid",
+      "antonyms": "lenient, gentle, mild, indulgent"
+    },
+    {
+      "word": "Tendentious",
+      "trait": "Biased toward a particular point of view, often a provocative one; showing marked tendency or purpose",
+      "sense": "Negative (–ve) <br/> Generally negative as it implies unfair bias or skewed presentation",
+      "example": "The journalist's tendentious reporting clearly favored one political party. <br/> His tendentious arguments ignored evidence that contradicted his position.",
+      "synonyms": "biased, prejudiced, partisan, one-sided",
+      "antonyms": "impartial, unbiased, objective, fair"
+    },
+    {
+      "word": "Accentuate",
+      "trait": "Give emphasis or draw attention to something.",
+      "sense": "Neutral (0) or Positive (+ve) depending on context <br/> Positive: When highlighting beneficial attributes. <br/> Neutral: When simply emphasizing any feature.",
+      "example": "The lighting accentuates the curves in the sculpture. <br/> Her makeup accentuates her beautiful eyes.",
+      "synonyms": "emphasize, highlight, stress, underscore",
+      "antonyms": "downplay, understate, minimize"
+    },
+    {
+      "word": "Conjectural",
+      "trait": "Pertaining to a guess or inference made with limited data.",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Negative: When suggesting speculation without sufficient evidence. <br/> Neutral: When acknowledging a reasonable hypothesis.",
+      "example": "His theory remains conjectural until more evidence is found. <br/> The police report contained some conjectural statements about the suspect's motives.",
+      "synonyms": "speculative, hypothetical, theoretical, supposed",
+      "antonyms": "proven, factual, established, verified"
+    },
+    {
+      "word": "Convivial",
+      "trait": "Demonstrating a jovial nature or a fondness for festivities and companionship.",
+      "sense": "Positive (+ve)",
+      "example": "The convivial atmosphere at the dinner party made everyone feel welcome. <br/> He's known for his convivial personality and ability to make friends easily.",
+      "synonyms": "sociable, festive, genial, jolly, friendly",
+      "antonyms": "unfriendly, antisocial, aloof, hostile"
+    },
+    {
+      "word": "Decadent",
+      "trait": "Displaying excessive indulgence, sometimes to a morally degenerate extent.",
+      "sense": "Negative (–ve) or Neutral (0) depending on context <br/> Negative: When referring to moral decay or excessive indulgence. <br/> Neutral: When describing luxurious food or experiences without moral judgment.",
+      "example": "The Roman Empire's decadent final years were marked by corruption and excess. <br/> We shared a decadent chocolate dessert after dinner.",
+      "synonyms": "self-indulgent, extravagant, luxurious, hedonistic",
+      "antonyms": "austere, restrained, moderate, ascetic"
+    },
+    {
+      "word": "Egregious",
+      "trait": "Remarkably bad or shocking, to a conspicuous degree.",
+      "sense": "Negative (–ve)",
+      "example": "The politician's egregious behavior led to calls for resignation. <br/> That was an egregious error that could have been easily avoided.",
+      "synonyms": "outrageous, flagrant, glaring, blatant, shocking",
+      "antonyms": "minor, slight, inconspicuous, trivial"
+    },
+    {
+      "word": "Evanescent",
+      "trait": "Vanishing or fading away quickly, like mist or a phantom.",
+      "sense": "Neutral (0) with poetic undertones",
+      "example": "The rainbow was evanescent, disappearing as quickly as it had formed. <br/> Fame can be evanescent, especially in today's fast-moving culture.",
+      "synonyms": "fleeting, transient, ephemeral, momentary, brief",
+      "antonyms": "permanent, enduring, lasting, persistent"
+    },
+    {
+      "word": "Flamboyant",
+      "trait": "Characterized by a showy, confident, or audacious display.",
+      "sense": "Neutral (0) or Positive (+ve) depending on context <br/> Positive: When describing artistic expression or confident self-expression. <br/> Neutral: When merely descriptive of an extravagant style.",
+      "example": "The pianist was known for his flamboyant performances and colorful outfits. <br/> The flamboyant architecture of the cathedral attracts many tourists.",
+      "synonyms": "showy, ostentatious, extravagant, exuberant, ornate",
+      "antonyms": "restrained, subdued, modest, understated"
+    },
+    {
+      "word": "Forestall",
+      "trait": "Prevent something by taking strategic action in advance.",
+      "sense": "Neutral (0) or Positive (+ve) depending on context <br/> Positive: When preventing negative outcomes. <br/> Neutral: When describing strategic planning.",
+      "example": "The company implemented new security measures to forestall any potential data breaches. <br/> The government's quick response forestalled a financial crisis.",
+      "synonyms": "prevent, avert, preclude, thwart, preempt",
+      "antonyms": "enable, allow, facilitate, permit"
+    },
+    {
+      "word": "Gainsay",
+      "trait": "Deny or refute an assertion or argument.",
+      "sense": "Neutral (0)",
+      "example": "No one could gainsay the evidence presented in court. <br/> Her expertise on the subject was too thorough for anyone to gainsay.",
+      "synonyms": "contradict, dispute, deny, refute, contest",
+      "antonyms": "confirm, affirm, validate, acknowledge"
+    },
+    {
+      "word": "Galvanize",
+      "trait": "Inspire or stir up to action or heightened activity.",
+      "sense": "Positive (+ve)",
+      "example": "The speech galvanized the crowd into taking action. <br/> The crisis galvanized the community to work together.",
+      "synonyms": "motivate, inspire, stimulate, energize, incite",
+      "antonyms": "discourage, dampen, demoralize, suppress"
+    },
+    {
+      "word": "Indiscriminate",
+      "trait": "Lacking selectivity or judgment, often with potentially harmful effects.",
+      "sense": "Negative (–ve)",
+      "example": "The indiscriminate use of antibiotics has led to resistant bacteria. <br/> The bombing caused indiscriminate destruction throughout the city.",
+      "synonyms": "random, haphazard, unselective, promiscuous, undiscerning",
+      "antonyms": "selective, discerning, careful, judicious"
+    },
+    {
+      "word": "Innocuous",
+      "trait": "Harmless, having no ill effect.",
+      "sense": "Neutral (0) or Positive (+ve) depending on context <br/> Positive: When describing safety. <br/> Neutral: When describing something as unremarkable.",
+      "example": "The comment seemed innocuous, but it deeply offended her. <br/> The medicine has innocuous side effects for most patients.",
+      "synonyms": "harmless, benign, inoffensive, safe, mild",
+      "antonyms": "harmful, dangerous, noxious, offensive"
+    },
+    {
+      "word": "Momentary",
+      "trait": "Lasting for a brief moment or interval.",
+      "sense": "Neutral (0)",
+      "example": "There was a momentary silence before everyone burst into applause. <br/> I felt a momentary pang of regret as I said goodbye.",
+      "synonyms": "brief, fleeting, temporary, short-lived, transient",
+      "antonyms": "lasting, permanent, enduring, perpetual"
+    },
+    {
+      "word": "Mundane",
+      "trait": "Commonplace or ordinary, lacking excitement.",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Negative: When describing something as dull or uninspiring. <br/> Neutral: When simply describing everyday activities.",
+      "example": "She was tired of her mundane office job and yearned for adventure. <br/> Taking care of mundane household chores is part of adult life.",
+      "synonyms": "ordinary, commonplace, banal, routine, everyday",
+      "antonyms": "extraordinary, unusual, remarkable, exceptional"
+    },
+    {
+      "word": "Nettlesome",
+      "trait": "Causing irritation or annoyance.",
+      "sense": "Negative (–ve)",
+      "example": "His nettlesome habit of interrupting others during meetings irritated his colleagues. <br/> Dealing with nettlesome regulatory issues delayed the project.",
+      "synonyms": "annoying, irritating, vexing, bothersome, troublesome",
+      "antonyms": "pleasing, agreeable, satisfying, gratifying"
+    },
+    {
+      "word": "Nullify",
+      "trait": "To render ineffective, cancel out or invalidate.",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Negative: When describing the cancellation of something positive. <br/> Neutral: When describing a legal or formal action.",
+      "example": "The Supreme Court's decision nullified the previous ruling. <br/> His poor performance nullified all the team's earlier efforts.",
+      "synonyms": "invalidate, cancel, void, negate, annul",
+      "antonyms": "validate, confirm, uphold, ratify"
+    },
+    {
+      "word": "Obviate",
+      "trait": "Sidestep or bypass a potential problem or difficulty.",
+      "sense": "Positive (+ve)",
+      "example": "The new procedure obviates the need for additional paperwork. <br/> Installing fire sprinklers obviates many potential safety hazards.",
+      "synonyms": "prevent, preclude, eliminate, avoid, remove",
+      "antonyms": "necessitate, require, demand, entail"
+    },
+    {
+      "word": "Omnipresent",
+      "trait": "Existing or seeming to exist everywhere at once.",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Negative: When describing an unwanted pervasive presence. <br/> Neutral: When describing widespread phenomena.",
+      "example": "Social media has become an omnipresent force in modern life. <br/> The fear of failure was omnipresent throughout her career.",
+      "synonyms": "ubiquitous, universal, pervasive, ever-present, all-pervading",
+      "antonyms": "rare, scarce, occasional, limited"
+    },
+    {
+      "word": "Oust",
+      "trait": "Displace or eject from a position or place.",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Negative: When describing forceful removal without justification. <br/> Neutral: When describing replacement or succession.",
+      "example": "The board voted to oust the CEO after the company's poor performance. <br/> The challenger ousted the incumbent in the election.",
+      "synonyms": "expel, remove, depose, eject, evict",
+      "antonyms": "install, admit, retain, maintain"
+    },
+    {
+      "word": "Palpable",
+      "trait": "Easily perceived or detected; tangible and obvious.",
+      "sense": "Neutral (0)",
+      "example": "There was a palpable tension in the room during the negotiations. <br/> His relief was palpable when he heard the good news.",
+      "synonyms": "tangible, perceptible, noticeable, evident, obvious",
+      "antonyms": "imperceptible, intangible, subtle, undetectable"
+    },
+    {
+      "word": "Perfidy",
+      "trait": "Act of betrayal or unfaithfulness.",
+      "sense": "Negative (–ve)",
+      "example": "His perfidy shocked everyone who had trusted him. <br/> The novel's plot centered around a tale of perfidy and revenge.",
+      "synonyms": "treachery, betrayal, disloyalty, duplicity, faithlessness",
+      "antonyms": "loyalty, faithfulness, fidelity, trustworthiness"
+    },
+    {
+      "word": "Profuse",
+      "trait": "Abundant, plentiful, or occurring in large amounts.",
+      "sense": "Neutral (0) or Positive (+ve) depending on context <br/> Positive: When describing abundance of something desirable. <br/> Neutral: When simply describing quantity.",
+      "example": "She offered profuse apologies for her mistake. <br/> The garden was filled with profuse blooms in springtime.",
+      "synonyms": "abundant, copious, plentiful, ample, lavish",
+      "antonyms": "scarce, sparse, limited, insufficient, meager"
+    },
+    {
+      "word": "Pugnacious",
+      "trait": "Quick to engage in a conflict or argument; combative.",
+      "sense": "Negative (–ve)",
+      "example": "His pugnacious attitude made him difficult to work with. <br/> The pugnacious debater challenged every point made by his opponents.",
+      "synonyms": "combative, aggressive, belligerent, contentious, quarrelsome",
+      "antonyms": "peaceful, gentle, conciliatory, agreeable, harmonious"
+    },
+    {
+      "word": "Sagacious",
+      "trait": "Demonstrating wisdom or sound judgment.",
+      "sense": "Positive (+ve)",
+      "example": "The sagacious elder provided valuable guidance to the community. <br/> Her sagacious investment decisions helped the company thrive.",
+      "synonyms": "wise, judicious, perceptive, discerning, astute",
+      "antonyms": "foolish, unwise, imprudent, injudicious"
+    },
+    {
+      "word": "Sanguine",
+      "trait": "Cheerfully optimistic, particularly in a difficult situation.",
+      "sense": "Positive (+ve)",
+      "example": "Despite the challenges, he remained sanguine about the company's future. <br/> Her sanguine outlook on life helped her overcome many obstacles.",
+      "synonyms": "optimistic, hopeful, positive, confident, buoyant",
+      "antonyms": "pessimistic, gloomy, despondent, disheartened"
+    },
+    {
+      "word": "Scant",
+      "trait": "Hardly sufficient, meager, or minimal.",
+      "sense": "Negative (–ve)",
+      "example": "The proposal received scant support from the committee. <br/> Despite scant resources, they managed to complete the project.",
+      "synonyms": "insufficient, meager, sparse, minimal, inadequate",
+      "antonyms": "ample, abundant, plentiful, generous, substantial"
+    },
+    {
+      "word": "Skullduggery",
+      "trait": "Sneaky or dishonest actions.",
+      "sense": "Negative (–ve)",
+      "example": "The investigation uncovered skullduggery in the company's accounting practices. <br/> Political skullduggery undermined the election's integrity.",
+      "synonyms": "trickery, dishonesty, deception, intrigue, chicanery",
+      "antonyms": "honesty, integrity, straightforwardness, fairness"
+    },
+    {
+      "word": "Trivial",
+      "trait": "Of minor significance or value.",
+      "sense": "Negative (–ve) or Neutral (0) depending on context <br/> Negative: When dismissing something as unimportant. <br/> Neutral: When objectively describing scale or importance.",
+      "example": "Don't waste time on trivial details when we have major issues to address. <br/> The error was trivial and easily corrected.",
+      "synonyms": "insignificant, minor, unimportant, inconsequential, trifling",
+      "antonyms": "significant, important, major, crucial, substantial"
+    },
+    {
+      "word": "Utilitarian",
+      "trait": "Emphasizing practicality and functionality over aesthetics.",
+      "sense": "Neutral (0)",
+      "example": "The building's design is purely utilitarian, focusing on efficiency rather than beauty. <br/> She prefers utilitarian clothing that's comfortable and durable.",
+      "synonyms": "practical, functional, pragmatic, useful, efficient",
+      "antonyms": "decorative, ornamental, impractical, aesthetic"
+    },
+    {
+      "word": "Vapid",
+      "trait": "Uninteresting, lacking flavor or spark.",
+      "sense": "Negative (–ve)",
+      "example": "The critic described the film as vapid and forgettable. <br/> Her vapid comments added nothing to the discussion.",
+      "synonyms": "dull, bland, insipid, tedious, banal",
+      "antonyms": "interesting, engaging, stimulating, lively, vibrant"
+    },
+    {
+      "word": "Boorish",
+      "trait": "Rude or unrefined in manners or behavior.",
+      "sense": "Negative (–ve)",
+      "example": "His boorish behavior at the dinner party offended many guests. <br/> The crowd's boorish comments during the performance were disrespectful.",
+      "synonyms": "crude, uncouth, coarse, vulgar, loutish",
+      "antonyms": "polite, refined, cultured, courteous"
+    },
+    {
+      "word": "Brook",
+      "trait": "To tolerate or endure something, especially an annoyance.",
+      "sense": "Neutral (0)",
+      "example": "The professor will not brook any interruptions during the lecture. <br/> The CEO wouldn't brook any dissent regarding the new company policy.",
+      "synonyms": "tolerate, endure, allow, permit, stand",
+      "antonyms": "reject, refuse, forbid, prohibit"
+    },
+    {
+      "word": "Circumspect",
+      "trait": "Cautious or wary, especially when considering potential consequences.",
+      "sense": "Positive (+ve)",
+      "example": "The diplomat was circumspect in his comments about the ongoing negotiations. <br/> It's wise to be circumspect when discussing sensitive topics in public.",
+      "synonyms": "cautious, prudent, careful, wary, guarded",
+      "antonyms": "rash, reckless, imprudent, careless"
+    },
+    {
+      "word": "Comity",
+      "trait": "A courteous harmony or mutual respect toward others.",
+      "sense": "Positive (+ve)",
+      "example": "The two nations have maintained a relationship of comity for over a century. <br/> There was a spirit of comity among the delegates at the international conference.",
+      "synonyms": "courtesy, civility, harmony, rapport, amity",
+      "antonyms": "discord, conflict, hostility, animosity"
+    },
+    {
+      "word": "Commensurate",
+      "trait": "Comparable in size, extent, or degree; proportionate.",
+      "sense": "Neutral (0)",
+      "example": "The salary offered was commensurate with her experience and qualifications. <br/> The punishment should be commensurate with the severity of the crime.",
+      "synonyms": "proportionate, corresponding, equivalent, equal, matching",
+      "antonyms": "disproportionate, unequal, inadequate"
+    },
+    {
+      "word": "Cordial",
+      "trait": "Characterized by warmth and sincerity.",
+      "sense": "Positive (+ve)",
+      "example": "They maintained cordial relations despite their political differences. <br/> We received a cordial welcome from our hosts upon arrival.",
+      "synonyms": "warm, friendly, genial, affable, hospitable",
+      "antonyms": "cold, unfriendly, hostile, aloof"
+    },
+    {
+      "word": "Deleterious",
+      "trait": "Having a harmful effect.",
+      "sense": "Negative (–ve)",
+      "example": "Smoking has deleterious effects on health. <br/> The pollution had a deleterious impact on the local ecosystem.",
+      "synonyms": "harmful, damaging, detrimental, injurious, pernicious",
+      "antonyms": "beneficial, advantageous, helpful, salubrious"
+    },
+    {
+      "word": "Dichotomy",
+      "trait": "A split into two contrasting or opposite parts.",
+      "sense": "Neutral (0)",
+      "example": "There's a clear dichotomy between her public persona and her private life. <br/> The researcher explored the dichotomy between rural and urban educational experiences.",
+      "synonyms": "division, contrast, opposition, polarity, separation",
+      "antonyms": "unity, continuity, harmony, sameness"
+    },
+    {
+      "word": "Edify",
+      "trait": "Enlighten or uplift through knowledge; teach.",
+      "sense": "Positive (+ve)",
+      "example": "The professor's lectures edify students about complex philosophical concepts. <br/> Good literature can both entertain and edify.",
+      "synonyms": "enlighten, educate, instruct, inform, improve",
+      "antonyms": "confuse, mislead, misinform"
+    },
+    {
+      "word": "Elicit",
+      "trait": "Extract a reply or action; provoke.",
+      "sense": "Neutral (0)",
+      "example": "The interviewer asked probing questions to elicit detailed responses. <br/> The researcher designed the experiment to elicit specific behaviors from the participants.",
+      "synonyms": "draw out, evoke, extract, prompt, provoke",
+      "antonyms": "suppress, discourage, inhibit"
+    },
+    {
+      "word": "Erudite",
+      "trait": "Possessing great knowledge, typically from study or research.",
+      "sense": "Positive (+ve)",
+      "example": "The erudite scholar had mastered several ancient languages. <br/> Her erudite commentary on the text impressed even the most skeptical critics.",
+      "synonyms": "learned, scholarly, knowledgeable, intellectual, academic",
+      "antonyms": "ignorant, uneducated, unlearned, uninformed"
+    },
+    {
+      "word": "Fecund",
+      "trait": "Fertile or highly productive.",
+      "sense": "Positive (+ve)",
+      "example": "The fecund soil produced abundant crops year after year. <br/> She has a fecund imagination that generates countless creative ideas.",
+      "synonyms": "fertile, productive, prolific, fruitful, generative",
+      "antonyms": "barren, sterile, unproductive, infertile"
+    },
+    {
+      "word": "Feeble",
+      "trait": "Weak; deficient in strength.",
+      "sense": "Negative (–ve)",
+      "example": "The patient's voice became increasingly feeble as his illness progressed. <br/> Their feeble attempts to solve the crisis were ineffective.",
+      "synonyms": "weak, frail, fragile, delicate, infirm",
+      "antonyms": "strong, robust, powerful, vigorous"
+    },
+    {
+      "word": "Felicitous",
+      "trait": "1. Well-suited or apt <br/> 2. Causing delight or satisfaction.",
+      "sense": "Positive (+ve)",
+      "example": "The speaker made a felicitous choice of words for the occasion. <br/> The timing of their arrival was particularly felicitous.",
+      "synonyms": "apt, appropriate, fitting, suitable, pleasing",
+      "antonyms": "inappropriate, unsuitable, infelicitous, inapt"
+    },
+    {
+      "word": "Forbear",
+      "trait": "Refrain or abstain from doing something.",
+      "sense": "Neutral (0) to Positive (+ve) <br/> Neutral: Simply describing restraint <br/> Positive: When showing remarkable self-control",
+      "example": "Please forbear from making comments until the end of the presentation. <br/> He had to forbear his impulse to correct every minor error.",
+      "synonyms": "refrain, abstain, desist, resist, hold back",
+      "antonyms": "indulge, persist, continue"
+    },
+    {
+      "word": "Haphazard",
+      "trait": "Lacking clear planning, order, or direction.",
+      "sense": "Negative (–ve)",
+      "example": "The project failed due to their haphazard approach to management. <br/> The books were arranged in a haphazard manner on the shelves.",
+      "synonyms": "random, chaotic, disorganized, unsystematic, arbitrary",
+      "antonyms": "organized, systematic, methodical, planned"
+    },
+    {
+      "word": "Hodgepodge",
+      "trait": "A mixture or assortment of different things.",
+      "sense": "Neutral (0) to Negative (–ve) depending on context <br/> Neutral: When describing an eclectic mix <br/> Negative: When implying disorganization",
+      "example": "The museum collection was a hodgepodge of artifacts from various historical periods. <br/> The report was a hodgepodge of unrelated facts and opinions.",
+      "synonyms": "mixture, assortment, jumble, medley, miscellany",
+      "antonyms": "uniformity, homogeneity, consistency"
+    },
+    {
+      "word": "Impede",
+      "trait": "Obstruct or hinder progress.",
+      "sense": "Negative (–ve)",
+      "example": "The heavy traffic impeded our journey to the airport. <br/> Bureaucratic procedures often impede innovation in large organizations.",
+      "synonyms": "hinder, obstruct, hamper, block, inhibit",
+      "antonyms": "facilitate, assist, help, expedite"
+    },
+    {
+      "word": "Impetuous",
+      "trait": "Rash or hasty in action or decision.",
+      "sense": "Negative (–ve)",
+      "example": "His impetuous decision to quit his job without another lined up caused financial strain. <br/> The general's impetuous attack resulted in unnecessary casualties.",
+      "synonyms": "rash, hasty, impulsive, reckless, precipitate",
+      "antonyms": "cautious, deliberate, careful, prudent"
+    },
+    {
+      "word": "Irascible",
+      "trait": "Easily angered or irritated.",
+      "sense": "Negative (–ve)",
+      "example": "The irascible professor often lost his temper during class discussions. <br/> Lack of sleep made her increasingly irascible throughout the day.",
+      "synonyms": "irritable, hot-tempered, quick-tempered, touchy, testy",
+      "antonyms": "calm, even-tempered, patient, placid"
+    },
+    {
+      "word": "Mercenary",
+      "trait": "Motivated primarily by a desire for monetary or material gain.",
+      "sense": "Negative (–ve)",
+      "example": "His decision to change companies was purely mercenary, based solely on the higher salary offered. <br/> They criticized the artist for taking a mercenary approach to his work.",
+      "synonyms": "greedy, money-oriented, materialistic, profit-driven, venal",
+      "antonyms": "selfless, altruistic, generous, philanthropic"
+    },
+    {
+      "word": "Meticulous",
+      "trait": "Exhibiting great care to detail.",
+      "sense": "Positive (+ve)",
+      "example": "The watchmaker was meticulous in assembling the tiny components. <br/> Her meticulous research uncovered previously overlooked evidence.",
+      "synonyms": "thorough, careful, precise, scrupulous, painstaking",
+      "antonyms": "careless, sloppy, haphazard, negligent"
+    },
+    {
+      "word": "Mordant",
+      "trait": "Biting or sharply critical in thought or expression.",
+      "sense": "Neutral (0) to Negative (–ve) depending on context <br/> Neutral: When used for incisive critique <br/> Negative: When excessively harsh or cutting",
+      "example": "The reviewer was known for his mordant critiques of pretentious films. <br/> Her mordant wit made her both admired and feared at social gatherings.",
+      "synonyms": "caustic, acerbic, scathing, cutting, biting",
+      "antonyms": "gentle, kind, mild, bland"
+    },
+    {
+      "word": "Outstrip",
+      "trait": "Surpass or do better than.",
+      "sense": "Neutral (0) to Positive (+ve) depending on context",
+      "example": "The company's performance continues to outstrip that of its competitors. <br/> Demand for the new product has outstripped supply.",
+      "synonyms": "surpass, exceed, outdo, outperform, overtake",
+      "antonyms": "fall behind, trail, lag"
+    },
+    {
+      "word": "Precarious",
+      "trait": "Uncertain and likely to cause danger.",
+      "sense": "Negative (–ve)",
+      "example": "The climbers were in a precarious position on the cliff face. <br/> The country's economy remains in a precarious state following the recession.",
+      "synonyms": "unstable, insecure, unreliable, dangerous, risky",
+      "antonyms": "secure, safe, stable, certain"
+    },
+    {
+      "word": "Quirky",
+      "trait": "Unusual in an endearing or peculiar way.",
+      "sense": "Neutral (0) to Positive (+ve) depending on context <br/> Neutral: When describing something simply unusual <br/> Positive: When the unusual quality is charming",
+      "example": "The film director is known for his quirky approach to storytelling. <br/> She has a quirky sense of humor that makes her popular at parties.",
+      "synonyms": "eccentric, peculiar, odd, idiosyncratic, unconventional",
+      "antonyms": "conventional, ordinary, standard, typical"
+    },
+    {
+      "word": "Repudiate",
+      "trait": "Reject or refute.",
+      "sense": "Neutral (0) to Negative (–ve) depending on context",
+      "example": "The politician was quick to repudiate the false accusations. <br/> The company repudiated its previous position on environmental policies.",
+      "synonyms": "reject, disown, deny, renounce, disavow",
+      "antonyms": "accept, acknowledge, embrace, affirm"
+    },
+    {
+      "word": "Tact",
+      "trait": "Skill in handling difficult situations without causing offense.",
+      "sense": "Positive (+ve)",
+      "example": "She showed great tact in dealing with the sensitive issue. <br/> Diplomatic negotiations require tact and finesse.",
+      "synonyms": "diplomacy, sensitivity, discretion, consideration, delicacy",
+      "antonyms": "bluntness, insensitivity, tactlessness, rudeness"
+    },
+    {
+      "word": "Trifling",
+      "trait": "Lacking significance or importance.",
+      "sense": "Negative (–ve)",
+      "example": "Don't waste time on trifling matters when there are serious issues to address. <br/> The error was trifling and had no effect on the outcome.",
+      "synonyms": "insignificant, trivial, minor, petty, inconsequential",
+      "antonyms": "significant, important, major, substantial"
+    },
+    {
+      "word": "Turbulent",
+      "trait": "Full of conflict or chaos.",
+      "sense": "Negative (–ve)",
+      "example": "The country experienced a turbulent period of political upheaval. <br/> The aircraft encountered turbulent conditions during the flight.",
+      "synonyms": "chaotic, tumultuous, volatile, unstable, stormy",
+      "antonyms": "calm, peaceful, stable, tranquil"
+    },
+    {
+      "word": "Acumen",
+      "trait": "Quickness and keenness in understanding and judgment.",
+      "sense": "Positive (+ve)",
+      "example": "Her business acumen helped the company thrive during economic downturn. <br/> The detective's acumen allowed him to solve cases that baffled others.",
+      "synonyms": "shrewdness, astuteness, sharpness, intelligence",
+      "antonyms": "stupidity, dullness, ignorance"
+    },
+    {
+      "word": "Antithesis",
+      "trait": "The direct opposite or contrast.",
+      "sense": "Neutral (0)",
+      "example": "Their parenting styles are the antithesis of each other—one strict, one permissive. <br/> Her calm demeanor was the antithesis of her brother's excitable nature.",
+      "synonyms": "opposite, contrast, contrary, reverse",
+      "antonyms": "similarity, likeness, agreement"
+    },
+    {
+      "word": "Ascribe",
+      "trait": "Attribute or credit something to a particular cause or source.",
+      "sense": "Neutral (0)",
+      "example": "Critics ascribe the painting's uniqueness to the artist's unconventional techniques. <br/> He ascribed his success to hard work and determination.",
+      "synonyms": "attribute, assign, credit, impute",
+      "antonyms": "discredit, dissociate, disconnect"
+    },
+    {
+      "word": "Befuddled",
+      "trait": "Confused, bewildered, or perplexed.",
+      "sense": "Negative (–ve)",
+      "example": "The elderly man looked befuddled by the complex technology. <br/> After reading the convoluted instructions, I was completely befuddled.",
+      "synonyms": "confused, bewildered, perplexed, puzzled",
+      "antonyms": "clear-headed, lucid, comprehending"
+    },
+    {
+      "word": "Eschew",
+      "trait": "Intentionally avoid or abstain from.",
+      "sense": "Neutral (0)",
+      "example": "She eschewed social media to focus on her mental health. <br/> Many monks eschew material possessions in pursuit of spiritual enlightenment.",
+      "synonyms": "avoid, shun, abstain from, forgo",
+      "antonyms": "embrace, pursue, seek"
+    },
+    {
+      "word": "Esoteric",
+      "trait": "Understood by few or a small group of people; specialized or obscure.",
+      "sense": "Neutral (0)",
+      "example": "The professor's lecture was filled with esoteric terminology only comprehensible to experts. <br/> He collects esoteric musical instruments from around the world.",
+      "synonyms": "arcane, obscure, specialized, abstruse",
+      "antonyms": "common, familiar, mainstream, obvious"
+    },
+    {
+      "word": "Evasive",
+      "trait": "Indirect or not straightforward; avoiding confrontation.",
+      "sense": "Negative (–ve)",
+      "example": "The politician gave evasive answers to direct questions. <br/> Her evasive behavior made me suspect she was hiding something.",
+      "synonyms": "elusive, avoidant, dodgy, noncommittal",
+      "antonyms": "direct, straightforward, forthright"
+    },
+    {
+      "word": "Exculpate",
+      "trait": "Clear from blame or guilt.",
+      "sense": "Positive (+ve)",
+      "example": "The new evidence exculpated the wrongfully convicted man. <br/> Her testimony helped exculpate her colleague from allegations of misconduct.",
+      "synonyms": "absolve, acquit, clear, vindicate",
+      "antonyms": "incriminate, implicate, blame"
+    },
+    {
+      "word": "Expedite",
+      "trait": "Accelerate or speed up a process or action.",
+      "sense": "Positive (+ve)",
+      "example": "The manager implemented new software to expedite customer service. <br/> We need to expedite the shipping process to meet the deadline.",
+      "synonyms": "accelerate, hasten, speed up, facilitate",
+      "antonyms": "delay, hinder, impede, slow down"
+    },
+    {
+      "word": "Fastidious",
+      "trait": "Showing great care and attention to detail; hard to please.",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Positive: When referring to thoroughness and meticulousness. <br/> Negative: When indicating excessive pickiness or fussiness.",
+      "example": "The fastidious chef inspected every plate before it left the kitchen. <br/> His fastidious nature made him difficult to work with.",
+      "synonyms": "meticulous, particular, fussy, exacting",
+      "antonyms": "careless, sloppy, negligent, casual"
+    },
+    {
+      "word": "Feign",
+      "trait": "Pretend or simulate, especially feelings or symptoms.",
+      "sense": "Negative (–ve)",
+      "example": "She had to feign interest in his boring stories. <br/> The student feigned illness to avoid taking the test.",
+      "synonyms": "pretend, fake, simulate, counterfeit",
+      "antonyms": "genuine, authentic, sincere, real"
+    },
+    {
+      "word": "Furtive",
+      "trait": "Sneaky or secretive, especially due to guilt or dubious motives.",
+      "sense": "Negative (–ve)",
+      "example": "He cast furtive glances around before slipping the note under her door. <br/> The suspicious behavior and furtive movements made the security guard take notice.",
+      "synonyms": "secretive, sly, stealthy, clandestine",
+      "antonyms": "open, forthright, transparent"
+    },
+    {
+      "word": "Hamper",
+      "trait": "Obstruct or hinder progress.",
+      "sense": "Negative (–ve)",
+      "example": "Bad weather hampered the rescue efforts. <br/> Budget cuts seriously hampered their ability to complete the project.",
+      "synonyms": "hinder, impede, obstruct, inhibit",
+      "antonyms": "facilitate, help, assist, enable"
+    },
+    {
+      "word": "Indispensable",
+      "trait": "Completely necessary; essential.",
+      "sense": "Positive (+ve)",
+      "example": "She quickly became an indispensable member of our team. <br/> Clean water is indispensable for human survival.",
+      "synonyms": "essential, vital, crucial, necessary",
+      "antonyms": "dispensable, unnecessary, superfluous"
+    },
+    {
+      "word": "Lament",
+      "trait": "Express deep sorrow or regret.",
+      "sense": "Negative (–ve)",
+      "example": "The widow lamented the loss of her husband. <br/> Environmental activists lament the destruction of rainforests.",
+      "synonyms": "mourn, grieve, bewail, regret",
+      "antonyms": "celebrate, rejoice, delight in"
+    },
+    {
+      "word": "Myopic",
+      "trait": "Short-sighted; lacking creativity or foresight.",
+      "sense": "Negative (–ve)",
+      "example": "The company's myopic focus on quarterly profits damaged its long-term sustainability. <br/> His myopic view prevented him from seeing the broader implications.",
+      "synonyms": "short-sighted, narrow-minded, unimaginative",
+      "antonyms": "far-sighted, visionary, broad-minded"
+    },
+    {
+      "word": "Nonchalant",
+      "trait": "Appearing casually calm or indifferent.",
+      "sense": "Neutral (0) <br/> Positive: When indicating composure under pressure. <br/> Negative: When suggesting inappropriate indifference.",
+      "example": "Despite the pressure, she remained nonchalant during the negotiations. <br/> His nonchalant attitude toward safety regulations concerned his supervisors.",
+      "synonyms": "casual, unconcerned, calm, indifferent",
+      "antonyms": "anxious, concerned, interested, engaged"
+    },
+    {
+      "word": "Partial",
+      "trait": "Prejudiced or biased toward one side; showing favoritism.",
+      "sense": "Negative (–ve) when referring to bias <br/> Neutral (0) when referring to incompleteness",
+      "example": "The referee was accused of being partial to the home team. <br/> We only have partial information about what happened.",
+      "synonyms": "biased, prejudiced, preferential, incomplete",
+      "antonyms": "impartial, unbiased, fair, complete"
+    },
+    {
+      "word": "Pensive",
+      "trait": "Deep in thought, often with a touch of sadness or wistfulness.",
+      "sense": "Neutral (0)",
+      "example": "She looked pensive as she gazed out the window at the rain. <br/> His pensive mood followed him throughout the day after receiving the news.",
+      "synonyms": "thoughtful, reflective, contemplative, meditative",
+      "antonyms": "carefree, thoughtless, inattentive"
+    },
+    {
+      "word": "Portend",
+      "trait": "Indicate or warn that something, often unpleasant, is going to happen.",
+      "sense": "Neutral (0) with negative connotation",
+      "example": "Dark clouds portend a coming storm. <br/> The market fluctuations portend economic instability.",
+      "synonyms": "foreshadow, presage, foretell, herald",
+      "antonyms": "reflect, indicate (present state)"
+    },
+    {
+      "word": "Provincial",
+      "trait": "Narrow in perspective; not sophisticated; relating to provinces.",
+      "sense": "Negative (–ve) when referring to narrowness <br/> Neutral (0) when referring to geographic origin",
+      "example": "His provincial attitudes made it difficult for him to adapt to the cosmopolitan city. <br/> The museum houses a collection of provincial French art.",
+      "synonyms": "narrow-minded, unsophisticated, parochial, rural",
+      "antonyms": "cosmopolitan, sophisticated, worldly, urbane"
+    },
+    {
+      "word": "Rudimentary",
+      "trait": "Basic or elementary; in the earliest stages of development.",
+      "sense": "Neutral (0) with slight negative connotation",
+      "example": "The tribe had only rudimentary tools at their disposal. <br/> She has a rudimentary understanding of computer programming.",
+      "synonyms": "basic, elementary, primitive, simple",
+      "antonyms": "advanced, sophisticated, complex, developed"
+    },
+    {
+      "word": "Salutary",
+      "trait": "Beneficial, especially in promoting health or well-being.",
+      "sense": "Positive (+ve)",
+      "example": "The mountain retreat had a salutary effect on her mental health. <br/> The scandal had the salutary effect of exposing corrupt practices in the industry.",
+      "synonyms": "beneficial, healthy, advantageous, wholesome",
+      "antonyms": "harmful, detrimental, unhealthy"
+    },
+    {
+      "word": "Sever",
+      "trait": "Cut off or put an end to abruptly.",
+      "sense": "Neutral (0) with negative connotation",
+      "example": "She decided to sever all ties with her former business partner. <br/> The accident severed his spinal cord, leaving him paralyzed.",
+      "synonyms": "cut off, disconnect, separate, break",
+      "antonyms": "connect, join, unite, maintain"
+    },
+    {
+      "word": "Slight",
+      "trait": "Treat with disrespect or neglect; insult.",
+      "sense": "Negative (–ve)",
+      "example": "He felt slighted when he wasn't invited to the meeting. <br/> She didn't mean to slight her colleague by forgetting to acknowledge his contribution.",
+      "synonyms": "snub, insult, disregard, neglect",
+      "antonyms": "honor, respect, acknowledge"
+    },
+    {
+      "word": "Somnolent",
+      "trait": "Sleepy or drowsy; inducing sleep.",
+      "sense": "Neutral (0) <br/> Negative: When referring to undesirable drowsiness or dullness.",
+      "example": "The professor's monotonous voice had a somnolent effect on the class. <br/> The medication's somnolent side effects made driving dangerous.",
+      "synonyms": "drowsy, sleepy, lethargic, dozy",
+      "antonyms": "alert, awake, energetic, lively"
+    },
+    {
+      "word": "Stoic",
+      "trait": "Unaffected by pain or distress; showing no emotion.",
+      "sense": "Neutral (0) <br/> Positive: When indicating strength and resilience. <br/> Negative: When suggesting emotional detachment.",
+      "example": "She remained stoic throughout the difficult medical procedure. <br/> His stoic response to the tragedy made others wonder if he cared at all.",
+      "synonyms": "impassive, unemotional, composed, resolved",
+      "antonyms": "emotional, sensitive, expressive"
+    },
+    {
+      "word": "Supersede",
+      "trait": "Replace or take the place of.",
+      "sense": "Neutral (0)",
+      "example": "Digital technology has largely superseded film photography. <br/> The new regulations supersede all previous guidelines.",
+      "synonyms": "replace, supplant, succeed, displace",
+      "antonyms": "precede, underlie, follow"
+    },
+    {
+      "word": "Tout",
+      "trait": "Promote or praise energetically.",
+      "sense": "Neutral (0) <br/> Positive: When genuinely promoting something of value. <br/> Negative: When overselling or making exaggerated claims.",
+      "example": "The company touts its new software as revolutionary. <br/> Critics tout the film as the best of the year.",
+      "synonyms": "promote, praise, advertise, acclaim",
+      "antonyms": "criticize, condemn, downplay"
+    },
+    {
+      "word": "Wane",
+      "trait": "Decrease in power, size, or intensity.",
+      "sense": "Neutral (0)",
+      "example": "His influence in the party began to wane after the scandal. <br/> Public interest in the story has waned over time.",
+      "synonyms": "decrease, decline, diminish, fade",
+      "antonyms": "wax, increase, grow, strengthen"
+    },
+    {
+      "word": "Abhor",
+      "trait": "Detest or regard with deep hatred.",
+      "sense": "Negative (–ve)",
+      "example": "She abhors violence in any form. <br/> Most people abhor the idea of animal cruelty.",
+      "synonyms": "detest, loathe, hate, despise, revile",
+      "antonyms": "adore, love, cherish, embrace"
+    },
+    {
+      "word": "Boisterous",
+      "trait": "Energetic, noisy, and lively.",
+      "sense": "Positive (+ve) or Negative (–ve) depending on context <br/> Positive: When describing healthy enthusiasm or energy. <br/> Negative: When the energy is disruptive or excessive.",
+      "example": "The children were boisterous during the birthday party. <br/> His boisterous laughter filled the room.",
+      "synonyms": "rowdy, raucous, exuberant, spirited, lively",
+      "antonyms": "quiet, subdued, restrained, calm"
+    },
+    {
+      "word": "Chivalrous",
+      "trait": "Honorable and polite, especially toward women.",
+      "sense": "Positive (+ve)",
+      "example": "He was chivalrous enough to open the door for her. <br/> The knight was known for his chivalrous behavior in battle.",
+      "synonyms": "courteous, gallant, noble, respectful, gentlemanly",
+      "antonyms": "rude, discourteous, disrespectful, boorish"
+    },
+    {
+      "word": "Churlish",
+      "trait": "Rude or lacking good manners.",
+      "sense": "Negative (–ve)",
+      "example": "It would be churlish to refuse such a generous offer. <br/> His churlish behavior at the dinner party embarrassed everyone.",
+      "synonyms": "rude, boorish, surly, ill-mannered, impolite",
+      "antonyms": "polite, courteous, civil, gracious"
+    },
+    {
+      "word": "Clandestine",
+      "trait": "Secretive; avoiding attention, often for illicit purposes.",
+      "sense": "Negative (–ve) or Neutral (0) depending on context",
+      "example": "They held clandestine meetings to plan the surprise party. <br/> The government uncovered a clandestine operation to smuggle weapons.",
+      "synonyms": "secret, covert, furtive, stealthy, surreptitious",
+      "antonyms": "open, public, transparent, overt"
+    },
+    {
+      "word": "Complacent",
+      "trait": "Smugly self-satisfied, often without awareness of potential dangers.",
+      "sense": "Negative (–ve)",
+      "example": "After years of success, the company became complacent and failed to innovate. <br/> We cannot afford to be complacent about climate change.",
+      "synonyms": "self-satisfied, smug, content, unconcerned, unworried",
+      "antonyms": "vigilant, concerned, anxious, careful"
+    },
+    {
+      "word": "Cumbersome",
+      "trait": "Large, heavy, slow or complicated and therefore difficult to use or manage.",
+      "sense": "Negative (–ve)",
+      "example": "The old software system was cumbersome and inefficient. <br/> She struggled with the cumbersome equipment during the hike.",
+      "synonyms": "unwieldy, awkward, burdensome, clumsy, bulky",
+      "antonyms": "manageable, convenient, handy, lightweight"
+    },
+    {
+      "word": "Debilitating",
+      "trait": "Weakening or impairing strength.",
+      "sense": "Negative (–ve)",
+      "example": "She suffers from a debilitating illness that affects her mobility. <br/> The heat wave had a debilitating effect on the workforce.",
+      "synonyms": "weakening, enfeebling, draining, exhausting, incapacitating",
+      "antonyms": "strengthening, invigorating, energizing, revitalizing"
+    },
+    {
+      "word": "Deliberate",
+      "trait": "1. Think over or discuss carefully. 2. Intentional, planned, or done on purpose.",
+      "sense": "Positive (+ve) or Neutral (0) depending on context",
+      "example": "We need to deliberate on this issue before making a decision. <br/> The attack was a deliberate attempt to undermine the peace process.",
+      "synonyms": "intentional, planned, premeditated, conscious, calculated",
+      "antonyms": "accidental, unintended, impulsive, spontaneous"
+    },
+    {
+      "word": "Droll",
+      "trait": "Amusing in a quirky or unusual way.",
+      "sense": "Positive (+ve)",
+      "example": "The comedian's droll observations about everyday life had the audience laughing. <br/> He has a droll sense of humor that not everyone appreciates.",
+      "synonyms": "amusing, funny, comical, humorous, witty",
+      "antonyms": "serious, solemn, grave, unfunny"
+    },
+    {
+      "word": "Eccentric",
+      "trait": "Deviating from conventional behavior; quirky or unusual in habits or appearance.",
+      "sense": "Neutral (0) or Positive (+ve) depending on context",
+      "example": "The eccentric professor wore mismatched socks and talked to his plants. <br/> The town is known for its eccentric characters and unusual traditions.",
+      "synonyms": "unconventional, quirky, odd, peculiar, idiosyncratic",
+      "antonyms": "conventional, traditional, ordinary, normal"
+    },
+    {
+      "word": "Fractious",
+      "trait": "Quarrelsome and irritable; unruly or difficult to control.",
+      "sense": "Negative (–ve)",
+      "example": "The fractious meeting ended without any resolution. <br/> The child became fractious when tired and hungry.",
+      "synonyms": "irritable, grumpy, cranky, quarrelsome, unruly",
+      "antonyms": "agreeable, docile, cooperative, peaceful"
+    },
+    {
+      "word": "Limpid",
+      "trait": "Clear, transparent, or easy to understand.",
+      "sense": "Positive (+ve)",
+      "example": "Her limpid explanation made the complex theory understandable. <br/> The lake's limpid waters revealed colorful fish swimming below.",
+      "synonyms": "clear, transparent, lucid, crystalline, pellucid",
+      "antonyms": "opaque, murky, cloudy, turbid"
+    },
+    {
+      "word": "Mawkish",
+      "trait": "Overly sentimental in a way that seems exaggerated or insincere.",
+      "sense": "Negative (–ve)",
+      "example": "The film's mawkish ending was criticized by reviewers. <br/> She found his mawkish displays of affection embarrassing.",
+      "synonyms": "sentimental, schmaltzy, saccharine, cloying, mushy",
+      "antonyms": "unsentimental, restrained, genuine, authentic"
+    },
+    {
+      "word": "Obeisance",
+      "trait": "Reverence, respect, or deference shown to an individual or authority.",
+      "sense": "Neutral (0)",
+      "example": "The courtiers made obeisance to the king as he entered. <br/> Corporate culture often requires obeisance to senior management.",
+      "synonyms": "homage, reverence, deference, respect, submission",
+      "antonyms": "disrespect, defiance, rebellion, insolence"
+    },
+    {
+      "word": "Ostentatious",
+      "trait": "Showy or designed to impress; characterized by vulgar or pretentious display.",
+      "sense": "Negative (–ve)",
+      "example": "Their ostentatious wealth made others uncomfortable. <br/> The palace was decorated in an ostentatious style with gold leaf everywhere.",
+      "synonyms": "showy, pretentious, flamboyant, gaudy, flashy",
+      "antonyms": "modest, understated, tasteful, subtle"
+    },
+    {
+      "word": "Panacea",
+      "trait": "A perfect cure or solution for all problems or difficulties.",
+      "sense": "Neutral (0)",
+      "example": "Technology is not a panacea for all educational challenges. <br/> The new policy was presented as a panacea for economic inequality.",
+      "synonyms": "cure-all, universal remedy, magic bullet, elixir",
+      "antonyms": "problem, complication, impediment"
+    },
+    {
+      "word": "Perfunctory",
+      "trait": "Done without enthusiasm or effort; carried out with minimal attention or care.",
+      "sense": "Negative (–ve)",
+      "example": "The doctor gave the patient a perfunctory examination. <br/> He offered a perfunctory apology that no one believed was sincere.",
+      "synonyms": "cursory, hasty, superficial, mechanical, routine",
+      "antonyms": "thorough, careful, detailed, attentive"
+    },
+    {
+      "word": "Perilous",
+      "trait": "Risky and hazardous; full of danger or risk.",
+      "sense": "Negative (–ve)",
+      "example": "The mountain climbers faced perilous conditions in the storm. <br/> Crossing the river during the flood was a perilous undertaking.",
+      "synonyms": "dangerous, hazardous, risky, treacherous, life-threatening",
+      "antonyms": "safe, secure, harmless, benign"
+    },
+    {
+      "word": "Pervasive",
+      "trait": "Spreading widely throughout an area or a group of people.",
+      "sense": "Neutral (0)",
+      "example": "Corruption was pervasive throughout the government. <br/> The smell of smoke was pervasive in the building after the fire.",
+      "synonyms": "widespread, ubiquitous, omnipresent, universal, prevalent",
+      "antonyms": "limited, restricted, confined, rare"
+    },
+    {
+      "word": "Preclude",
+      "trait": "Prevent something from happening or make it impossible.",
+      "sense": "Neutral (0)",
+      "example": "Her prior commitments preclude her from attending the conference. <br/> The terms of the agreement preclude any further negotiation.",
+      "synonyms": "prevent, prohibit, rule out, make impossible, hinder",
+      "antonyms": "allow, permit, enable, facilitate"
+    },
+    {
+      "word": "Predilection",
+      "trait": "Preference or bias towards something; a natural liking for something.",
+      "sense": "Neutral (0)",
+      "example": "She has a predilection for spicy food. <br/> His predilection for classical music influenced his career choice.",
+      "synonyms": "preference, liking, fondness, penchant, inclination",
+      "antonyms": "aversion, dislike, distaste, antipathy"
+    },
+    {
+      "word": "Rapacious",
+      "trait": "Very greedy; aggressively and excessively grasping or acquisitive.",
+      "sense": "Negative (–ve)",
+      "example": "The rapacious developer bought up all the land in the area. <br/> Colonial powers were often rapacious in their exploitation of resources.",
+      "synonyms": "greedy, avaricious, predatory, voracious, grasping",
+      "antonyms": "generous, benevolent, charitable, selfless"
+    },
+    {
+      "word": "Relish",
+      "trait": "Take great pleasure or delight in something.",
+      "sense": "Positive (+ve)",
+      "example": "She relished the opportunity to showcase her talents. <br/> He relished the challenge of climbing the mountain.",
+      "synonyms": "enjoy, savor, appreciate, delight in, love",
+      "antonyms": "dislike, hate, despise, abhor"
+    },
+    {
+      "word": "Satirical",
+      "trait": "Using humor, irony, exaggeration, or ridicule to criticize or mock others, particularly in the context of contemporary politics and other topical issues.",
+      "sense": "Neutral (0)",
+      "example": "The satirical cartoon mocked the government's latest policy. <br/> The novel is a satirical look at modern corporate culture.",
+      "synonyms": "mocking, ironic, sarcastic, sardonic, caustic",
+      "antonyms": "serious, straightforward, literal, earnest"
+    },
+    {
+      "word": "Sham",
+      "trait": "Fake; not genuine; something that is not what it appears to be.",
+      "sense": "Negative (–ve)",
+      "example": "The diamond necklace turned out to be a sham. <br/> Their marriage was a sham, arranged only for visa purposes.",
+      "synonyms": "fake, counterfeit, fraudulent, bogus, pretense",
+      "antonyms": "genuine, authentic, real, legitimate"
+    },
+    {
+      "word": "Skirt",
+      "trait": "Go around or avoid something, especially an issue or obstacle.",
+      "sense": "Neutral (0) or Negative (–ve) depending on context",
+      "example": "The politician tried to skirt the controversial question. <br/> The path skirts the edge of the cliff, offering spectacular views.",
+      "synonyms": "avoid, evade, circumvent, bypass, sidestep",
+      "antonyms": "confront, address, tackle, face"
+    },
+    {
+      "word": "Sluggish",
+      "trait": "Lacking energy; slow and listless.",
+      "sense": "Negative (–ve)",
+      "example": "The economy remained sluggish despite government intervention. <br/> After the large meal, he felt sluggish and wanted to nap.",
+      "synonyms": "slow, lethargic, inactive, torpid, lifeless",
+      "antonyms": "energetic, lively, dynamic, vigorous"
+    },
+    {
+      "word": "Spartan",
+      "trait": "Marked by simplicity, frugality, and avoidance of luxury and comfort.",
+      "sense": "Neutral (0)",
+      "example": "The monastery offered only spartan accommodations for visitors. <br/> He lived a spartan lifestyle, owning only what he needed.",
+      "synonyms": "austere, frugal, plain, simple, minimalist",
+      "antonyms": "luxurious, opulent, lavish, extravagant"
+    },
+    {
+      "word": "Truculent",
+      "trait": "Aggressively combative or confrontational; eager to argue or fight.",
+      "sense": "Negative (–ve)",
+      "example": "The truculent customer complained loudly about the service. <br/> His truculent attitude made it difficult to work with him.",
+      "synonyms": "aggressive, belligerent, hostile, combative, argumentative",
+      "antonyms": "peaceable, agreeable, amiable, friendly"
+    },
+    {
+      "word": "Acrimonious",
+      "trait": "Bitter and sharp in language or tone",
+      "sense": "Negative (–ve)",
+      "example": "The divorce proceedings became increasingly acrimonious as both parties refused to compromise. <br/> Their acrimonious debate left everyone in the room feeling uncomfortable.",
+      "synonyms": "bitter, caustic, hostile, rancorous, venomous",
+      "antonyms": "friendly, harmonious, amicable, cordial"
+    },
+    {
+      "word": "Belligerent",
+      "trait": "Argumentative, threatening, or aggressive",
+      "sense": "Negative (–ve)",
+      "example": "The belligerent customer demanded to speak to the manager. <br/> His belligerent attitude made it impossible to have a rational conversation.",
+      "synonyms": "aggressive, hostile, combative, antagonistic, pugnacious",
+      "antonyms": "peaceful, friendly, conciliatory, cooperative"
+    },
+    {
+      "word": "Beneficent",
+      "trait": "Kind and charitable, producing good results or benefits",
+      "sense": "Positive (+ve)",
+      "example": "The beneficent donor contributed millions to cancer research. <br/> Her beneficent actions improved the lives of countless children in need.",
+      "synonyms": "benevolent, charitable, generous, kind, philanthropic",
+      "antonyms": "harmful, malevolent, cruel, detrimental"
+    },
+    {
+      "word": "Canny",
+      "trait": "Shrewd and cautious",
+      "sense": "Positive (+ve) or Neutral (0) depending on context",
+      "example": "The canny investor always researched thoroughly before making decisions. <br/> Her canny negotiating skills secured an excellent deal for the company.",
+      "synonyms": "shrewd, astute, clever, prudent, judicious",
+      "antonyms": "naive, foolish, gullible, reckless"
+    },
+    {
+      "word": "Cavalier",
+      "trait": "Exhibiting an overly casual attitude; unconcerned",
+      "sense": "Negative (–ve)",
+      "example": "The manager's cavalier attitude toward workplace safety concerned many employees. <br/> He was cavalier about missing the deadline, which frustrated the entire team.",
+      "synonyms": "dismissive, nonchalant, offhand, careless, indifferent",
+      "antonyms": "careful, conscientious, meticulous, thorough"
+    },
+    {
+      "word": "Distressed",
+      "trait": "Experiencing nervousness, irritation, or sadness",
+      "sense": "Negative (–ve)",
+      "example": "She became distressed when she heard the bad news. <br/> The distressed child couldn't stop crying after losing his favorite toy.",
+      "synonyms": "troubled, upset, anguished, worried, anxious",
+      "antonyms": "calm, content, happy, relaxed"
+    },
+    {
+      "word": "Dwindling",
+      "trait": "Decreasing steadily in size or quantity",
+      "sense": "Negative (–ve) or Neutral (0) depending on context",
+      "example": "The company's profits have been dwindling for three consecutive quarters. <br/> The dwindling daylight reminded us that winter was approaching.",
+      "synonyms": "diminishing, declining, decreasing, shrinking, waning",
+      "antonyms": "growing, increasing, expanding, rising"
+    },
+    {
+      "word": "Eclipse",
+      "trait": "Overshadow or surpass",
+      "sense": "Neutral (0)",
+      "example": "Her recent achievements eclipsed her earlier failures. <br/> The new smartphone's features eclipse those of its competitors.",
+      "synonyms": "overshadow, surpass, outshine, exceed, outdo",
+      "antonyms": "fall short, underperform, trail, lag behind"
+    },
+    {
+      "word": "Encyclopedic",
+      "trait": "Thorough; comprehensive in scope",
+      "sense": "Positive (+ve)",
+      "example": "The professor had encyclopedic knowledge of ancient civilizations. <br/> Her encyclopedic memory allowed her to recall obscure facts with ease.",
+      "synonyms": "comprehensive, exhaustive, extensive, thorough, wide-ranging",
+      "antonyms": "limited, narrow, restricted, superficial"
+    },
+    {
+      "word": "Exacerbate",
+      "trait": "Make a situation or condition worse",
+      "sense": "Negative (–ve)",
+      "example": "His rude comments only exacerbated the tense situation. <br/> Lack of sleep can exacerbate symptoms of anxiety.",
+      "synonyms": "aggravate, worsen, intensify, compound, heighten",
+      "antonyms": "alleviate, ease, mitigate, reduce, relieve"
+    },
+    {
+      "word": "Exasperated",
+      "trait": "Severely irritated or angry",
+      "sense": "Negative (–ve)",
+      "example": "The teacher became exasperated by the students' constant chatter. <br/> She gave an exasperated sigh when her computer crashed again.",
+      "synonyms": "frustrated, annoyed, irritated, vexed, infuriated",
+      "antonyms": "pleased, calm, patient, satisfied"
+    },
+    {
+      "word": "Fungible",
+      "trait": "Interchangeable for another item of a similar type",
+      "sense": "Neutral (0)",
+      "example": "Currency is fungible because one dollar bill can be exchanged for any other dollar bill. <br/> Unlike unique artwork, basic commodities like oil are fungible.",
+      "synonyms": "interchangeable, exchangeable, replaceable, substitutable",
+      "antonyms": "unique, irreplaceable, distinct, specific"
+    },
+    {
+      "word": "Hackneyed",
+      "trait": "Lacking creativity; derivative and overused",
+      "sense": "Negative (–ve)",
+      "example": "The movie relied on hackneyed plot devices that bored the audience. <br/> His speech was full of hackneyed phrases that failed to inspire.",
+      "synonyms": "clichéd, trite, banal, unoriginal, stale",
+      "antonyms": "original, fresh, innovative, novel"
+    },
+    {
+      "word": "Incongruous",
+      "trait": "Out of place; lacking harmony",
+      "sense": "Negative (–ve) or Neutral (0) depending on context",
+      "example": "The casual sneakers looked incongruous with his formal suit. <br/> The modern skyscraper seemed incongruous among the ancient buildings.",
+      "synonyms": "incompatible, inconsistent, discordant, mismatched, unsuitable",
+      "antonyms": "compatible, congruous, harmonious, fitting"
+    },
+    {
+      "word": "Interchangeable",
+      "trait": "Capable of being used in place of each other",
+      "sense": "Neutral (0)",
+      "example": "The parts are interchangeable across all models in this product line. <br/> The two terms are often used as if they were interchangeable, but they have subtle differences.",
+      "synonyms": "exchangeable, replaceable, substitutable, fungible",
+      "antonyms": "unique, irreplaceable, distinct, specialized"
+    },
+    {
+      "word": "Laconic",
+      "trait": "Economical with words; quiet and reserved",
+      "sense": "Neutral (0)",
+      "example": "His laconic response consisted of just a single word. <br/> The laconic detective revealed little about the investigation.",
+      "synonyms": "terse, concise, brief, succinct, pithy",
+      "antonyms": "verbose, loquacious, garrulous, wordy"
+    },
+    {
+      "word": "Lucrative",
+      "trait": "Producing a significant amount of money",
+      "sense": "Positive (+ve)",
+      "example": "She left academia for a more lucrative position in the private sector. <br/> The contract proved to be extremely lucrative for the small company.",
+      "synonyms": "profitable, remunerative, gainful, high-paying, rewarding",
+      "antonyms": "unprofitable, unrewarding, worthless"
+    },
+    {
+      "word": "Magisterial",
+      "trait": "1. Possessing great authority <br/> 2. Exercising authority in an excessive manner",
+      "sense": "Positive (+ve) or Negative (–ve) depending on context <br/> Positive: When referring to authoritative expertise <br/> Negative: When describing overbearing behavior",
+      "example": "The historian produced a magisterial work on the Civil War. <br/> The judge's magisterial attitude alienated everyone in the courtroom.",
+      "synonyms": "authoritative, commanding, imposing, masterful, domineering",
+      "antonyms": "submissive, humble, modest, unassuming"
+    },
+    {
+      "word": "Onerous",
+      "trait": "Involving a heavy burden; challenging or difficult",
+      "sense": "Negative (–ve)",
+      "example": "The onerous task required hours of tedious work. <br/> The new regulations imposed onerous requirements on small businesses.",
+      "synonyms": "burdensome, taxing, arduous, demanding, laborious",
+      "antonyms": "easy, light, effortless, manageable"
+    },
+    {
+      "word": "Opprobrium",
+      "trait": "Severe criticism or public shame",
+      "sense": "Negative (–ve)",
+      "example": "The politician faced public opprobrium after the scandal came to light. <br/> His unethical actions earned him the opprobrium of his colleagues.",
+      "synonyms": "disgrace, condemnation, censure, reproach, dishonor",
+      "antonyms": "approval, praise, acclaim, honor"
+    },
+    {
+      "word": "Parsimonious",
+      "trait": "Extremely frugal or stingy",
+      "sense": "Negative (–ve) or Neutral (0) depending on context",
+      "example": "The parsimonious businessman refused to donate to charity despite his wealth. <br/> The company's parsimonious approach to employee benefits hurt morale.",
+      "synonyms": "miserly, stingy, frugal, penny-pinching, thrifty",
+      "antonyms": "generous, extravagant, lavish, liberal"
+    },
+    {
+      "word": "Peripheral",
+      "trait": "Of marginal importance; minor",
+      "sense": "Neutral (0)",
+      "example": "She focused on the main issues and ignored peripheral concerns. <br/> His role in the project was peripheral; he contributed very little.",
+      "synonyms": "marginal, secondary, incidental, tangential, minor",
+      "antonyms": "central, core, essential, primary, main"
+    },
+    {
+      "word": "Provocative",
+      "trait": "Causing outrage or irritation, often intentionally",
+      "sense": "Negative (–ve) or Neutral (0) depending on context",
+      "example": "His provocative comments sparked a heated debate. <br/> The artist's provocative work challenged conventional thinking about beauty.",
+      "synonyms": "controversial, inflammatory, incendiary, inciting, stirring",
+      "antonyms": "calming, pacifying, soothing, uncontroversial"
+    },
+    {
+      "word": "Renounce",
+      "trait": "Reject or give up",
+      "sense": "Neutral (0)",
+      "example": "She decided to renounce her citizenship and move abroad permanently. <br/> The leader renounced violence and called for peaceful negotiations.",
+      "synonyms": "abandon, disavow, forsake, reject, relinquish",
+      "antonyms": "accept, embrace, adopt, claim"
+    },
+    {
+      "word": "Tempestuous",
+      "trait": "1. (of emotions or actions) Unrestrained and turbulent <br/> 2. (of weather) Extremely stormy",
+      "sense": "Negative (–ve) or Neutral (0) depending on context",
+      "example": "They had a tempestuous relationship marked by frequent arguments. <br/> The ship struggled to navigate through the tempestuous seas.",
+      "synonyms": "stormy, turbulent, tumultuous, volatile, violent",
+      "antonyms": "calm, peaceful, tranquil, mild, serene"
+    },
+    {
+      "word": "Tenable",
+      "trait": "(of an idea or method) Justifiable and rational",
+      "sense": "Positive (+ve)",
+      "example": "After reviewing the evidence, her theory seemed perfectly tenable. <br/> The company's financial position is no longer tenable given the current market conditions.",
+      "synonyms": "defensible, justifiable, sustainable, viable, reasonable",
+      "antonyms": "untenable, indefensible, unsustainable, unreasonable"
+    },
+    {
+      "word": "Transgression",
+      "trait": "A violation of a law, rule, or social norm",
+      "sense": "Negative (–ve)",
+      "example": "The minor transgression was quickly forgiven and forgotten. <br/> His repeated transgressions eventually led to his dismissal from the team.",
+      "synonyms": "offense, violation, infringement, breach, misdeed",
+      "antonyms": "compliance, obedience, conformity, observance"
+    },
+    {
+      "word": "Urbane",
+      "trait": "Refined, sophisticated, and courteous",
+      "sense": "Positive (+ve)",
+      "example": "The urbane host made everyone feel welcome at the gala. <br/> His urbane manner and witty conversation impressed all the guests.",
+      "synonyms": "sophisticated, polished, refined, suave, cultured",
+      "antonyms": "rustic, unsophisticated, boorish, unrefined"
+    },
+    {
+      "word": "Verisimilitude",
+      "trait": "Appearance or semblance of truth or reality; believability",
+      "sense": "Positive (+ve)",
+      "example": "The historical novel was praised for its verisimilitude. <br/> The filmmaker strived for verisimilitude in depicting life in ancient Rome.",
+      "synonyms": "realism, believability, plausibility, credibility, authenticity",
+      "antonyms": "implausibility, unreality, artificiality, falseness"
+    },
+    {
+      "word": "Vitiate",
+      "trait": "Impair or corrupt the quality of something",
+      "sense": "Negative (–ve)",
+      "example": "Errors in the methodology vitiated the study's results. <br/> The scandal vitiated the politician's reputation beyond repair.",
+      "synonyms": "impair, corrupt, spoil, mar, taint",
+      "antonyms": "improve, enhance, strengthen, fortify"
+    },
+    {
+      "word": "Affinity",
+      "trait": "A natural liking or connection to a person, thing, or idea; a similarity between two things.",
+      "sense": "Positive (+ve) <br/> Indicates connection, attraction, or natural compatibility.",
+      "example": "She has a strong affinity for classical music. <br/> There's a clear affinity between the two theories.",
+      "synonyms": "attraction, fondness, rapport, kinship",
+      "antonyms": "aversion, dislike, repulsion, antipathy"
+    },
+    {
+      "word": "Altruistic",
+      "trait": "Showing generosity and concern for the welfare of others.",
+      "sense": "Positive (+ve) <br/> Indicates selflessness and compassion.",
+      "example": "Her altruistic nature led her to volunteer at the homeless shelter. <br/> The businessman made an altruistic donation to the charity.",
+      "synonyms": "selfless, benevolent, philanthropic, generous",
+      "antonyms": "selfish, egocentric, self-serving, greedy"
+    },
+    {
+      "word": "Baroque",
+      "trait": "Overly detailed or ornamental; elaborate in style.",
+      "sense": "Neutral (0) or Negative (-ve) depending on context <br/> Neutral: When describing artistic style. <br/> Negative: When implying excessive decoration.",
+      "example": "The palace featured baroque architecture with intricate details. <br/> His baroque writing style made the simple story difficult to follow.",
+      "synonyms": "ornate, elaborate, embellished, complex",
+      "antonyms": "simple, plain, austere, minimalist"
+    },
+    {
+      "word": "Byzantine",
+      "trait": "Overly complex or intricate; characterized by complicated bureaucracy.",
+      "sense": "Negative (-ve) <br/> Typically implies unnecessary complexity.",
+      "example": "The tax code is so byzantine that most people need professional help. <br/> The company's byzantine approval process delayed the project for months.",
+      "synonyms": "complicated, convoluted, labyrinthine, intricate",
+      "antonyms": "simple, straightforward, clear, uncomplicated"
+    },
+    {
+      "word": "Compromise",
+      "trait": "Weaken or diminish in quality, character, or value; to settle differences by mutual concession.",
+      "sense": "Neutral (0) or Negative (-ve) depending on context <br/> Neutral: When referring to finding middle ground. <br/> Negative: When referring to weakening or corrupting something.",
+      "example": "They reached a compromise that satisfied both parties. <br/> The leak compromised the security of the database.",
+      "synonyms": "settlement, concession, weakening, undermining",
+      "antonyms": "strengthen, enhance, maintain, preserve"
+    },
+    {
+      "word": "Conciliatory",
+      "trait": "Intended to appease or calm someone down; promoting reconciliation.",
+      "sense": "Positive (+ve) <br/> Indicates desire for peace and resolution.",
+      "example": "He made a conciliatory gesture by apologizing first. <br/> Her conciliatory tone helped defuse the tense situation.",
+      "synonyms": "appeasing, pacifying, placatory, diplomatic",
+      "antonyms": "antagonistic, provocative, inflammatory, hostile"
+    },
+    {
+      "word": "Countenance",
+      "trait": "Accept or permit; the look of a person's face or expression.",
+      "sense": "Neutral (0) <br/> As a verb (to permit) or noun (facial expression).",
+      "example": "The principal would not countenance such behavior in school. <br/> His countenance revealed his disappointment without words.",
+      "synonyms": "face, expression, appearance, support",
+      "antonyms": "disapproval, rejection, opposition"
+    },
+    {
+      "word": "Covert",
+      "trait": "Hidden or concealed; not openly practiced or acknowledged.",
+      "sense": "Negative (-ve) or Neutral (0) depending on context <br/> Often implies secrecy with negative intent.",
+      "example": "The spy conducted covert operations in the foreign country. <br/> They had a covert agreement that was hidden from management.",
+      "synonyms": "secret, clandestine, concealed, undercover",
+      "antonyms": "overt, open, public, transparent"
+    },
+    {
+      "word": "Credible",
+      "trait": "Able to be trusted or believed; persuasive.",
+      "sense": "Positive (+ve) <br/> Indicates reliability and believability.",
+      "example": "Her testimony was considered credible by the jury. <br/> The study provided credible evidence for the new theory.",
+      "synonyms": "believable, trustworthy, reliable, plausible",
+      "antonyms": "incredible, unbelievable, dubious, implausible"
+    },
+    {
+      "word": "Diffuse",
+      "trait": "Spread or disperse widely; scattered over a large area.",
+      "sense": "Neutral (0) <br/> Describes a physical state or process.",
+      "example": "The scent of roses diffused throughout the room. <br/> Light diffused through the frosted glass, creating a soft glow.",
+      "synonyms": "spread, scatter, disperse, disseminate",
+      "antonyms": "concentrate, focus, centralize, gather"
+    },
+    {
+      "word": "Documentary",
+      "trait": "Based on or reproducing real events or facts; a film or program presenting facts objectively.",
+      "sense": "Neutral (0) <br/> Factual presentation without inherent judgment.",
+      "example": "The documentary about climate change won several awards. <br/> She collected documentary evidence of the historical event.",
+      "synonyms": "factual, non-fiction, actual, authentic",
+      "antonyms": "fictional, fabricated, invented, dramatized"
+    },
+    {
+      "word": "Exhaustive",
+      "trait": "Thorough and comprehensive; including all possibilities.",
+      "sense": "Positive (+ve) <br/> Indicates thoroughness and completeness.",
+      "example": "The researchers conducted an exhaustive study on the subject. <br/> The book provides an exhaustive analysis of medieval literature.",
+      "synonyms": "comprehensive, thorough, complete, all-encompassing",
+      "antonyms": "incomplete, partial, limited, cursory"
+    },
+    {
+      "word": "Exhilarating",
+      "trait": "Intensely exciting; making one feel very happy, animated, or elated.",
+      "sense": "Positive (+ve) <br/> Indicates strong positive emotional response.",
+      "example": "The roller coaster ride was exhilarating. <br/> The team found the victory absolutely exhilarating.",
+      "synonyms": "thrilling, exciting, invigorating, stimulating",
+      "antonyms": "boring, depressing, disheartening, tedious"
+    },
+    {
+      "word": "Extraneous",
+      "trait": "Lacking relevance; unnecessary or unrelated to the subject.",
+      "sense": "Negative (-ve) <br/> Implies irrelevance or superfluousness.",
+      "example": "Please avoid adding extraneous details to your report. <br/> The professor asked them to remove all extraneous information from their presentations.",
+      "synonyms": "irrelevant, unrelated, unnecessary, superfluous",
+      "antonyms": "relevant, pertinent, essential, necessary"
+    },
+    {
+      "word": "Fervor",
+      "trait": "Intense enthusiasm toward something; passionate intensity.",
+      "sense": "Positive (+ve) or Neutral (0) depending on context <br/> Indicates strong passion that can be constructive or excessive.",
+      "example": "She approached her new project with fervor. <br/> Religious fervor motivated the pilgrims to make the difficult journey.",
+      "synonyms": "passion, zeal, enthusiasm, ardor",
+      "antonyms": "apathy, indifference, disinterest, coolness"
+    },
+    {
+      "word": "Futile",
+      "trait": "Incapable of resulting in anything worthwhile; pointless or useless.",
+      "sense": "Negative (-ve) <br/> Indicates lack of effectiveness or purpose.",
+      "example": "Their attempts to repair the damaged engine proved futile. <br/> It seemed futile to argue with someone so stubborn.",
+      "synonyms": "pointless, useless, fruitless, vain",
+      "antonyms": "effective, productive, worthwhile, successful"
+    },
+    {
+      "word": "Illusory",
+      "trait": "Unreal or based on illusion; deceptive in nature.",
+      "sense": "Negative (-ve) <br/> Implies deception or false appearance.",
+      "example": "The economic stability proved to be illusory. <br/> Their hope for immediate success was illusory.",
+      "synonyms": "deceptive, false, unreal, misleading",
+      "antonyms": "real, actual, genuine, authentic"
+    },
+    {
+      "word": "Invidious",
+      "trait": "Likely to cause resentment or envy; unfair or prejudiced against someone or something.",
+      "sense": "Negative (-ve) <br/> Indicates unfairness or actions causing ill will.",
+      "example": "The manager's invidious treatment of certain employees led to workplace tension. <br/> Making invidious comparisons between siblings can damage their relationship.",
+      "synonyms": "offensive, discriminatory, unjust, biased",
+      "antonyms": "fair, impartial, unbiased, equitable"
+    },
+    {
+      "word": "Lethargic",
+      "trait": "Sluggish; tired or lacking energy; pathologically drowsy.",
+      "sense": "Negative (-ve) <br/> Indicates undesirable lack of energy or motivation.",
+      "example": "After the large meal, everyone felt lethargic. <br/> The humid weather made the workers lethargic and unproductive.",
+      "synonyms": "sluggish, torpid, listless, drowsy",
+      "antonyms": "energetic, vigorous, lively, active"
+    },
+    {
+      "word": "Metaphorical",
+      "trait": "Symbolic rather than literal; containing or using metaphors.",
+      "sense": "Neutral (0) <br/> Describes figurative rather than literal language.",
+      "example": "The poem is full of metaphorical language about life's journey. <br/> Her metaphorical description of depression as a heavy blanket was powerful.",
+      "synonyms": "figurative, symbolic, allegorical, representative",
+      "antonyms": "literal, actual, concrete, direct"
+    },
+    {
+      "word": "Mimic",
+      "trait": "To imitate or copy someone or something, often in an amusing way.",
+      "sense": "Neutral (0) or Negative (-ve) depending on context <br/> Can be playful or mocking.",
+      "example": "The parrot can mimic human speech with surprising accuracy. <br/> The comedian's ability to mimic the president drew laughter from the audience.",
+      "synonyms": "imitate, copy, simulate, impersonate",
+      "antonyms": "originate, create, invent, pioneer"
+    },
+    {
+      "word": "Numinous",
+      "trait": "Having a spiritual or divine quality; indicating the presence of divinity.",
+      "sense": "Positive (+ve) <br/> Indicates transcendent or spiritual quality.",
+      "example": "The ancient temple had a numinous atmosphere. <br/> Many describe a numinous feeling when witnessing natural wonders like the northern lights.",
+      "synonyms": "spiritual, divine, transcendent, mystical",
+      "antonyms": "mundane, ordinary, secular, worldly"
+    },
+    {
+      "word": "Obscure",
+      "trait": "Not clearly expressed or understood; making something unclear and vague; not well-known.",
+      "sense": "Negative (-ve) or Neutral (0) depending on context <br/> Can indicate lack of clarity or simply lack of fame.",
+      "example": "The professor's explanation was too obscure for the students to understand. <br/> She specializes in translating obscure medieval texts.",
+      "synonyms": "unclear, ambiguous, vague, unknown",
+      "antonyms": "clear, obvious, famous, well-known"
+    },
+    {
+      "word": "Overt",
+      "trait": "Open and observable; not hidden or secret.",
+      "sense": "Neutral (0) <br/> Describes visibility without inherent judgment.",
+      "example": "The government made an overt attempt to improve foreign relations. <br/> There was overt hostility between the two competing teams.",
+      "synonyms": "open, apparent, evident, manifest",
+      "antonyms": "covert, hidden, secret, concealed"
+    },
+    {
+      "word": "Pellucid",
+      "trait": "Transparently clear in meaning or style; (of a body of water or substance) transparent and clear.",
+      "sense": "Positive (+ve) <br/> Indicates desirable clarity and transparency.",
+      "example": "Her pellucid explanation made the complex concept easy to understand. <br/> The pellucid waters of the Caribbean revealed colorful coral reefs below.",
+      "synonyms": "clear, transparent, lucid, limpid",
+      "antonyms": "opaque, murky, obscure, ambiguous"
+    },
+    {
+      "word": "Perpetuate",
+      "trait": "Make something continue for an indefinite time; preserve from extinction or oblivion.",
+      "sense": "Neutral (0) or Negative (-ve) depending on context <br/> Can be positive when preserving good things, negative when continuing problems.",
+      "example": "These policies perpetuate inequality in education. <br/> The organization works to perpetuate traditional craftsmanship.",
+      "synonyms": "continue, maintain, sustain, preserve",
+      "antonyms": "end, terminate, discontinue, abolish"
+    },
+    {
+      "word": "Rational",
+      "trait": "Based on clear thought or reason; logical and sensible.",
+      "sense": "Positive (+ve) <br/> Indicates desirable logical thinking.",
+      "example": "The committee made a rational decision based on the available data. <br/> In times of crisis, it's important to remain rational.",
+      "synonyms": "logical, reasonable, sensible, judicious",
+      "antonyms": "irrational, unreasonable, illogical, absurd"
+    },
+    {
+      "word": "Scathing",
+      "trait": "Harshly or bitterly critical; vitriolic; severe.",
+      "sense": "Negative (-ve) <br/> Indicates harsh or severe criticism.",
+      "example": "The critic wrote a scathing review of the play. <br/> Her scathing remarks about the proposal silenced the room.",
+      "synonyms": "harsh, caustic, severe, blistering",
+      "antonyms": "mild, gentle, moderate, complimentary"
+    },
+    {
+      "word": "Subtle",
+      "trait": "Delicate or slight; not obvious or direct; requiring careful attention.",
+      "sense": "Positive (+ve) or Neutral (0) <br/> Indicates refinement or nuance.",
+      "example": "There was a subtle difference between the two paint colors. <br/> The film contains subtle references to classical literature.",
+      "synonyms": "delicate, nuanced, understated, fine",
+      "antonyms": "obvious, blatant, explicit, overt"
+    },
+    {
+      "word": "Superficial",
+      "trait": "Existing, occurring, or located on the surface; not profound or thorough; concerned only with what is obvious.",
+      "sense": "Negative (-ve) <br/> Indicates lack of depth or thoroughness.",
+      "example": "The wound was fortunately superficial and required no stitches. <br/> He only had a superficial understanding of the complex issue.",
+      "synonyms": "shallow, surface-level, cursory, skin-deep",
+      "antonyms": "deep, profound, thorough, comprehensive"
+    },
+    {
+      "word": "Acquiesce",
+      "trait": "To agree or consent quietly without protest or enthusiasm.",
+      "sense": "Neutral (0) <br/> Can be positive when showing reasonable accommodation or negative when suggesting passive compliance.",
+      "example": "The committee acquiesced to the CEO's demands to avoid conflict. <br/> After much debate, she finally acquiesced to her friend's suggestion.",
+      "synonyms": "comply, consent, agree, accept, yield",
+      "antonyms": "resist, oppose, refuse, object"
+    },
+    {
+      "word": "Adroit",
+      "trait": "Skillful, clever, or dexterous in using the hands or mind.",
+      "sense": "Positive (+ve) <br/> Indicates competence and skill.",
+      "example": "The adroit surgeon completed the complex procedure flawlessly. <br/> She was adroit at navigating office politics.",
+      "synonyms": "skillful, dexterous, expert, proficient, deft",
+      "antonyms": "clumsy, inept, awkward, unskilled"
+    },
+    {
+      "word": "Amend",
+      "trait": "To change or modify for the better; to improve by alteration.",
+      "sense": "Positive (+ve) or Neutral (0) <br/> Generally positive when improving something, neutral when simply making changes.",
+      "example": "Congress voted to amend the legislation to address public concerns. <br/> The author amended her manuscript based on editor feedback.",
+      "synonyms": "modify, revise, alter, change, improve",
+      "antonyms": "preserve, maintain, worsen"
+    },
+    {
+      "word": "Animus",
+      "trait": "Strong hostility or ill will; animosity or enmity.",
+      "sense": "Negative (–ve) <br/> Indicates hostility and negative emotions.",
+      "example": "There was clear animus between the two political candidates during the debate. <br/> His animus toward his former employer was evident in his scathing remarks.",
+      "synonyms": "hostility, animosity, antagonism, enmity, hatred",
+      "antonyms": "goodwill, amity, friendship, affection"
+    },
+    {
+      "word": "Apologist",
+      "trait": "A person who offers a defense or justification for something controversial.",
+      "sense": "Neutral (0) or Negative (–ve) <br/> Often carries negative connotations suggesting blind defense of problematic positions.",
+      "example": "He has become an apologist for the company's controversial environmental policies. <br/> She is known as an apologist for classical education methods.",
+      "synonyms": "defender, advocate, supporter, champion",
+      "antonyms": "critic, detractor, opponent"
+    },
+    {
+      "word": "Astringent",
+      "trait": "Severe or harsh in manner, style, or character; sharp or bitter.",
+      "sense": "Negative (–ve) or Neutral (0) <br/> Generally negative when describing personality, can be neutral when describing style.",
+      "example": "The critic's astringent review left the author devastated. <br/> Her astringent wit made her both feared and admired in literary circles.",
+      "synonyms": "harsh, severe, sharp, caustic, acerbic",
+      "antonyms": "mild, gentle, soothing, agreeable"
+    },
+    {
+      "word": "Collaborate",
+      "trait": "To work jointly with others, especially in an intellectual endeavor.",
+      "sense": "Positive (+ve) or Negative (–ve) <br/> Positive when referring to teamwork, negative when referring to treasonous cooperation with an enemy.",
+      "example": "The scientists collaborated on groundbreaking research into cancer treatments. <br/> He was accused of collaborating with the occupying forces during the war.",
+      "synonyms": "cooperate, team up, work together, partner",
+      "antonyms": "compete, oppose, work alone"
+    },
+    {
+      "word": "Competent",
+      "trait": "Having adequate or sufficient ability, knowledge, or skill.",
+      "sense": "Positive (+ve) or Neutral (0) <br/> Positive but modest praise, suggesting adequacy rather than excellence.",
+      "example": "The new hire proved to be a competent manager who met all expectations. <br/> She's a competent pianist, though not quite at professional level.",
+      "synonyms": "capable, qualified, proficient, adequate, skilled",
+      "antonyms": "incompetent, incapable, unskilled"
+    },
+    {
+      "word": "Correlate",
+      "trait": "To establish a mutual or reciprocal relationship between things.",
+      "sense": "Neutral (0) <br/> Technical term without inherent positive or negative connotations.",
+      "example": "The researchers attempted to correlate environmental factors with disease incidence. <br/> We need to correlate the survey responses with demographic data.",
+      "synonyms": "connect, relate, associate, link, correspond",
+      "antonyms": "disconnect, separate, dissociate"
+    },
+    {
+      "word": "Deride",
+      "trait": "To treat or speak of with contempt; to mock or ridicule.",
+      "sense": "Negative (–ve) <br/> Indicates contempt and disrespect.",
+      "example": "Critics derided his early paintings, but they later became highly valued. <br/> The professor derided the student's poorly researched argument.",
+      "synonyms": "ridicule, mock, scorn, taunt, belittle",
+      "antonyms": "praise, commend, respect, admire"
+    },
+    {
+      "word": "Dictate",
+      "trait": "To issue commands or orders authoritatively; to prescribe.",
+      "sense": "Negative (–ve) or Neutral (0) <br/> Often negative when implying authoritarian behavior, neutral in contexts like dictating a letter.",
+      "example": "The manager tried to dictate every aspect of the project, frustrating the team. <br/> The attorney dictated notes to her assistant.",
+      "synonyms": "command, order, prescribe, impose, mandate",
+      "antonyms": "suggest, request, recommend, follow"
+    },
+    {
+      "word": "Discreet",
+      "trait": "Showing good judgment in conduct and speech; prudent and circumspect.",
+      "sense": "Positive (+ve) <br/> Valued quality indicating trustworthiness and sensitivity.",
+      "example": "She was discreet about the confidential information shared in the meeting. <br/> The hotel staff remained discreet about their celebrity guests.",
+      "synonyms": "prudent, careful, tactful, circumspect, cautious",
+      "antonyms": "indiscreet, tactless, imprudent, careless"
+    },
+    {
+      "word": "Divorced",
+      "trait": "Separated completely from something previously associated with.",
+      "sense": "Neutral (0) or Negative (–ve) <br/> When not referring to marital status, often suggests an undesirable disconnection.",
+      "example": "His policies seem completely divorced from economic reality. <br/> The theory is divorced from practical application.",
+      "synonyms": "separated, detached, disconnected, removed, disassociated",
+      "antonyms": "connected, linked, attached, united"
+    },
+    {
+      "word": "Elitist",
+      "trait": "Relating to or supporting the view that a society should be led by an elite; believing in one's superiority.",
+      "sense": "Negative (–ve) <br/> Generally carries negative connotations of snobbery and exclusivity.",
+      "example": "The club was criticized for its elitist membership policies. <br/> His elitist attitude alienated many potential supporters.",
+      "synonyms": "snobbish, superior, exclusive, aristocratic",
+      "antonyms": "egalitarian, democratic, inclusive"
+    },
+    {
+      "word": "Exacting",
+      "trait": "Demanding accuracy and precision; rigorous and severe in requirements.",
+      "sense": "Neutral (0) or Positive (+ve) <br/> Can be positive when indicating high standards, neutral or negative when suggesting excessive demands.",
+      "example": "The exacting standards of the competition challenged even the most talented participants. <br/> She was an exacting editor who improved every manuscript she touched.",
+      "synonyms": "demanding, rigorous, strict, meticulous, precise",
+      "antonyms": "lenient, easy-going, undemanding, relaxed"
+    },
+    {
+      "word": "Flummoxed",
+      "trait": "Utterly confused or bewildered; perplexed.",
+      "sense": "Neutral (0) or Negative (–ve) <br/> Suggests a state of confusion that may be temporary or problematic.",
+      "example": "The unexpected question left him completely flummoxed during the interview. <br/> She was flummoxed by the complex instructions for assembling the furniture.",
+      "synonyms": "bewildered, confused, perplexed, baffled, puzzled",
+      "antonyms": "comprehending, understanding, clear-headed"
+    },
+    {
+      "word": "Fruitful",
+      "trait": "Producing good results; productive or profitable.",
+      "sense": "Positive (+ve) <br/> Indicates success and productivity.",
+      "example": "Their fruitful collaboration resulted in several groundbreaking discoveries. <br/> We had a fruitful discussion that resolved many outstanding issues.",
+      "synonyms": "productive, successful, profitable, beneficial, rewarding",
+      "antonyms": "fruitless, unproductive, futile, barren"
+    },
+    {
+      "word": "Inborn",
+      "trait": "Existing from birth; innate or inherited.",
+      "sense": "Neutral (0) <br/> Descriptive without inherent positive or negative judgment.",
+      "example": "Her inborn talent for music was evident from an early age. <br/> Scientists debate whether certain behaviors are inborn or learned.",
+      "synonyms": "innate, natural, inherent, congenital, hereditary",
+      "antonyms": "acquired, learned, developed"
+    },
+    {
+      "word": "Polymath",
+      "trait": "A person of wide-ranging knowledge or learning across various subjects.",
+      "sense": "Positive (+ve) <br/> Indicates impressive intellectual breadth and achievement.",
+      "example": "Leonardo da Vinci was a true polymath, excelling in art, science, and engineering. <br/> As a polymath, she contributed to fields ranging from mathematics to literature.",
+      "synonyms": "Renaissance person, generalist, scholar, sage",
+      "antonyms": "specialist, expert in a single field"
+    },
+    {
+      "word": "Reticent",
+      "trait": "Not revealing one's thoughts or feelings readily; reserved or uncommunicative.",
+      "sense": "Neutral (0) <br/> Can be seen as positive (discreet) or negative (uncommunicative) depending on context.",
+      "example": "The reticent scientist rarely spoke about his ongoing research. <br/> She was reticent about her personal life during the interview.",
+      "synonyms": "reserved, restrained, silent, taciturn, uncommunicative",
+      "antonyms": "talkative, forthcoming, open, verbose"
+    },
+    {
+      "word": "Stringent",
+      "trait": "Strict, precise, and exacting; rigorous or severe.",
+      "sense": "Neutral (0) or Positive (+ve) <br/> Can be positive when referring to necessary standards, neutral or negative when excessive.",
+      "example": "The company implemented stringent security measures after the data breach. <br/> The grant has stringent requirements that many applicants struggle to meet.",
+      "synonyms": "strict, severe, rigorous, tough, exacting",
+      "antonyms": "lenient, relaxed, flexible, permissive"
+    },
+    {
+      "word": "Subservient",
+      "trait": "Overly willing to obey others; submissive or subordinate.",
+      "sense": "Negative (–ve) <br/> Generally implies excessive submission or lack of independence.",
+      "example": "She refused to take a subservient role in the relationship. <br/> The country's foreign policy became increasingly subservient to its larger neighbor.",
+      "synonyms": "submissive, servile, compliant, deferential, obsequious",
+      "antonyms": "dominant, assertive, independent, authoritative"
+    },
+    {
+      "word": "Surreptitious",
+      "trait": "Done, made, or acquired by stealth; clandestine or secretive.",
+      "sense": "Negative (–ve) or Neutral (0) <br/> Often negative, suggesting secrecy for questionable reasons.",
+      "example": "He made a surreptitious glance at his competitor's notes. <br/> The documents were removed from the office in a surreptitious manner.",
+      "synonyms": "secretive, stealthy, clandestine, covert, furtive",
+      "antonyms": "open, public, overt, transparent"
+    },
+    {
+      "word": "Tantalizing",
+      "trait": "Tormenting or teasing with the sight or promise of something unobtainable.",
+      "sense": "Positive (+ve) or Neutral (0) <br/> Usually positive, suggesting tempting allure.",
+      "example": "The chef presented a tantalizing array of desserts. <br/> The research offers tantalizing clues about ancient civilizations.",
+      "synonyms": "tempting, alluring, enticing, teasing, provocative",
+      "antonyms": "repelling, unappealing, uninteresting"
+    },
+    {
+      "word": "Tantamount",
+      "trait": "Equivalent to something in significance, effect, or value.",
+      "sense": "Neutral (0) <br/> Technical term indicating equivalence without inherent judgment.",
+      "example": "His silence was tantamount to an admission of guilt. <br/> Cutting the budget would be tantamount to abandoning the project entirely.",
+      "synonyms": "equivalent, equal, comparable, synonymous, amounting to",
+      "antonyms": "different, unrelated, dissimilar"
+    },
+    {
+      "word": "Torpor",
+      "trait": "A state of mental or physical inactivity or lethargy.",
+      "sense": "Negative (–ve) <br/> Indicates an undesirable state of sluggishness or inactivity.",
+      "example": "The extreme heat induced a state of torpor among the workers. <br/> After the large meal, he fell into a torpor and slept for hours.",
+      "synonyms": "lethargy, inertia, sluggishness, dormancy, inactivity",
+      "antonyms": "energy, vigor, liveliness, activity"
+    },
+    {
+      "word": "Trenchant",
+      "trait": "Vigorous or incisive in expression or style; sharp, keen, or penetrating.",
+      "sense": "Positive (+ve) <br/> Suggests effective, forceful expression or analysis.",
+      "example": "Her trenchant analysis of the economic crisis impressed the panel. <br/> The book offers a trenchant critique of modern political systems.",
+      "synonyms": "incisive, sharp, penetrating, keen, forceful",
+      "antonyms": "dull, ineffective, weak, vague"
+    },
+    {
+      "word": "Umbrage",
+      "trait": "Offense or annoyance; resentment.",
+      "sense": "Negative (–ve) <br/> Indicates displeasure or offense taken.",
+      "example": "He took umbrage at the suggestion that his work was derivative. <br/> She expressed umbrage over not being invited to the meeting.",
+      "synonyms": "offense, resentment, annoyance, indignation, pique",
+      "antonyms": "pleasure, delight, satisfaction"
+    },
+    {
+      "word": "Versatile",
+      "trait": "Able to adapt or be adapted to many different functions or activities.",
+      "sense": "Positive (+ve) <br/> Indicates valuable flexibility and adaptability.",
+      "example": "The versatile actor could perform in comedy, drama, and musical productions. <br/> This versatile software can be used for a wide range of business applications.",
+      "synonyms": "adaptable, flexible, multifaceted, all-around, multitalented",
+      "antonyms": "inflexible, specialized, limited, rigid"
+    },
+    {
+      "word": "Wayward",
+      "trait": "Difficult to control or predict because of willful or perverse behavior.",
+      "sense": "Negative (–ve) <br/> Suggests problematic unpredictability or disobedience.",
+      "example": "The wayward teenager frequently ignored her parents' rules. <br/> His wayward approach to business led to unpredictable results.",
+      "synonyms": "unruly, disobedient, rebellious, willful, erratic",
+      "antonyms": "obedient, compliant, predictable, disciplined"
+    },
+    {
+      "word": "Alienate",
+      "trait": "Make someone feel isolated and estranged",
+      "sense": "Negative (–ve)",
+      "example": "His rude behavior will alienate his colleagues. <br/> The new policies alienated many long-time customers.",
+      "synonyms": "estrange, isolate, disconnect, distance",
+      "antonyms": "unite, connect, integrate, include"
+    },
+    {
+      "word": "Apathy",
+      "trait": "Lack of interest or enthusiasm towards something",
+      "sense": "Negative (–ve)",
+      "example": "Voter apathy resulted in low turnout for the election. <br/> The teacher was concerned about the students' apathy toward learning.",
+      "synonyms": "indifference, disinterest, unconcern, detachment",
+      "antonyms": "interest, enthusiasm, passion, concern"
+    },
+    {
+      "word": "Apropos",
+      "trait": "Appropriate or relevant to the situation",
+      "sense": "Positive (+ve)",
+      "example": "His comments were apropos to our discussion. <br/> She made an apropos remark about the economic situation.",
+      "synonyms": "relevant, pertinent, applicable, fitting",
+      "antonyms": "irrelevant, inappropriate, unrelated, unsuitable"
+    },
+    {
+      "word": "Apt",
+      "trait": "1. Suitable or appropriate <br/> 2. Having a tendency toward something <br/> 3. Quick to learn",
+      "sense": "Positive (+ve) or Neutral (0) depending on context",
+      "example": "Her description was apt for the situation. <br/> The child is apt at mathematics. <br/> He is apt to forget important dates.",
+      "synonyms": "appropriate, suitable, fitting, inclined, talented",
+      "antonyms": "unsuitable, inappropriate, inept, unlikely"
+    },
+    {
+      "word": "Cloak",
+      "trait": "Conceal or disguise",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Neutral: When used for protection or privacy <br/> Negative: When used for deception",
+      "example": "She tried to cloak her disappointment with a smile. <br/> The government cloaked its true intentions behind diplomatic language.",
+      "synonyms": "conceal, hide, disguise, mask, veil",
+      "antonyms": "reveal, expose, disclose, uncover"
+    },
+    {
+      "word": "Consensus",
+      "trait": "General agreement among the members of a group",
+      "sense": "Positive (+ve)",
+      "example": "The committee reached a consensus on the new policy. <br/> There is a growing consensus among scientists about climate change.",
+      "synonyms": "agreement, accord, harmony, concurrence",
+      "antonyms": "disagreement, discord, dissent, conflict"
+    },
+    {
+      "word": "Distort",
+      "trait": "Give a false or misleading account of",
+      "sense": "Negative (–ve)",
+      "example": "The reporter distorted the facts to create a more sensational story. <br/> Mirrors in funhouses distort your reflection.",
+      "synonyms": "misrepresent, twist, warp, falsify",
+      "antonyms": "represent accurately, clarify, straighten"
+    },
+    {
+      "word": "Divergent",
+      "trait": "Growing further apart; disagreeing",
+      "sense": "Neutral (0)",
+      "example": "The two teams had divergent strategies for solving the problem. <br/> Their divergent opinions made it difficult to reach an agreement.",
+      "synonyms": "differing, varying, contrasting, conflicting",
+      "antonyms": "convergent, similar, uniform, agreeing"
+    },
+    {
+      "word": "Elated",
+      "trait": "Very happy or proud",
+      "sense": "Positive (+ve)",
+      "example": "She was elated when she received the job offer. <br/> The team was elated after winning the championship.",
+      "synonyms": "thrilled, overjoyed, delighted, jubilant",
+      "antonyms": "depressed, disappointed, dejected, despondent"
+    },
+    {
+      "word": "Enchant",
+      "trait": "Capture the attention or to charm",
+      "sense": "Positive (+ve)",
+      "example": "The musician's performance enchanted the audience. <br/> The children were enchanted by the magician's tricks.",
+      "synonyms": "charm, captivate, delight, bewitch",
+      "antonyms": "repel, bore, disenchant, disgust"
+    },
+    {
+      "word": "Entrenched",
+      "trait": "Firmly ingrained and unlikely to change",
+      "sense": "Neutral (0) or Negative (–ve) depending on context",
+      "example": "The company has entrenched policies that are difficult to change. <br/> Entrenched beliefs can prevent people from considering new ideas.",
+      "synonyms": "established, ingrained, embedded, rooted",
+      "antonyms": "flexible, temporary, shallow, superficial"
+    },
+    {
+      "word": "Exotic",
+      "trait": "Foreign, especially in an exciting way",
+      "sense": "Positive (+ve) or Neutral (0)",
+      "example": "They served exotic dishes from around the world. <br/> She collected exotic plants for her garden.",
+      "synonyms": "foreign, unusual, unfamiliar, strange",
+      "antonyms": "familiar, common, ordinary, native"
+    },
+    {
+      "word": "Exploitative",
+      "trait": "Taking unfair advantage of a person, group, or situation",
+      "sense": "Negative (–ve)",
+      "example": "The company's exploitative practices harmed both workers and the environment. <br/> Critics called the film exploitative of its subject matter.",
+      "synonyms": "abusive, opportunistic, manipulative, predatory",
+      "antonyms": "fair, ethical, equitable, supportive"
+    },
+    {
+      "word": "Foreseeable",
+      "trait": "Able to be predicted or expected",
+      "sense": "Neutral (0)",
+      "example": "The consequences were foreseeable to anyone paying attention. <br/> We have enough supplies for the foreseeable future.",
+      "synonyms": "predictable, anticipated, expected, projected",
+      "antonyms": "unpredictable, unexpected, unforeseen, surprising"
+    },
+    {
+      "word": "Forsake",
+      "trait": "Abandon or give up",
+      "sense": "Negative (–ve) or Neutral (0) depending on context",
+      "example": "He forsook his family to pursue his career. <br/> She had to forsake her dream of becoming an athlete after her injury.",
+      "synonyms": "abandon, desert, renounce, relinquish",
+      "antonyms": "embrace, support, maintain, retain"
+    },
+    {
+      "word": "Gratify",
+      "trait": "Please or satisfy; make content",
+      "sense": "Positive (+ve)",
+      "example": "It gratified him to see his students succeed. <br/> Her praise gratified his ego.",
+      "synonyms": "satisfy, please, delight, fulfill",
+      "antonyms": "disappoint, frustrate, displease, dissatisfy"
+    },
+    {
+      "word": "Heed",
+      "trait": "Mind or regard with care; pay attention",
+      "sense": "Positive (+ve)",
+      "example": "You should heed the warnings about the storm. <br/> The company failed to heed the advice of its consultants.",
+      "synonyms": "consider, regard, attend to, observe",
+      "antonyms": "ignore, disregard, neglect, dismiss"
+    },
+    {
+      "word": "Judicious",
+      "trait": "Having, characterized by, or done with good judgment or sound thinking",
+      "sense": "Positive (+ve)",
+      "example": "The judge made a judicious decision based on the evidence. <br/> A judicious investment strategy can reduce financial risk.",
+      "synonyms": "wise, prudent, sensible, thoughtful",
+      "antonyms": "unwise, imprudent, reckless, foolish"
+    },
+    {
+      "word": "Lucid",
+      "trait": "Clear and easy to understand",
+      "sense": "Positive (+ve)",
+      "example": "Her explanation was lucid and helpful. <br/> Despite his illness, he remained lucid and aware of his surroundings.",
+      "synonyms": "clear, intelligible, comprehensible, coherent",
+      "antonyms": "unclear, confusing, incomprehensible, incoherent"
+    },
+    {
+      "word": "Pertinent",
+      "trait": "Important with regard to a subject or matter; relevant",
+      "sense": "Positive (+ve)",
+      "example": "She asked pertinent questions during the interview. <br/> The document contains pertinent information about the case.",
+      "synonyms": "relevant, applicable, germane, appropriate",
+      "antonyms": "irrelevant, unrelated, impertinent, inappropriate"
+    },
+    {
+      "word": "Propriety",
+      "trait": "Conformity to established standards of good or proper behavior",
+      "sense": "Positive (+ve) or Neutral (0)",
+      "example": "She always behaved with propriety at formal events. <br/> The board questioned the propriety of the director's actions.",
+      "synonyms": "correctness, appropriateness, decorum, etiquette",
+      "antonyms": "impropriety, inappropriateness, indecorum, rudeness"
+    },
+    {
+      "word": "Scintillating",
+      "trait": "Brilliantly or impressively clever, exciting, amusing or witty",
+      "sense": "Positive (+ve)",
+      "example": "The author gave a scintillating performance at the book reading. <br/> Their conversation was scintillating, full of wit and intelligence.",
+      "synonyms": "brilliant, dazzling, sparkling, witty",
+      "antonyms": "dull, boring, tedious, uninspiring"
+    },
+    {
+      "word": "Sensational",
+      "trait": "Exaggerated for effect, often sacrificing accuracy",
+      "sense": "Negative (–ve) or Neutral (0) depending on context",
+      "example": "The tabloid published a sensational account of the celebrity's private life. <br/> The performance was sensational, leaving the audience stunned.",
+      "synonyms": "exaggerated, dramatic, extreme, shocking",
+      "antonyms": "modest, understated, accurate, reserved"
+    },
+    {
+      "word": "Sophisticated",
+      "trait": "1. Experienced, worldly, or cultured <br/> 2. Advanced or intricate, often in tech",
+      "sense": "Positive (+ve)",
+      "example": "She has sophisticated taste in art and music. <br/> The new security system uses sophisticated technology to detect intruders.",
+      "synonyms": "cultured, refined, complex, advanced",
+      "antonyms": "simple, unsophisticated, naive, primitive"
+    },
+    {
+      "word": "Strife",
+      "trait": "Conflict or struggle",
+      "sense": "Negative (–ve)",
+      "example": "The region has been plagued by political strife for decades. <br/> Their marriage was full of strife and disagreement.",
+      "synonyms": "conflict, discord, dissension, friction",
+      "antonyms": "harmony, peace, agreement, accord"
+    },
+    {
+      "word": "Understated",
+      "trait": "Expressed in a subtle, restrained, or low-key manner",
+      "sense": "Positive (+ve) or Neutral (0)",
+      "example": "Her understated elegance was more impressive than flashy displays. <br/> The film's understated approach to the subject made it more powerful.",
+      "synonyms": "subtle, restrained, modest, unassuming",
+      "antonyms": "exaggerated, overstated, flashy, ostentatious"
+    },
+    {
+      "word": "Unscrupulous",
+      "trait": "Without moral principles",
+      "sense": "Negative (–ve)",
+      "example": "The unscrupulous businessman defrauded his clients. <br/> She used unscrupulous tactics to eliminate her competition.",
+      "synonyms": "dishonest, unprincipled, corrupt, immoral",
+      "antonyms": "ethical, honest, principled, moral"
+    },
+    {
+      "word": "Veracity",
+      "trait": "Conformity to truth or accuracy",
+      "sense": "Positive (+ve)",
+      "example": "The veracity of his statement was confirmed by witnesses. <br/> Scientists questioned the veracity of the research findings.",
+      "synonyms": "truthfulness, accuracy, honesty, authenticity",
+      "antonyms": "falsehood, dishonesty, deception, inaccuracy"
+    },
+    {
+      "word": "Virulent",
+      "trait": "Extremely hostile or malicious; intensely acrimonious",
+      "sense": "Negative (–ve)",
+      "example": "He launched a virulent attack on his political opponents. <br/> The disease is caused by a particularly virulent strain of bacteria.",
+      "synonyms": "hostile, malicious, venomous, bitter",
+      "antonyms": "benign, mild, gentle, kind"
+    },
+    {
+      "word": "Volatile",
+      "trait": "Likely to change unpredictably and quickly (usually for the worse)",
+      "sense": "Negative (–ve) or Neutral (0) depending on context",
+      "example": "The stock market has been volatile this month. <br/> His volatile temper made him difficult to work with.",
+      "synonyms": "unstable, unpredictable, erratic, changeable",
+      "antonyms": "stable, steady, constant, predictable"
+    },
+    {
+      "word": "Antedate",
+      "trait": "To occur before (something) in time; precede.",
+      "sense": "Neutral (0)",
+      "example": "The ancient ruins antedate the Roman Empire by several centuries. <br/> The tradition antedates the founding of the country.",
+      "synonyms": "precede, predate, forerun, preexist",
+      "antonyms": "postdate, follow, succeed"
+    },
+    {
+      "word": "Banish",
+      "trait": "To expel from a place, especially as punishment; get rid of.",
+      "sense": "Negative (–ve) <br/> Generally indicates removal or elimination, often forcefully.",
+      "example": "The king banished the disloyal advisor from the kingdom. <br/> She tried to banish the negative thoughts from her mind.",
+      "synonyms": "exile, expel, deport, cast out, evict",
+      "antonyms": "welcome, invite, admit, include"
+    },
+    {
+      "word": "Bridle",
+      "trait": "To control or restrain; to show resentment or anger, especially by drawing up the head and chin.",
+      "sense": "Negative (–ve) or Neutral (0) depending on context <br/> Negative: When indicating resentment or anger. <br/> Neutral: When simply referring to controlling something.",
+      "example": "She bridled at his insulting remarks. <br/> The government attempted to bridle inflation through monetary policy.",
+      "synonyms": "restrain, control, check, curb, contain",
+      "antonyms": "release, free, liberate, unleash"
+    },
+    {
+      "word": "Comply",
+      "trait": "To obey someone's rules or wishes; meet certain standards.",
+      "sense": "Neutral (0) <br/> Generally indicates conformity or adherence.",
+      "example": "All businesses must comply with the new safety regulations. <br/> She complied with her doctor's orders to rest.",
+      "synonyms": "obey, conform, adhere, observe, follow",
+      "antonyms": "disobey, defy, rebel, resist"
+    },
+    {
+      "word": "Crestfallen",
+      "trait": "Disappointed, dispirited, or depressed.",
+      "sense": "Negative (–ve) <br/> Indicates disappointment or sadness.",
+      "example": "The team looked crestfallen after losing the championship game. <br/> He was crestfallen when he heard the bad news.",
+      "synonyms": "dejected, downcast, disheartened, discouraged, dispirited",
+      "antonyms": "elated, cheerful, jubilant, overjoyed"
+    },
+    {
+      "word": "Curtail",
+      "trait": "To restrict or limit; decrease in quantity.",
+      "sense": "Negative (–ve) or Neutral (0) depending on context <br/> Negative: When limiting something desirable. <br/> Neutral: When limiting something excessive or problematic.",
+      "example": "Budget cuts forced the school to curtail its music program. <br/> The company curtailed unnecessary spending to avoid bankruptcy.",
+      "synonyms": "reduce, limit, decrease, restrict, shorten",
+      "antonyms": "increase, extend, expand, prolong"
+    },
+    {
+      "word": "Elucidate",
+      "trait": "To make clear; clarify or shed light on.",
+      "sense": "Positive (+ve) <br/> Indicates bringing clarity and understanding.",
+      "example": "The professor elucidated the complex theory for his students. <br/> Please elucidate how this solution works.",
+      "synonyms": "explain, clarify, illuminate, illustrate, explicate",
+      "antonyms": "confuse, obscure, complicate, mystify"
+    },
+    {
+      "word": "Evade",
+      "trait": "To avoid or escape from, typically in a cunning way; to deflect from giving a clear answer.",
+      "sense": "Negative (–ve) <br/> Generally implies deception or dishonesty.",
+      "example": "The suspect managed to evade the police for months. <br/> The politician evaded answering the reporter's direct questions.",
+      "synonyms": "avoid, dodge, elude, escape, sidestep",
+      "antonyms": "confront, face, address, tackle"
+    },
+    {
+      "word": "Feckless",
+      "trait": "Without skill, ineffective, incompetent; lacking purpose or vitality.",
+      "sense": "Negative (–ve) <br/> Indicates ineffectiveness or incompetence.",
+      "example": "His feckless attempt to repair the car made the problem worse. <br/> The manager criticized the feckless attitude of some team members.",
+      "synonyms": "ineffective, incompetent, inept, useless, worthless",
+      "antonyms": "effective, competent, capable, efficient"
+    },
+    {
+      "word": "Fester",
+      "trait": "To worsen over time, especially due to neglect; to decay or rot.",
+      "sense": "Negative (–ve) <br/> Indicates deterioration or worsening.",
+      "example": "Their unresolved argument festered for years. <br/> The wound began to fester due to improper care.",
+      "synonyms": "deteriorate, worsen, decay, rot, putrefy",
+      "antonyms": "heal, improve, ameliorate, recover"
+    },
+    {
+      "word": "Iconoclastic",
+      "trait": "Challenging or overthrowing tradition or established beliefs; breaking or destroying images.",
+      "sense": "Neutral (0) or Positive (+ve) depending on context <br/> Neutral: When simply describing challenging tradition. <br/> Positive: When innovation or challenging outdated beliefs is valued.",
+      "example": "The artist's iconoclastic approach revolutionized modern art. <br/> His iconoclastic views often put him at odds with the establishment.",
+      "synonyms": "rebellious, revolutionary, unorthodox, unconventional",
+      "antonyms": "traditional, conventional, orthodox, conformist"
+    },
+    {
+      "word": "Immure",
+      "trait": "To imprison or isolate; to enclose within walls.",
+      "sense": "Negative (–ve) <br/> Indicates confinement or imprisonment.",
+      "example": "The princess was immured in the tower for years. <br/> He felt immured in his boring office job.",
+      "synonyms": "imprison, confine, incarcerate, seclude, isolate",
+      "antonyms": "free, liberate, release, emancipate"
+    },
+    {
+      "word": "Improvise",
+      "trait": "To create something spontaneously without preparation; to make do with what is available.",
+      "sense": "Neutral (0) or Positive (+ve) depending on context <br/> Neutral: When describing the act itself. <br/> Positive: When creativity and adaptability are highlighted.",
+      "example": "The jazz musician improvised a beautiful solo. <br/> When the projector broke, the presenter had to improvise a lecture without slides.",
+      "synonyms": "extemporize, ad-lib, make up, invent on the spot",
+      "antonyms": "plan, prepare, rehearse, script"
+    },
+    {
+      "word": "Inhibit",
+      "trait": "To make difficult to accomplish; act as an obstacle; to restrain or prevent.",
+      "sense": "Negative (–ve) <br/> Indicates restriction or hindrance.",
+      "example": "Alcohol can inhibit motor functions. <br/> Her shyness inhibited her from speaking up in meetings.",
+      "synonyms": "restrain, hinder, prevent, restrict, impede",
+      "antonyms": "encourage, facilitate, enable, promote"
+    },
+    {
+      "word": "Inscrutable",
+      "trait": "Not easily understood; mysterious or difficult to interpret.",
+      "sense": "Neutral (0) <br/> Describes something difficult to understand without inherent positive or negative value.",
+      "example": "The ancient text remained inscrutable despite years of study. <br/> His inscrutable expression gave no hint of his thoughts.",
+      "synonyms": "enigmatic, mysterious, impenetrable, unfathomable",
+      "antonyms": "transparent, obvious, clear, comprehensible"
+    },
+    {
+      "word": "Lionize",
+      "trait": "To treat someone as a celebrity or hero; to give excessive attention or praise.",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Neutral: When describing legitimate admiration. <br/> Negative: When suggesting excessive or undeserved adulation.",
+      "example": "The media lionized the young athlete after his Olympic victory. <br/> Some critics argued that the author was unduly lionized despite mediocre work.",
+      "synonyms": "idolize, glorify, celebrate, exalt, adore",
+      "antonyms": "criticize, condemn, disparage, denigrate"
+    },
+    {
+      "word": "Monotonous",
+      "trait": "Lacking in variety; repetitively dull; tedious due to sameness.",
+      "sense": "Negative (–ve) <br/> Indicates tedium or lack of variety.",
+      "example": "The speaker's monotonous voice put several audience members to sleep. <br/> She found the monotonous routine of her job unbearable.",
+      "synonyms": "repetitive, tedious, dull, boring, unchanging",
+      "antonyms": "varied, diverse, interesting, dynamic"
+    },
+    {
+      "word": "Peculiar",
+      "trait": "Strange or unusual; specific or particular to a person, place, or thing.",
+      "sense": "Neutral (0) <br/> Can describe uniqueness without inherent judgment.",
+      "example": "The house had a peculiar smell that no one could identify. <br/> Each region has its own peculiar customs and traditions.",
+      "synonyms": "strange, odd, unusual, distinctive, unique",
+      "antonyms": "ordinary, common, normal, typical"
+    },
+    {
+      "word": "Premeditate",
+      "trait": "To consider or plan beforehand; to deliberate in advance.",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Neutral: When describing careful planning. <br/> Negative: When associated with crimes or harmful actions.",
+      "example": "The crime was clearly premeditated, not a spontaneous act. <br/> She premeditated every aspect of the business proposal.",
+      "synonyms": "plan, scheme, plot, contemplate in advance",
+      "antonyms": "improvise, act spontaneously, react impulsively"
+    },
+    {
+      "word": "Profligate",
+      "trait": "Inclined to waste resources or behave extravagantly; recklessly wasteful or immoral.",
+      "sense": "Negative (–ve) <br/> Indicates wastefulness or extravagance.",
+      "example": "The profligate spending of the company led to its bankruptcy. <br/> His profligate lifestyle eventually caught up with him.",
+      "synonyms": "wasteful, extravagant, spendthrift, dissolute, debauched",
+      "antonyms": "frugal, economical, thrifty, restrained"
+    },
+    {
+      "word": "Reconcile",
+      "trait": "To bring back or return to harmony; restore a relationship; to make compatible or consistent.",
+      "sense": "Positive (+ve) <br/> Indicates resolution of conflict or inconsistency.",
+      "example": "The mediator helped reconcile the feuding neighbors. <br/> She couldn't reconcile her beliefs with the new evidence.",
+      "synonyms": "harmonize, settle, resolve, make compatible",
+      "antonyms": "alienate, estrange, separate, divide"
+    },
+    {
+      "word": "Refine",
+      "trait": "To purify or bring to a pure state; to improve in accuracy or excellence; to make more polished.",
+      "sense": "Positive (+ve) <br/> Indicates improvement or enhancement.",
+      "example": "The company refined its manufacturing process to reduce waste. <br/> The author spent months refining her manuscript.",
+      "synonyms": "improve, perfect, polish, enhance, purify",
+      "antonyms": "worsen, degrade, contaminate, corrupt"
+    },
+    {
+      "word": "Relinquish",
+      "trait": "To give up or release a claim, right, or possession; to surrender or let go.",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Neutral: When describing the act itself. <br/> Negative: When giving up something valuable or desired.",
+      "example": "The champion reluctantly relinquished his title after the defeat. <br/> She was forced to relinquish control of the company to the board.",
+      "synonyms": "surrender, give up, abandon, yield, cede",
+      "antonyms": "retain, keep, hold, maintain, grasp"
+    },
+    {
+      "word": "Ruminate",
+      "trait": "To meditate or reflect; to ponder over; to think deeply about something.",
+      "sense": "Neutral (0) or Positive (+ve) depending on context <br/> Neutral: When simply describing thoughtfulness. <br/> Positive: When deep thought leads to insight. <br/> Can be negative when indicating obsessive overthinking.",
+      "example": "She ruminated on the problem for days before finding a solution. <br/> He tends to ruminate on past mistakes instead of moving forward.",
+      "synonyms": "contemplate, reflect, ponder, muse, deliberate",
+      "antonyms": "ignore, disregard, overlook, dismiss"
+    },
+    {
+      "word": "Skittish",
+      "trait": "Easily scared or startled; timid; difficult to control; unpredictably excitable.",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Neutral: When describing natural caution. <br/> Negative: When indicating problematic nervousness.",
+      "example": "The skittish horse was difficult to train. <br/> Investors became skittish after the market downturn.",
+      "synonyms": "nervous, jumpy, timid, easily frightened, jittery",
+      "antonyms": "calm, composed, steady, confident, bold"
+    },
+    {
+      "word": "Superfluous",
+      "trait": "More than is necessary or required; excessive; redundant.",
+      "sense": "Negative (–ve) <br/> Indicates unnecessary excess.",
+      "example": "The editor removed all superfluous details from the article. <br/> His superfluous comments only confused the issue further.",
+      "synonyms": "excessive, unnecessary, redundant, surplus, extra",
+      "antonyms": "necessary, essential, vital, required"
+    },
+    {
+      "word": "Synoptic",
+      "trait": "Providing a general overview or summary; taking a broad view.",
+      "sense": "Neutral (0) or Positive (+ve) <br/> Indicates comprehensive overview without detailed judgment.",
+      "example": "The textbook offered a synoptic view of world history. <br/> His synoptic report covered all the major points quickly.",
+      "synonyms": "comprehensive, summary, general, broad, overview",
+      "antonyms": "detailed, specific, particular, in-depth"
+    },
+    {
+      "word": "Thorough",
+      "trait": "Careful and complete concerning every detail; comprehensive and exhaustive.",
+      "sense": "Positive (+ve) <br/> Indicates completeness and carefulness.",
+      "example": "The detective conducted a thorough investigation of the crime scene. <br/> Her thorough preparation for the exam paid off with a high score.",
+      "synonyms": "comprehensive, complete, exhaustive, meticulous",
+      "antonyms": "superficial, cursory, incomplete, careless"
+    },
+    {
+      "word": "Visionary",
+      "trait": "Showing foresight or imagination; having or marked by vision or foresight.",
+      "sense": "Positive (+ve) <br/> Indicates innovative thinking and foresight.",
+      "example": "The visionary entrepreneur anticipated market trends years in advance. <br/> Her visionary ideas transformed the company.",
+      "synonyms": "innovative, forward-thinking, prophetic, imaginative",
+      "antonyms": "short-sighted, unimaginative, conventional, traditional"
+    },
+    {
+      "word": "Vociferous",
+      "trait": "Expressing opinions or feelings loudly and forcefully; characterized by vehement outcry.",
+      "sense": "Neutral (0) or Negative (–ve) depending on context <br/> Neutral: When describing passionate expression. <br/> Negative: When indicating disruptive or excessive loudness.",
+      "example": "The proposal received vociferous opposition from local residents. <br/> He was a vociferous advocate for human rights.",
+      "synonyms": "loud, clamorous, noisy, outspoken, strident",
+      "antonyms": "quiet, reserved, reticent, soft-spoken"
     }
   ]
 }
