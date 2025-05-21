@@ -105,6 +105,13 @@
         color: #555;
       }
 
+      .blue {
+        background-color: rgb(43, 128, 255) !important;
+        border: 1px solid rgb(43, 110, 255) !important;
+      }
+      .blue:hover {
+        color: rgb(159, 174, 255) !important;
+      }
       .red {
         background-color: rgb(255, 43, 43) !important;
         border: 1px solid rgb(255, 43, 43) !important;
@@ -112,7 +119,6 @@
       .red:hover {
         color: rgb(255, 159, 159) !important;
       }
-
       h1 {
         text-align: center;
         color: #333;
@@ -419,6 +425,7 @@
         <span>Vocabulary</span>
       </nav>
       <div>
+        <a href="/vocabulary/wordList.html" class="blue header-a">Word List</a>
         <a href="/vocabulary/material.html" class="header-a">Materials</a>
         <a href="/vocabulary/vocabquiz.html" class="red header-a">Practice</a>
       </div>
@@ -713,7 +720,7 @@
           ? "Unmark"
           : "Mark";
 
-        document.getElementById("details-word").textContent = `👉 ${wordObj.word}`;
+        document.getElementById("details-word").textContent = `👉${wordObj.word}`;
         document.getElementById("details-trait").innerHTML = wordObj.trait;
         const senseElement = document.getElementById("details-sense");
         let senseText = wordObj.sense;
