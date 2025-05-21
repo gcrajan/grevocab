@@ -142,6 +142,26 @@
         font-size: 0.9rem;
       }
 
+      @media screen and (max-width: 600px) {
+        header, section {
+          margin: 0rem !important;
+        }
+        header img {
+          height: 35px !important;
+        }
+        header > a {
+          font-size: 1rem !important;
+        }
+        h1{
+          font-size: 1.1rem;
+        }
+        .card-container {
+          gap: 45px !important;
+        }
+        .card{
+          max-width: none !important;
+        }
+      }
       @media screen and (min-width: 600px) {
         .card {
           width: calc(50% - 20px);
