@@ -145,6 +145,11 @@
           width: 90vw;
         }
       }
+      @media only screen and (max-width: 700px) {
+        .word-details {
+          margin: 1rem 0rem;
+        }
+      }
 
       .grouphead {
         display: flex;
@@ -200,20 +205,57 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 80%;
+        width: 95%;
         max-width: 600px;
-        background-color: #fff;
-        display: none;
+        background-color: #ffffff;
+        border-radius: 16px;
+        padding: 24px;
         z-index: 1000;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+        border: 1px solid #e0e0e0;
+        display: none;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        transition: all 0.3s ease-in-out;
       }
 
       .word-details-info {
-        position: relative;
         background-color: #fff;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
         overflow-y: auto;
-        max-height: 90%;
+        max-height: 80vh;
+      }
+
+      .word-details-info h3.title {
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+        color: #333;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 8px;
+      }
+
+      .word-details-info p {
+        margin-bottom: 14px;
+        line-height: 1.6;
+        font-size: 1rem;
+        color: #444;
+      }
+
+      .word-details-info strong {
+        color: #222;
+      }
+
+      .sense-word-positive {
+        color: #388e3c;
+        font-weight: bold;
+      }
+
+      .sense-word-negative {
+        color: #d32f2f;
+        font-weight: bold;
+      }
+
+      .sense-word-neutral {
+        color: #0040ff;
+        font-weight: bold;
       }
 
       .form-container {
@@ -268,6 +310,7 @@
         right: 2rem;
         position: fixed;
       }
+
       footer {
         display: flex;
         justify-content: center;
@@ -356,7 +399,12 @@
           <button onclick="closeDetails()" class="redbtn right">Close</button>
         </div>
         <h3 id="details-word" class="title"></h3>
-        <p><strong>Meaning:</strong> <span id="details-meaning"></span></p>
+        <p><strong>Trait:</strong> <span id="details-trait"></span></p>
+        <p><strong>Sense:</strong> <span id="details-sense"></span></p>
+        <p>
+          <strong>Examples:</strong><br />
+          <span id="details-example"></span>
+        </p>
         <p><strong>Synonyms:</strong> <span id="details-synonyms"></span></p>
         <p><strong>Antonyms:</strong> <span id="details-antonyms"></span></p>
       </div>
@@ -531,8 +579,28 @@
           : "Mark";
 
         document.getElementById("details-word").textContent = wordObj.word;
-        document.getElementById("details-meaning").textContent =
-          wordObj.meaning;
+        document.getElementById("details-trait").innerHTML = wordObj.trait;
+        const senseElement = document.getElementById("details-sense");
+        let senseText = wordObj.sense;
+
+        // Replace just the word "Positive" or "Negative" with a span
+        senseText = senseText.replace(
+          /\bPositive\b/,
+          '<span class="sense-word-positive">Positive</span>'
+        );
+        senseText = senseText.replace(
+          /\bNegative\b/,
+          '<span class="sense-word-negative">Negative</span>'
+        );
+        senseText = senseText.replace(
+          /\bNeutral\b/,
+          '<span class="sense-word-neutral">Neutral</span>'
+        );
+
+        // Set the formatted HTML
+        senseElement.innerHTML = senseText;
+
+        document.getElementById("details-example").innerHTML = wordObj.example;
         document.getElementById("details-synonyms").textContent =
           wordObj.synonyms;
         document.getElementById("details-antonyms").textContent =
