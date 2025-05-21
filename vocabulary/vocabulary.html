@@ -414,8 +414,15 @@
 
       /* For responsive design */
       @media (max-width: 500px) {
+        .slider-container > div {
+          width: 100%;
+          justify-content: center;
+          display: flex;
+          gap: 1rem;
+        }
         .slider-container {
           max-width: 100%;
+          flex-wrap: wrap;
         }
       }
     </style>
