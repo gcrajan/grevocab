@@ -123,6 +123,7 @@
         align-items: center;
         gap: 1rem;
         flex-wrap: wrap;
+        margin-top: 2rem;
       }
 
       .groups-container {
@@ -316,6 +317,95 @@
         justify-content: center;
         padding-top: 1rem;
       }
+
+      /* slider */
+      .slider-container {
+        width: 100%;
+        margin-bottom: 10px;
+        font-weight: 600;
+        color: #444;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .slider-container label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: 500;
+        color: #444;
+      }
+
+      #days-value {
+        font-weight: bold;
+        color: #28a745;
+      }
+
+      .range-slider {
+        position: relative;
+        width: 100%;
+        margin-top: 5px;
+      }
+
+      .slider {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 8px;
+        border-radius: 5px;
+        background: #e0e0e0;
+        outline: none;
+        opacity: 0.7;
+        transition: opacity 0.2s;
+      }
+
+      .slider:hover {
+        opacity: 1;
+      }
+
+      .slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: #28a745;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease;
+      }
+
+      .slider::-moz-range-thumb {
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: #28a745;
+        cursor: pointer;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        transition: all 0.2s ease;
+      }
+
+      .slider::-webkit-slider-thumb:hover,
+      .slider::-webkit-slider-thumb:active {
+        transform: scale(1.1);
+        background: #218838;
+      }
+
+      .range-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 8px;
+        color: #666;
+        font-size: 0.85rem;
+      }
+
+      /* For responsive design */
+      @media (max-width: 500px) {
+        .slider-container {
+          max-width: 100%;
+        }
+      }
     </style>
   </head>
 
@@ -338,53 +428,72 @@
 
     <!-- Group Selector -->
     <div class="title-bottom">
-      <div>
-        <label for="group-selector">Select number of days to show: </label>
-        <select id="group-selector" onchange="updateVisibleGroups()">
-          <option value="all">All</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
-          <option value="13">13</option>
-          <option value="14">14</option>
-          <option value="15">15</option>
-          <option value="16">16</option>
-          <option value="17">17</option>
-          <option value="18">18</option>
-          <option value="19">19</option>
-          <option value="20">20</option>
-          <option value="21">21</option>
-          <option value="22">22</option>
-          <option value="23">23</option>
-          <option value="24">24</option>
-          <option value="25">25</option>
-          <option value="26">26</option>
-          <option value="27">27</option>
-          <option value="28">28</option>
-          <option value="29">29</option>
-          <option value="30">30</option>
-          <option value="31">31</option>
-          <option value="32">32</option>
-        </select>
+      <div class="range-slider">
+        <input
+          type="range"
+          id="days-slider"
+          min="0"
+          max="32"
+          value="0"
+          class="slider"
+          oninput="updateDaysValue(this.value)"
+          onchange="updateVisibleGroups(this.value)"
+        />
+        <div class="range-labels">
+          <span>All</span>
+          <span>'</span>
+          <span>2</span>
+          <span>'</span>
+          <span>4</span>
+          <span>'</span>
+          <span>6</span>
+          <span>'</span>
+          <span>8</span>
+          <span>'</span>
+          <span>10</span>
+          <span>'</span>
+          <span>12</span>
+          <span>'</span>
+          <span>14</span>
+          <span>'</span>
+          <span>16</span>
+          <span>'</span>
+          <span>18</span>
+          <span>'</span>
+          <span>20</span>
+          <span>'</span>
+          <span>22</span>
+          <span>'</span>
+          <span>24</span>
+          <span>'</span>
+          <span>26</span>
+          <span>'</span>
+          <span>28</span>
+          <span>'</span>
+          <span>30</span>
+          <span>'</span>
+          <span>32</span>
+        </div>
       </div>
-
-      <!-- Random and Reset buttons for all groups -->
-      <div>
-        <button id="random-btn" class="greenbtn" onclick="randomizeAllGroups()">
-          Randomize All
-        </button>
-        <button id="reset-btn" class="redbtn" onclick="resetAllGroups()">
-          Reset All Selected
-        </button>
+      <div class="slider-container">
+        <div>
+          <label for="days-slider"
+            >Select number of days to show:
+            <span id="days-value">All</span></label
+          >
+        </div>
+        <div>
+          <button
+            id="random-btn"
+            class="greenbtn"
+            onclick="randomizeAllGroups()"
+          >
+            Randomize All
+          </button>
+          <button id="reset-btn" class="redbtn" onclick="resetAllGroups()">
+            Reset All Selected
+          </button>
+        </div>
       </div>
     </div>
 
@@ -470,7 +579,7 @@
 
           chunk.forEach((wordObj) => {
             const li = document.createElement("li");
-            li.textContent = wordObj.word;
+            li.textContent = `${wordObj.word}`;
             li.addEventListener("click", () =>
               openWordDetails(group, wordObj, li)
             );
@@ -481,18 +590,44 @@
           groupsContainer.appendChild(group);
         });
       }
+      function updateDaysValue(value) {
+        const daysValue = document.getElementById("days-value");
+        if (value == 0) {
+          daysValue.textContent = "All";
+        } else {
+          daysValue.textContent = value;
+        }
+      }
 
-      function updateVisibleGroups() {
-        const selectedValue = document.getElementById("group-selector").value;
+      function updateVisibleGroups(value) {
         const allGroups = document.querySelectorAll(".group");
+        value = parseInt(value);
+
         allGroups.forEach((group, index) => {
-          if (selectedValue === "all" || index < selectedValue) {
+          if (value === 0 || index < value) {
             group.style.display = "block";
           } else {
             group.style.display = "none";
           }
         });
       }
+
+      // Keep compatibility with existing code
+      window.onload = function () {
+        // Wait for vocabulary to load
+        const checkVocabularyLoaded = setInterval(() => {
+          if (document.querySelector(".group")) {
+            clearInterval(checkVocabularyLoaded);
+
+            // Initialize the slider
+            const slider = document.getElementById("days-slider");
+            if (slider) {
+              updateDaysValue(slider.value);
+              updateVisibleGroups(slider.value);
+            }
+          }
+        }, 100);
+      };
 
       function randomizeAllGroups() {
         const selectedGroups = Array.from(
@@ -578,7 +713,7 @@
           ? "Unmark"
           : "Mark";
 
-        document.getElementById("details-word").textContent = wordObj.word;
+        document.getElementById("details-word").textContent = `👉${wordObj.word}`;
         document.getElementById("details-trait").innerHTML = wordObj.trait;
         const senseElement = document.getElementById("details-sense");
         let senseText = wordObj.sense;
