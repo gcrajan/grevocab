@@ -1,334 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Boost your GRE preparation with expert practice in Analytical Writing, Quant, and Verbal. Get the best GRE prep resources, vocab practice, and quant problem-solving techniques." />
-  <meta name="keywords"
-    content="GRE prep, GRE practice, GRE writing, analytical writing, gre writing practice, GRE preparation, GRE verbal, GRE study tips" />
-  <meta name="jhamghat" content="Jhamghat" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Best GRE Preparation - Writing, Quant & Verbal Practice" />
-  <meta property="og:description"
-    content="Ace your GRE with top-notch preparation strategies, analytical writing exercises, quant problem-solving, and vocab practice." />
-  <meta property="og:image" content="https://greprep.netlify.app/logo.png" />
-  <meta property="og:url" content="https://greprep.netlify.app/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="GRE Prep - Writing, Quant & Vocab Practice" />
-  <meta name="twitter:description"
-    content="Excel in your GRE with effective study techniques and practice questions in writing, quant, and vocab." />
-  <meta name="twitter:image" content="https://pbs.twimg.com/profile_images/1441442129629249537/tapqgD9Z_400x400.jpg" />
-  <link rel="shortcut icon" href="/fav-icon.png" type="image/x-icon" />
-  <title>Epreptest: Writing</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      padding: 20px;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #f5f7fa;
-      color: #333;
-    }
-
-    .container {
-      /* max-width: 900px; */
-      margin: auto;
-    }
-
-    h1 {
-      text-align: center;
-      color: #2b2b2b;
-      margin-bottom: 1rem;
-      font-size: 2rem;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .header-a {
-      color: #fff;
-      text-decoration: none;
-      background-color: #28a745;
-      border-radius: 5px;
-      padding: 8px 14px;
-      font-weight: 500;
-      transition: background-color 0.2s;
-    }
-
-    .header-a:hover {
-      background-color: #218838;
-    }
-
-    .red {
-      background-color: #dc3545 !important;
-    }
-
-    .red:hover {
-      background-color: #c82333 !important;
-    }
-
-    .blue {
-      background-color: #007bff !important;
-    }
-
-    .blue:hover {
-      background-color: #005fc4 !important;
-    }
-
-    .breadcrumb {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-size: 1.1rem;
-      flex-wrap: wrap;
-    }
-
-    .breadcrumb a {
-      color: #28a745;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .breadcrumb a:hover {
-      color: #1c7c36;
-    }
-
-    .breadcrumb span.separator {
-      color: #aaa;
-    }
-
-    .breadcrumb span:last-child {
-      color: #555;
-    }
-
-    .note {
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-      background: #e9f7ef;
-      padding: 12px 18px;
-      border-left: 5px solid #28a745;
-      border-radius: 5px;
-    }
-
-    .note span {
-      font-weight: bold;
-      color: #0c63e4;
-    }
-
-    .qaDiv {
-      margin-bottom: 20px;
-      padding: 15px;
-      background-color: #ffffff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      transition: box-shadow 0.2s ease-in-out;
-    }
-
-    .qaDiv:hover {
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-    }
-
-    .highlighted-question {
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #dc3545;
-    }
-
-    .answer {
-      display: none;
-      margin-top: 12px;
-      background-color: #f8f9fa;
-      border-left: 4px solid #007bff;
-      padding: 12px;
-      border-radius: 6px;
-      white-space: pre-wrap;
-    }
-
-    .toggle-btn {
-      margin-top: 10px;
-      padding: 8px 16px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 4px;
-      background-color: #007bff;
-      color: #fff;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-
-    .toggle-btn:hover {
-      background-color: #0056b3;
-    }
-
-    button[style*="position: absolute"] {
-      font-size: 0.75rem;
-      padding: 4px 8px;
-      background-color: #6c757d;
-      color: white;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-
-    button[style*="position: absolute"]:hover {
-      background-color: #5a6268;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
-      margin-top: 2rem;
-      padding-top: 1rem;
-    }
-
-    @media (max-width: 600px) {
-      .header {
-        flex-direction: column;
-        align-items: flex-start;
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Boost your GRE preparation with expert practice in Analytical Writing, Quant, and Verbal. Get the best GRE prep resources, vocab practice, and quant problem-solving techniques."
+    />
+    <meta
+      name="keywords"
+      content="GRE prep, GRE practice, GRE writing, analytical writing, gre writing practice, GRE preparation, GRE verbal, GRE study tips"
+    />
+    <meta name="jhamghat" content="Jhamghat" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Best GRE Preparation - Writing, Quant & Verbal Practice"
+    />
+    <meta
+      property="og:description"
+      content="Ace your GRE with top-notch preparation strategies, analytical writing exercises, quant problem-solving, and vocab practice."
+    />
+    <meta property="og:image" content="https://greprep.netlify.app/logo.png" />
+    <meta property="og:url" content="https://greprep.netlify.app/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="GRE Prep - Writing, Quant & Vocab Practice"
+    />
+    <meta
+      name="twitter:description"
+      content="Excel in your GRE with effective study techniques and practice questions in writing, quant, and vocab."
+    />
+    <meta
+      name="twitter:image"
+      content="https://pbs.twimg.com/profile_images/1441442129629249537/tapqgD9Z_400x400.jpg"
+    />
+    <link rel="shortcut icon" href="/fav-icon.png" type="image/x-icon" />
+    <title>Epreptest: Writing</title>
+    <style>
+      * {
+        box-sizing: border-box;
       }
 
-      .breadcrumb {
-        font-size: 1rem;
+      body {
+        margin: 0;
+        padding: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f5f7fa;
+        color: #333;
+      }
+
+      .container {
+        /* max-width: 900px; */
+        margin: auto;
+      }
+
+      h1 {
+        text-align: center;
+        color: #2b2b2b;
+        margin-bottom: 1rem;
+        font-size: 2rem;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
       }
 
       .header-a {
-        width: 100%;
+        color: #fff;
+        text-decoration: none;
+        background-color: #28a745;
+        border-radius: 5px;
+        padding: 8px 14px;
+        font-weight: 500;
+        transition: background-color 0.2s;
+      }
+
+      .header-a:hover {
+        background-color: #218838;
+      }
+
+      .red {
+        background-color: #dc3545 !important;
+      }
+
+      .red:hover {
+        background-color: #c82333 !important;
+      }
+
+      .blue {
+        background-color: #007bff !important;
+      }
+
+      .blue:hover {
+        background-color: #005fc4 !important;
+      }
+
+      .breadcrumb {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1.1rem;
+        flex-wrap: wrap;
+      }
+
+      .breadcrumb a {
+        color: #28a745;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .breadcrumb a:hover {
+        color: #1c7c36;
+      }
+
+      .breadcrumb span.separator {
+        color: #aaa;
+      }
+
+      .breadcrumb span:last-child {
+        color: #555;
+      }
+
+      .note {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+        background: #e9f7ef;
+        padding: 12px 18px;
+        border-left: 5px solid #28a745;
+        border-radius: 5px;
+      }
+
+      .note span {
+        font-weight: bold;
+        color: #0c63e4;
+      }
+
+      .qaDiv {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+        transition: box-shadow 0.2s ease-in-out;
+      }
+
+      .qaDiv:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      }
+
+      .highlighted-question {
+        font-weight: 600;
+        font-size: 1.1rem;
+        color: #dc3545;
+      }
+
+      .answer {
+        display: none;
+        margin-top: 12px;
+        background-color: #f8f9fa;
+        border-left: 4px solid #007bff;
+        padding: 12px;
+        border-radius: 6px;
+        white-space: pre-wrap;
+      }
+
+      .toggle-btn {
+        margin-top: 10px;
+        padding: 8px 16px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 4px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .toggle-btn:hover {
+        background-color: #0056b3;
+      }
+
+      button[style*="position: absolute"] {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        background-color: #6c757d;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      button[style*="position: absolute"]:hover {
+        background-color: #5a6268;
+      }
+
+      footer {
         text-align: center;
+        font-size: 0.9rem;
+        color: #888;
+        margin-top: 2rem;
+        padding-top: 1rem;
       }
-    }
-  </style>
 
-</head>
+      @media (max-width: 600px) {
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
-<body>
-  <header class="header">
-    <nav class="breadcrumb">
-      <a href="/index.html">Home</a>
-      <span class="separator">›</span>
-      <span>Writing</span>
-    </nav>
-    <div>
-      <a href="/writing/Category-AWA.html" class="blue header-a">Categorial List</a>
-      <a href="/writing/template.html" class="header-a">Template</a>
-      <a href="/writing/awawriting.html" class="red header-a">Practice</a>
-    </div>
-  </header>
-  <h1>GRE Writing Topics.</h1>
+        .breadcrumb {
+          font-size: 1rem;
+        }
 
-  <p class="note">
-    <span>Note: Use these prompt in AI model(ChatGPT, Deepseek, Claude etc.) and
-      then simply copy below questions and paste to get answer.</span>
-    <br />
-    Do you know about analytical writing in GRE. I will provide the topic for
-    the AWA and I want you to answer score 6 answer. Give the answer into 3
-    different steps.<br />
-    1) Provide the main points<br />
-    2) Provide 3,4 examples that you are going to use (at least 2 examples
-    must be used and relevant)<br />
-    3) Provide complete essay.
-  </p>
-  <section class="container" id="qaContainer">
-    <!-- Questions will be dynamically added here -->
-  </section>
+        .header > div {
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 1rem;
+          flex-wrap: wrap;
+        }
 
-  <footer>Copyright @ 2025, Jhamghat</footer>
-
-  <script>
-    async function fetchQuestions() {
-      try {
-        const response = await fetch("awawriting.json");
-        const questions = await response.json();
-        displayQuestions(questions);
-      } catch (error) {
-        console.error("Error fetching questions:", error);
+        .header-a {
+          padding: 4px 7px;
+        }
       }
-    }
+    </style>
+  </head>
 
-    function displayQuestions(questions) {
-      const container = document.getElementById("qaContainer");
-      container.innerHTML = ""; // Clear previous content
+  <body>
+    <header class="header">
+      <nav class="breadcrumb">
+        <a href="/index.html">Home</a>
+        <span class="separator">›</span>
+        <span>Writing</span>
+      </nav>
+      <div>
+        <a href="/writing/Category-AWA.html" class="blue header-a"
+          >Categorial List</a
+        >
+        <a href="/writing/template.html" class="header-a">Template</a>
+        <a href="/writing/awawriting.html" class="red header-a">Practice</a>
+      </div>
+    </header>
+    <h1>GRE Writing Topics.</h1>
 
-      questions.forEach((item, index) => {
-        const qaDiv = document.createElement("div");
-        qaDiv.classList.add("qaDiv");
+    <p class="note">
+      <span
+        >Note: Use these prompt in AI model(ChatGPT, Deepseek, Claude etc.) and
+        then simply copy below questions and paste to get answer.</span
+      >
+      <br />
+      Do you know about analytical writing in GRE. I will provide the topic for
+      the AWA and I want you to answer score 6 answer. Give the answer into 3
+      different steps.<br />
+      1) Provide the main points<br />
+      2) Provide 3,4 examples that you are going to use (at least 2 examples
+      must be used and relevant)<br />
+      3) Provide complete essay.
+    </p>
+    <section class="container" id="qaContainer">
+      <!-- Questions will be dynamically added here -->
+    </section>
 
-        const [firstLine, ...restLines] = item.question.split("\n");
+    <footer>Copyright @ 2025, Jhamghat</footer>
 
-        const questionContainer = document.createElement("div");
-        questionContainer.style.position = "relative";
+    <script>
+      async function fetchQuestions() {
+        try {
+          const response = await fetch("awawriting.json");
+          const questions = await response.json();
+          displayQuestions(questions);
+        } catch (error) {
+          console.error("Error fetching questions:", error);
+        }
+      }
 
-        const copyBtn = document.createElement("button");
-        copyBtn.textContent = "Copy";
-        copyBtn.style.position = "absolute";
-        copyBtn.style.top = "-1rem";
-        copyBtn.style.right = "0";
-        copyBtn.style.fontSize = "0.8rem";
-        copyBtn.style.padding = "4px 8px";
-        copyBtn.style.backgroundColor = "#6c757d";
-        copyBtn.style.color = "#fff";
-        copyBtn.style.border = "none";
-        copyBtn.style.borderRadius = "3px";
-        copyBtn.style.cursor = "pointer";
+      function displayQuestions(questions) {
+        const container = document.getElementById("qaContainer");
+        container.innerHTML = ""; // Clear previous content
 
-        copyBtn.onclick = () => {
-          navigator.clipboard.writeText(item.question).then(() => {
-            copyBtn.textContent = "Copied!";
-            setTimeout(() => (copyBtn.textContent = "Copy"), 1500);
-          });
-        };
+        questions.forEach((item, index) => {
+          const qaDiv = document.createElement("div");
+          qaDiv.classList.add("qaDiv");
 
-        const questionEl = document.createElement("p");
-        questionEl.classList.add("question");
-        questionEl.innerHTML = `Q${index + 1
+          const [firstLine, ...restLines] = item.question.split("\n");
+
+          const questionContainer = document.createElement("div");
+          questionContainer.style.position = "relative";
+
+          const copyBtn = document.createElement("button");
+          copyBtn.textContent = "Copy";
+          copyBtn.style.position = "absolute";
+          copyBtn.style.top = "-1rem";
+          copyBtn.style.right = "0";
+          copyBtn.style.fontSize = "0.8rem";
+          copyBtn.style.padding = "4px 8px";
+          copyBtn.style.backgroundColor = "#6c757d";
+          copyBtn.style.color = "#fff";
+          copyBtn.style.border = "none";
+          copyBtn.style.borderRadius = "3px";
+          copyBtn.style.cursor = "pointer";
+
+          copyBtn.onclick = () => {
+            navigator.clipboard.writeText(item.question).then(() => {
+              copyBtn.textContent = "Copied!";
+              setTimeout(() => (copyBtn.textContent = "Copy"), 1500);
+            });
+          };
+
+          const questionEl = document.createElement("p");
+          questionEl.classList.add("question");
+          questionEl.innerHTML = `Q${
+            index + 1
           }: <span class="highlighted-question">${firstLine}</span><br>${restLines.join(
             "<br>"
           )}`;
 
-        questionContainer.appendChild(copyBtn);
-        questionContainer.appendChild(questionEl);
+          questionContainer.appendChild(copyBtn);
+          questionContainer.appendChild(questionEl);
 
-        const answerEl = document.createElement("p");
-        answerEl.classList.add("answer");
-        answerEl.innerHTML = item.answer.replace(/\n/g, "<br>"); // Replace \n with <br>
+          const answerEl = document.createElement("p");
+          answerEl.classList.add("answer");
+          answerEl.innerHTML = item.answer.replace(/\n/g, "<br>"); // Replace \n with <br>
 
-        const toggleBtn = document.createElement("button");
-        toggleBtn.classList.add("toggle-btn");
-        toggleBtn.textContent = "Show Answer";
-        toggleBtn.onclick = function () {
-          if (answerEl.style.display === "none") {
-            answerEl.style.display = "block";
-            toggleBtn.textContent = "Hide Answer";
-          } else {
-            answerEl.style.display = "none";
-            toggleBtn.textContent = "Show Answer";
-          }
-        };
+          const toggleBtn = document.createElement("button");
+          toggleBtn.classList.add("toggle-btn");
+          toggleBtn.textContent = "Show Answer";
+          toggleBtn.onclick = function () {
+            if (answerEl.style.display === "none") {
+              answerEl.style.display = "block";
+              toggleBtn.textContent = "Hide Answer";
+            } else {
+              answerEl.style.display = "none";
+              toggleBtn.textContent = "Show Answer";
+            }
+          };
 
-        answerEl.style.display = "none"; // Hide answers initially
+          answerEl.style.display = "none"; // Hide answers initially
 
-        qaDiv.appendChild(questionContainer);
-        qaDiv.appendChild(toggleBtn);
-        qaDiv.appendChild(answerEl);
+          qaDiv.appendChild(questionContainer);
+          qaDiv.appendChild(toggleBtn);
+          qaDiv.appendChild(answerEl);
 
-        container.appendChild(qaDiv);
-      });
-    }
+          container.appendChild(qaDiv);
+        });
+      }
 
-    fetchQuestions();
-  </script>
-</body>
-
+      fetchQuestions();
+    </script>
+  </body>
 </html>
