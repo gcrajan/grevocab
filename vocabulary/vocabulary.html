@@ -137,9 +137,11 @@
         gap: 20px;
         margin: 20px 0px;
         flex-wrap: wrap;
+        justify-content: space-between;
       }
 
       .group {
+        flex: 1 1 240px;
         border: 2px solid #ccc;
         border-radius: 8px;
         background-color: #fff;
@@ -147,11 +149,11 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       }
 
-      @media only screen and (max-width: 600px) {
+      /* @media only screen and (max-width: 600px) {
         .group {
           width: 90vw;
         }
-      }
+      } */
       @media only screen and (max-width: 700px) {
         .word-details {
           margin: 1rem 0rem;
@@ -164,6 +166,9 @@
         align-items: center;
         border-bottom: 2px solid #c1b8b8;
         gap: 5px;
+        background-color: #f9f9f9;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
       }
 
       .group h2 {
@@ -720,7 +725,9 @@
           ? "Unmark"
           : "Mark";
 
-        document.getElementById("details-word").textContent = `👉${wordObj.word}`;
+        document.getElementById(
+          "details-word"
+        ).textContent = `👉${wordObj.word}`;
         document.getElementById("details-trait").innerHTML = wordObj.trait;
         const senseElement = document.getElementById("details-sense");
         let senseText = wordObj.sense;
