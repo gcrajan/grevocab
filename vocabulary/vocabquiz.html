@@ -38,6 +38,7 @@
     />
     <link rel="shortcut icon" href="/fav-icon.png" type="image/x-icon" />
     <title>Gre Prep: Vocabulary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
       body {
         box-sizing: border-box;
@@ -45,7 +46,7 @@
         margin: 0rem;
         font-family: Arial, sans-serif;
         text-align: center;
-        background-color: #f9f9f9;
+        background-color: #f8f9fa;
       }
       .header {
         display: flex;
@@ -65,7 +66,6 @@
         border-radius: 0.2rem;
         padding: 0.3rem 0.5rem;
       }
-
       .header-a:hover {
         color: #54d171;
       }
@@ -108,6 +108,7 @@
       .container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         margin-top: 20px;
       }
@@ -167,9 +168,14 @@
       .hidden {
         display: none;
       }
-
+      .options-grid {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: self-start;
+      }
       button {
-        background-color: #28a745;
+        /* background-color: #28a745; */
         color: white;
         border: none;
         padding: 10px 15px;
@@ -178,12 +184,29 @@
         border-radius: 5px;
         margin-top: 10px;
       }
-
-      button:hover {
+      .btn-green {
+        background-color: #39ff54;
+        color: #ffffff;
+        padding: 3px 8px;
+        font-size: 1.2rem;
+      }
+      .btn-red {
+        background-color: #ff3636;
+        color: #ffffff;
+        padding: 3px 8px;
+        font-size: 1.2rem;
+      }
+      .btn-green:hover {
         background-color: #218838;
       }
-
-      #meaning,
+      .btn-red:hover {
+        background-color: #882121;
+      }
+      .gamebtn:hover {
+        opacity: 0.7;
+        background-color: #ffffff;
+      }
+      #trait,
       #synonyms,
       #antonyms {
         font-size: 18px;
@@ -200,6 +223,24 @@
         justify-content: center;
         padding-top: 1rem;
       }
+      .game-content {
+        display: none; /* Initially hide all game sections */
+        min-width: 50vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .active-game {
+        display: flex; /* Show the active game */
+      }
+      footer {
+        text-align: center;
+        padding: 1.5rem 0;
+        background-color: #f8f9fa;
+        margin: 2rem 5rem 0rem 5rem;
+        font-size: 0.9rem;
+        border-top: 1px solid #ddd;
+      }
     </style>
   </head>
   <body>
@@ -215,180 +256,1128 @@
         <a href="/vocabulary/material.html" class="header-a">Materials</a>
       </div>
     </header>
+    <div id="app-container" class="container">
+      <header class="mb-8 text-center">
+        <h1 class="text-4xl font-bold text-gray-800">
+          GRE Vocabulary Practice Hub
+        </h1>
+        <p class="text-lg text-gray-600 mt-2">
+          Sharpen your vocabulary with a variety of interactive games!
+        </p>
+      </header>
 
-    <h1>GRE Vocab Practice</h1>
-    <div class="container">
-      <h2>#Game1, Random Words</h2>
-      <div class="word-container"></div>
-      <button id="nextWord">Next Word</button>
-    </div>
-    <h2>#Game2, Select Correct Word</h2>
-    <div class="game-container">
-      <h2 id="wordDisplay2"></h2>
-      <div id="optionsContainer" class="options"></div>
-      <p id="resultMessage2" class="hidden"></p>
-      <p id="wordMeaning" class="hidden"></p>
-      <button id="nextWordGame2">Next</button>
-    </div>
+      <nav id="main-menu" class="mx-12 flex p-6 bg-white rounded-xl shadow-xl">
+        <h2 class="text-2xl font-semibold mb-6 text-center text-gray-700">
+          Choose a Game
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <button data-game="game1" class="gamebtn rounded">
+            <img src="./1.png" alt="flashcard" class="rounded" />
+          </button>
+          <button data-game="game2" class="gamebtn rounded">
+            <img src="./2.png" alt="flashcard" class="rounded" />
+          </button>
+          <button data-game="game3" class="gamebtn rounded">
+            <img src="./3.png" alt="flashcard" class="rounded" />
+          </button>
+          <button data-game="game4" class="gamebtn rounded">
+            <img src="./4.png" alt="flashcard" class="rounded" />
+          </button>
+          <button data-game="game5" class="gamebtn rounded">
+            <img src="./5.png" alt="flashcard" class="rounded" />
+          </button>
+          <button data-game="game6" class="gamebtn rounded">
+            <img src="./6.png" alt="flashcard" class="rounded" />
+          </button>
+          <button data-game="game7" class="gamebtn rounded">
+            <img src="./7.png" alt="flashcard" class="rounded" />
+          </button>
+        </div>
+      </nav>
 
+      <main id="game-area" class="mt-8">
+        <button id="back-to-menu" class="btn btn-secondary mb-6 hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5 inline-block mr-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3"
+            />
+          </svg>
+          Back to Menu
+        </button>
+
+        <div
+          id="game1-container"
+          class="game-content p-6 bg-white rounded-xl shadow-xl"
+        >
+          <h2 class="text-2xl font-semibold mb-4 text-center text-blue-600">
+            Game 1: Flashcards
+          </h2>
+          <div id="game1-word-container" class="text-center"></div>
+          <div class="text-center mt-6">
+            <button id="game1-nextWord" class="btn btn-green">Next Word</button>
+          </div>
+        </div>
+
+        <div
+          id="game2-container"
+          class="game-content p-6 bg-white rounded-xl shadow-xl"
+        >
+          <h2 class="text-2xl font-semibold mb-4 text-center text-blue-600">
+            Game 2: Select Correct Synonym
+          </h2>
+          <h3
+            id="game2-wordDisplay"
+            class="text-3xl font-bold my-4 text-center"
+          ></h3>
+          <div id="game2-optionsContainer" class="options-grid my-4"></div>
+          <p id="game2-resultMessage" class="my-3 text-center"></p>
+          <div id="game2-wordDetails" class="details-box hidden"></div>
+          <div class="text-center mt-6">
+            <button id="game2-nextWord" class="btn btn-green">Next Word</button>
+          </div>
+        </div>
+
+        <div
+          id="game3-container"
+          class="game-content p-6 bg-white rounded-xl shadow-xl"
+        >
+          <h2 class="text-2xl font-semibold mb-4 text-center text-blue-600">
+            Game 3: Select Correct Antonym
+          </h2>
+          <h3
+            id="game3-wordDisplay"
+            class="text-3xl font-bold my-4 text-center"
+          ></h3>
+          <div id="game3-optionsContainer" class="options-grid my-4"></div>
+          <p id="game3-resultMessage" class="my-3 text-center"></p>
+          <div id="game3-wordDetails" class="details-box hidden"></div>
+          <div class="text-center mt-6">
+            <button id="game3-nextWord" class="btn btn-green">Next Word</button>
+          </div>
+        </div>
+
+        <div
+          id="game4-container"
+          class="game-content p-6 bg-white rounded-xl shadow-xl"
+        >
+          <h2 class="text-2xl font-semibold mb-4 text-center text-blue-600">
+            Game 4: Select Multiple Synonyms
+          </h2>
+          <h3
+            id="game4-wordDisplay"
+            class="text-3xl font-bold my-4 text-center"
+          ></h3>
+          <p class="text-sm text-gray-600 text-center mb-3">
+            Select all correct synonyms.
+          </p>
+          <div id="game4-optionsContainer" class="options-grid my-4"></div>
+          <div class="text-center">
+            <button id="game4-checkAnswers" class="btn btn-red my-3">
+              Check Answers
+            </button>
+          </div>
+          <p id="game4-resultMessage" class="my-3 text-center"></p>
+          <div id="game4-wordDetails" class="details-box hidden"></div>
+          <div class="text-center mt-6">
+            <button id="game4-nextWord" class="btn btn-green hidden">
+              Next Word
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="game5-container"
+          class="game-content p-6 bg-white rounded-xl shadow-xl"
+        >
+          <h2 class="text-2xl font-semibold mb-4 text-center text-blue-600">
+            Game 5: Select Multiple Antonyms
+          </h2>
+          <h3
+            id="game5-wordDisplay"
+            class="text-3xl font-bold my-4 text-center"
+          ></h3>
+          <p class="text-sm text-gray-600 text-center mb-3">
+            Select all correct antonyms.
+          </p>
+          <div id="game5-optionsContainer" class="options-grid my-4"></div>
+          <div class="text-center">
+            <button id="game5-checkAnswers" class="btn btn-red my-3">
+              Check Answers
+            </button>
+          </div>
+          <p id="game5-resultMessage" class="my-3 text-center"></p>
+          <div id="game5-wordDetails" class="details-box hidden"></div>
+          <div class="text-center mt-6">
+            <button id="game5-nextWord" class="btn btn-green hidden">
+              Next Word
+            </button>
+          </div>
+        </div>
+
+        <div
+          id="game6-container"
+          class="game-content p-6 bg-white rounded-xl shadow-xl"
+        >
+          <h2 class="text-2xl font-semibold mb-4 text-center text-blue-600">
+            Game 6: Match Word to Definition
+          </h2>
+          <h3
+            id="game6-wordDisplay"
+            class="text-3xl font-bold my-4 text-center"
+          ></h3>
+          <p class="text-sm text-gray-600 text-center mb-3">
+            Select the correct definition (trait) for the word above.
+          </p>
+          <div id="game6-optionsContainer" class="options-grid my-4"></div>
+          <p id="game6-resultMessage" class="my-3 text-center"></p>
+          <div id="game6-wordDetails" class="details-box hidden"></div>
+          <div class="text-center mt-6">
+            <button id="game6-nextWord" class="btn btn-green">Next Word</button>
+          </div>
+        </div>
+
+        <div
+          id="game7-container"
+          class="game-content p-6 bg-white rounded-xl shadow-xl"
+        >
+          <h2 class="text-2xl font-semibold mb-4 text-center text-blue-600">
+            Game 7: Sentence Completion
+          </h2>
+          <p
+            id="game7-sentenceDisplay"
+            class="text-xl my-6 p-4 bg-blue-50 border border-blue-200 rounded-md text-center"
+          ></p>
+          <p class="text-sm text-gray-600 text-center mb-3">
+            Choose the word that best completes the sentence.
+          </p>
+          <div id="game7-optionsContainer" class="options-grid my-4"></div>
+          <p id="game7-resultMessage" class="my-3 text-center"></p>
+          <div id="game7-wordDetails" class="details-box hidden"></div>
+          <div class="text-center mt-6">
+            <button id="game7-nextWord" class="btn btn-green">Next Word</button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer>
+      <p>
+        &copy; <span id="currentYear"></span>, Jhamghat. All rights reserved.
+      </p>
+    </footer>
     <script>
-      document.addEventListener("DOMContentLoaded", async () => {
-        let words = [];
-        let usedWords = new Set();
-        let currentWordIndex = null;
+      // Embedded Vocabulary Data (simulates fetching vocabulary.json)
+      const vocabularyData = {
+        vocabulary: [
+          {
+            word: "Abound",
+            triat: "Be present in large quantities",
+            sense:
+              "Positive (+ve) or Neutral (0) <br/> Positive: When abundance is desirable. <br/> Neutral: When simply describing a quantity.",
+            example:
+              "Opportunities abound for those willing to take risks. <br/> Fish abound in this lake during summer.",
+            synonyms: "flourish, teem, swarm, proliferate",
+            antonyms: "lack, scarce, deficient, rare",
+          },
+          {
+            word: "Amorphous",
+            triat: "Lacking structure; unclear or without definite shape",
+            sense:
+              "Negative (–ve) or Neutral (0) <br/> Negative: When clarity or structure is needed. <br/> Neutral: When describing physical properties.",
+            example:
+              "The committee presented an amorphous plan with no clear objectives. <br/> The amorphous blob of cells began to take shape as it developed.",
+            synonyms: "shapeless, formless, unstructured, vague",
+            antonyms: "structured, defined, clear, shaped",
+          },
+          {
+            word: "Austere",
+            triat:
+              "Severe or strict in manner, attitude, or appearance; (of living conditions or a way of life) having no comforts or luxuries.",
+            sense:
+              "Negative (–ve) or Neutral (0) <br/> Negative: When implying harshness or lack of comfort. <br/> Neutral: When describing simplicity or discipline.",
+            example:
+              "The headmaster's austere demeanor intimidated the students. <br/> They lived an austere life in the remote monastery.",
+            synonyms: "stern, strict, severe, stark, plain, simple",
+            antonyms: "genial, indulgent, luxurious, ornate, elaborate",
+          },
+          {
+            word: "Belie",
+            triat:
+              "Fail to give a true notion or impression of (something); disguise or contradict.",
+            sense:
+              "Neutral (0) or Negative (–ve) <br/> Neutral: When describing a simple contradiction. <br/> Negative: When implying deception or misrepresentation.",
+            example:
+              "His cheerful smile belied his inner turmoil. <br/> The cheap-looking exterior belies the quality of the product.",
+            synonyms: "contradict, disprove, debunk, misrepresent, falsify",
+            antonyms: "attest, prove, verify, confirm, represent",
+          },
+          {
+            word: "Capricious",
+            triat:
+              "Given to sudden and unaccountable changes of mood or behavior.",
+            sense:
+              "Negative (–ve) or Neutral (0) <br/> Negative: When implying unpredictability and instability. <br/> Neutral: When describing whimsical or playful behavior.",
+            example:
+              "The capricious weather made it difficult to plan the picnic. <br/> She was known for her capricious spending habits.",
+            synonyms: "fickle, erratic, whimsical, unpredictable, volatile",
+            antonyms: "stable, consistent, predictable, steady, steadfast",
+          },
+          {
+            word: "Cerebral",
+            triat: "Intellectual rather than emotional or physical.",
+            sense:
+              "Neutral (0) or Positive (+ve) <br/> Neutral: Describing a type of activity or person. <br/> Positive: When valuing intellect and thoughtfulness.",
+            example:
+              "Chess is a cerebral game that requires deep concentration. <br/> Her cerebral approach to problems often led to innovative solutions.",
+            synonyms:
+              "intellectual, analytical, rational, academic, thoughtful",
+            antonyms: "emotional, intuitive, physical, visceral, unthinking",
+          },
+          {
+            word: "Congenial",
+            triat:
+              "Pleasant or agreeable because suited to one's taste or inclination.",
+            sense: "Positive (+ve)",
+            example:
+              "The congenial atmosphere of the café made it a popular spot. <br/> He found a congenial group of friends in his new city.",
+            synonyms:
+              "agreeable, pleasant, compatible, amiable, friendly, harmonious",
+            antonyms:
+              "disagreeable, unpleasant, incompatible, hostile, uncongenial",
+          },
+          {
+            word: "Conspicuous",
+            triat:
+              "Standing out so as to be clearly visible; attracting notice or attention.",
+            sense:
+              "Neutral (0) or Negative (–ve) <br/> Neutral: Simply being noticeable. <br/> Negative: When attracting unwanted attention or being overly showy.",
+            example:
+              "His bright red car was conspicuous in the parking lot. <br/> She made a conspicuous effort to avoid him at the party.",
+            synonyms:
+              "obvious, noticeable, prominent, evident, salient, blatant",
+            antonyms: "inconspicuous, unnoticeable, hidden, subtle, concealed",
+          },
+          {
+            word: "Corroborate",
+            triat:
+              "Confirm or give support to (a statement, theory, or finding).",
+            sense: "Positive (+ve) or Neutral (0)",
+            example:
+              "The witness corroborated the victim's account of the incident. <br/> Further research is needed to corroborate these findings.",
+            synonyms:
+              "confirm, verify, endorse, support, validate, substantiate",
+            antonyms: "contradict, refute, deny, disprove, invalidate",
+          },
+          {
+            word: "Deference",
+            triat: "Humble submission and respect.",
+            sense: "Positive (+ve) or Neutral (0)",
+            example:
+              "He showed deference to his elders by listening patiently. <br/> Out of deference to her wishes, they changed their plans.",
+            synonyms:
+              "respect, reverence, submission, consideration, courtesy, homage",
+            antonyms: "disrespect, defiance, contempt, disregard, impudence",
+          },
+          {
+            word: "Ephemeral",
+            triat: "Lasting for a very short time.",
+            sense:
+              "Neutral (0) or Negative (–ve) <br/> Neutral: Describing something short-lived. <br/> Negative: When implying transience and lack of permanence.",
+            example:
+              "The beauty of the cherry blossoms is ephemeral. <br/> Fame in the entertainment industry can be ephemeral.",
+            synonyms: "transient, fleeting, short-lived, momentary, transitory",
+            antonyms: "permanent, lasting, eternal, enduring, perpetual",
+          },
+        ],
+      };
 
-        // Fetch vocabulary.json file
-        async function fetchWords() {
-          try {
-            const response = await fetch("vocabulary.json");
-            const data = await response.json();
-            words = data.vocabulary; // Extract the vocabulary array
-            getNextWord();
-          } catch (error) {
-            console.error("Error loading vocabulary:", error);
-          }
+      let globalVocabulary = [];
+      let usedWordsIndices = new Set(); // To track used words within a session for some games
+
+      // --- Utility Functions ---
+      function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
         }
+        return array;
+      }
 
-        function getNextWord() {
-          if (usedWords.size === words.length) {
-            usedWords.clear(); // Reset when all words are used
-          }
+      function getRandomWord(excludeIndex = -1) {
+        if (globalVocabulary.length === 0) return null;
+        let wordIndex;
+        do {
+          wordIndex = Math.floor(Math.random() * globalVocabulary.length);
+        } while (wordIndex === excludeIndex);
+        return { ...globalVocabulary[wordIndex], index: wordIndex }; // Return a copy with its original index
+      }
 
-          do {
-            currentWordIndex = Math.floor(Math.random() * words.length);
-          } while (usedWords.has(currentWordIndex));
-
-          usedWords.add(currentWordIndex);
-          displayWord(words[currentWordIndex]);
+      function getMultipleRandomWords(count, excludeIndex = -1) {
+        const words = [];
+        const availableIndices = globalVocabulary
+          .map((_, i) => i)
+          .filter((i) => i !== excludeIndex);
+        const shuffledIndices = shuffleArray(availableIndices);
+        for (let i = 0; i < Math.min(count, shuffledIndices.length); i++) {
+          words.push(globalVocabulary[shuffledIndices[i]]);
         }
+        return words;
+      }
 
-        function displayWord(wordObj) {
-          const wordContainer = document.querySelector(".word-container");
-          wordContainer.innerHTML = `
-      <div class="word-box">
-        <h2 id="word">${wordObj.word}</h2>
-        <p id="meaning" class="hidden"><strong>"${wordObj.meaning}"</p></strong>
-        <p id="synonyms" class="hidden"><strong>Synonyms:</strong> ${wordObj.synonyms}</p>
-        <p id="antonyms" class="hidden"><strong>Antonyms:</strong> ${wordObj.antonyms}</p>
-        <button id="toggleMeaning">Show Meaning</button>
-      </div>
-    `;
-          document
-            .getElementById("toggleMeaning")
-            .addEventListener("click", toggleMeaning);
+      function displayWordDetails(containerId, wordObject) {
+        const detailsContainer = document.getElementById(containerId);
+        if (!wordObject) {
+          detailsContainer.innerHTML = "<p>Word details not available.</p>";
+          return;
         }
+        detailsContainer.innerHTML = `
+                <p class="mb-1"><strong>Word:</strong> ${wordObject.word}</p>
+                <p class="mb-1"><strong>Trait:</strong> "${
+                  wordObject.triat
+                }"</p>
+                <p class="mb-1"><strong>Sense:</strong> ${wordObject.sense}</p>
+                <p class="mb-1"><strong>Example:</strong> ${
+                  wordObject.example
+                }</p>
+                <p class="mb-1"><strong>Synonyms:</strong> ${
+                  wordObject.synonyms || "N/A"
+                }</p>
+                <p><strong>Antonyms:</strong> ${
+                  wordObject.antonyms || "N/A"
+                }</p>
+            `;
+        detailsContainer.classList.remove("hidden");
+      }
 
-        function toggleMeaning() {
-          const meaning = document.getElementById("meaning");
-          const synonyms = document.getElementById("synonyms");
-          const antonyms = document.getElementById("antonyms");
-          const toggleButton = document.getElementById("toggleMeaning");
+      // --- Navigation ---
+      const mainMenu = document.getElementById("main-menu");
+      const gameArea = document.getElementById("game-area");
+      const gameContents = document.querySelectorAll(".game-content");
+      const backToMenuButton = document.getElementById("back-to-menu");
 
-          if (meaning.classList.contains("hidden")) {
-            meaning.classList.remove("hidden");
-            synonyms.classList.remove("hidden");
-            antonyms.classList.remove("hidden");
-            toggleButton.textContent = "OK";
-          } else {
-            meaning.classList.add("hidden");
-            synonyms.classList.add("hidden");
-            antonyms.classList.add("hidden");
-            toggleButton.textContent = "Show Meaning";
-          }
-        }
-
-        document
-          .getElementById("nextWord")
-          .addEventListener("click", getNextWord);
-
-        fetchWords();
+      document.querySelectorAll("#main-menu button").forEach((button) => {
+        button.addEventListener("click", () => {
+          const gameId = button.dataset.game;
+          showGame(gameId);
+        });
       });
 
-      document.addEventListener("DOMContentLoaded", async () => {
-        let vocabulary = [];
+      backToMenuButton.addEventListener("click", () => {
+        mainMenu.style.display = "block";
+        gameArea.style.display = "block"; // Keep game area visible for the button
+        backToMenuButton.classList.add("hidden");
+        gameContents.forEach((content) =>
+          content.classList.remove("active-game")
+        );
+        // Reset any ongoing game states if necessary
+      });
 
-        async function fetchVocabulary() {
-          try {
-            const response = await fetch("vocabulary.json");
-            const data = await response.json();
-            vocabulary = data.vocabulary;
-            startGame2();
-          } catch (error) {
-            console.error("Error fetching vocabulary:", error);
-          }
+      function showGame(gameId) {
+        mainMenu.style.display = "none";
+        gameArea.style.display = "block";
+        backToMenuButton.classList.remove("hidden");
+        gameContents.forEach((content) => {
+          content.classList.remove("active-game");
+        });
+        const activeGameContainer = document.getElementById(
+          gameId + "-container"
+        );
+        if (activeGameContainer) {
+          activeGameContainer.classList.add("active-game");
+          // Initialize the specific game
+          if (gameId === "game1") startGame1();
+          else if (gameId === "game2") startGame2();
+          else if (gameId === "game3") startGame3();
+          else if (gameId === "game4") startGame4();
+          else if (gameId === "game5") startGame5();
+          else if (gameId === "game6") startGame6();
+          else if (gameId === "game7") startGame7();
         }
+      }
 
-        function startGame2() {
-          if (vocabulary.length === 0) return;
+      // --- Game 1: Flashcards ---
+      const game1WordContainer = document.getElementById(
+        "game1-word-container"
+      );
+      const game1NextWordButton = document.getElementById("game1-nextWord");
+      let game1CurrentWord;
 
-          const currentWordIndex = Math.floor(
-            Math.random() * vocabulary.length
-          );
-          const correctWord = vocabulary[currentWordIndex];
+      function startGame1() {
+        usedWordsIndices.clear();
+        loadNextGame1Word();
+      }
 
-          document.getElementById("wordDisplay2").textContent =
-            correctWord.word;
+      function loadNextGame1Word() {
+        if (usedWordsIndices.size === globalVocabulary.length) {
+          usedWordsIndices.clear(); // Reset if all words shown
+        }
+        let wordIndex;
+        do {
+          wordIndex = Math.floor(Math.random() * globalVocabulary.length);
+        } while (usedWordsIndices.has(wordIndex));
 
-          // Extract one synonym from the correct word
-          const correctSynonym =
-            correctWord.synonyms.split(", ")[0] || "Unknown";
-          const synonym = String(correctWord.synonyms);
+        usedWordsIndices.add(wordIndex);
+        game1CurrentWord = globalVocabulary[wordIndex];
+        displayGame1Word();
+      }
 
-          // Get five random incorrect options from other words
-          let incorrectOptions = vocabulary
-            .filter((_, index) => index !== currentWordIndex) // Exclude correct word
-            .map((word) => word.word)
-            .sort(() => 0.5 - Math.random()) // Shuffle
-            .slice(0, 5); // Pick five
-
-          // Shuffle options and include the correct one
-          const options = [...incorrectOptions, correctSynonym].sort(
-            () => Math.random() - 0.5
-          );
-
-          // Display options in a radio button list
-          const optionsContainer = document.getElementById("optionsContainer");
-          optionsContainer.innerHTML = "";
-          options.forEach((option, index) => {
-            const optionElement = document.createElement("label");
-            optionElement.classList.add("option");
-            optionElement.innerHTML = `
-              <input type="radio" name="option" value="${option}" /> ${option}
+      function displayGame1Word() {
+        game1WordContainer.innerHTML = `
+                <div class="p-4">
+                    <h3 class="text-4xl font-bold mb-3">${
+                      game1CurrentWord.word
+                    }</h3>
+                    <div id="game1-details" class="hidden text-left text-sm space-y-2">
+                        <p><strong>Trait:</strong> "${
+                          game1CurrentWord.triat
+                        }"</p>
+                        <p><strong>Sense:</strong> ${game1CurrentWord.sense}</p>
+                        <p><strong>Example:</strong> ${
+                          game1CurrentWord.example
+                        }</p>
+                        <p><strong>Synonyms:</strong> ${
+                          game1CurrentWord.synonyms || "N/A"
+                        }</p>
+                        <p><strong>Antonyms:</strong> ${
+                          game1CurrentWord.antonyms || "N/A"
+                        }</p>
+                    </div>
+                    <button id="game1-toggleDetails" class="btn btn-red mt-4">Show Details</button>
+                </div>
             `;
-            optionElement.addEventListener("click", () =>
-              checkAnswer(option, correctSynonym, correctWord.meaning, synonym)
-            );
-            optionsContainer.appendChild(optionElement);
-          });
-
-          // Hide result message & meaning initially
-          document.getElementById("resultMessage2").classList.add("hidden");
-          document.getElementById("wordMeaning").classList.add("hidden");
-        }
-        function checkAnswer(selectedOption, correctSynonym, meaning, synonym) {
-          const resultMessage = document.getElementById("resultMessage2");
-          const wordMeaning = document.getElementById("wordMeaning");
-
-          if (selectedOption === correctSynonym) {
-            resultMessage.textContent = "Correct!";
-            resultMessage.classList.remove("incorrect");
-            resultMessage.classList.add("correct");
-          } else {
-            resultMessage.textContent = "Incorrect, try again.";
-            resultMessage.classList.remove("correct");
-            resultMessage.classList.add("incorrect");
-          }
-
-          wordMeaning.innerHTML = `<div><p>"<strong> ${meaning}</strong>"</p><p><strong>Synonyms</strong>: ${synonym}</p></div>`;
-          resultMessage.classList.remove("hidden");
-          wordMeaning.classList.remove("hidden");
-        }
-
         document
-          .getElementById("nextWordGame2")
-          .addEventListener("click", startGame2);
+          .getElementById("game1-toggleDetails")
+          .addEventListener("click", toggleGame1Details);
+      }
 
-        fetchVocabulary();
+      function toggleGame1Details() {
+        const detailsDiv = document.getElementById("game1-details");
+        const button = document.getElementById("game1-toggleDetails");
+        detailsDiv.classList.toggle("hidden");
+        button.textContent = detailsDiv.classList.contains("hidden")
+          ? "Show Details"
+          : "Hide Details";
+      }
+      game1NextWordButton.addEventListener("click", loadNextGame1Word);
+
+      // --- Game 2: Select Correct Synonym ---
+      const game2WordDisplay = document.getElementById("game2-wordDisplay");
+      const game2OptionsContainer = document.getElementById(
+        "game2-optionsContainer"
+      );
+      const game2ResultMessage = document.getElementById("game2-resultMessage");
+      const game2WordDetails = document.getElementById("game2-wordDetails");
+      const game2NextWordButton = document.getElementById("game2-nextWord");
+      let game2CorrectWord;
+      let game2CorrectSynonym;
+
+      function startGame2() {
+        game2ResultMessage.textContent = "";
+        game2ResultMessage.className = "my-3 text-center"; // Reset classes
+        game2WordDetails.classList.add("hidden");
+
+        game2CorrectWord = getRandomWord();
+        if (!game2CorrectWord) return;
+
+        game2WordDisplay.textContent = game2CorrectWord.word;
+        const synonyms = game2CorrectWord.synonyms
+          ? game2CorrectWord.synonyms
+              .split(",")
+              .map((s) => s.trim())
+              .filter((s) => s)
+          : [];
+        if (synonyms.length === 0) {
+          startGame2(); // Try another word if no synonyms
+          return;
+        }
+        game2CorrectSynonym =
+          synonyms[Math.floor(Math.random() * synonyms.length)];
+
+        const distractors = getMultipleRandomWords(3, game2CorrectWord.index)
+          .map((w) =>
+            w.synonyms
+              ? w.synonyms
+                  .split(",")
+                  .map((s) => s.trim())
+                  .filter((s) => s)
+              : []
+          )
+          .flat() // Get all synonyms from distractor words
+          .filter(
+            (s) => s && s !== game2CorrectSynonym && !synonyms.includes(s)
+          ); // Filter out correct ones and empty
+
+        let finalDistractors = shuffleArray([...new Set(distractors)]).slice(
+          0,
+          3
+        ); // Ensure unique and limit
+
+        // If not enough synonym distractors, use random words as distractors
+        let wordDistractorsNeeded = 3 - finalDistractors.length;
+        if (wordDistractorsNeeded > 0) {
+          const randomWordDistractors = getMultipleRandomWords(
+            wordDistractorsNeeded,
+            game2CorrectWord.index
+          )
+            .map((w) => w.word)
+            .filter((w) => w !== game2CorrectWord.word); // Ensure they are not the correct word itself
+          finalDistractors.push(...randomWordDistractors);
+        }
+
+        const options = shuffleArray([
+          ...finalDistractors.slice(0, 3),
+          game2CorrectSynonym,
+        ]);
+
+        game2OptionsContainer.innerHTML = "";
+        options.forEach((option) => {
+          const label = document.createElement("label");
+          label.className = "option-label";
+          label.innerHTML = `<input type="radio" name="game2-option" value="${option}"> ${option}`;
+          label.addEventListener("click", () => checkGame2Answer(option));
+          game2OptionsContainer.appendChild(label);
+        });
+      }
+
+      function checkGame2Answer(selectedOption) {
+        document
+          .querySelectorAll('input[name="game2-option"]')
+          .forEach((rb) => (rb.disabled = true));
+        if (selectedOption === game2CorrectSynonym) {
+          game2ResultMessage.textContent = "Correct!";
+          game2ResultMessage.className = "correct-feedback my-3 text-center";
+        } else {
+          game2ResultMessage.textContent = `Incorrect. The correct synonym is "${game2CorrectSynonym}".`;
+          game2ResultMessage.className = "incorrect-feedback my-3 text-center";
+        }
+        displayWordDetails("game2-wordDetails", game2CorrectWord);
+      }
+      game2NextWordButton.addEventListener("click", startGame2);
+
+      // --- Game 3: Select Correct Antonym --- (Similar to Game 2)
+      const game3WordDisplay = document.getElementById("game3-wordDisplay");
+      const game3OptionsContainer = document.getElementById(
+        "game3-optionsContainer"
+      );
+      const game3ResultMessage = document.getElementById("game3-resultMessage");
+      const game3WordDetails = document.getElementById("game3-wordDetails");
+      const game3NextWordButton = document.getElementById("game3-nextWord");
+      let game3CorrectWord;
+      let game3CorrectAntonym;
+
+      function startGame3() {
+        game3ResultMessage.textContent = "";
+        game3ResultMessage.className = "my-3 text-center";
+        game3WordDetails.classList.add("hidden");
+
+        game3CorrectWord = getRandomWord();
+        if (!game3CorrectWord) return;
+
+        game3WordDisplay.textContent = game3CorrectWord.word;
+        const antonyms = game3CorrectWord.antonyms
+          ? game3CorrectWord.antonyms
+              .split(",")
+              .map((s) => s.trim())
+              .filter((s) => s)
+          : [];
+        if (antonyms.length === 0) {
+          startGame3(); // Try another word if no antonyms
+          return;
+        }
+        game3CorrectAntonym =
+          antonyms[Math.floor(Math.random() * antonyms.length)];
+
+        const distractors = getMultipleRandomWords(3, game3CorrectWord.index)
+          .map((w) =>
+            w.antonyms
+              ? w.antonyms
+                  .split(",")
+                  .map((s) => s.trim())
+                  .filter((s) => s)
+              : []
+          )
+          .flat()
+          .filter(
+            (s) => s && s !== game3CorrectAntonym && !antonyms.includes(s)
+          );
+
+        let finalDistractors = shuffleArray([...new Set(distractors)]).slice(
+          0,
+          3
+        );
+
+        let wordDistractorsNeeded = 3 - finalDistractors.length;
+        if (wordDistractorsNeeded > 0) {
+          const randomWordDistractors = getMultipleRandomWords(
+            wordDistractorsNeeded,
+            game3CorrectWord.index
+          )
+            .map((w) => w.word)
+            .filter((w) => w !== game3CorrectWord.word);
+          finalDistractors.push(...randomWordDistractors);
+        }
+
+        const options = shuffleArray([
+          ...finalDistractors.slice(0, 3),
+          game3CorrectAntonym,
+        ]);
+
+        game3OptionsContainer.innerHTML = "";
+        options.forEach((option) => {
+          const label = document.createElement("label");
+          label.className = "option-label";
+          label.innerHTML = `<input type="radio" name="game3-option" value="${option}"> ${option}`;
+          label.addEventListener("click", () => checkGame3Answer(option));
+          game3OptionsContainer.appendChild(label);
+        });
+      }
+
+      function checkGame3Answer(selectedOption) {
+        document
+          .querySelectorAll('input[name="game3-option"]')
+          .forEach((rb) => (rb.disabled = true));
+        if (selectedOption === game3CorrectAntonym) {
+          game3ResultMessage.textContent = "Correct!";
+          game3ResultMessage.className = "correct-feedback my-3 text-center";
+        } else {
+          game3ResultMessage.textContent = `Incorrect. The correct antonym is "${game3CorrectAntonym}".`;
+          game3ResultMessage.className = "incorrect-feedback my-3 text-center";
+        }
+        displayWordDetails("game3-wordDetails", game3CorrectWord);
+      }
+      game3NextWordButton.addEventListener("click", startGame3);
+
+      // --- Game 4: Select Multiple Synonyms ---
+      const game4WordDisplay = document.getElementById("game4-wordDisplay");
+      const game4OptionsContainer = document.getElementById(
+        "game4-optionsContainer"
+      );
+      const game4CheckButton = document.getElementById("game4-checkAnswers");
+      const game4ResultMessage = document.getElementById("game4-resultMessage");
+      const game4WordDetails = document.getElementById("game4-wordDetails");
+      const game4NextWordButton = document.getElementById("game4-nextWord");
+      let game4CorrectWord;
+      let game4CorrectSynonymsList;
+
+      function startGame4() {
+        game4ResultMessage.textContent = "";
+        game4ResultMessage.className = "my-3 text-center";
+        game4WordDetails.classList.add("hidden");
+        game4CheckButton.classList.remove("hidden");
+        game4NextWordButton.classList.add("hidden");
+
+        game4CorrectWord = getRandomWord();
+        if (!game4CorrectWord) return;
+
+        game4WordDisplay.textContent = game4CorrectWord.word;
+        game4CorrectSynonymsList = game4CorrectWord.synonyms
+          ? game4CorrectWord.synonyms
+              .split(",")
+              .map((s) => s.trim())
+              .filter((s) => s)
+          : [];
+
+        if (game4CorrectSynonymsList.length === 0) {
+          startGame4(); // Need words with synonyms
+          return;
+        }
+
+        const numDistractorsToGet = Math.max(
+          2,
+          5 - game4CorrectSynonymsList.length
+        ); // Aim for about 5-6 options total
+        const distractors = getMultipleRandomWords(
+          numDistractorsToGet + 5,
+          game4CorrectWord.index
+        ) // Get more to filter
+          .flatMap((w) =>
+            w.synonyms
+              ? w.synonyms
+                  .split(",")
+                  .map((s) => s.trim())
+                  .filter((s) => s)
+              : []
+          )
+          .filter((s) => s && !game4CorrectSynonymsList.includes(s)); // Must not be a correct synonym
+
+        const finalDistractors = shuffleArray([...new Set(distractors)]).slice(
+          0,
+          numDistractorsToGet
+        );
+
+        const options = shuffleArray([
+          ...game4CorrectSynonymsList,
+          ...finalDistractors,
+        ]);
+
+        game4OptionsContainer.innerHTML = "";
+        options.forEach((option) => {
+          const label = document.createElement("label");
+          label.className = "option-label";
+          label.innerHTML = `<input type="checkbox" name="game4-option" value="${option}"> ${option}`;
+          game4OptionsContainer.appendChild(label);
+        });
+      }
+
+      function checkGame4Answers() {
+        const selectedOptions = Array.from(
+          document.querySelectorAll('input[name="game4-option"]:checked')
+        ).map((cb) => cb.value);
+        let correctSelections = 0;
+        let incorrectSelections = 0;
+
+        selectedOptions.forEach((sel) => {
+          if (game4CorrectSynonymsList.includes(sel)) {
+            correctSelections++;
+          } else {
+            incorrectSelections++;
+          }
+        });
+
+        const allCorrectFound =
+          correctSelections === game4CorrectSynonymsList.length;
+        const noIncorrectSelected = incorrectSelections === 0;
+
+        if (
+          allCorrectFound &&
+          noIncorrectSelected &&
+          selectedOptions.length === game4CorrectSynonymsList.length
+        ) {
+          game4ResultMessage.textContent =
+            "Perfect! All synonyms selected correctly.";
+          game4ResultMessage.className = "correct-feedback my-3 text-center";
+        } else {
+          game4ResultMessage.textContent = `You found ${correctSelections} of ${
+            game4CorrectSynonymsList.length
+          } correct synonyms. You selected ${incorrectSelections} incorrect options. Correct synonyms: ${game4CorrectSynonymsList.join(
+            ", "
+          )}.`;
+          game4ResultMessage.className = "incorrect-feedback my-3 text-center";
+        }
+        displayWordDetails("game4-wordDetails", game4CorrectWord);
+        game4CheckButton.classList.add("hidden");
+        game4NextWordButton.classList.remove("hidden");
+      }
+      game4CheckButton.addEventListener("click", checkGame4Answers);
+      game4NextWordButton.addEventListener("click", startGame4);
+
+      // --- Game 5: Select Multiple Antonyms --- (Similar to Game 4)
+      const game5WordDisplay = document.getElementById("game5-wordDisplay");
+      const game5OptionsContainer = document.getElementById(
+        "game5-optionsContainer"
+      );
+      const game5CheckButton = document.getElementById("game5-checkAnswers");
+      const game5ResultMessage = document.getElementById("game5-resultMessage");
+      const game5WordDetails = document.getElementById("game5-wordDetails");
+      const game5NextWordButton = document.getElementById("game5-nextWord");
+      let game5CorrectWord;
+      let game5CorrectAntonymsList;
+
+      function startGame5() {
+        game5ResultMessage.textContent = "";
+        game5ResultMessage.className = "my-3 text-center";
+        game5WordDetails.classList.add("hidden");
+        game5CheckButton.classList.remove("hidden");
+        game5NextWordButton.classList.add("hidden");
+
+        game5CorrectWord = getRandomWord();
+        if (!game5CorrectWord) return;
+
+        game5WordDisplay.textContent = game5CorrectWord.word;
+        game5CorrectAntonymsList = game5CorrectWord.antonyms
+          ? game5CorrectWord.antonyms
+              .split(",")
+              .map((s) => s.trim())
+              .filter((s) => s)
+          : [];
+
+        if (game5CorrectAntonymsList.length === 0) {
+          startGame5(); // Need words with antonyms
+          return;
+        }
+
+        const numDistractorsToGet = Math.max(
+          2,
+          5 - game5CorrectAntonymsList.length
+        );
+        const distractors = getMultipleRandomWords(
+          numDistractorsToGet + 5,
+          game5CorrectWord.index
+        )
+          .flatMap((w) =>
+            w.antonyms
+              ? w.antonyms
+                  .split(",")
+                  .map((s) => s.trim())
+                  .filter((s) => s)
+              : []
+          )
+          .filter((s) => s && !game5CorrectAntonymsList.includes(s));
+
+        const finalDistractors = shuffleArray([...new Set(distractors)]).slice(
+          0,
+          numDistractorsToGet
+        );
+        const options = shuffleArray([
+          ...game5CorrectAntonymsList,
+          ...finalDistractors,
+        ]);
+
+        game5OptionsContainer.innerHTML = "";
+        options.forEach((option) => {
+          const label = document.createElement("label");
+          label.className = "option-label";
+          label.innerHTML = `<input type="checkbox" name="game5-option" value="${option}"> ${option}`;
+          game5OptionsContainer.appendChild(label);
+        });
+      }
+
+      function checkGame5Answers() {
+        const selectedOptions = Array.from(
+          document.querySelectorAll('input[name="game5-option"]:checked')
+        ).map((cb) => cb.value);
+        let correctSelections = 0;
+        let incorrectSelections = 0;
+
+        selectedOptions.forEach((sel) => {
+          if (game5CorrectAntonymsList.includes(sel)) {
+            correctSelections++;
+          } else {
+            incorrectSelections++;
+          }
+        });
+
+        const allCorrectFound =
+          correctSelections === game5CorrectAntonymsList.length;
+        const noIncorrectSelected = incorrectSelections === 0;
+
+        if (
+          allCorrectFound &&
+          noIncorrectSelected &&
+          selectedOptions.length === game5CorrectAntonymsList.length
+        ) {
+          game5ResultMessage.textContent =
+            "Perfect! All antonyms selected correctly.";
+          game5ResultMessage.className = "correct-feedback my-3 text-center";
+        } else {
+          game5ResultMessage.textContent = `You found ${correctSelections} of ${
+            game5CorrectAntonymsList.length
+          } correct antonyms. You selected ${incorrectSelections} incorrect options. Correct antonyms: ${game5CorrectAntonymsList.join(
+            ", "
+          )}.`;
+          game5ResultMessage.className = "incorrect-feedback my-3 text-center";
+        }
+        displayWordDetails("game5-wordDetails", game5CorrectWord);
+        game5CheckButton.classList.add("hidden");
+        game5NextWordButton.classList.remove("hidden");
+      }
+      game5CheckButton.addEventListener("click", checkGame5Answers);
+      game5NextWordButton.addEventListener("click", startGame5);
+
+      // --- Game 6: Match Word to Definition (Trait) ---
+      const game6WordDisplay = document.getElementById("game6-wordDisplay");
+      const game6OptionsContainer = document.getElementById(
+        "game6-optionsContainer"
+      );
+      const game6ResultMessage = document.getElementById("game6-resultMessage");
+      const game6WordDetails = document.getElementById("game6-wordDetails");
+      const game6NextWordButton = document.getElementById("game6-nextWord");
+      let game6CorrectWord;
+      let game6CorrectTrait;
+
+      function startGame6() {
+        game6ResultMessage.textContent = "";
+        game6ResultMessage.className = "my-3 text-center";
+        game6WordDetails.classList.add("hidden");
+
+        game6CorrectWord = getRandomWord();
+        if (!game6CorrectWord) return;
+
+        game6WordDisplay.textContent = game6CorrectWord.word;
+        game6CorrectTrait = game6CorrectWord.triat;
+
+        const distractorTraits = getMultipleRandomWords(
+          3,
+          game6CorrectWord.index
+        )
+          .map((w) => w.triat)
+          .filter((t) => t && t !== game6CorrectTrait); // Ensure unique and not the correct one
+
+        const finalDistractors = shuffleArray([
+          ...new Set(distractorTraits),
+        ]).slice(0, 3);
+
+        const options = shuffleArray([...finalDistractors, game6CorrectTrait]);
+
+        game6OptionsContainer.innerHTML = "";
+        options.forEach((optionTrait) => {
+          const label = document.createElement("label");
+          label.className = "option-label text-sm"; // Smaller text for definitions
+          label.innerHTML = `<input type="radio" name="game6-option" value="${optionTrait}"> ${optionTrait}`;
+          label.addEventListener("click", () => checkGame6Answer(optionTrait));
+          game6OptionsContainer.appendChild(label);
+        });
+      }
+
+      function checkGame6Answer(selectedTrait) {
+        document
+          .querySelectorAll('input[name="game6-option"]')
+          .forEach((rb) => (rb.disabled = true));
+        if (selectedTrait === game6CorrectTrait) {
+          game6ResultMessage.textContent = "Correct Definition!";
+          game6ResultMessage.className = "correct-feedback my-3 text-center";
+        } else {
+          game6ResultMessage.textContent = `Incorrect. The correct definition is: "${game6CorrectTrait}"`;
+          game6ResultMessage.className = "incorrect-feedback my-3 text-center";
+        }
+        displayWordDetails("game6-wordDetails", game6CorrectWord);
+      }
+      game6NextWordButton.addEventListener("click", startGame6);
+
+      // --- Game 7: Sentence Completion ---
+      const game7SentenceDisplay = document.getElementById(
+        "game7-sentenceDisplay"
+      );
+      const game7OptionsContainer = document.getElementById(
+        "game7-optionsContainer"
+      );
+      const game7ResultMessage = document.getElementById("game7-resultMessage");
+      const game7WordDetails = document.getElementById("game7-wordDetails");
+      const game7NextWordButton = document.getElementById("game7-nextWord");
+      let game7CorrectWordObject;
+
+      function getSentenceAndBlank(wordObj) {
+        if (!wordObj || !wordObj.example || !wordObj.word) return null;
+        let exampleSentences = wordObj.example
+          .split("<br/>")
+          .map((s) => s.trim())
+          .filter((s) => s);
+        let chosenSentence = "";
+
+        for (let sentence of exampleSentences) {
+          // Case-insensitive check if sentence contains the word
+          if (sentence.toLowerCase().includes(wordObj.word.toLowerCase())) {
+            chosenSentence = sentence;
+            break;
+          }
+        }
+        if (!chosenSentence && exampleSentences.length > 0) {
+          chosenSentence = exampleSentences[0]; // Fallback
+        } else if (!chosenSentence) {
+          return null;
+        }
+        // Create a regex to replace the word, case-insensitive, whole word only
+        const regex = new RegExp(
+          `\\b${wordObj.word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\b`,
+          "gi"
+        );
+        const blankedSentence = chosenSentence.replace(regex, "_______");
+
+        // If the word wasn't found and replaced, this game might not work for this example
+        if (!blankedSentence.includes("_______")) return null;
+        return blankedSentence;
+      }
+
+      function startGame7() {
+        game7ResultMessage.textContent = "";
+        game7ResultMessage.className = "my-3 text-center";
+        game7WordDetails.classList.add("hidden");
+
+        let blankedSentenceText = null;
+        let attempts = 0;
+        // Try to find a word with a suitable example sentence
+        while (!blankedSentenceText && attempts < globalVocabulary.length * 2) {
+          game7CorrectWordObject = getRandomWord();
+          if (!game7CorrectWordObject) {
+            attempts++;
+            continue;
+          }
+          blankedSentenceText = getSentenceAndBlank(game7CorrectWordObject);
+          attempts++;
+        }
+
+        if (!blankedSentenceText) {
+          game7SentenceDisplay.innerHTML =
+            '<p class="text-red-500">Could not load a suitable sentence completion question. Try another game or refresh.</p>';
+          game7OptionsContainer.innerHTML = "";
+          return;
+        }
+
+        game7SentenceDisplay.innerHTML = blankedSentenceText;
+        const correctWordValue = game7CorrectWordObject.word;
+
+        const distractorWords = getMultipleRandomWords(
+          3,
+          game7CorrectWordObject.index
+        )
+          .map((w) => w.word)
+          .filter((w) => w && w !== correctWordValue);
+
+        const finalDistractors = shuffleArray([
+          ...new Set(distractorWords),
+        ]).slice(0, 3);
+
+        const options = shuffleArray([...finalDistractors, correctWordValue]);
+
+        game7OptionsContainer.innerHTML = "";
+        options.forEach((optionWord) => {
+          const label = document.createElement("label");
+          label.className = "option-label";
+          label.innerHTML = `<input type="radio" name="game7-option" value="${optionWord}"> ${optionWord}`;
+          label.addEventListener("click", () => checkGame7Answer(optionWord));
+          game7OptionsContainer.appendChild(label);
+        });
+      }
+
+      function checkGame7Answer(selectedWord) {
+        document
+          .querySelectorAll('input[name="game7-option"]')
+          .forEach((rb) => (rb.disabled = true));
+        const correct = game7CorrectWordObject.word;
+        if (selectedWord === correct) {
+          game7ResultMessage.textContent = "Correct!";
+          game7ResultMessage.className = "correct-feedback my-3 text-center";
+        } else {
+          game7ResultMessage.textContent = `Incorrect. The correct word is "${correct}".`;
+          game7ResultMessage.className = "incorrect-feedback my-3 text-center";
+        }
+        // Display full details including the original example sentence
+        const detailsContainer = document.getElementById("game7-wordDetails");
+        detailsContainer.innerHTML = `
+                <p class="mb-1"><strong>Word:</strong> ${game7CorrectWordObject.word}</p>
+                <p class="mb-1"><strong>Full Example:</strong> ${game7CorrectWordObject.example}</p>
+                <p class="mb-1"><strong>Trait:</strong> "${game7CorrectWordObject.triat}"</p>
+            `;
+        detailsContainer.classList.remove("hidden");
+      }
+      game7NextWordButton.addEventListener("click", startGame7);
+
+      // --- Initial Load ---
+      document.addEventListener("DOMContentLoaded", () => {
+        globalVocabulary = vocabularyData.vocabulary;
+        if (globalVocabulary.length === 0) {
+          document.getElementById("app-container").innerHTML =
+            '<p class="text-red-600 text-center font-bold text-xl p-10">Error: Vocabulary data could not be loaded. Please try again later.</p>';
+          return;
+        }
+        // No game is shown initially, only the menu.
+        mainMenu.style.display = "block";
+        gameArea.style.display = "block"; // Keep game area visible for back button logic
+        backToMenuButton.classList.add("hidden"); // Hide back button initially
+        gameContents.forEach((content) =>
+          content.classList.remove("active-game")
+        ); // Ensure all games hidden
+
+        document.getElementById("currentYear").textContent =
+          new Date().getFullYear();
       });
     </script>
   </body>
